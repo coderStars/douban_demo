@@ -1,19 +1,24 @@
 <template>
   <div id="app">
     <Header />
-    <router-view></router-view>
+    <Search />
+    <div class="bodyWrapper">
+      <router-view></router-view>
+    </div>
     <Footer />
 
   </div>
 </template>
 
 <script>
-import Header from '@/components/header/Header'
-import Footer from '@/components/footer/Footer'
+import Header from '@/components/Header/Header'
+import Search from '@/components/Search/Search'
+import Footer from '@/components/Footer/Footer'
 export default {
   name: 'App',
   components: {
     Header,
+    Search,
     Footer
   }
 }
@@ -21,4 +26,8 @@ export default {
 
 <style>
 @import 'assets/css/base.css';
+.bodyWrapper {
+  width: 1040px;
+  margin: 0 auto;
+}
 </style>
