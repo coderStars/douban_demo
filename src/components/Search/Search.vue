@@ -60,6 +60,7 @@ export default {
 <style lang="less" scoped>
 .searchContainer {
   background: #f6f6f1;
+  margin-bottom: 40px;
   input {
     outline: none;
     border: none;
