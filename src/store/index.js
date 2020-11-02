@@ -1,5 +1,6 @@
 //1、引入并声明使用
-
+import Vue from 'vue'
+import Vuex from 'vuex'
 Vue.use(Vuex)
 
 
