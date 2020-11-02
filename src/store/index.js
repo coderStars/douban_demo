@@ -27,7 +27,7 @@ export default new Vuex.Store({
 })
 
 
-//3、注入这个创建的store对象  在vue当中111
+//3、注入这个创建的store对象  在vue当中
 
 
 
