@@ -6,7 +6,7 @@
       <router-view></router-view>
     </div>
     <Footer />
-
+  <div>
   </div>
 </template>
 
@@ -14,6 +14,7 @@
 import Header from '@/components/Header/Header'
 import Search from '@/components/Search/Search'
 import Footer from '@/components/Footer/Footer'
+import Movie from './pages/Movie'
 export default {
   name: 'App',
   components: {
@@ -21,10 +22,12 @@ export default {
     Search,
     Footer
   }
+
 }
 </script>
 
-<style>
+<style lang="less" scoped>
+
 @import 'assets/css/base.css';
 .bodyWrapper {
   width: 1040px;
