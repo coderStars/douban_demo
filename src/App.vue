@@ -6,7 +6,6 @@
       <router-view></router-view>
     </div>
     <Footer />
-  <div>
   </div>
 </template>
 
@@ -14,14 +13,16 @@
 import Header from '@/components/Header/Header'
 import Search from '@/components/Search/Search'
 import Footer from '@/components/Footer/Footer'
-import Movie from './pages/Movie'
 export default {
   name: 'App',
   components: {
     Header,
     Search,
     Footer
-  }
+  },
+  mounted() {
+    console.log(Header)
+  },
 
 }
 </script>

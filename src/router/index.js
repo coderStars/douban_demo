@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
-const Movie = () => import('@/views/music/Movie.vue')
+const Movie = () => import('@/views/movie/index.vue')
 
 const routes = [
     {
