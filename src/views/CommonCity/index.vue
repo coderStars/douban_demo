@@ -4,33 +4,31 @@
       <div class="nav">
           <!-- 版心 -->
           <div class="container">
-              <!-- 豆瓣同城 -->
-              <div class="logo" :style="{background:`url(${logoImg}})`}">
-                  <a href="javascript:;" title="豆瓣同城-北京">豆瓣同城</a>
-              </div>
-              <!-- 似下拉框 -->
-              <div class="place">
-                  <a href="javascript:;">北京
-                      <i></i>
-                  </a>
-              </div>
-              <!-- 选项 -->
-              <ul>
-                    <li>
-                        <a href="javascript:;">近期活动</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">主办方</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">舞台剧</a>
-                    </li>
-              </ul>
-              <!-- 右侧搜索框 -->
-              <div class="search">
-                <input type="text" class="search" placeholder="活动 / 舞台剧 / 地点">
-                <button></button>
-              </div>
+              <!-- 左侧导航 -->
+            <div class="navLeft">
+                <div class="logo">豆瓣同城</div>
+                <div class="city">
+                    <a href="javascript:;">北京
+                    <i></i>
+                    </a>
+                </div>
+                <div class="activityNav">
+                    <ul>
+                        <li>近期活动</li>
+                        <li>主办方</li>
+                        <li>舞台剧</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 右侧搜索 -->
+            <div class="searchRight">
+                <div class="rightContainer">
+                    <input  class="input" type="text" placeholder="活动 / 舞台剧 / 地点">
+                    <div  class="submit iconfont iconsearch"></div>
+                </div>
+            </div>
+
+         
           </div>
 
 
@@ -48,9 +46,9 @@
                     <div class="hotActivity">
                         <h2>热门活动</h2>
                         <div class="control">
-                            <span>1/3</span>
-                            <a href="javascript:;" class="pre"> < </a>
-                            <a href="javascript:;" class="next"> > </a>
+                            <div>1/3</div>
+                            <a href="javascript:;" class="pre"></a>
+                            <a href="javascript:;" class="next"></a>
                         </div>
                     </div>
                     <!-- 自动轮播图 -->
@@ -111,11 +109,12 @@
 </template>
 
 <script>
+import './css/index.css'
 export default {
   name: 'CommonCity',
   data() {
       return {
-          logoImg: require('@/assets/imgs/logo.png')
+         
       }
   },
 }
@@ -128,77 +127,105 @@ export default {
     height: 66px;
     background-color: #F6F5F2;
     margin-bottom: 40px;
+    font: 12px Helvetica,Arial,sans-serif;
+    line-height: 1.62;
     // 版心
     .container{
         width: 1040px;
         margin: 0 auto;
         height: 66px;
-        overflow: hidden;
-        // 豆瓣同城
-        .logo{
-            float: left;
-            padding-right:13px;
-            a{
-                display: block;
+        display: flex;
+        // 左侧导航
+        .navLeft{
+            height: 66px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            .logo{
                 width: 124px;
                 height: 56px;
-                line-height: 56px;
-                color: #E85D16;
-                font-size: 28px;
-                font-weight: bold;
-            }
-        }
-        
-        //似下拉框
-        .place{
-            float: left;
-            background-color: red;
-            margin-right: 30px;
-            margin-top:13px;
-            a{  
-                font-size: 13px;
-                font-weight: bold;
-                // background-color: red;
-                // padding: 5px 10 6px 10px;
-            }
-        }
-        ul{
-            float: left;
-            height: 24px;
-            padding-right: 15px;
-            li{
+                background: url('./images/logo.png') no-repeat center center;
+                background-size: 112px auto;
                 float: left;
-                list-style: none;
-                padding: 0 15px;
-                // &:hover a{
-                // background-color:#643 ;
-                // color: #fff;
-                // }
-                a{
-                    color: #643;
-                    font-size: 15px;
+                color: transparent;
+                margin-right: 13px;
+                // margin-top: 4px;
+            }
+            .city{
+                margin-right: 30px;
+                a{  
+                    position: relative;
+                    display: inline-block;
+                    padding: 5px 10px 6px;
+                    width: 64px;
+                    font: 700 14px/1 tahoma,arial,"stheiti","黑体",sans-serif;
+                    font-weight: bold;
+                    background-color:#DEDEDE;
+                    height: 25px;
+                    border-radius: 6px;
+                    i{
+                    position: absolute;        
+                    display:block;
+                    width:0;
+                    height:0;
+                    border-top:5px solid black;
+                    border-left:4px solid transparent;
+                    border-right:4px solid transparent;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);   
+                    }
+                }
+            }
+            .activityNav{
+                ul{
+                    list-style: none;
+                    li{
+                        float: left;
+                        color: #643;
+                        margin: 0 15px;
+                        font-size: 16px;
+                    }   
                 }
             }
         }
-        .search{
-            width: 218px;
-            float: right;
-            height: 28px;
-            border: 1px solid #e3e2de;
-
-            // line-height: 66px;
-            input{
-                width: 92%;
+        //右侧搜索
+        .searchRight{
+            .rightContainer{
                 height: 28px;
-                border: none;
-                font-size: 13px;
+                // width: 218px;   
+                border: 1px solid #e3e2de;
+                // border: 1px  orange solid;
+                display: flex;
+                margin-top: 15px;
+                align-items: center;
+                .input{ 
+                    width: 200px;
+                    height: 26px;
+                    border: none;
+                    padding-left: 10px;
+                }
+                input::-webkit-input-placeholder {
+                    color: #C8CCCC;
+                    font-size: 13px;
+                }
+                .submit{
+                    line-height: 26px;
+                    width: 30px;
+                    height: 26px;
+                    border: none;
+                    // color: transparent;
+                    background-color: #fff;
+                    font-size: 20px;
+
+                }
             }
-              
         }
     }
 }
 // 主体
 body{
+    background-color: #fff;
     //主体版心
     .bodyContainer{
         width: 1040px;
@@ -207,14 +234,18 @@ body{
         .content{
             width:675px;
             padding-right: 25px;
+            font: 12px Arial, Helvetica, sans-seri;
+            // 热门活动
             .hotActivity{
                 width:100%;
+                height: 30px;
+                line-height: 30px;
                 border-bottom: 1px dotted #dadada;
-                margin-bottom:20px ;
+                margin-bottom:20px;
                 overflow: hidden;
                 h2{
                     float: left;
-                    font:15px Arial, Helvetica, sans-serif;
+                    font:16px Arial, Helvetica, sans-serif, sans-serif;
                     line-height: 1.2;
                     color: #333;
                     margin-bottom: 12px;
@@ -222,20 +253,34 @@ body{
                 .control{
                     float: right;
                     margin-bottom: 12px;
-                    span{
+                    vertical-align: middle;
+                    div{
+                        vertical-align: top;
                         display: inline-block;
-                        margin-right: 10px;
+                        margin-right: 14px;
                         font-size: 13px;
                         color: #666;
+                        // height: 16px;
+                        line-height: 18px;
+                        margin-bottom:10px;
+                        
                     }
-                    .pre,.next{
+                    .pre{
+                        background: url('./images/pre.png') no-repeat 1px -2px ;
                         display: inline-block;
                         width: 19px;
                         height: 19px;
                         border-radius: 50%;
-                        background-color: #E1E1DD;
-                        text-align: center;
-                        margin-right: 10px;
+                        margin-bottom: 10px;
+                        margin-right: 3px;
+                    }
+                    .next{
+                        background: url('./images/pre.png') no-repeat -21px -2px ;
+                        display: inline-block;
+                        width: 19px;
+                        height: 19px;
+                        border-radius: 50%;
+                        margin-bottom: 10px;
                     }
 
                 }
@@ -259,17 +304,24 @@ body{
                             margin-bottom: 10px;
                         }
                         p{
-                           color: red;
+                            text-align: center;
+                           color: #37a;
+                           text-overflow: ellipsis;
+                           overflow: hidden;
+                           display: -webkit-box;
+                           -webkit-line-clamp: 2;
+                        -webkit-box-orient:vertical;
                         }
                     }
                 }
             }
+            // 分类导航
             .navContainer{
                 width: 650px;
-                background-color: red;
+                // background-color: pink;
                 height: 126px;
                 padding: 9px;
-                margin-bottom: 40px;
+                margin: 40px 0 40px 0;
                 // .nav{
                         
                 // }
@@ -277,5 +329,6 @@ body{
         }
     }
 }
+
 </style>
 

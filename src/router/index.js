@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 
-import CommonCity from '../pages/CommonCity'
+import CommonCity from '../views/CommonCity'
 const router = new VueRouter({
     routes:[
         {
