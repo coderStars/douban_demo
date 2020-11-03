@@ -133,7 +133,6 @@ export default {
         width: 1040px;
         margin: 0 auto;
         height: 66px;
-        line-height: 66px;
         overflow: hidden;
         // 豆瓣同城
         .logo{
@@ -143,6 +142,7 @@ export default {
                 display: block;
                 width: 124px;
                 height: 56px;
+                line-height: 56px;
                 color: #E85D16;
                 font-size: 28px;
                 font-weight: bold;
@@ -158,9 +158,9 @@ export default {
             margin-top:13px;
             a{  
                 display: inline-block;
-                width: 44px;
+                // width: 44px;
                 height: 14px;
-                line-height: 14px!important;
+                line-height: 8px;
                 font-size: 13px;
                 font-weight: bold;
                 // background-color: red;
@@ -275,9 +275,9 @@ body{
                 height: 126px;
                 padding: 9px;
                 margin-bottom: 40px;
-                .nav{
+                // .nav{
                         
-                }
+                // }
             }
         }
     }
