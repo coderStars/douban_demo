@@ -15,11 +15,13 @@ const routes = [{
 },
 {
     path: '/music',
-    component: Music
+    component: Music,
+    meta: { isShow: true },
 },
 {
     path: '/books',
-    component: Books
+    component: Books,
+    meta: { isShow: true },
 },
 {
     path: '/commoncity',
