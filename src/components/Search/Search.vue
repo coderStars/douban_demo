@@ -70,7 +70,7 @@ export default {
   .searchWrapper {
     border-bottom: 1px solid #e5ebe4;
     width: 1040px;
-    height: 79px;
+    height: 60px;
     margin: 0 auto;
     display: flex;
     padding: 10px 0 5px;

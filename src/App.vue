@@ -29,9 +29,12 @@ export default {
 
 <style lang="less" scoped>
 
-@import 'assets/css/base.css';
+@import 'assets/css/reset.css';
 .bodyWrapper {
   width: 1040px;
   margin: 0 auto;
+}
+body,html {
+  width: 100%;
 }
 </style>
