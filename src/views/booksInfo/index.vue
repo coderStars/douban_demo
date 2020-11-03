@@ -111,8 +111,10 @@
                   <a href="##">写书评</a>
                 </li>
                 <li>
-                  <img src="./images/add-cart.gif" alt="" />
-                  <a href="##">加入购书单</a>
+                  
+                    <img src="./images/add-cart.gif" style="width:8px;height:9px"/>
+                    <a href="##">加入购书单</a>
+                  
                 </li>
                 <li>
                   <a href="##" class="bn-sharing"
@@ -179,6 +181,69 @@
               </div>
             </div>
             <h2>作者简介 · · · · · ·</h2>
+            <div class="indent">
+              <div class="intro">
+                <p>格里高利·大卫·罗伯兹</p>
+                <p>
+                  Gregory David Roberts
+                </p>
+                <p>
+                  澳大利亚知名作家，一生极富传奇色彩。
+                </p>
+                <p>1952年生于墨尔本，青年时开始写作并发表小说。26岁身染毒瘾，婚姻破裂，抢劫银行，被判入狱。后逃狱至印度，在那里过着流亡生活，加入过孟买黑帮，参加过游击队。在印度十年的摸爬滚打中，他得以深入接触印度社会，既见识了最低等的贫苦，也经历了最痛的苦难，最终迎来了自我的觉醒。这段印度流亡岁月，便成了《项塔兰》最真实的蓝本。</p>
+                <p>
+                  1990年他在德国被捕，决心坦然面对过去，入狱服刑。1997年获释后，他写下了《项塔兰》这部厚达千页的自传体小说，并凭借此书声名鹊起，从此成为专职作家。2014年他宣布退出公共视野，专注于陪伴家人和新写作计划。2015年，《项塔兰》续篇《山之影》出版。2020年4月，他携带精神成长的非虚构作品回归，并持续在个人网站上与读者交流。
+                </p>
+                <p>
+                  w...
+                </p>
+                <p>
+                  <a href="##">(展开全部)</a>
+                </p>
+              </div>
+            </div>
+            <div class="blank20">
+              <h2>豆瓣成员常用的标签(共16个) · · · · · ·</h2>
+              <div class="indent">
+                <span>
+                  <a href="##" class="tag">格里高利·大卫·罗伯兹</a>
+                </span>
+                <span>
+                  <a href="##" class="tag">文学</a>
+                </span>
+                <span>
+                  <a href="##" class="tag">澳大利亚</a>
+                </span>
+                <span>
+                  <a href="##" class="tag">小说</a>
+                </span>
+                <span>
+                  <a href="##" class="tag">澳大利亚文学</a>
+                </span>
+                <span>
+                  <a href="##" class="tag">犯罪</a>
+                </span>
+                <span>
+                  <a href="##" class="tag">历史</a>
+                </span>
+                <span>
+                  <a href="##" class="tag">悬疑</a>
+                </span>
+              </div>
+            </div>
+            <div class="subject_show">
+              <h2>丛书信息</h2>
+              <div>
+                <a href="##">项塔兰套装 (共3册)</a>
+                , 这套丛书还有 《项塔兰》,《项塔兰3》,
+              </div>
+            </div>
+            <div class="subject_show">
+              <h2>喜欢读"项塔兰2"的人也喜欢的电子书  · · · · · ·</h2>
+              <div class="tips-mod">
+                支持 Web、iPhone、iPad、Android 阅读器
+              </div>
+            </div>
           </div>
         </div>
         <!-- 右侧 -->
@@ -291,6 +356,10 @@ h1 {
               font-size: 0;
               margin: 2px 4px 0 0;
             }
+            a:hover {
+              background-color: #5081b9;
+              color: #fff;
+            }
             .nabla {
               width: 0px;
               height: 0px;
@@ -387,10 +456,11 @@ h1 {
     .related_info {
       width: 675px;
       height: 3000px;
+      font-size: 13px;
       h2 {
         font: 12px/1.3 "Microsoft YaHei", Tahoma, Helvetica, Arial, "\5b8b\4f53",
           sans-serif;
-        font-size: 15px;
+        font-size: 16px;
         color: #007722;
         line-height: 150%;
         height: 24px;
@@ -432,17 +502,40 @@ h1 {
               border-radius: 5px;
               vertical-align: middle;
               color: rgba(0, 0, 0, 0.9);
-              img{
+              img {
                 width: 16px;
                 height: 16px;
                 border-radius: 50%;
-                box-shadow: 0 0 1px 0 rgba(0,0,0,0.6);
+                box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.6);
               }
-              span{
+              span {
                 display: inline-block;
                 height: 24px;
                 line-height: 24px;
               }
+            }
+          }
+        }
+      }
+      .blank20 {
+        height: 54px;
+        margin-bottom: 20px;
+        .indent {
+          height: 27px;
+          display: flex;
+          justify-content: space-between;
+          span {
+            .tag {
+              width: auto;
+              word-break: keep-all;
+              white-space: nowrap;
+              background-color: #f5f5f5;
+              color: #37a;
+              font-size: 13px;
+              padding: 2px 11px 0;
+              display: inline-block;
+              margin: 0 3px 5px 0;
+              line-height: 20px;
             }
           }
         }
