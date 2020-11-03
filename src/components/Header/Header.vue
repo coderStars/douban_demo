@@ -2,9 +2,18 @@
   <div class="header">
     <ul class="leftTitle">
       <li><a>豆瓣</a></li>
-      <li><a>读书</a></li>
-      <li><router-link  tag="a" target="_blank" :to="{name:'movie'}">电影</router-link></li>
-      <li><a>音乐</a></li>
+      <li>
+        <!-- <a>读书</a> -->
+        <router-link to="/books">读书</router-link>
+      </li>
+      <li>
+        <!-- <a>电影</a> -->
+        <router-link  tag="a" target="_blank" :to="{name:'movie'}">电影</router-link>
+      </li>
+      <li>
+        <!-- <a>音乐</a> -->
+        <router-link to="/music">音乐</router-link>
+      </li>
       <li><a>同城</a></li>
       <li><a>小组</a></li>
       <li><a>阅读</a></li>
@@ -33,14 +42,15 @@ export default {
   color: #d5d5d5;
   background-color: #545652;
   align-content: space-around;
-  line-height: 28px;
+  line-height: 26px;
   font-size: 12px;
   a {
     color: #d5d5d5;
     cursor: pointer;
   }
   a:hover {
-    color: #fff;
+    color: #fff !important;
+    text-decoration: none;
   }
   li {
     padding: 0 12px;
@@ -54,6 +64,10 @@ export default {
   .rightTitle {
     list-style: none;
     display: flex;
+
+    li:last-child {
+      margin-right: 8px;
+    }
   }
 }
 </style>
