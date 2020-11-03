@@ -10,7 +10,8 @@ const routes = [
     {
         path: '/movie',
         component: Movie,
-        name: 'movie'
+        name: 'movie',
+        meta: {isShow: true},
     },
     {
         path: '/music',

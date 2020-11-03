@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Search />
+    <Search v-show="$route.meta.isShow"/>
     <div class="bodyWrapper">
       <router-view></router-view>
     </div>
@@ -10,19 +10,8 @@
 </template>
 
 <script>
-import Header from '@/components/Header/Header'
-import Search from '@/components/Search/Search'
-import Footer from '@/components/Footer/Footer'
 export default {
   name: 'App',
-  components: {
-    Header,
-    Search,
-    Footer
-  },
-  mounted() {
-    console.log(Header)
-  },
 
 }
 </script>
