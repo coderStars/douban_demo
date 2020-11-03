@@ -78,18 +78,120 @@
                     </div>
                     <!-- 分类导航 -->
                     <div class="navContainer">
-                        <ul class="nav">
-                            <li class="navItem">
-                                <h5>音乐>> </h5>
-                                <ul>
-                                    <li>小型现场</li>
-                                    <li>音乐会</li>
-                                    <li>演唱会</li>
-                                    <li>音乐节</li>
-                                </ul>
-                            </li>
-                        </ul>
+                        <!-- 音乐» -->
+                         <div class="navItem">
+                            <h5>音乐»  </h5>
+                            <div class="info">
+                                <div class="row1">
+                                    <span>小型现场</span>
+                                    <span>音乐会</span>
+                                </div>
+                                <div class="row2">
+                                    <span>演唱会</span>
+                                    <span>音乐节</span>
+                                </div>
+                            </div>
+                        </div>   
+                        <!-- 戏剧 -->
+                       <div class="navItem">
+                            <h5>戏剧» </h5>
+                            <div class="info">
+                                <div class="row1">
+                                    <span>话剧</span>
+                                    <span>音乐剧</span>
+                                    <span>舞剧</span>
+                                </div>
+                                <div class="row2">
+                                    <span>歌剧</span>
+                                    <span>戏曲</span>
+                                    <span>其他</span>
+                                </div>
+                            </div>
+                      </div>
+                        <!-- 聚会» -->
+                       <div class="navItem">
+                            <h5>聚会» </h5>
+                            <div class="info">
+                                <div class="row1">
+                                    <span>生活</span>
+                                    <span>集市</span>
+                                    <span>摄影</span>
+                                </div>
+                                <div class="row2">
+                                    <span>外语</span>
+                                    <span>桌游</span>
+                                    <span>交友</span>
+                                </div>
+                                <div class="row3">
+                                    <span>美食</span>
+                                    <span>派对</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 电影» -->
+                         <div class="navItem">
+                            <h5>电影» </h5>
+                            <div class="info">
+                                <div class="row1">
+                                    <span>主题放映</span>
+                                    <span>影展</span>
+                                </div>
+                                <div class="row2">
+                                    <span>影院活动</span>
+                                </div>
+                            </div>
+                        </div>                  
+                        <!--其他»  -->
+                        <div class="navItem">
+                            <h5>其他» </h5>
+                            <div class="info">
+                                <div class="row1">
+                                    <span>讲座</span>
+                                    <span>展览</span>
+                                    <span>运动</span>
+                                </div>
+                                <div class="row2">
+                                    <span>旅行</span>
+                                    <span>公益</span>
+                                    <span>赛事</span>
+                                </div>
+                                <div class="row3">
+                                    <span>课程</span>
+                                    <span>亲子</span>
+                                </div>
+                            </div>
+                        </div>      
+
                     </div>
+                    <!-- 展示内容区 -->
+                    <div class="show">
+                        <!-- 头部导航区 -->
+                        <div class="showHeader">
+                            <div class="title">戏剧</div>
+                            <!-- 类别选项卡 -->
+                            <div class="type">
+                                <div class="hot">最热</div>
+                                <div>话剧</div>
+                                <div>音乐剧</div>
+                                <div>舞剧</div>
+                                <div>歌剧</div>
+                                <div>戏曲</div>
+                                <div>其他</div>
+                            </div>
+                            <div class="more">更多» </div>
+                        </div>
+                        <!-- 内容区 -->
+                        <div class="showContent">
+                           
+                          
+                            <!-- -------- -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
                     <!-- 戏剧 -->
                     <!-- 展览 -->
                     <!-- 演唱会 -->
@@ -99,10 +201,11 @@
                     <!-- 聚会 -->
                     <!-- 讲座 -->
                     <!-- 其他 -->
-                </div>
+            
 
                 <!-- 右侧侧边栏 -->
                 <aside></aside>
+
             </div>
         </body>
     </div>
@@ -204,6 +307,7 @@ export default {
                     height: 26px;
                     border: none;
                     padding-left: 10px;
+                    outline: none;
                 }
                 input::-webkit-input-placeholder {
                     color: #C8CCCC;
@@ -318,13 +422,94 @@ body{
             // 分类导航
             .navContainer{
                 width: 650px;
-                // background-color: pink;
+                background-color: #F6F5F2;
                 height: 126px;
                 padding: 9px;
                 margin: 40px 0 40px 0;
-                // .nav{
+                display: flex;
+                justify-content: space-between;
+                padding: 9px;
+                .navItem{
+                    width: 118px;
+                    padding: 0 7px;
+                    h5{
+                        font-size: 14px;
+                        color: #111;
+                        margin-bottom: 9px;
+                        font-weight: normal;
+                        margin-top: 5px;
+                    }
+                    .info{
+                        font-size: 12px;
+                        .row1{
+                            color: #37a;
+                            margin-bottom: 10px;
+                            span{
+                                padding-right:6px;
+                            }
+                        }
+                        .row2{
+                            // width: 154px;
+                            color: #37a;
+                            margin-bottom: 10px;
+                              span{
+                                padding-right:6px;
+                            }
+                        }
+                        .row3{
+                            color: #37a;
+                             margin-bottom: 6px;
+                              span{
+                                padding-right:8px;
+                            }
+                        }
+                    }
+                }
+            }
+            //内容展示区
+            .show{
+                // 头部导航区
+                .showHeader{
+                    display: flex;
+                    padding-bottom: 6px;
+                    margin-bottom: 20px;
+                      border-bottom: 1px dotted #DEDEDE;
+                    .title{
+                        color: #111;
+                        font-size: 16px;
+                        margin-right: 48px;
+                    }
+                    .type{
+                        display: flex;
+                        width: 391px;
+                        justify-content:space-between;
+                        color: #3377aa;
+                        align-items: center;
+                        .hot{
+                            color: #333;
+                            font: Helvetica,Arial,sans-serif;
+                            font-size: 13px;
+                            padding: 1px 10px;
+                            background-color: #e6e6e6;
+                        }
+                        // line-height: 16px;
+
+                    }
+                    .more{
+                        flex: 1;
+                        color: #3377aa;
+                        font-size: 13px;
+                    }
+                }
+                // 内容区
+                .showContent{
+                    background-color: orange;
+                    height: 20px;
+                    // 单个内容的展示
+                    .showItem{
                         
-                // }
+                    }
+                }
             }
         }
     }
