@@ -182,10 +182,70 @@
                         </div>
                         <!-- 内容区 -->
                         <div class="showContent">
-                           
+                            <!-- 单个内容的展示 -->
+                            <div class="showItem">
+                                <img src="https://img1.doubanio.com/pview/event_poster/median/public/d80c5169eeeca69.jpg" alt="">
+                                <!-- 描述 -->
+                                <div class="desc">
+                                    <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
+                                    <p class="date">11月8日 至 11月29日</p>
+                                    <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
+                                    <p class="num">2人关注</p>
+                                </div>
+                            </div> 
                           
+                            <!-- ----2  ---- -->
+                            <div class="showItem">
+                                <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
+                                <!-- 描述 -->
+                                <div class="desc">
+                                    <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
+                                    <p class="date">11月8日 至 11月29日</p>
+                                    <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
+                                    <p class="num">2人关注</p>
+                                </div>
+                            </div> 
+                            <!-- ------3---- -->
+                            <div class="showItem">
+                                <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
+                                <div class="desc">
+                                    <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
+                                    <p class="date">11月8日 至 11月29日</p>
+                                    <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
+                                    <p class="num">2人关注</p>
+                                </div>
+                            </div> 
+                            <!-- ------4------ -->
+                            <div class="showItem">
+                                <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
+                                <div class="desc">
+                                    <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
+                                    <p class="date">11月8日 至 11月29日</p>
+                                    <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
+                                    <p class="num">2人关注</p>
+                                </div>
+                            </div> 
+                            <!-------5-----  -->
+                            <div class="showItem">
+                                <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
+                                <div class="desc">
+                                    <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
+                                    <p class="date">11月8日 至 11月29日</p>
+                                    <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
+                                    <p class="num">2人关注</p>
+                                </div>
+                            </div> 
+                            <!-- ----6---- -->
+                            <div class="showItem">
+                                <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
+                                <div class="desc">
+                                    <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
+                                    <p class="date">11月8日 至 11月29日</p>
+                                    <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
+                                    <p class="num">2人关注</p>
+                                </div>
+                            </div> 
                             <!-- -------- -->
-
                         </div>
 
                     </div>
@@ -204,7 +264,43 @@
             
 
                 <!-- 右侧侧边栏 -->
-                <aside></aside>
+                <aside>
+                    <!-- 广告图 -->
+                    <img class="adv" src="https://img3.doubanio.com/view/dale-online/dale_ad/public/b605e5ac498ede2.jpg" alt="">
+                    <!-- 发起同城活动 -->
+                    <div class="button">
+                        <a href="javascript:;">＋发起同城活动</a>
+                    </div>
+
+                    <!-- 轮播图 -->
+                    <div class="swiper">
+                        <!-- 头部 -->
+                        <div class="header"></div>
+                        <!-- 轮播内容 -->
+                        <div>
+
+                        </div>
+                    </div>
+
+                    <!-- 北京主办方 -->
+                    <div class="hostInfo">
+                        <div class="hostItem">
+                            <img src="" alt="">
+                            <div class="desc">
+                                <p>KPRendezvous</p>
+                                <p>有2个活动正在进行</p>
+                                <p>[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
+                                <p>[展览] 西安SKP文苑·展览 | 探寻民间...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 广告 -->
+                    <img src="./images/adv.jpg" alt="">
+
+                    <!--  -->
+
+                </aside>
 
             </div>
         </body>
@@ -224,6 +320,7 @@ export default {
 </script>
 
 <style scoped lang='less'>
+@import './css/index.css';
 // 头部
 .nav{
     width: 100%;
@@ -503,11 +600,37 @@ body{
                 }
                 // 内容区
                 .showContent{
-                    background-color: orange;
-                    height: 20px;
+                    display: flex;
+                    flex-wrap: wrap;
                     // 单个内容的展示
                     .showItem{
-                        
+                        width:325px !important;
+                        display: flex;
+                        margin-bottom: 30px;
+                        img{
+                            display: block;
+                            width: 75px;
+                            height: 112px;
+                            margin-right: 20px;
+                        }      
+                        .desc{
+                            width: 210px;
+                            .name{
+                                font-size: 14px;
+                                color: #37a;
+                                margin-bottom: 6px;
+                            }
+                            .date,.adress,.num{
+                                color: #666;
+                                font-size: 13px;
+                                height: 18px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+
+                            }
+                            
+                        }
                     }
                 }
             }
