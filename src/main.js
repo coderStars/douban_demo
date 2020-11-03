@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from '@/router' 
 import store from './store/index'
 import "swiper/css/swiper.min.css";
-
+import getImages from '@/utils/getImgUrl'
 
 Vue.config.productionTip = false
 

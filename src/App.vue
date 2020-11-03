@@ -19,10 +19,7 @@ export default {
     Header,
     Search,
     Footer
-  },
-  mounted() {
-    console.log(Header)
-  },
+  }
 
 }
 </script>
