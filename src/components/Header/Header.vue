@@ -8,7 +8,8 @@
       </li>
       <li>
         <!-- <a>电影</a> -->
-        <router-link  tag="a" target="_blank" :to="{name:'movie'}">电影</router-link>
+        <!-- <router-link  tag="a" target="_blank" :to="{name:'movie'}">电影</router-link> -->
+        <router-link to="/movie">电影</router-link>
       </li>
       <li>
         <!-- <a>音乐</a> -->
