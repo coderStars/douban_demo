@@ -1,32 +1,14 @@
 <template>
   <div>
     <!-- 顶部导航 -->
-    <div class="heander"></div>
-    <!-- 头部 -->
-    <div class="topContainer">
-      <div class="top">
-        <!-- 豆瓣电影logo -->
-        <div class="nav-logo clearfix">
-          <a href="#"></a>
-        </div>
-        <!-- 搜索区域 -->
-        <div class="searchContainer clearfix">
-          <!-- 搜索框 -->
-          <div class="search">
-            <input type="text" placeholder="搜索电影、电视剧、综艺、影人">
-          </div>
-          <!-- 搜索按钮 -->
-          <div class="input-btn"></div>
-        </div>
-        <!-- 电影榜单logo -->
-        <a href="#" id="movieannual"></a>
-      </div>
-    </div>
+    <Header></Header>
+    <!-- 头部搜索区域 -->
+    <Search></Search>
 
     <!-- 中间内容区 -->
     <div id="wapper">
-      <div class="left">
-        111
+      <div class="aircle">
+        .
       </div>
       <div class="right">
         222
@@ -108,12 +90,15 @@
   width: 1040px;
   margin: 0 auto;
   .left{
-    width: 70%;
-    height: 500px;
-    background: lemonchiffon;
+    width: 715px;
+    .aircle{
+      width: 675px;
+      margin-right: 40px;
+      background-color: lavender
+    }
   }
   .right{
-    width: 30%;
+    width: 325px;
     height: 500px;
     background: lavenderblush;
   }

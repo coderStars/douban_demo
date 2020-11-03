@@ -3,7 +3,7 @@
     <ul class="leftTitle">
       <li><a>豆瓣</a></li>
       <li><a>读书</a></li>
-      <li><a>电影</a></li>
+      <li><router-link  tag="a" target="_blank" :to="{name:'movie'}">电影</router-link></li>
       <li><a>音乐</a></li>
       <li><a>同城</a></li>
       <li><a>小组</a></li>

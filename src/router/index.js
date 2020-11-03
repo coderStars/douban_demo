@@ -8,7 +8,8 @@ const Music = () => import('@/views/music/Music.vue')
 const routes = [
     {
         path: '/movie',
-        component: Movie
+        component: Movie,
+        name: 'movie'
     },
     {
         path: '/music',
