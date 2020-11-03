@@ -5,6 +5,7 @@ Vue.use(VueRouter)
 const Movie = () => import('@/views/movie/index.vue')
 const Music = () => import('@/views/music/Music.vue')
 const Books = () => import('@/views/books/index.vue')
+import CommonCity from '../views/CommonCity'
 
 const routes = [
     {
@@ -20,6 +21,14 @@ const routes = [
     {
         path: '/books',
         component: Books
+    },
+    {
+        path:'/commoncity',
+        component:CommonCity
+    },
+    {
+        path:'/',
+        redirect:'/commoncity'
     }
 
 ]
@@ -27,4 +36,5 @@ const routes = [
 const router = new VueRouter({
     routes
 })
-export default router
+
+export default router 

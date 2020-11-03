@@ -14,7 +14,10 @@
         <!-- <a>音乐</a> -->
         <router-link to="/music">音乐</router-link>
       </li>
-      <li><a>同城</a></li>
+      <li>
+        <a>同城</a>
+        <router-link to="/commoncity"></router-link>
+      </li>
       <li><a>小组</a></li>
       <li><a>阅读</a></li>
       <li><a>FM</a></li>

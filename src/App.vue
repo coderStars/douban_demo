@@ -12,14 +12,11 @@
 <script>
 export default {
   name: 'App',
-<<<<<<< HEAD
   components: {
     Header,
     Search,
     Footer
   }
-=======
->>>>>>> 6ba21039ecbaa88c1b9e25ae22f4b46d472ef88d
 
 }
 </script>
@@ -34,4 +31,5 @@ export default {
 body,html {
   width: 100%;
 }
+
 </style>
