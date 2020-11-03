@@ -265,11 +265,12 @@
 
                 <!-- 右侧侧边栏 -->
                 <aside>
-                    <!-- 广告图 -->
-                    <img class="adv" src="https://img3.doubanio.com/view/dale-online/dale_ad/public/b605e5ac498ede2.jpg" alt="">
+                    <!-- 广告图1 -->
+                    <img class="adv" src="https://img9.doubanio.com/view/dale-online/dale_ad/public/f98459bcad0aed4.jpg" alt="">
+
                     <!-- 发起同城活动 -->
-                    <div class="button">
-                        <a href="javascript:;">＋发起同城活动</a>
+                    <div class="commonActivity">
+                        <a>＋发起同城活动</a>
                     </div>
 
                     <!-- 轮播图 -->
@@ -433,6 +434,7 @@ body{
         margin:  0 auto;
         //左侧主体内容
         .content{
+            float: left;
             width:675px;
             padding-right: 25px;
             font: 12px Arial, Helvetica, sans-seri;
@@ -633,6 +635,31 @@ body{
                         }
                     }
                 }
+            }
+        }
+        aside{
+            width:340px;
+            float: right;
+            .adv{
+                display: block;
+                width: 300px;
+                height: 250px;
+                margin-bottom: 20px;    
+            }
+            .commonActivity{
+                width: 300px;
+                height: 28px;
+                margin-bottom: 40px;
+                a{  
+                    display: block;
+                    // box-sizing: content-box;
+                    width: 91px;
+                    height: 28px;
+                    padding: 0 13px;
+                    background: #a88360;  
+                    color: #fff; 
+                    // font-size: 10px;
+                }   
             }
         }
     }
