@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Search />
+    <Search v-show="$route.meta.isShow"/>
     <div class="bodyWrapper">
       <router-view></router-view>
     </div>
@@ -10,16 +10,16 @@
 </template>
 
 <script>
-import Header from '@/components/Header/Header'
-import Search from '@/components/Search/Search'
-import Footer from '@/components/Footer/Footer'
 export default {
   name: 'App',
+<<<<<<< HEAD
   components: {
     Header,
     Search,
     Footer
   }
+=======
+>>>>>>> 6ba21039ecbaa88c1b9e25ae22f4b46d472ef88d
 
 }
 </script>
