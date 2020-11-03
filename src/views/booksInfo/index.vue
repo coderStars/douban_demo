@@ -7,6 +7,7 @@
         <!-- 左侧 -->
         <div class="article">
           <div class="indent">
+            <!-- 简介 -->
             <div class="subjectwrap">
               <div class="subject">
                 <!-- 封面 -->
@@ -99,6 +100,85 @@
                 </span>
               </div>
             </div>
+            <div class="gtleft">
+              <ul class="menu">
+                <li>
+                  <img src="./images/pen.gif" />
+                  <a href="##">写笔记</a>
+                </li>
+                <li>
+                  <img src="./images/pen.gif" />
+                  <a href="##">写书评</a>
+                </li>
+                <li>
+                  <img src="./images/add-cart.gif" alt="" />
+                  <a href="##">加入购书单</a>
+                </li>
+                <li>
+                  <a href="##" class="bn-sharing"
+                    >分享到
+                    <div class="nabla"></div>
+                  </a>
+                </li>
+              </ul>
+              <div class="recommendBtn">
+                <a href="##">推荐</a>
+              </div>
+            </div>
+          </div>
+          <!-- 内容简介 -->
+          <div class="related_info">
+            <h2>内容简介 · · · · · ·</h2>
+            <div class="indent">
+              <div class="intro">
+                <p>林巴巴能活下来，靠的是他遇到的人。</p>
+                <p>
+                  逃狱出来的林巴巴在孟买经历了贫民窟的慷慨收容，在这里邂逅了绿眼睛的神秘女人卡拉、总有着开朗笑容的朋友普拉巴克、有教父般地位的黑帮大佬哈德拜和与他惺惺相惜的打手阿布杜拉。他不但在孟买扎下了根，而且成为哈德拜重点培养的新人，跟着他的手下练
+                  习生存的技能。
+                </p>
+                <p>
+                  但当生活中最重要的人相继离去，再坚强的人也会被摧毁。在安顿好朋友的家人之后，生活该怎样继续，他拿不出答案。
+                </p>
+                <p>编辑推荐</p>
+                <p>
+                  ♥《项塔兰》是一部传奇，一部经典。《项塔兰2》是项塔兰全三册的第二册。
+                </p>
+                <p>
+                  大鱼读品将65万字的《项塔兰》原稿分为《项塔兰》《项塔兰2》《项塔兰3》三册上市，平装，32开本，重新修订内文，就是为了让这部长篇经典再次被阅读，再次感动读者。
+                </p>
+                <p>
+                  ♥谢谢读者对《项塔兰》的评论，虽然你们只读了全书的三分之一，但已经可以看到大家get到这本书的好处了。接受别人推荐而读的人说好读好看，才是真的好。
+                </p>
+                <p>
+                  <a href="##">(展开全部)</a>
+                </p>
+              </div>
+            </div>
+            <!-- 分界线 -->
+            <div class="online-partner">
+              <div class="online-type">
+                <span>在线试读：</span>
+                <div class="online-read-or-audio">
+                  <a href="##">
+                    <img src="./images/icon_douban_read.png" >
+                    <span>豆瓣阅读></span></span>
+                  </a>
+                </div>
+                <div class="online-read-or-audio">
+                  <a href="##">
+                    <img src="./images/icon_migubook.png" >
+                    <span>咪咕阅读></span></span>
+                  </a>
+                </div>
+                <div class="online-read-or-audio">
+                  <a href="##">
+                    <img src="./images/icon_dedao.png" >
+                    <span>得到></span></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <h2>作者简介 · · · · · ·</h2>
           </div>
         </div>
         <!-- 右侧 -->
@@ -125,7 +205,6 @@ h1 {
   .article {
     width: 715px;
     padding-right: 40px;
-    display: flex;
     .indent {
       width: 675px;
       height: 337px;
@@ -165,7 +244,6 @@ h1 {
         width: 100%;
         height: 24px;
         padding: 20px 0 3px 0;
-        background-color: #bfc;
         display: flex;
         .btn {
           width: 51px;
@@ -191,6 +269,52 @@ h1 {
               margin-top: 4px;
             }
           }
+        }
+      }
+      .gtleft {
+        display: flex;
+        justify-content: space-between;
+        .menu {
+          width: 290px;
+          height: 14px;
+          padding-top: 6px;
+          display: flex;
+          justify-content: space-between;
+          li {
+            .bn-sharing {
+              display: flex;
+            }
+            img {
+              width: 10px;
+              height: 11px;
+              display: inline;
+              font-size: 0;
+              margin: 2px 4px 0 0;
+            }
+            .nabla {
+              width: 0px;
+              height: 0px;
+              border-top: 6px solid #c1c1c1;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              margin: 5px 0 0 3px;
+            }
+          }
+        }
+        .recommendBtn {
+          width: 26px;
+          height: 19px;
+          border: 1px solid #eaf4ef;
+          padding: 0 8px;
+          line-height: 19px;
+          border-radius: 3px;
+          background-color: #f2f8f2;
+          a {
+            color: #4f946e;
+          }
+        }
+        .recommendBtn:hover {
+          border-color: #c4e2d8;
         }
       }
     }
@@ -257,6 +381,70 @@ h1 {
           height: 10px;
           margin: 1px 4px;
           background-color: #ffd596;
+        }
+      }
+    }
+    .related_info {
+      width: 675px;
+      height: 3000px;
+      h2 {
+        font: 12px/1.3 "Microsoft YaHei", Tahoma, Helvetica, Arial, "\5b8b\4f53",
+          sans-serif;
+        font-size: 15px;
+        color: #007722;
+        line-height: 150%;
+        height: 24px;
+        margin: 24px 0 3px 0;
+      }
+      .indent {
+        height: 396px;
+        .intro {
+          p {
+            font: 12px Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            line-height: 162%;
+            color: #111;
+            text-indent: 2em;
+            word-break: normal;
+            margin: 13px 0;
+          }
+        }
+      }
+      .online-partner {
+        height: 26px;
+        line-height: 26px;
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #d8d8d8;
+        .online-type {
+          display: flex;
+          .online-read-or-audio {
+            height: 26px;
+            a {
+              display: flex;
+              align-items: center;
+              margin-right: 10px;
+              padding: 0 15px 0 7px;
+              border: 1px solid rgba(0, 0, 0, 0.25);
+              border-radius: 5px;
+              vertical-align: middle;
+              color: rgba(0, 0, 0, 0.9);
+              img{
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                box-shadow: 0 0 1px 0 rgba(0,0,0,0.6);
+              }
+              span{
+                display: inline-block;
+                height: 24px;
+                line-height: 24px;
+              }
+            }
+          }
         }
       }
     }
