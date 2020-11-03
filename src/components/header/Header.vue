@@ -5,7 +5,10 @@
       <li><a>读书</a></li>
       <li><a>电影</a></li>
       <li><a>音乐</a></li>
-      <li><a>同城</a></li>
+      <li>
+        <a>同城</a>
+        <router-link to="/commoncity"></router-link>
+      </li>
       <li><a>小组</a></li>
       <li><a>阅读</a></li>
       <li><a>FM</a></li>

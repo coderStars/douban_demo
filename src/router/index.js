@@ -3,9 +3,18 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 
+import CommonCity from '../pages/CommonCity'
 const router = new VueRouter({
-    routes :[
-
+    routes:[
+        {
+            path:'/commoncity',
+            component:CommonCity
+        },
+        {
+            path:'/',
+            redirect:'/commoncity'
+        }
     ]
 })
-export default router
+
+export default router 
