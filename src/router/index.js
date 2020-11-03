@@ -5,9 +5,9 @@ Vue.use(VueRouter)
 const Movie = () => import('@/views/movie/index.vue')
 const Music = () => import('@/views/music/Music.vue')
 const Books = () => import('@/views/books/index.vue')
+const BooksInfo = () => import('@/views/booksInfo/index.vue')
 
-const routes = [
-    {
+const routes = [{
         path: '/movie',
         component: Movie,
         name: 'movie'
@@ -19,6 +19,10 @@ const routes = [
     {
         path: '/books',
         component: Books
+    },
+    {
+        path: '/booksinfo',
+        component: BooksInfo
     }
 
 ]
