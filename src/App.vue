@@ -11,12 +11,7 @@
 
 <script>
 export default {
-  name: 'App',
-  components: {
-    Header,
-    Search,
-    Footer
-  }
+  name: 'App'
 
 }
 </script>
