@@ -26,10 +26,6 @@ const routes = [{
     component: CommonCity
 },
 {
-    path: '/',
-    redirect: '/commoncity'
-},
-{
     path: '/booksinfo',
     component: Books
 }
