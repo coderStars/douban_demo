@@ -181,7 +181,7 @@
               </div>
             </div>
             <h2>作者简介 · · · · · ·</h2>
-            <div class="indent">
+            <div class="indent " style="height:364px">
               <div class="intro">
                 <p>格里高利·大卫·罗伯兹</p>
                 <p>
@@ -238,10 +238,238 @@
                 , 这套丛书还有 《项塔兰》,《项塔兰3》,
               </div>
             </div>
+            <!-- 图书推荐1 -->
             <div class="subject_show">
               <h2>喜欢读"项塔兰2"的人也喜欢的电子书  · · · · · ·</h2>
               <div class="tips-mod">
                 支持 Web、iPhone、iPad、Android 阅读器
+              </div>
+              <div class="content">
+                <dl>
+                  <dt>
+                    <a href="##">
+                      <span class="cover-outer">
+                        <img src="./images/bk_01.jpg">
+                      </span>
+                    </a>
+                  </dt>
+                  <dd>
+                    <div class="title">
+                      <a href="##">孤筏重洋（70周年纪念版）</a>
+                    </div>
+                    <div class="price">12.99元</div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <a href="##">
+                      <span class="cover-outer">
+                        <img src="./images/bk_02.jpg">
+                      </span>
+                    </a>
+                  </dt>
+                  <dd>
+                    <div class="title">
+                      <a href="##">相约博物馆</a>
+                    </div>
+                    <div class="price">12.99元</div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <a href="##">
+                      <span class="cover-outer">
+                        <img src="./images/bk_03.jpg">
+                      </span>
+                    </a>
+                  </dt>
+                  <dd>
+                    <div class="title">
+                      <a href="##">幸福家庭的秘密</a>
+                    </div>
+                    <div class="price">12.99元</div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <a href="##">
+                      <span class="cover-outer">
+                        <img src="./images/bk_04.jpg">
+                      </span>
+                    </a>
+                  </dt>
+                  <dd>
+                    <div class="title">
+                      <a href="##">失去名字的女孩</a>
+                    </div>
+                    <div class="price">12.99元</div>
+                  </dd>
+                </dl>
+                <dl>
+                  <dt>
+                    <a href="##">
+                      <span class="cover-outer">
+                        <img src="./images/bk_05.jpg">
+                      </span>
+                    </a>
+                  </dt>
+                  <dd>
+                    <div class="title">
+                      <a href="##">伟大的孤独</a>
+                    </div>
+                    <div class="price">12.99元</div>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+            <!-- 图书推荐2 -->
+            <div class="subject_show">
+              <h2>喜欢读"项塔兰2"的人也喜欢  · · · · · ·</h2>
+              <div class="content content_box">
+                <div class="box">
+                  <dl>
+                    <dt>
+                      <a href="##">
+                        <span class="cover-outer">
+                          <img src="./images/bk_01.jpg">
+                        </span>
+                      </a>
+                    </dt>
+                    <dd>
+                      <div class="title">
+                        <a href="##">孤筏重洋（70周年纪念版）</a>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>
+                      <a href="##">
+                        <span class="cover-outer">
+                          <img src="./images/bk_02.jpg">
+                        </span>
+                      </a>
+                    </dt>
+                    <dd>
+                      <div class="title">
+                        <a href="##">相约博物馆</a>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>
+                      <a href="##">
+                        <span class="cover-outer">
+                          <img src="./images/bk_03.jpg">
+                        </span>
+                      </a>
+                    </dt>
+                    <dd>
+                      <div class="title">
+                        <a href="##">幸福家庭的秘密</a>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>
+                      <a href="##">
+                        <span class="cover-outer">
+                          <img src="./images/bk_04.jpg">
+                        </span>
+                      </a>
+                    </dt>
+                    <dd>
+                      <div class="title">
+                        <a href="##">失去名字的女孩</a>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>
+                      <a href="##">
+                        <span class="cover-outer">
+                          <img src="./images/bk_05.jpg">
+                        </span>
+                      </a>
+                    </dt>
+                    <dd>
+                      <div class="title">
+                        <a href="##">伟大的孤独</a>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="box">
+                  <dl>
+                    <dt>
+                      <a href="##">
+                        <span class="cover-outer">
+                          <img src="./images/bk_01.jpg">
+                        </span>
+                      </a>
+                    </dt>
+                    <dd>
+                      <div class="title">
+                        <a href="##">孤筏重洋（70周年纪念版）</a>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>
+                      <a href="##">
+                        <span class="cover-outer">
+                          <img src="./images/bk_02.jpg">
+                        </span>
+                      </a>
+                    </dt>
+                    <dd>
+                      <div class="title">
+                        <a href="##">相约博物馆</a>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>
+                      <a href="##">
+                        <span class="cover-outer">
+                          <img src="./images/bk_03.jpg">
+                        </span>
+                      </a>
+                    </dt>
+                    <dd>
+                      <div class="title">
+                        <a href="##">幸福家庭的秘密</a>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>
+                      <a href="##">
+                        <span class="cover-outer">
+                          <img src="./images/bk_04.jpg">
+                        </span>
+                      </a>
+                    </dt>
+                    <dd>
+                      <div class="title">
+                        <a href="##">失去名字的女孩</a>
+                      </div>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>
+                      <a href="##">
+                        <span class="cover-outer">
+                          <img src="./images/bk_05.jpg">
+                        </span>
+                      </a>
+                    </dt>
+                    <dd>
+                      <div class="title">
+                        <a href="##">伟大的孤独</a>
+                      </div>
+                    </dd>
+                  </dl>
+                </div>
               </div>
             </div>
           </div>
@@ -260,292 +488,355 @@ export default {
 </script>
 
 <style scoped lang="less">
-h1 {
-  font-size: 26px;
-  padding-bottom: 15px;
-}
-.content {
-  height: 3000px;
-  display: flex;
-  .article {
-    width: 715px;
-    padding-right: 40px;
-    .indent {
-      width: 675px;
-      height: 337px;
-      .subjectwrap {
-        width: 100%;
-        height: 252px;
-        display: flex;
-        margin-bottom: 15px;
-        .subject {
-          display: flex;
-          width: 500px;
-          .mainpic {
-            width: 135px;
-            margin: 3px 12px 0 0;
-            img {
-              height: 185px;
-              margin-bottom: 10px;
-            }
-          }
-          .info {
-            font-size: 13px;
-            span {
-              line-height: 160%;
-              color: #666;
-              a {
-                color: #3377aa;
-              }
-              a:hover {
-                background-color: #5081b9;
-                color: #fff;
-              }
-            }
-          }
-        }
-      }
-      .interest {
-        width: 100%;
-        height: 24px;
-        padding: 20px 0 3px 0;
-        display: flex;
-        .btn {
-          width: 51px;
-          height: 24px;
-          line-height: 24px;
-          font-size: 13px;
-          background-color: #ffeada;
-          text-align: center;
-          margin-right: 10px;
-          box-sizing: border-box;
-          border: 1px solid #e9d2c2;
-          border-radius: 4px;
-        }
-        .evaluate {
-          height: 24px;
-          line-height: 24px;
-          display: flex;
-          .rating {
-            height: 19px;
-            img {
-              width: 16px;
-              height: 16px;
-              margin-top: 4px;
-            }
-          }
-        }
-      }
-      .gtleft {
-        display: flex;
-        justify-content: space-between;
-        .menu {
-          width: 290px;
-          height: 14px;
-          padding-top: 6px;
-          display: flex;
-          justify-content: space-between;
-          li {
-            .bn-sharing {
-              display: flex;
-            }
-            img {
-              width: 10px;
-              height: 11px;
-              display: inline;
-              font-size: 0;
-              margin: 2px 4px 0 0;
-            }
-            a:hover {
-              background-color: #5081b9;
-              color: #fff;
-            }
-            .nabla {
-              width: 0px;
-              height: 0px;
-              border-top: 6px solid #c1c1c1;
-              border-left: 5px solid transparent;
-              border-right: 5px solid transparent;
-              margin: 5px 0 0 3px;
-            }
-          }
-        }
-        .recommendBtn {
-          width: 26px;
-          height: 19px;
-          border: 1px solid #eaf4ef;
-          padding: 0 8px;
-          line-height: 19px;
-          border-radius: 3px;
-          background-color: #f2f8f2;
-          a {
-            color: #4f946e;
-          }
-        }
-        .recommendBtn:hover {
-          border-color: #c4e2d8;
-        }
-      }
-    }
-    .interest_sectl {
-      width: 155px;
-      height: 157px;
-      padding-left: 15px;
-      border-left: 1px solid #f4f4f4;
-      margin-top: 2px;
-      .rating_wrap {
-        width: 155px;
-        height: 142px;
-        padding-bottom: 15px;
-        color: #9b9b9b;
-        font: 12px Helvetica, Arial, sans-serif;
-        font-size: 12px;
-        .rating_logo {
-          font-size: 12px;
-        }
-        .rating_self {
-          width: 155px;
-          height: 60px;
-          span {
-            display: inline-block;
-            font: 12px Helvetica, Arial, sans-serif;
-            float: left;
-            font-size: 28px;
-            color: #494949;
-            width: 46.5px;
-            height: 56px;
-            line-height: 56px;
-          }
-          .rating_right {
-            float: left;
-            width: 75px;
-            height: 40px;
-            padding: 10px 0 10px 6px;
-            .star {
-              width: 75px;
-              height: 15px;
-              margin-top: 1px;
-              background: url(./images/star.png) no-repeat 0 -15px;
-            }
-            .rating_sum {
-              width: 100%;
-              height: 24px;
-              line-height: 24px;
-              a {
-                font-size: 12px;
-                color: #5081b9;
-              }
-              a:hover {
-                background-color: #5081b9;
-                color: #fff;
-              }
-            }
-          }
-        }
-        .starstop {
-          margin-right: 5px;
-        }
-        .power {
-          display: inline-block;
-          height: 10px;
-          margin: 1px 4px;
-          background-color: #ffd596;
-        }
-      }
-    }
-    .related_info {
-      width: 675px;
-      height: 3000px;
-      font-size: 13px;
-      h2 {
-        font: 12px/1.3 "Microsoft YaHei", Tahoma, Helvetica, Arial, "\5b8b\4f53",
-          sans-serif;
-        font-size: 16px;
-        color: #007722;
-        line-height: 150%;
-        height: 24px;
-        margin: 24px 0 3px 0;
-      }
+.wrapper {
+  width: 100%;
+  height: 3500px;
+  font-size: 13px;
+  h1 {
+    font-size: 26px;
+    padding-bottom: 15px;
+  }
+  .content {
+    display: flex;
+    .article {
+      width: 715px;
+      padding-right: 40px;
       .indent {
-        height: 396px;
-        .intro {
-          p {
-            font: 12px Helvetica, Arial, sans-serif;
-            font-size: 13px;
-            line-height: 162%;
-            color: #111;
-            text-indent: 2em;
-            word-break: normal;
-            margin: 13px 0;
+        width: 675px;
+        height: 337px;
+        .subjectwrap {
+          width: 100%;
+          height: 252px;
+          display: flex;
+          margin-bottom: 15px;
+          .subject {
+            display: flex;
+            width: 500px;
+            .mainpic {
+              width: 135px;
+              margin: 3px 12px 0 0;
+              img {
+                height: 185px;
+                margin-bottom: 10px;
+              }
+            }
+            .info {
+              font-size: 13px;
+              span {
+                line-height: 160%;
+                color: #666;
+                a {
+                  color: #3377aa;
+                }
+                a:hover {
+                  background-color: #5081b9;
+                  color: #fff;
+                }
+              }
+            }
           }
         }
-      }
-      .online-partner {
-        height: 26px;
-        line-height: 26px;
-        display: flex;
-        align-items: center;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        margin-bottom: 20px;
-        border-bottom: 1px solid #d8d8d8;
-        .online-type {
+        .interest {
+          width: 100%;
+          height: 24px;
+          padding: 20px 0 3px 0;
           display: flex;
-          .online-read-or-audio {
-            height: 26px;
-            a {
-              display: flex;
-              align-items: center;
-              margin-right: 10px;
-              padding: 0 15px 0 7px;
-              border: 1px solid rgba(0, 0, 0, 0.25);
-              border-radius: 5px;
-              vertical-align: middle;
-              color: rgba(0, 0, 0, 0.9);
+          .btn {
+            width: 51px;
+            height: 24px;
+            line-height: 24px;
+            font-size: 13px;
+            background-color: #ffeada;
+            text-align: center;
+            margin-right: 10px;
+            box-sizing: border-box;
+            border: 1px solid #e9d2c2;
+            border-radius: 4px;
+          }
+          .evaluate {
+            height: 24px;
+            line-height: 24px;
+            display: flex;
+            .rating {
+              height: 19px;
               img {
                 width: 16px;
                 height: 16px;
-                border-radius: 50%;
-                box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.6);
-              }
-              span {
-                display: inline-block;
-                height: 24px;
-                line-height: 24px;
+                margin-top: 4px;
               }
             }
           }
         }
-      }
-      .blank20 {
-        height: 54px;
-        margin-bottom: 20px;
-        .indent {
-          height: 27px;
+        .gtleft {
           display: flex;
           justify-content: space-between;
-          span {
-            .tag {
-              width: auto;
-              word-break: keep-all;
-              white-space: nowrap;
-              background-color: #f5f5f5;
-              color: #37a;
-              font-size: 13px;
-              padding: 2px 11px 0;
+          .menu {
+            width: 290px;
+            height: 14px;
+            padding-top: 6px;
+            display: flex;
+            justify-content: space-between;
+            li {
+              .bn-sharing {
+                display: flex;
+              }
+              img {
+                width: 10px;
+                height: 11px;
+                display: inline;
+                font-size: 0;
+                margin: 2px 4px 0 0;
+              }
+              a:hover {
+                background-color: #5081b9;
+                color: #fff;
+              }
+              .nabla {
+                width: 0px;
+                height: 0px;
+                border-top: 6px solid #c1c1c1;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                margin: 5px 0 0 3px;
+              }
+            }
+          }
+          .recommendBtn {
+            width: 26px;
+            height: 19px;
+            border: 1px solid #eaf4ef;
+            padding: 0 8px;
+            line-height: 19px;
+            border-radius: 3px;
+            background-color: #f2f8f2;
+            a {
+              color: #4f946e;
+            }
+          }
+          .recommendBtn:hover {
+            border-color: #c4e2d8;
+          }
+        }
+      }
+      .interest_sectl {
+        width: 155px;
+        height: 157px;
+        padding-left: 15px;
+        border-left: 1px solid #f4f4f4;
+        margin-top: 2px;
+        .rating_wrap {
+          width: 155px;
+          height: 142px;
+          padding-bottom: 15px;
+          color: #9b9b9b;
+          font: 12px Helvetica, Arial, sans-serif;
+          font-size: 12px;
+          .rating_logo {
+            font-size: 12px;
+          }
+          .rating_self {
+            width: 155px;
+            height: 60px;
+            span {
               display: inline-block;
-              margin: 0 3px 5px 0;
-              line-height: 20px;
+              font: 12px Helvetica, Arial, sans-serif;
+              float: left;
+              font-size: 28px;
+              color: #494949;
+              width: 46.5px;
+              height: 56px;
+              line-height: 56px;
+            }
+            .rating_right {
+              float: left;
+              width: 75px;
+              height: 40px;
+              padding: 10px 0 10px 6px;
+              .star {
+                width: 75px;
+                height: 15px;
+                margin-top: 1px;
+                background: url(./images/star.png) no-repeat 0 -15px;
+              }
+              .rating_sum {
+                width: 100%;
+                height: 24px;
+                line-height: 24px;
+                a {
+                  font-size: 12px;
+                  color: #5081b9;
+                }
+                a:hover {
+                  background-color: #5081b9;
+                  color: #fff;
+                }
+              }
+            }
+          }
+          .starstop {
+            margin-right: 5px;
+          }
+          .power {
+            display: inline-block;
+            height: 10px;
+            margin: 1px 4px;
+            background-color: #ffd596;
+          }
+        }
+      }
+      .related_info {
+        width: 675px;
+        font-size: 13px;
+        h2 {
+          font: 12px/1.3 "Microsoft YaHei", Tahoma, Helvetica, Arial,
+            "\5b8b\4f53", sans-serif;
+          font-size: 16px;
+          color: #007722;
+          line-height: 150%;
+          height: 24px;
+          margin: 24px 0 3px 0;
+        }
+        .indent {
+          height: 396px;
+          .intro {
+            p {
+              font: 12px Helvetica, Arial, sans-serif;
+              font-size: 13px;
+              line-height: 162%;
+              color: #111;
+              text-indent: 2em;
+              word-break: normal;
+              margin: 13px 0;
+            }
+          }
+        }
+        .online-partner {
+          height: 26px;
+          line-height: 26px;
+          display: flex;
+          align-items: center;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          margin-bottom: 20px;
+          border-bottom: 1px solid #d8d8d8;
+          .online-type {
+            display: flex;
+            .online-read-or-audio {
+              height: 26px;
+              a {
+                display: flex;
+                align-items: center;
+                margin-right: 10px;
+                padding: 0 15px 0 7px;
+                border: 1px solid rgba(0, 0, 0, 0.25);
+                border-radius: 5px;
+                vertical-align: middle;
+                color: rgba(0, 0, 0, 0.9);
+                img {
+                  width: 16px;
+                  height: 16px;
+                  border-radius: 50%;
+                  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.6);
+                }
+                span {
+                  display: inline-block;
+                  height: 24px;
+                  line-height: 24px;
+                }
+              }
+            }
+          }
+        }
+        .blank20 {
+          height: 54px;
+          margin-bottom: 20px;
+          .indent {
+            height: 27px;
+            display: flex;
+            justify-content: space-between;
+            span {
+              .tag {
+                width: auto;
+                word-break: keep-all;
+                white-space: nowrap;
+                background-color: #f5f5f5;
+                color: #37a;
+                font-size: 13px;
+                padding: 2px 11px 0;
+                display: inline-block;
+                margin: 0 3px 5px 0;
+                line-height: 20px;
+              }
+            }
+          }
+        }
+        .subject_show {
+          .content {
+            width: 700px;
+            height: 268px;
+            dl {
+              width: 115px;
+              margin: 15px 25px 15px 0;
+              text-align: center;
+              dt {
+                a {
+                  img {
+                    width: 117px;
+                  }
+                }
+              }
+              dd {
+                .title {
+                  width: 115px;
+                  line-height: 160%;
+                  a {
+                    color: #3377aa;
+                  }
+                  a:link,
+                  a:visited,
+                  a:focus {
+                    color: #3377aa;
+                  }
+                  a:hover {
+                    background-color: #3377aa;
+                    color: white;
+                  }
+                }
+                .price {
+                  width: 115px;
+                  height: 21px;
+                  line-height: 21px;
+                  color: #111;
+                }
+              }
+            }
+          }
+          .content_box{
+            width: 700px;
+            height: 536px;
+            display: flex;
+            flex-direction: column;
+            .box{
+              width: 700px;
+              height: 268px;
+              display: flex;
+              justify-content: space-between;
+              dl{
+                height: 196px;
+              }
+              dd{
+                padding-top: 3px;
+              }
             }
           }
         }
       }
     }
-  }
-  .aside {
-    width: 300px;
-    height: 3000px;
-    background-color: pink;
+    .aside {
+      width: 300px;
+      height: 3000px;
+      background-color: pink;
+    }
   }
 }
 </style>
