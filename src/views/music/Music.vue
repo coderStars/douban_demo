@@ -54,7 +54,62 @@
             <li><a>单曲</a></li>
           </ul>
         </div>
-        <div class="content"></div>
+        <div class="content">
+          <ul>
+            <li>
+              <a class="img"><img :src="getImages('https://img1.doubanio.com/view/fm_songlist_cover/large/public/3306419.jpg')" /></a>
+              <div class="itemInfo">
+                <h3><a>AC/DC：钢铁侠最爱的乐队，了解一下？</a></h3>
+                <p class="desc">
+                  锅炉不是锅 制作 | 294 收藏
+                </p>
+                <p class="intro">1.Back In Black</p>
+                <p class="intro">2.Highway To Hell</p>
+                <p class="intro">3.Shoot to Thrill</p>
+                <p class="intro">...</p>
+              </div>
+            </li>
+            <li>
+              <a class="img"><img :src="getImages('https://img1.doubanio.com/view/fm_songlist_cover/large/public/3306419.jpg')" /></a>
+              <div class="itemInfo">
+                <h3><a>AC/DC：钢铁侠最爱的乐队，了解一下？</a></h3>
+                <p class="desc">
+                  锅炉不是锅 制作 | 294 收藏
+                </p>
+                <p class="intro">1.Back In Black</p>
+                <p class="intro">2.Highway To Hell</p>
+                <p class="intro">3.Shoot to Thrill</p>
+                <p class="intro">...</p>
+              </div>
+            </li>
+            <li>
+              <a class="img"><img :src="getImages('https://img1.doubanio.com/view/fm_songlist_cover/large/public/3306419.jpg')" /></a>
+              <div class="itemInfo">
+                <h3><a>AC/DC：钢铁侠最爱的乐队，了解一下？</a></h3>
+                <p class="desc">
+                  锅炉不是锅 制作 | 294 收藏
+                </p>
+                <p class="intro">1.Back In Black</p>
+                <p class="intro">2.Highway To Hell</p>
+                <p class="intro">3.Shoot to Thrill</p>
+                <p class="intro">...</p>
+              </div>
+            </li>
+            <li>
+              <a class="img"><img :src="getImages('https://img1.doubanio.com/view/fm_songlist_cover/large/public/3306419.jpg')" /></a>
+              <div class="itemInfo">
+                <h3><a>AC/DC：钢铁侠最爱的乐队，了解一下？</a></h3>
+                <p class="desc">
+                  锅炉不是锅 制作 | 294 收藏
+                </p>
+                <p class="intro">1.Back In Black</p>
+                <p class="intro">2.Highway To Hell</p>
+                <p class="intro">3.Shoot to Thrill</p>
+                <p class="intro">...</p>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="rightPage">
@@ -95,8 +150,8 @@
 
       <div class="singleRank">
         <div class="singleTitle">
-          <span>本周单曲榜</span>
-          <button>播放全部</button>
+          <span class="leftText">本周单曲榜</span>
+          <button class="singleBtn">播放全部</button>
         </div>
         <div class="content">
           <ul class="contentTitle">
@@ -109,10 +164,11 @@
           </ul>
           <div class="contentWrapper">
             <ul class="contentCenter">
-              <li>
-                <img />
+              <li v-for="(item, index) in weekMusicList[0] && weekMusicList[0].imgList" :key="item.id">
+                <a class="contentImg"><img :src="getImages(item.imgUrl)"/></a>
                 <div class="textInfo">
-
+                  <div class="textTop">{{item.username}}</div>
+                  <div class="textbottom">{{item.type}}</div>
                 </div>
               </li>
             </ul>
@@ -143,7 +199,8 @@ import CallOur from "./childCom/callOur/callOur.vue";
 import MusicCover from "./childCom/musicCover/musicCover.vue";
 import NewAlbumCover from "./childCom/newAlbumCover/newAlbumCover.vue";
 
-import { getMusicImgList } from "@/api/music";
+import getImages from "@/utils/getImgUrl";
+import { getMusicImgList, getAlbumImgList } from "@/api/music";
 
 export default {
   name: "Music",
@@ -160,11 +217,13 @@ export default {
         require("@/assets/img/music/banner-2912.jpg")
       ],
       imgPopularList: [],
+      weekMusicList: [],
       imgIndex: 0
     };
   },
   mounted() {
     this.getMusicImgList();
+    this.getWeekImgList();
     var mySwiper = new Swiper(this.$refs.swiperContainer, {
       // direction: 'vertical', // 垂直切换选项
       loop: true, // 循环模式选项
@@ -188,7 +247,11 @@ export default {
     },
     changeImgIndex(index) {
       this.imgIndex = index;
-    }
+    },
+    async getWeekImgList() {
+      this.weekMusicList = await getAlbumImgList();
+    },
+    getImages
   }
 };
 </script>
@@ -277,7 +340,8 @@ export default {
     }
     .albumRank {
       width: 100%;
-      height: 489px;
+      // height: 489px;
+      margin-bottom: 20px;
       .title {
         height: 30px;
         line-height: 30px;
@@ -357,6 +421,72 @@ export default {
           width: 0px;
         }
       }
+
+      .content {
+        padding: 15px 0px 15px 15px;
+        background: #f4f7f8;
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          li {
+            width: 315px;
+            height: 166px;
+            margin: 0 10px 15px -2px;
+            background: #ffffff;
+            border: 1px solid #eeeeee;
+            display: flex;
+
+            position: relative;
+            a {
+              cursor: pointer;
+            }
+            a.img {
+              cursor: pointer;
+              position: absolute;
+              left: 10px;
+              top: 10px;
+            }
+            img {
+              width: 41px;
+              height: 41px;
+            }
+
+            .itemInfo {
+              width: 237px;
+              padding: 16px 13px 16px 63px;
+              h3 {
+                height: 17px;
+                width: 100%;
+                font-weight: normal;
+                a {
+                  display: block;
+                  background: transparent;
+                  width: 100%;
+                  margin: 0;
+                  font-size: 15px;
+                  color: #138a64;
+                  line-height: 15px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
+              }
+              .desc {
+                font-size: 13px;
+                color: #999;
+                line-height: 13px;
+                margin: 13px 0;
+              }
+              .intro {
+                font-size: 14px;
+                color: #666666;
+                line-height: 19px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -415,6 +545,7 @@ export default {
       }
     }
     .singleRank {
+      margin-bottom: 40px;
       .singleTitle {
         font-size: 15px;
         color: #222;
@@ -425,6 +556,17 @@ export default {
         margin-bottom: 10px;
         border-bottom: 1px solid #e4e2e2;
         padding-bottom: 4px;
+
+        .singleBtn {
+          background: #139d72;
+          border: 1px solid #138a64;
+          border-radius: 3px;
+          font-size: 13px;
+          color: #fff;
+          line-height: 22px;
+          width: 88px;
+          height: 23px;
+        }
 
         button {
           float: right;
@@ -437,7 +579,7 @@ export default {
             list-style: none;
             float: left;
             position: relative;
-            margin-right: 5px;
+            margin: 0 5px;
             font-size: 13px;
             color: #999999;
             a {
@@ -448,7 +590,7 @@ export default {
           li:after {
             position: absolute;
             transform: translateY(-50%);
-            right: -3px;
+            right: -5px;
             top: 50%;
             content: "";
             display: block;
@@ -462,8 +604,48 @@ export default {
           }
         }
         .contentWrapper {
-          height: 600px;
+          // height: 600px;
           width: 100%;
+        }
+      }
+
+      .contentWrapper {
+        li {
+          display: flex;
+          width: 100%;
+          height: 60px;
+          vertical-align: top;
+          .contentImg {
+            display: inline-block;
+            img {
+              width: 48px;
+              height: 48px;
+              border-radius: 50%;
+              margin-top: 10px;
+            }
+          }
+
+          .textInfo {
+            margin-left: 10px;
+            .textTop {
+              max-width: 200px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              background-color: transparent;
+              font-size: 15px;
+              color: #138a64;
+              line-height: 14px;
+              padding: 12px 0 8px 0;
+            }
+            .textBottom {
+              font-size: 13px;
+              color: #999;
+              line-height: 13px;
+              padding: 0;
+              margin: 0;
+            }
+          }
         }
       }
     }

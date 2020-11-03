@@ -6,3 +6,10 @@ export const getMusicImgList = () => {
     method: 'get'
   })
 }
+
+export const getAlbumImgList = () => {
+  return request({
+    url: '/getalbumImgList',
+    method: 'get'
+  })
+}

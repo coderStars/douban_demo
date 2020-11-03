@@ -9,16 +9,13 @@
 </template>
 
 <script>
+import getImages from '@/utils/getImgUrl'
+
 export default {
   name: 'musicCover',
   props: ['musicItem'],
   methods: {
-    getImages(_url) {
-      if( _url !== undefined ){
-          let _u = _url.substring( 7 );
-          return 'https://images.weserv.nl/?url=' + _u;
-      }
-    }
+    getImages
   }
 }
 </script>
