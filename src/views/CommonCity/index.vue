@@ -147,7 +147,6 @@ export default {
                 font-size: 28px;
                 font-weight: bold;
             }
-           
         }
         
         //似下拉框
@@ -157,10 +156,6 @@ export default {
             margin-right: 30px;
             margin-top:13px;
             a{  
-                display: inline-block;
-                // width: 44px;
-                height: 14px;
-                line-height: 8px;
                 font-size: 13px;
                 font-weight: bold;
                 // background-color: red;
