@@ -4,6 +4,7 @@ Vue.use(VueRouter)
 
 const Movie = () => import('@/views/movie/index.vue')
 const Music = () => import('@/views/music/Music.vue')
+const Books = () => import('@/views/books/index.vue')
 
 const routes = [
     {
@@ -13,6 +14,10 @@ const routes = [
     {
         path: '/music',
         component: Music
+    },
+    {
+        path: '/books',
+        component: Books
     }
 
 ]

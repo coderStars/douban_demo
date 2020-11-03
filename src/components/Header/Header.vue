@@ -2,7 +2,10 @@
   <div class="header">
     <ul class="leftTitle">
       <li><a>豆瓣</a></li>
-      <li><a>读书</a></li>
+      <li>
+        <!-- <a>读书</a> -->
+        <router-link to="/books">读书</router-link>
+      </li>
       <li>
         <!-- <a>电影</a> -->
         <router-link to="/movie">电影</router-link>
