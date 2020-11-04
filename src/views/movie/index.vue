@@ -252,8 +252,11 @@
         <Latest></Latest>
 
         <Latest></Latest>
+
+        <Gallery></Gallery>
       </div>
 
+      <!-- 左边侧边栏 -->
       <div class="aside">
         <!-- 豆瓣电影评分八问 -->
         <div id="rating_answer">
@@ -346,32 +349,37 @@
         </div>
 
         <!-- 关注我们 -->
-        <div id="contact mod">
+        <div id="contact">
           <h2>关注我们</h2>
           <ul>
             <li>
-              <a class="logo" href="#"><img src="" alt="" /></a><a class="title" href="#">微博</a>
+              <a class="logo" href="#"><img src="../../assets/images/movie/index/home_weibo@2x.jpg" alt="" /></a>
+              <a class="title" href="#">微博</a>
             </li>
             <li>
-              <a class="logo" href="#"><img src="" alt="" /></a><a class="title" href="#">微信</a>
+              <a class="logo" href="#"><img src="../../assets/images/movie/index/home_weixin@2x.jpg" alt="" /></a>
+              <a class="title" href="#">微信</a>
             </li>
             <li>
-              <a class="logo" href="#"><img src="" alt="" /></a><a class="title" href="#">瓣嘴</a>
+              <a class="logo" href="#"><img src="../../assets/images/movie/index/bite_me@2x.jpg" alt="" /></a>
+              <a class="title" href="#">瓣嘴</a>
             </li>
             <li>
-              <a class="logo" href="#"><img src="" alt="" /></a><a class="title" href="#">豆瓣影人PRO</a>
+              <a class="logo" href="#"><img src="../../assets/images/movie/index/home_film_pro@2x.jpg" alt="" /></a>
+              <a class="title" href="#">豆瓣影人PRO</a>
             </li>
             <li>
-              <a class="logo" href="#"><img src="" alt="" /></a><a class="title" href="#">观影club</a>
+              <a class="logo" href="#"><img src="../../assets/images/movie/index/home_club@2x.jpg" alt="" /></a>
+              <a class="title" href="#">观影club</a>
             </li>
           </ul>
         </div>
 
         <!-- 广告 -->
         <div id="advertising">
-          <a href="#"><img src="" alt="" /></a>
+          <a id="active" href="#"><img src="../../assets/images/movie/index/509f463353311cd.jpg" alt="" /></a>
           <div class="article-info">
-            <p class="title">你的音乐记忆-豆瓣FM 11岁啦</p>
+            <a class="title">你的音乐记忆-豆瓣FM 11岁啦</a>
             <span>豆瓣FM</span>
           </div>
         </div>
@@ -382,11 +390,14 @@
 
 <script>
 import Swiper from "swiper";
+
 import Latest from "../../components/Latest/Latest";
+import Gallery from './gallery/Gallery'
 export default {
   name: "Movie",
   components: {
     Latest,
+    Gallery
   },
   data() {
     return {};
@@ -396,7 +407,7 @@ export default {
     var mySwiper = new Swiper(".screening", {
       direction: "horizontal", // 横向纵向切换选项
       loop: true, // 循环模式选项
-      // autoplay: true, // 自动循环
+      autoplay: true, // 自动循环
       slidesPerView: 5, // 一屏显示几个
       loopedSlides: 5,
 
@@ -514,12 +525,10 @@ export default {
               height: 18px;
             }
             .pre div {
-              background: url("../../assets/images/movie/index/slide_swithc_2.png")
-                0 0;
+              background: url("../../assets/images/movie/index/slide_swithc_2.png") 0 0;
             }
             .next div {
-              background: url("../../assets/images/movie/index/slide_swithc_2.png")
-                18px 0;
+              background: url("../../assets/images/movie/index/slide_swithc_2.png") 18px 0;
             }
           }
         }
@@ -665,24 +674,57 @@ export default {
 
     // 关注我们
     #contact {
-      h2{
-
-      }
+      margin-bottom: 50px;
       ul{
+        display: flex;
+        justify-content: space-around;
         li{
+          width: 60px;
+          text-align: center;
           .logo{
+            &:hover{
+              background: transparent;
+            }
             img{
-              
+              width: 40px;
+              height: 40px;
+              margin-bottom: 3px;
             }
           }
           .title{
-
+            display: inline-block;
+            font-size: 12px;
           }
         }
       }
     }
 
+    // 广告
     #advertising {
+      position: relative;
+      width: 280px;
+      height: 80px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      #active img{
+        vertical-align: bottom;
+        width: 96px;
+      }
+      .article-info{
+        position: absolute;
+        top: 20px;
+        left: 120px;
+        .title{
+          color: rgb(51, 119, 170);
+          font-size: 12px;
+        }
+        span{
+          display: block;
+          font-size: 12px;
+          color: #999;
+          margin-top: 10px;
+        }
+      }
     }
   }
 }

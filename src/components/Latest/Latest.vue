@@ -405,6 +405,8 @@ export default {
 }
 // 内容容器
 .contentContainer {
+  margin-bottom: 40px;
+
   .slide-container {
     display: flex;
     width: 100%;
