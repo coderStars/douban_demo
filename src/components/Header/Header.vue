@@ -27,7 +27,11 @@
     </ul>
     <ul class="rightTitle">
       <li><a>下载豆瓣客户端</a></li>
-      <li><a>登录/注册</a></li>
+      <!-- <li><a>登录/注册</a></li> -->
+      <li>
+        <!-- <a>登录/注册</a> -->
+        <router-link to="/login">登录/注册</router-link>
+        </li>
     </ul>
   </div>
 </template>

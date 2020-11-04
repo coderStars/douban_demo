@@ -6,6 +6,7 @@ const Movie = () => import('@/views/movie/index.vue')
 const Music = () => import('@/views/music/Music.vue')
 const Books = () => import('@/views/books/index.vue')
 const CommonCity = () => import('@/views/CommonCity/index.vue')
+const Login = () => import('@/views/login/Login.vue')
 
 const routes = [{
     path: '/movie',
@@ -30,6 +31,10 @@ const routes = [{
 {
     path: '/booksinfo',
     component: Books
+},
+{
+    path: '/login',
+    component: Login
 }
 
 ]
