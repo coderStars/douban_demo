@@ -336,9 +336,8 @@
 <script>
 import './css/index.css'
 import Swiper from "swiper";
-import "swiper/css/swiper.min.css";
 
-import CityHeader from '../../components/CityHeader'
+import CityHeader from '@/components/CityHeader'
 
 export default {
   name: 'CommonCity',
@@ -353,7 +352,7 @@ export default {
 }
 </script>
 
-<style scoped lang='less'>
+<style lang='less' scoped>
 @import '/src/assets/css/base.css';
 // 主体
 body{
