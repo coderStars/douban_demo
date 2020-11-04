@@ -818,7 +818,6 @@ export default {
             flex-direction: column;
             .box{
               width: 700px;
-              height: 268px;
               display: flex;
               justify-content: space-between;
               dl{
