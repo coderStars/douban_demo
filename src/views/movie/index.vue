@@ -262,7 +262,7 @@
 
         <!-- 口碑单 -->
         <div id="billboard">
-          <h2 id="billboard-hd">一周口碑榜<a href="#">更多榜单</a></h2>
+          <h2 id="billboard-hd">一周口碑榜<a href="#">更多榜单»</a></h2>
           <ul id="billboard-bd">
             <li>
               <span class="order">1</span
@@ -320,9 +320,28 @@
         <div id="contact-and-cooperation">
           <h2 id="contact-and-cooperation-hd">合作联系</h2>
           <ul>
-            <li>电影合作邮箱：<img src="" alt="电影合作邮箱" /></li>
-            <li>电视剧合作邮箱：<img src="" alt="电视剧合作邮箱" /></li>
-            <li>豆瓣影人PRO合作邮箱：<img src="" alt="豆瓣影人邮箱" /></li>
+            <li>
+              电影合作邮箱：<img
+                src="../../assets/images/movie/index/email_movie.png"
+                alt="电影合作邮箱"
+              />
+            </li>
+            <li>
+              电视剧合作邮箱：<img
+                src="../../assets/images/movie/index/email_tv.png"
+                alt="电视剧合作邮箱"
+              /> <img
+                class="new"
+                src="../../assets/images/movie/index/ic_new (1).png"
+                alt="mew"
+              />
+            </li>
+            <li>
+              豆瓣影人PRO合作邮箱：<img
+                src="../../assets/images/movie/index/email_pro.png"
+                alt="豆瓣影人邮箱"
+              />
+            </li>
           </ul>
         </div>
 
@@ -331,19 +350,19 @@
           <h2>关注我们</h2>
           <ul>
             <li>
-              <a href="#"><img src="" alt="" /></a><a href="#">微博</a>
+              <a class="logo" href="#"><img src="" alt="" /></a><a class="title" href="#">微博</a>
             </li>
             <li>
-              <a href="#"><img src="" alt="" /></a><a href="#">微信</a>
+              <a class="logo" href="#"><img src="" alt="" /></a><a class="title" href="#">微信</a>
             </li>
             <li>
-              <a href="#"><img src="" alt="" /></a><a href="#">瓣嘴</a>
+              <a class="logo" href="#"><img src="" alt="" /></a><a class="title" href="#">瓣嘴</a>
             </li>
             <li>
-              <a href="#"><img src="" alt="" /></a><a href="#">豆瓣影人PRO</a>
+              <a class="logo" href="#"><img src="" alt="" /></a><a class="title" href="#">豆瓣影人PRO</a>
             </li>
             <li>
-              <a href="#"><img src="" alt="" /></a><a href="#">观影club</a>
+              <a class="logo" href="#"><img src="" alt="" /></a><a class="title" href="#">观影club</a>
             </li>
           </ul>
         </div>
@@ -421,6 +440,14 @@ export default {
   a:active {
     color: #ffffff;
     background: rgb(255, 153, 51);
+  }
+  h2 {
+    font-weight: normal;
+    font-size: 15px;
+    color: #111;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
   }
   // 内容区左边部分
   .aircle {
@@ -558,38 +585,104 @@ export default {
       }
     }
   }
-  
+
   // 内容区右边部分
   .aside {
     width: 300px;
     margin-left: 25px;
-    #rating_answer{
+    #rating_answer {
       padding: 12px 0 12px 18px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       background: #f2f7f6;
-      a{
+      a {
         color: #3377aa;
       }
     }
-    #billboard{
-      billboard-hd{
-        
+    #billboard {
+      #billboard-hd {
+        margin-bottom: 5px;
+        font-weight: normal;
+        a {
+          margin-left: 12px;
+        }
+      }
+      #billboard-bd {
+        margin-bottom: 50px;
+        li {
+          line-height: 0.62;
+          padding: 7px 0;
+          .order {
+            display: inline-block;
+            width: 20px;
+            font-size: 9px;
+            text-align: center;
+            padding: 7px 0;
+            color: #111;
+            box-sizing: border-box;
+          }
+        }
       }
     }
-    #doulist{
-
+    #doulist {
+      margin-bottom: 40px;
+      h2 {
+        margin-bottom: 0;
+      }
+      ul {
+        li {
+          padding: 15px 0;
+          border-bottom: 1px solid #eaeaea;
+          .title {
+            float: right;
+          }
+        }
+      }
     }
 
-    #contact-and-cooperation{
-
+    // 合作联系
+    #contact-and-cooperation {
+      margin-bottom: 40px;
+      ul {
+        li {
+          height: 24px;
+          font-size: 13px;
+          color: #111;
+          line-height: 24px;
+          font-family: Microsoft YaHei;
+          img {
+            height: 14px;
+            vertical-align: middle;
+            margin-top: -2px;
+          }
+          .new {
+            width: 20px;
+            height: 9px;
+            margin-top: -3px;
+          }
+        }
+      }
     }
 
-    #contact{
+    // 关注我们
+    #contact {
+      h2{
 
+      }
+      ul{
+        li{
+          .logo{
+            img{
+              
+            }
+          }
+          .title{
+
+          }
+        }
+      }
     }
 
-    #advertising{
-
+    #advertising {
     }
   }
 }
