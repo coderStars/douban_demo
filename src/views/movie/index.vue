@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Search></Search>
     <!-- 中间内容区 -->
     <div id="wapper">
       <div class="aircle">
