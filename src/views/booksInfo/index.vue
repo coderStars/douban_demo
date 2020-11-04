@@ -475,7 +475,10 @@
           </div>
         </div>
         <!-- 右侧 -->
-        <div class="aside"></div>
+        <div class="aside">
+          <router-link to="/cart">加入购物车、
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -489,9 +492,10 @@ export default {
 
 <style scoped lang="less">
 .wrapper {
-  width: 100%;
+  width:1040px;
   height: 3500px;
   font-size: 13px;
+  margin: 0 auto;
   h1 {
     font-size: 26px;
     padding-bottom: 15px;

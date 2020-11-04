@@ -5,7 +5,7 @@
     <div class="bodyWrapper">
       <router-view></router-view>
     </div>
-    <Footer />
+    <Footer v-show="!$route.meta.isHide"/>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
 
 @import 'assets/css/reset.css';
 .bodyWrapper {
-  width: 1040px;
+  width: 100%;
   margin: 0 auto;
 }
 body,html {
