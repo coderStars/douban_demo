@@ -12,44 +12,50 @@ const showDetail = () => import('@/views/showDetail')
 const BooksInfo = () => import('@/views/booksInfo/index.vue')
 const Cart = () => import('@/views/cart/index.vue')
 
-const routes = [{
-    path: '/movie',
-    component: Movie,
-    name: 'movie',
-    meta: {
-        isShow: true
+const routes = [
+    {
+        path: '/',
+        component: Books,
+        meta: { isShow: true }
     },
-},
-{
-    path: '/music',
-    component: Music,
-    meta: {
-        isShow: true
+    {
+        path: '/movie',
+        component: Movie,
+        name: 'movie',
+        meta: {
+            isShow: true
+        },
     },
-},
-{
-    path: '/books',
-    component: Books,
-    meta: {
-        isShow: true
+    {
+        path: '/music',
+        component: Music,
+        meta: {
+            isShow: true
+        },
     },
-},
-{
-    path: '/commoncity',
-    component: CommonCity
-},
-{
-    path: '/booksinfo',
-    component: Books
-},
-{
-    path: '/login',
-    component: Login
-},
-{
-    path: '/doupin',
-    component: Doupin
-}
+    {
+        path: '/books',
+        component: Books,
+        meta: {
+            isShow: true
+        },
+    },
+    {
+        path: '/commoncity',
+        component: CommonCity
+    },
+    {
+        path: '/booksinfo',
+        component: Books
+    },
+    {
+        path: '/login',
+        component: Login
+    },
+    {
+        path: '/doupin',
+        component: Doupin
+    }
 ]
 
 
