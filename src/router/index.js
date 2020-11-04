@@ -5,60 +5,51 @@ Vue.use(VueRouter)
 const Movie = () => import('@/views/movie/index.vue')
 const Music = () => import('@/views/music/Music.vue')
 const Books = () => import('@/views/books/index.vue')
+const Doupin = () => import('@/views/doupin/index.vue')
 const CommonCity = () => import('@/views/CommonCity/index.vue')
 const Login = () => import('@/views/login/Login.vue')
-<<<<<<< HEAD
 const showDetail = () => import('@/views/showDetail')
-=======
 const BooksInfo = () => import('@/views/booksInfo/index.vue')
 const Cart = () => import('@/views/cart/index.vue')
->>>>>>> liuyue
 
-const routes = [
-{
-    path: '/',
-    component: Books,
-    meta: { isShow: true }
-}, 
-{
+const routes = [{
     path: '/movie',
     component: Movie,
     name: 'movie',
-    meta: { isShow: true },
+    meta: {
+        isShow: true
+    },
 },
 {
     path: '/music',
     component: Music,
-    meta: { isShow: true },
+    meta: {
+        isShow: true
+    },
 },
 {
     path: '/books',
     component: Books,
-    meta: { isShow: true },
-},
-{
-    path: '/showdetail',
-    component: showDetail,
+    meta: {
+        isShow: true
+    },
 },
 {
     path: '/commoncity',
-    component: CommonCity,
+    component: CommonCity
 },
 {
     path: '/booksinfo',
-    component: BooksInfo,
-    meta: { isShow: true },
+    component: Books
 },
 {
     path: '/login',
     component: Login
 },
 {
-    path: '/cart',
-    component: Cart,
-    meta: { isHide: true },
+    path: '/doupin',
+    component: Doupin
 }
-
 ]
 
 
@@ -66,5 +57,4 @@ const router = new VueRouter({
     routes
 
 })
-
-export default router 
+export default router
