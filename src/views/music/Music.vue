@@ -1,193 +1,197 @@
 <template>
-  <div class="musicWrapper">
-    <div class="leftPage">
-      <div class="swiper-container" ref="swiperContainer">
-        <div class="swiper-wrapper">
-          <div
-            class="swiper-slide"
-            v-for="(item, index) in bannerList"
-            :key="index"
-          >
-            <img :src="item" alt="" />
+  <div class="musicContainer">
+    <Search inpText="唱片名、表演者、条码、ISRC"  :buttomText="buttomTextList"></Search>
+    <Topics></Topics>
+    <div class="musicWrapper">
+      <div class="leftPage">
+        <div class="swiper-container" ref="swiperContainer">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide"
+              v-for="(item, index) in bannerList"
+              :key="index"
+            >
+              <img :src="item" alt="" />
+            </div>
+          </div>
+          <!-- 如果需要分页器 -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+        <div class="popularPerson">
+          <div class="title">
+            <ul class="titleList">
+              <li :class="{active: imgIndex === 0}" @click="changeImgIndex(0)"><a>本周流行音乐人</a></li>
+              <li :class="{active: imgIndex === 1}" @click="changeImgIndex(1)"><a>上升最快音乐人</a></li>
+            </ul>
+          </div>
+          <div class="content">
+            <MusicCover :musicItem="item"  v-for="(item, index) in (imgPopularList[imgIndex] && imgPopularList[imgIndex].imgList) " :key="item.id"/>
           </div>
         </div>
-        <!-- 如果需要分页器 -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-      <div class="popularPerson">
-        <div class="title">
-          <ul class="titleList">
-            <li :class="{active: imgIndex === 0}" @click="changeImgIndex(0)"><a>本周流行音乐人</a></li>
-            <li :class="{active: imgIndex === 1}" @click="changeImgIndex(1)"><a>上升最快音乐人</a></li>
-          </ul>
+        <div class="albumRank">
+          <div class="title">
+            <h3>新碟榜</h3>
+            <ul class="titleList">
+              <li><a>最热</a></li>
+              <li><a>华语</a></li>
+              <li><a>欧美</a></a></li>
+              <li><a>日韩</a></li>
+              <li><a>单曲</a></li>
+            </ul>
+          </div>
+          <div class="content">
+            <NewAlbumCover />
+          </div>
         </div>
-        <div class="content">
-          <MusicCover :musicItem="item"  v-for="(item, index) in (imgPopularList[imgIndex] && imgPopularList[imgIndex].imgList) " :key="item.id"/>
-        </div>
-      </div>
-      <div class="albumRank">
-        <div class="title">
-          <h3>新碟榜</h3>
-          <ul class="titleList">
-            <li><a>最热</a></li>
-            <li><a>华语</a></li>
-            <li><a>欧美</a></a></li>
-            <li><a>日韩</a></li>
-            <li><a>单曲</a></li>
-          </ul>
-        </div>
-        <div class="content">
-          <NewAlbumCover />
-        </div>
-      </div>
 
-      <!-- 热门歌曲 -->
-      <div class="hotMusic">
-        <div class="title">
-          <h3>近期热门歌曲</h3>
-          <ul class="titleList">
-            <li><a>最热</a></li>
-            <li><a>华语</a></li>
-            <li><a>欧美</a></a></li>
-            <li><a>日韩</a></li>
-            <li><a>单曲</a></li>
-          </ul>
-        </div>
-        <div class="content">
-          <ul>
-            <li>
-              <a class="img"><img :src="getImages('https://img1.doubanio.com/view/fm_songlist_cover/large/public/3306419.jpg')" /></a>
-              <div class="itemInfo">
-                <h3><a>AC/DC：钢铁侠最爱的乐队，了解一下？</a></h3>
-                <p class="desc">
-                  锅炉不是锅 制作 | 294 收藏
-                </p>
-                <p class="intro">1.Back In Black</p>
-                <p class="intro">2.Highway To Hell</p>
-                <p class="intro">3.Shoot to Thrill</p>
-                <p class="intro">...</p>
-              </div>
-            </li>
-            <li>
-              <a class="img"><img :src="getImages('https://img1.doubanio.com/view/fm_songlist_cover/large/public/3306419.jpg')" /></a>
-              <div class="itemInfo">
-                <h3><a>AC/DC：钢铁侠最爱的乐队，了解一下？</a></h3>
-                <p class="desc">
-                  锅炉不是锅 制作 | 294 收藏
-                </p>
-                <p class="intro">1.Back In Black</p>
-                <p class="intro">2.Highway To Hell</p>
-                <p class="intro">3.Shoot to Thrill</p>
-                <p class="intro">...</p>
-              </div>
-            </li>
-            <li>
-              <a class="img"><img :src="getImages('https://img1.doubanio.com/view/fm_songlist_cover/large/public/3306419.jpg')" /></a>
-              <div class="itemInfo">
-                <h3><a>AC/DC：钢铁侠最爱的乐队，了解一下？</a></h3>
-                <p class="desc">
-                  锅炉不是锅 制作 | 294 收藏
-                </p>
-                <p class="intro">1.Back In Black</p>
-                <p class="intro">2.Highway To Hell</p>
-                <p class="intro">3.Shoot to Thrill</p>
-                <p class="intro">...</p>
-              </div>
-            </li>
-            <li>
-              <a class="img"><img :src="getImages('https://img1.doubanio.com/view/fm_songlist_cover/large/public/3306419.jpg')" /></a>
-              <div class="itemInfo">
-                <h3><a>AC/DC：钢铁侠最爱的乐队，了解一下？</a></h3>
-                <p class="desc">
-                  锅炉不是锅 制作 | 294 收藏
-                </p>
-                <p class="intro">1.Back In Black</p>
-                <p class="intro">2.Highway To Hell</p>
-                <p class="intro">3.Shoot to Thrill</p>
-                <p class="intro">...</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="rightPage">
-      <div class="topTitle">
-        <div class="item">
-          <h2><a>47549</a></h2>
-          <span>音乐人</span>
-        </div>
-        <div class="item">
-          <h2><a>2731</a></h2>
-          <span>播客</span>
-        </div>
-        <div class="item">
-          <h2><a>1240</a></h2>
-          <span>厂牌</span>
-        </div>
-        <button class="titleBtn">我要加入</button>
-      </div>
-
-      <!-- 热门音乐分类人 -->
-      <div class="hMusicPersonType">
-        <div class="hotTitle">
-          <span>热门音乐人分类</span>
-        </div>
-        <div class="typeList">
-          <a>流行</a>
-          <a>轻音乐</a>
-          <a>摇滚</a>
-          <a>电子</a>
-          <a>民谣</a>
-          <a>爵士</a>
-          <a>世界音乐</a>
-          <a>原声</a>
-          <a>古典</a>
-          <a>说唱</a>
-        </div>
-      </div>
-
-      <div class="singleRank">
-        <div class="singleTitle">
-          <span class="leftText">本周单曲榜</span>
-          <button class="singleBtn">播放全部</button>
-        </div>
-        <div class="content">
-          <ul class="contentTitle">
-            <li><a>最热</a></li>
-            <li><a>摇滚</a></li>
-            <li><a>民谣</a></li>
-            <li><a>流行</a></li>
-            <li><a>电子</a></li>
-            <li><a>说唱</a></li>
-          </ul>
-          <div class="contentWrapper">
-            <ul class="contentCenter">
-              <li v-for="(item, index) in weekMusicList[0] && weekMusicList[0].imgList" :key="item.id">
-                <a class="contentImg"><img :src="getImages(item.imgUrl)"/></a>
-                <div class="textInfo">
-                  <div class="textTop">{{item.username}}</div>
-                  <div class="textbottom">{{item.type}}</div>
+        <!-- 热门歌曲 -->
+        <div class="hotMusic">
+          <div class="title">
+            <h3>近期热门歌曲</h3>
+            <ul class="titleList">
+              <li><a>最热</a></li>
+              <li><a>华语</a></li>
+              <li><a>欧美</a></a></li>
+              <li><a>日韩</a></li>
+              <li><a>单曲</a></li>
+            </ul>
+          </div>
+          <div class="content">
+            <ul>
+              <li>
+                <a class="img"><img :src="getImages('https://img1.doubanio.com/view/fm_songlist_cover/large/public/3306419.jpg')" /></a>
+                <div class="itemInfo">
+                  <h3><a>AC/DC：钢铁侠最爱的乐队，了解一下？</a></h3>
+                  <p class="desc">
+                    锅炉不是锅 制作 | 294 收藏
+                  </p>
+                  <p class="intro">1.Back In Black</p>
+                  <p class="intro">2.Highway To Hell</p>
+                  <p class="intro">3.Shoot to Thrill</p>
+                  <p class="intro">...</p>
+                </div>
+              </li>
+              <li>
+                <a class="img"><img :src="getImages('https://img1.doubanio.com/view/fm_songlist_cover/large/public/3306419.jpg')" /></a>
+                <div class="itemInfo">
+                  <h3><a>AC/DC：钢铁侠最爱的乐队，了解一下？</a></h3>
+                  <p class="desc">
+                    锅炉不是锅 制作 | 294 收藏
+                  </p>
+                  <p class="intro">1.Back In Black</p>
+                  <p class="intro">2.Highway To Hell</p>
+                  <p class="intro">3.Shoot to Thrill</p>
+                  <p class="intro">...</p>
+                </div>
+              </li>
+              <li>
+                <a class="img"><img :src="getImages('https://img1.doubanio.com/view/fm_songlist_cover/large/public/3306419.jpg')" /></a>
+                <div class="itemInfo">
+                  <h3><a>AC/DC：钢铁侠最爱的乐队，了解一下？</a></h3>
+                  <p class="desc">
+                    锅炉不是锅 制作 | 294 收藏
+                  </p>
+                  <p class="intro">1.Back In Black</p>
+                  <p class="intro">2.Highway To Hell</p>
+                  <p class="intro">3.Shoot to Thrill</p>
+                  <p class="intro">...</p>
+                </div>
+              </li>
+              <li>
+                <a class="img"><img :src="getImages('https://img1.doubanio.com/view/fm_songlist_cover/large/public/3306419.jpg')" /></a>
+                <div class="itemInfo">
+                  <h3><a>AC/DC：钢铁侠最爱的乐队，了解一下？</a></h3>
+                  <p class="desc">
+                    锅炉不是锅 制作 | 294 收藏
+                  </p>
+                  <p class="intro">1.Back In Black</p>
+                  <p class="intro">2.Highway To Hell</p>
+                  <p class="intro">3.Shoot to Thrill</p>
+                  <p class="intro">...</p>
                 </div>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      
-      <MusicList />
-      <div class="artist-wx-qrcode-wrap">
-        <img src="https://img3.doubanio.com/f/music/8eecf69a2a441e6c4d282b001263a98a16713497/pics/music/home/artist_wx_qrcode.jpg" />
-        <div class="artist-wx-qrcode">
-          <div class="labels">
-            <p class="main-title">豆瓣音乐人小程序</p>
-            <p class="sub-title">发现当下最酷的独立音乐</p>
+      <div class="rightPage">
+        <div class="topTitle">
+          <div class="item">
+            <h2><a>47549</a></h2>
+            <span>音乐人</span>
+          </div>
+          <div class="item">
+            <h2><a>2731</a></h2>
+            <span>播客</span>
+          </div>
+          <div class="item">
+            <h2><a>1240</a></h2>
+            <span>厂牌</span>
+          </div>
+          <button class="titleBtn">我要加入</button>
+        </div>
+
+        <!-- 热门音乐分类人 -->
+        <div class="hMusicPersonType">
+          <div class="hotTitle">
+            <span>热门音乐人分类</span>
+          </div>
+          <div class="typeList">
+            <a>流行</a>
+            <a>轻音乐</a>
+            <a>摇滚</a>
+            <a>电子</a>
+            <a>民谣</a>
+            <a>爵士</a>
+            <a>世界音乐</a>
+            <a>原声</a>
+            <a>古典</a>
+            <a>说唱</a>
           </div>
         </div>
-      </div>
 
-      <CallOur />
+        <div class="singleRank">
+          <div class="singleTitle">
+            <span class="leftText">本周单曲榜</span>
+            <button class="singleBtn">播放全部</button>
+          </div>
+          <div class="content">
+            <ul class="contentTitle">
+              <li><a>最热</a></li>
+              <li><a>摇滚</a></li>
+              <li><a>民谣</a></li>
+              <li><a>流行</a></li>
+              <li><a>电子</a></li>
+              <li><a>说唱</a></li>
+            </ul>
+            <div class="contentWrapper">
+              <ul class="contentCenter">
+                <li v-for="(item, index) in weekMusicList[0] && weekMusicList[0].imgList" :key="item.id">
+                  <a class="contentImg"><img :src="getImages(item.imgUrl)"/></a>
+                  <div class="textInfo">
+                    <div class="textTop">{{item.username}}</div>
+                    <div class="textbottom">{{item.type}}</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <MusicList />
+        <div class="artist-wx-qrcode-wrap">
+          <img src="https://img3.doubanio.com/f/music/8eecf69a2a441e6c4d282b001263a98a16713497/pics/music/home/artist_wx_qrcode.jpg" />
+          <div class="artist-wx-qrcode">
+            <div class="labels">
+              <p class="main-title">豆瓣音乐人小程序</p>
+              <p class="sub-title">发现当下最酷的独立音乐</p>
+            </div>
+          </div>
+        </div>
+
+        <CallOur />
+      </div>
     </div>
   </div>
 </template>
@@ -198,6 +202,7 @@ import MusicList from "./childCom/musicList/musicList.vue";
 import CallOur from "./childCom/callOur/callOur.vue";
 import MusicCover from "./childCom/musicCover/musicCover.vue";
 import NewAlbumCover from "./childCom/newAlbumCover/newAlbumCover.vue";
+import Topics from '@/views/music/childRouter/Topics'
 
 import getImages from "@/utils/getImgUrl";
 import { getMusicImgList, getAlbumImgList } from "@/api/music";
@@ -208,7 +213,8 @@ export default {
     MusicList,
     CallOur,
     MusicCover,
-    NewAlbumCover
+    NewAlbumCover,
+    Topics
   },
   data() {
     return {
@@ -218,7 +224,8 @@ export default {
       ],
       imgPopularList: [],
       weekMusicList: [],
-      imgIndex: 0
+      imgIndex: 0,
+      buttomTextList: ['我听','音乐人','专题','排行榜','分类浏览','乐评','豆瓣FM','歌单','2019年度榜单']
     };
   },
   mounted() {
@@ -258,6 +265,8 @@ export default {
 
 <style lang="less" scoped>
 .musicWrapper {
+  width: 1040px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   .swiper-container {

@@ -30,7 +30,8 @@
       <!-- <li><a>登录/注册</a></li> -->
       <li>
         <!-- <a>登录/注册</a> -->
-        <router-link to="/login">登录/注册</router-link>
+        <a v-if="$store.state.user.userInfo.username">{{$store.state.user.userInfo.username}}</a>
+        <router-link to="/login" v-else>登录/注册</router-link>
         </li>
     </ul>
   </div>

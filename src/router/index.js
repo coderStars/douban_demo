@@ -8,7 +8,13 @@ const Books = () => import('@/views/books/index.vue')
 const CommonCity = () => import('@/views/CommonCity/index.vue')
 const Login = () => import('@/views/login/Login.vue')
 
-const routes = [{
+const routes = [
+{
+    path: '/',
+    component: Books,
+    meta: { isShow: true }
+}, 
+{
     path: '/movie',
     component: Movie,
     name: 'movie',

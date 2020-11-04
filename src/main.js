@@ -13,6 +13,11 @@ Vue.component('Header',Header)
 Vue.component('Search',Search)
 Vue.component('Footer',Footer)
 
+import {MessageBox,Message,Pagination,Button} from 'element-ui'
+Vue.prototype.$msgbox = MessageBox;
+Vue.prototype.$alert = MessageBox.alert;
+Vue.prototype.$message = Message;  //用来提示错误信息，更漂亮
+
 Vue.config.productionTip = false
 
 new Vue({

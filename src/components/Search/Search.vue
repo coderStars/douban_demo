@@ -61,7 +61,7 @@ export default {
   },
   watch: {
     $route: {
-      deep: true,
+      immediate: true,
       handler() {
         let path = this.$route.path;
         console.log(path);
