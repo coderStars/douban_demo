@@ -1,7 +1,7 @@
 <template>
   <div>
       <!-- 头部 -->
-        <cityHeader></cityHeader>
+        <CityHeader></CityHeader>
 
       <!-- 主体 -->
         <body>
@@ -338,9 +338,13 @@ import './css/index.css'
 import Swiper from "swiper";
 import "swiper/css/swiper.min.css";
 
-import cityHeader from '../../components/cityHeader'
+import CityHeader from '../../components/CityHeader'
+
 export default {
   name: 'CommonCity',
+  components:{
+      CityHeader
+  },
   data() {
       return {
          
@@ -350,7 +354,7 @@ export default {
 </script>
 
 <style scoped lang='less'>
-@import './css/index.css';
+@import '/src/assets/css/base.css';
 // 主体
 body{
     background-color: #fff;

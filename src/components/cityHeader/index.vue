@@ -36,13 +36,13 @@
 <script>
 
 export default {
-  name: 'cityHeader',
+  name: 'CityHeader',
 }
 </script>
 
 <style scoped lang='less'>
-@import './css/index.css';
-// 头部
+@import '/src/assets/css/base.css';
+    // 头部
 .nav{
     width: 100%;
     height: 66px;

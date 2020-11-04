@@ -5,7 +5,8 @@ Vue.use(VueRouter)
 const Movie = () => import('@/views/movie/index.vue')
 const Music = () => import('@/views/music/Music.vue')
 const Books = () => import('@/views/books/index.vue')
-const CommonCity = () => import('@/views/CommonCity/index.vue')
+const CommonCity = () => import('@/views/commonCity/index.vue')
+const showDetail = () => import('@/views/showDetail')
 
 const routes = [{
     path: '/movie',
@@ -24,13 +25,17 @@ const routes = [{
     meta: { isShow: true },
 },
 {
+    path: '/showdetail',
+    component: showDetail,
+},
+{
     path: '/commoncity',
-    component: CommonCity
+    component: CommonCity,
 },
 {
     path: '/booksinfo',
     component: Books
-}
+},
 
 ]
 
