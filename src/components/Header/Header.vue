@@ -8,8 +8,12 @@
       </li>
       <li>
         <!-- <a>电影</a> -->
+<<<<<<< HEAD
+        <router-link tag="a" target="_blank" :to="{ name: 'movie' }">电影</router-link>
+=======
         <!-- <router-link  tag="a" target="_blank" :to="{name:'movie'}">电影</router-link> -->
         <router-link to="/movie">电影</router-link>
+>>>>>>> master
       </li>
       <li>
         <!-- <a>音乐</a> -->
@@ -23,7 +27,10 @@
       <li><a>阅读</a></li>
       <li><a>FM</a></li>
       <li><a>时间</a></li>
-      <li><a>豆品</a></li>
+      <li>
+        <!-- <a>豆品</a> -->
+        <router-link to="/doupin">豆品</router-link>
+      </li>
     </ul>
     <ul class="rightTitle">
       <li><a>下载豆瓣客户端</a></li>
@@ -39,7 +46,7 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
 };
 </script>
 
