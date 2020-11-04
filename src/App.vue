@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Search v-show="$route.meta.isShow"/>
+    <Search v-show="$route.meta.isShow" />
     <div class="bodyWrapper">
       <router-view></router-view>
     </div>
@@ -11,20 +11,18 @@
 
 <script>
 export default {
-  name: 'App'
-
-}
+  name: "App",
+};
 </script>
 
 <style lang="less" scoped>
-
-@import 'assets/css/reset.css';
+@import "assets/css/reset.css";
 .bodyWrapper {
-  width: 1040px;
-  margin: 0 auto;
+  // width: 1040px;
+  // margin: 0 auto;
 }
-body,html {
+body,
+html {
   width: 100%;
 }
-
 </style>

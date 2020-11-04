@@ -29,7 +29,7 @@ const routes = [{
         component: Books,
         meta: {
             isShow: true
-        },
+        }
     },
     {
         path: '/commoncity',
@@ -45,7 +45,10 @@ const routes = [{
     },
     {
         path: '/doupin',
-        component: Doupin
+        component: Doupin,
+        // meta: {
+        //     isShow: false
+        // }
     }
 ]
 
