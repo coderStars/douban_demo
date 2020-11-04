@@ -71,18 +71,127 @@
                 <th class="cart-item-actions"></th>
               </tr>
             </table>
-
             <div class="shop-card-list">
               <div class="shop-card">
                 <div class="shop-header">
-                  <el-checkbox v-model="checked" fill="#ffffff"></el-checkbox>
+                  <el-checkbox v-model="checked"></el-checkbox>
                   <div class="shop-name">豆瓣书店</div>
                   <a href="##" class="sobot-icon">联系客服</a>
                 </div>
                 <div class="shop-content-wrap">
                   <div class="shop-content">
                     <table class="mui-table">
-                      <tr class=""></tr>
+                      <tr class="item-row">
+                        <td class="checkout">
+                          <el-checkbox v-model="checked"></el-checkbox>
+                        </td>
+                        <td class="cart-item-info">
+                          <div class="cart-item">
+                            <div class="item-pic">
+                              <a href="##">
+                                <img src="./images/p25414357.jpg" />
+                              </a>
+                            </div>
+                            <div class="cart-item-detail">
+                              <p class="item-title">
+                                <a href="##">极乐鸟与蜗牛</a>
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="cart-item-price">
+                          <span class="item-price">¥46.4</span>
+                        </td>
+                        <td class="cart-item-picker">
+                          <div class="item-number-picker">
+                            <div class="mui-number-picker">
+                              <i class="prev">-</i>
+                              <span class="current-number">1</span>
+                              <i class="plus">+</i>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="cart-item-amount">
+                          <span class="item-amount">¥46.4</span>
+                        </td>
+                        <td class="cart-item-actions">
+                          <button type="button">×</button>
+                        </td>
+                      </tr>
+                      <tr class="item-row">
+                        <td class="checkout">
+                          <el-checkbox v-model="checked"></el-checkbox>
+                        </td>
+                        <td class="cart-item-info">
+                          <div class="cart-item">
+                            <div class="item-pic">
+                              <a href="##">
+                                <img src="./images/p25414357.jpg" />
+                              </a>
+                            </div>
+                            <div class="cart-item-detail">
+                              <p class="item-title">
+                                <a href="##">极乐鸟与蜗牛</a>
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="cart-item-price">
+                          <span class="item-price">¥46.4</span>
+                        </td>
+                        <td class="cart-item-picker">
+                          <div class="item-number-picker">
+                            <div class="mui-number-picker">
+                              <i class="prev">-</i>
+                              <span class="current-number">1</span>
+                              <i class="plus">+</i>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="cart-item-amount">
+                          <span class="item-amount">¥46.4</span>
+                        </td>
+                        <td class="cart-item-actions">
+                          <button type="button">×</button>
+                        </td>
+                      </tr>
+                      <tr class="item-row">
+                        <td class="checkout">
+                          <el-checkbox v-model="checked"></el-checkbox>
+                        </td>
+                        <td class="cart-item-info">
+                          <div class="cart-item">
+                            <div class="item-pic">
+                              <a href="##">
+                                <img src="./images/p25414357.jpg" />
+                              </a>
+                            </div>
+                            <div class="cart-item-detail">
+                              <p class="item-title">
+                                <a href="##">极乐鸟与蜗牛</a>
+                              </p>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="cart-item-price">
+                          <span class="item-price">¥46.4</span>
+                        </td>
+                        <td class="cart-item-picker">
+                          <div class="item-number-picker">
+                            <div class="mui-number-picker">
+                              <i class="prev">-</i>
+                              <span class="current-number">1</span>
+                              <i class="plus">+</i>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="cart-item-amount">
+                          <span class="item-amount">¥46.4</span>
+                        </td>
+                        <td class="cart-item-actions">
+                          <button type="button">×</button>
+                        </td>
+                      </tr>
                     </table>
                   </div>
                 </div>
@@ -317,8 +426,129 @@ export default {
               .shop-content {
                 height: 360px;
                 border: 1px solid #ececec;
-                border-bottom: 0;
                 margin-bottom: 15px;
+                .mui-table {
+                  .item-row {
+                    border-spacing: 0;
+                    border-collapse: collapse;
+                    height: 120px;
+                    td {
+                      height: 80px;
+                      padding: 20px;
+                      text-align: center;
+                      vertical-align: middle;
+                      box-sizing: border-box;
+                    }
+                    .checkout {
+                      padding: 20px 10px;
+                      width: 48px;
+                      /deep/ .el-checkbox__inner {
+                        width: 17px;
+                        height: 17px;
+                        margin-left: 10px;
+                        border-radius: 0;
+                        border: 1px solid #ababac;
+                      }
+                      /deep/
+                        .el-checkbox__input.is-checked
+                        .el-checkbox__inner {
+                        background-color: #44883e;
+                        border-color: #44883e;
+                      }
+                    }
+                    .cart-item-info {
+                      width: 335px;
+                      .cart-item {
+                        width: 295px;
+                        height: 80px;
+                        .item-pic {
+                          float: left;
+                          a {
+                            img {
+                              width: 80px;
+                              height: 80px;
+                              display: block;
+                            }
+                          }
+                        }
+                        .cart-item-detail {
+                          width: 220px;
+                          height: 22.5px;
+                          line-height: 22.5px;
+                          text-align: left;
+                          margin-left: 95px;
+                          a {
+                            font-size: 15px;
+                            color: #5c5c5c;
+                            font-weight: 500;
+                          }
+                        }
+                      }
+                    }
+                    .cart-item-price {
+                      width: 294px;
+                      span {
+                        font-size: 14px;
+                        color: #dd1944;
+                      }
+                    }
+                    .cart-item-picker {
+                      width: 150px;
+                      .item-number-picker {
+                        width: 110px;
+                        height: 30px;
+                        .prev {
+                          color: #d8d8d8;
+                          cursor: not-allowed;
+                          height: 30px;
+                          line-height: 30px;
+                          background-color: #f9f9f9;
+                          color: #ababac;
+                          width: 30px;
+
+                          font-size: 14px;
+                          display: inline-block;
+                        }
+                        .plus {
+                          height: 30px;
+                          line-height: 30px;
+                          background-color: #f9f9f9;
+                          width: 30px;
+                          cursor: pointer;
+                          color: #3e3a39;
+                          font-size: 14px;
+                          display: inline-block;
+                        }
+                        span {
+                          display: inline-block;
+                          padding-left: 5px;
+                          padding-right: 5px;
+                          width: 35px;
+                          color: #3e3a39;
+                        }
+                      }
+                    }
+                    .cart-item-amount {
+                      width: 155px;
+                      font-size: 14px;
+                      color: #dd1944;
+                    }
+                    .cart-item-actions {
+                      width: 116px;
+                      button {
+                        padding-top: 9px;
+                        padding-bottom: 9px;
+                        font-size: 20px;
+                        cursor: pointer;
+                        line-height: 1em;
+                        padding: 5px 10px;
+                        border: none;
+                        outline: none;
+                        background-color: #fff;
+                      }
+                    }
+                  }
+                }
               }
             }
           }
