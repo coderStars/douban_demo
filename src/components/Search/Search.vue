@@ -18,11 +18,13 @@
         />
       </div>
     </div>
-    <div class="bottomList">
-      <a v-for="(item, index) in buttomText" :key="index">
-        {{ item }}
-      </a>
-    </div>
+    <ul class="bottomList">
+      <li v-for="(item, index) in buttomText" :key="index">
+        <a>
+          {{ item }}
+        </a>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -85,6 +87,18 @@ export default {
 .searchContainer {
   background: #f6f6f1;
   margin-bottom: 40px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 75px;
+    // border-bottom: 1px solid #e5ebe4;
+    background: #e5ebe4;
+    height: 1px;
+    width: 100%;
+  }
   input {
     outline: none;
     border: none;
@@ -92,18 +106,21 @@ export default {
     outline-color: "red";
   }
   .searchWrapper {
-    border-bottom: 1px solid #e5ebe4;
+    // border-bottom: 1px solid #e5ebe4;
     width: 1040px;
     height: 60px;
     margin: 0 auto;
     display: flex;
     padding: 10px 0 5px;
+
     .nav-logo {
       width: 145px;
       height: 56px;
       a {
         width: 100%;
         height: 100%;
+        display: block;
+        cursor: pointer;
       }
     }
     .searchInpt {
@@ -120,6 +137,7 @@ export default {
         width: 461px;
         border: none;
         border-radius: 5px;
+        box-shadow: 0 1px 1px #888888;
       }
       .inp-btn {
         width: 37px;
@@ -137,14 +155,22 @@ export default {
     height: 40px;
     line-height: 40px;
     display: flex;
-    a {
+
+    li {
       margin-left: 25px;
-      color: #614e3c;
-      text-decoration: none;
-      font-size: 14px;
-      cursor: pointer;
+      a {
+        color: #614e3c;
+        text-decoration: none;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      a:hover {
+        background: #614e3c;
+        color: #fff;
+        text-decoration: none;
+      }
     }
-    a:first-child {
+    li:first-child {
       margin-left: 0;
     }
   }
