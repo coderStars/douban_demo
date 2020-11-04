@@ -566,7 +566,10 @@
                 <div class="abooksInfo">
                   <div class="aBooksImg">
                     <a href="">
-                      <img src="../../assets/images/books/homePages/ia_100000070.png" alt="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000070.png"
+                        alt=""
+                      />
                     </a>
                   </div>
                   <div class="aBooksText">
@@ -579,7 +582,10 @@
                 <div class="abooksInfo">
                   <div class="aBooksImg">
                     <a href="">
-                      <img src="../../assets/images/books/homePages/ia_100000070.png" alt="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000070.png"
+                        alt=""
+                      />
                     </a>
                   </div>
                   <div class="aBooksText">
@@ -592,7 +598,10 @@
                 <div class="abooksInfo">
                   <div class="aBooksImg">
                     <a href="">
-                      <img src="../../assets/images/books/homePages/ia_100000070.png" alt="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000070.png"
+                        alt=""
+                      />
                     </a>
                   </div>
                   <div class="aBooksText">
@@ -605,7 +614,10 @@
                 <div class="abooksInfo">
                   <div class="aBooksImg">
                     <a href="">
-                      <img src="../../assets/images/books/homePages/ia_100000070.png" alt="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000070.png"
+                        alt=""
+                      />
                     </a>
                   </div>
                   <div class="aBooksText">
@@ -618,7 +630,10 @@
                 <div class="abooksInfo">
                   <div class="aBooksImg">
                     <a href="">
-                      <img src="../../assets/images/books/homePages/ia_100000070.png" alt="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000070.png"
+                        alt=""
+                      />
                     </a>
                   </div>
                   <div class="aBooksText">
@@ -626,6 +641,57 @@
                       <a href="">刘勃历史三部曲</a>
                     </div>
                     <div>￥88.00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 电子图书 -->
+        <div class="electronicBooks">
+          <div class="electronicBooksTop">
+            <h2>
+              <span>电子图书</span>
+              <span class="linMore">
+                <a
+                  href="https://market.douban.com/book/?utm_campaign=book_freyr_section&amp;utm_source=douban&amp;utm_medium=pc_web"
+                  >查看全部»</a
+                >
+              </span>
+            </h2>
+          </div>
+          <div class="electronicBooksBottom">
+            <div class="electronicBooksInfoTop">
+              <h3>
+                热门电子图书
+                <span class="moreInfo">
+                  <a
+                    href="https://read.douban.com/kind/1/?sort=hot&amp;dcs=book-hot&amp;dcm=douban&amp;dct=read-more"
+                    target="_blank"
+                  >
+                    更多»
+                  </a>
+                </span>
+              </h3>
+            </div>
+            <div class="electronicBooksInfoBottom">
+              <div class="aElectronicBooksInfo">
+                <div class="flexContainer">
+                  <div class="aElectronicBooksInfoText">
+                    <div class="aElectronicBooksImg">
+                      <a href="">
+                        <img
+                          src="../../assets/images/books/homePages/ia_100000075.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <div class="aElectronicBooksText">
+                      <div>
+                        <a href="">我信仰阅读</a>
+                      </div>
+                      <div>47.40元</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1331,33 +1397,107 @@ export default {
             }
           }
         }
-        .booksShopInfoBottom{
+        .booksShopInfoBottom {
           height: 203px;
           // background: darkblue;
-          .flexContainer{
+          .flexContainer {
             display: flex;
             justify-content: space-between;
-            .abooksInfo{
+            .abooksInfo {
               width: 115px;
               height: 183px;
               margin: 0 25px 20px 0;
               // background: darkolivegreen;
-              .aBooksImg{
+              .aBooksImg {
                 height: 140px;
                 margin-bottom: 12px;
-                a{
-                  img{
+                a {
+                  img {
                     width: 106px;
                   }
                 }
               }
-              .aBooksText{
-                div{
-                  font: 12px "Microsoft YaHei",Tahoma, Helvetica, Arial, sans-serif;
-                  a{
+              .aBooksText {
+                div {
+                  font: 12px "Microsoft YaHei", Tahoma, Helvetica, Arial,
+                    sans-serif;
+                  a {
                     color: #3377aa;
                     font-size: 13px;
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // 电子图书
+    .electronicBooks {
+      width: 675px;
+      height: 517px;
+      background: chartreuse;
+      margin-bottom: 30px;
+      .electronicBooksTop {
+        border-bottom: 1px #dddddd solid;
+        padding-bottom: 3px;
+        margin-bottom: 16px;
+        h2 {
+          span {
+            font: 18px Arial, Helvetica, sans-serif;
+            font-weight: bold;
+          }
+          .linMore {
+            padding-left: 10px;
+            font: 13px Arial, Helvetica, sans-serif;
+            line-height: 150%;
+            a {
+              color: #3377aa;
+            }
+          }
+        }
+      }
+      .electronicBooksBottom {
+        height: 470px;
+        background: chocolate;
+        .electronicBooksInfoTop {
+          height: 14px;
+          margin-bottom: 13px;
+          // background: cornflowerblue;
+          h3 {
+            font: 15px Helvetica, Arial, sans-serif;
+            font-weight: normal;
+            color: #111;
+            font-size: 15px;
+            line-height: 1;
+            // margin-bottom: 13px;
+            span {
+              margin-left: 10px;
+              a {
+                cursor: pointer;
+                color: #3377aa;
+              }
+            }
+          }
+        }
+        .electronicBooksInfoBottom {
+          height: 443px;
+          background: crimson;
+          .aElectronicBooksInfo {
+            width: 115px;
+            height: 201px;
+            background: darkgreen;
+            margin: 0 25px 20px 0;
+            .flexContainer{
+              .aElectronicBooksInfoText{
+                width: 115px;
+                height: 201px;
+                margin-right: 25px;
+                margin-bottom: 20px;
+                background: darkkhaki;
+                .aElectronicBooksImg{
+                  width: 106px;
+                  height: 158px;
                 }
               }
             }
