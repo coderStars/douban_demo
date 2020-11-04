@@ -1,40 +1,7 @@
 <template>
   <div>
       <!-- 头部 -->
-      <div class="nav">
-          <!-- 版心 -->
-          <div class="container">
-              <!-- 左侧导航 -->
-            <div class="navLeft">
-                <div class="logo">豆瓣同城</div>
-                <div class="city">
-                    <a href="javascript:;">北京
-                    <i></i>
-                    </a>
-                </div>
-                <div class="activityNav">
-                    <ul>
-                        <li>近期活动</li>
-                        <li>主办方</li>
-                        <li>舞台剧</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- 右侧搜索 -->
-            <div class="searchRight">
-                <div class="rightContainer">
-                    <input  class="input" type="text" placeholder="活动 / 舞台剧 / 地点">
-                    <div  class="submit iconfont iconsearch"></div>
-                </div>
-            </div>
-
-         
-          </div>
-
-
-
-
-      </div>
+        <cityHeader></cityHeader>
 
       <!-- 主体 -->
         <body>
@@ -276,27 +243,85 @@
                     <!-- 轮播图 -->
                     <div class="swiper">
                         <!-- 头部 -->
-                        <div class="header"></div>
+                        <div class="header">购票直通车</div>
                         <!-- 轮播内容 -->
-                        <div>
-
+                        <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+                                <div class="detail">
+                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                                    <p class="price">¥ 104</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">Slide 3</div>
+                        </div>
+                
                         </div>
                     </div>
 
                     <!-- 北京主办方 -->
                     <div class="hostInfo">
+                        <div class="hostHeader">
+                            <div>北京活跃的主办方</div>
+                            <div class="more">更多»</div>
+                        </div>
+                        <!-- 主体 -->
                         <div class="hostItem">
-                            <img src="" alt="">
+                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
                             <div class="desc">
-                                <p>KPRendezvous</p>
-                                <p>有2个活动正在进行</p>
-                                <p>[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
-                                <p>[展览] 西安SKP文苑·展览 | 探寻民间...</p>
+                                <p class="one">KPRendezvous</p>
+                                <p class="two">有2个活动正在进行</p>
+                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
+                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
                             </div>
                         </div>
+                        <!-- ----- -->
+                         <div class="hostItem">
+                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
+                            <div class="desc">
+                                <p class="one">KPRendezvous</p>
+                                <p class="two">有2个活动正在进行</p>
+                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
+                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
+                            </div>
+                        </div>
+                        <!-- ----- -->
+                         <div class="hostItem">
+                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
+                            <div class="desc">
+                                <p class="one">KPRendezvous</p>
+                                <p class="two">有2个活动正在进行</p>
+                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
+                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
+                            </div>
+                        </div>
+                        <!-- ----- -->
+                         <div class="hostItem">
+                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
+                            <div class="desc">
+                                <p class="one">KPRendezvous</p>
+                                <p class="two">有2个活动正在进行</p>
+                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
+                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
+                            </div>
+                        </div>
+                        <!-- ----- -->
+                         <div class="hostItem">
+                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
+                            <div class="desc">
+                                <p class="one">KPRendezvous</p>
+                                <p class="two">有2个活动正在进行</p>
+                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
+                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <!-- 广告 -->
+                    <!-- 广告2 -->
                     <img src="./images/adv.jpg" alt="">
 
                     <!--  -->
@@ -310,6 +335,10 @@
 
 <script>
 import './css/index.css'
+import Swiper from "swiper";
+import "swiper/css/swiper.min.css";
+
+import cityHeader from '../../components/cityHeader'
 export default {
   name: 'CommonCity',
   data() {
@@ -322,109 +351,6 @@ export default {
 
 <style scoped lang='less'>
 @import './css/index.css';
-// 头部
-.nav{
-    width: 100%;
-    height: 66px;
-    background-color: #F6F5F2;
-    margin-bottom: 40px;
-    font: 12px Helvetica,Arial,sans-serif;
-    line-height: 1.62;
-    // 版心
-    .container{
-        width: 1040px;
-        margin: 0 auto;
-        height: 66px;
-        display: flex;
-        // 左侧导航
-        .navLeft{
-            height: 66px;
-            flex: 1;
-            display: flex;
-            align-items: center;
-            .logo{
-                width: 124px;
-                height: 56px;
-                background: url('./images/logo.png') no-repeat center center;
-                background-size: 112px auto;
-                float: left;
-                color: transparent;
-                margin-right: 13px;
-                // margin-top: 4px;
-            }
-            .city{
-                margin-right: 30px;
-                a{  
-                    position: relative;
-                    display: inline-block;
-                    padding: 5px 10px 6px;
-                    width: 64px;
-                    font: 700 14px/1 tahoma,arial,"stheiti","黑体",sans-serif;
-                    font-weight: bold;
-                    background-color:#DEDEDE;
-                    height: 25px;
-                    border-radius: 6px;
-                    i{
-                    position: absolute;        
-                    display:block;
-                    width:0;
-                    height:0;
-                    border-top:5px solid black;
-                    border-left:4px solid transparent;
-                    border-right:4px solid transparent;
-                    top: 50%;
-                    right: 10px;
-                    transform: translateY(-50%);   
-                    }
-                }
-            }
-            .activityNav{
-                ul{
-                    list-style: none;
-                    li{
-                        float: left;
-                        color: #643;
-                        margin: 0 15px;
-                        font-size: 16px;
-                    }   
-                }
-            }
-        }
-        //右侧搜索
-        .searchRight{
-            .rightContainer{
-                height: 28px;
-                // width: 218px;   
-                border: 1px solid #e3e2de;
-                // border: 1px  orange solid;
-                display: flex;
-                margin-top: 15px;
-                align-items: center;
-                .input{ 
-                    width: 200px;
-                    height: 26px;
-                    border: none;
-                    padding-left: 10px;
-                    outline: none;
-                }
-                input::-webkit-input-placeholder {
-                    color: #C8CCCC;
-                    font-size: 13px;
-                }
-                .submit{
-                    line-height: 26px;
-                    width: 30px;
-                    height: 26px;
-                    border: none;
-                    // color: transparent;
-                    background-color: #fff;
-                    font-size: 20px;
-
-                }
-            }
-        }
-    }
-}
 // 主体
 body{
     background-color: #fff;
@@ -637,30 +563,133 @@ body{
                 }
             }
         }
+        // 右侧侧边栏
         aside{
             width:340px;
             float: right;
+            // 广告图1
             .adv{
                 display: block;
                 width: 300px;
                 height: 250px;
                 margin-bottom: 20px;    
             }
+            // 发起同城活动
             .commonActivity{
                 width: 300px;
                 height: 28px;
                 margin-bottom: 40px;
                 a{  
                     display: block;
-                    // box-sizing: content-box;
+                    box-sizing: content-box;
                     width: 91px;
                     height: 28px;
                     padding: 0 13px;
                     background: #a88360;  
                     color: #fff; 
-                    // font-size: 10px;
+                    font-size: 13px;
+                    line-height: 27px;
                 }   
             }
+            // 轮播图
+            .swiper{
+                .header{
+                    width: 300px;
+                    font-size: 15px;
+                    color: #111;
+                    box-sizing: content-box;
+                    padding-bottom: 7px;
+                    border-bottom: 1px dotted #ddd;
+                    margin-bottom: 20px;
+
+                }
+                //
+                .swiper-container{
+                    width:300px;
+                    height:700px;
+                    background-color: pink;
+                    margin-left: 0px;
+                    .swiper-slide{
+                        display: flex;
+                        // justify-content: space-around;
+                        img{
+                            display: block;
+                            width: 48px;
+                            height: 62px;
+                            margin-right: 10px;
+                        }
+                        .detail{
+                            .name{
+                                color: #37a;
+                                font-size: 14px;
+                                margin-bottom: 8px;
+                                margin-top: 4px;
+                            }
+                            .date{
+                                color:#666;
+                                font-size: 13px; 
+                                margin-bottom: 5px;
+                            }
+                            .price{
+                                color: #FF8263;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            //北京主办方
+            .hostInfo{
+                width: 300px;
+                margin-top: 40px;
+                //头部
+                .hostHeader{
+                    font-size: 15px;
+                    color: #111;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px dotted #ddd;
+                    padding: 4px;
+                    margin-bottom: 12px;
+                    .more{
+                        color: #37a;
+                        font-size: 13px;
+                    }
+                }
+                //主体
+                .hostItem{
+                    display: flex;
+                    margin-bottom: 25px;
+                    img{
+                        display:block;
+                        width:48px;
+                        height:48px;
+                        margin-right: 10px;
+                    }
+                    .desc{
+                        font: 12px Helvetica,Arial,sans-serif;
+                        .one{
+                            color: #37a;
+                            font-size:14px;
+                             margin-bottom: 4px;
+                        }
+                        .two{
+                            color: #666;
+                            font-size: 13px;
+                             margin-bottom: 9px;
+                        }
+                        .three,.four{
+                            color: #666;
+                            font-size: 13px;
+                            margin-bottom: 4px;
+                        }
+                        
+                    }
+                }
+
+            }
+            // 广告2
+            
         }
     }
 }

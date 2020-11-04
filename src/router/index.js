@@ -4,6 +4,7 @@ Vue.use(VueRouter)
 
 
 import CommonCity from '../views/CommonCity'
+import showDetail from '../views/showDetail'
 const router = new VueRouter({
     routes:[
         {
@@ -11,8 +12,12 @@ const router = new VueRouter({
             component:CommonCity
         },
         {
+            path:'/showdetail',
+            component:showDetail,
+        },
+        {
             path:'/',
-            redirect:'/commoncity'
+            redirect:'/showdetail'
         }
     ]
 })
