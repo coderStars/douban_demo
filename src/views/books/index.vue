@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Search inpText="书名、作者、ISBN" :buttomTextList="buttomTextList"></Search>
     <!-- 广告 -->
     <div class="topAds">
       <img src="../../assets/images/books/homePages/ia_400000000.jpg" alt="" />
@@ -1440,11 +1441,18 @@
 <script>
 export default {
   name: "Books",
+  data() {
+    return {
+      buttomTextList: ['购书单','电子图书','豆瓣书店','2019年度榜单', '2019书影音报告','购物车']
+    }
+  },
 };
 </script>
 
 <style  lang="less"  scoped>
 .topAds {
+  width: 1040px;
+  margin: 0 auto;
   padding-bottom: 16px;
 }
 .boxsExpress {

@@ -108,7 +108,7 @@ export default {
     }
     .searchInpt {
       // width: 461px;
-      // margin-left: 145px;
+      margin-left: 10px;
       line-height: 56px;
       input::placeholder {
         font-size: 12px;
@@ -116,14 +116,14 @@ export default {
       .inptFirst {
         padding-left: 20px;
         box-sizing: border-box;
-        height: 34px;
+        height: 30px;
         width: 461px;
         border: none;
-        border-radius: 10px;
+        border-radius: 5px;
       }
       .inp-btn {
         width: 37px;
-        height: 35px;
+        height: 31px;
         color: transparent;
         cursor: pointer;
         border-style: inset;
