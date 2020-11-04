@@ -7,6 +7,7 @@ const Music = () => import('@/views/music/Music.vue')
 const Books = () => import('@/views/books/index.vue')
 const CommonCity = () => import('@/views/CommonCity/index.vue')
 const Login = () => import('@/views/login/Login.vue')
+const showDetail = () => import('@/views/showDetail')
 
 const routes = [
 {
@@ -31,8 +32,12 @@ const routes = [
     meta: { isShow: true },
 },
 {
+    path: '/showdetail',
+    component: showDetail,
+},
+{
     path: '/commoncity',
-    component: CommonCity
+    component: CommonCity,
 },
 {
     path: '/booksinfo',
@@ -45,8 +50,10 @@ const routes = [
 
 ]
 
+
 const router = new VueRouter({
     routes
+
 })
 
 export default router 
