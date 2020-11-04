@@ -3,7 +3,7 @@
     <div class="searchWrapper">
       <div
         class="nav-logo"
-        :style="{ background: `url(${logoImg}) no-repeat 0 12px` }"
+        :style="{ background: `url(${logoImg[logoIndex]}) no-repeat 0 12px` }"
       >
         <a href="https://book.douban.com"></a>
       </div>
@@ -51,8 +51,32 @@ export default {
   data() {
     return {
       keyword: "",
-      logoImg: require("@/assets/img/lg_book_a11_1.png")
+      logoImg: [
+        require("@/assets/img/lg_book_a11_1.png"),
+        require("@/assets/img/lg_movie_a12_2.png"),
+        require("@/assets/img/lg_music_a12_2.png")
+      ],
+      logoIndex: 0
     };
+  },
+  watch: {
+    $route: {
+      deep: true,
+      handler() {
+        let path = this.$route.path;
+        console.log(path);
+        if (path === "/books") {
+          this.logoIndex = 0;
+        } else if (path === "/movie") {
+          console.log("=====");
+          this.logoIndex = 1;
+        } else if (path === "/music") {
+          this.logoIndex = 2;
+        } else {
+          this.logoIndex = 0;
+        }
+      }
+    }
   }
 };
 </script>

@@ -8,13 +8,21 @@
       </li>
       <li>
         <!-- <a>电影</a> -->
+<<<<<<< HEAD
         <router-link tag="a" target="_blank" :to="{ name: 'movie' }">电影</router-link>
+=======
+        <!-- <router-link  tag="a" target="_blank" :to="{name:'movie'}">电影</router-link> -->
+        <router-link to="/movie">电影</router-link>
+>>>>>>> master
       </li>
       <li>
         <!-- <a>音乐</a> -->
         <router-link to="/music">音乐</router-link>
       </li>
-      <li><a>同城</a></li>
+      <li>
+        <!-- <a>同城</a> -->
+        <router-link to="/commoncity">同城</router-link>
+      </li>
       <li><a>小组</a></li>
       <li><a>阅读</a></li>
       <li><a>FM</a></li>
@@ -26,7 +34,11 @@
     </ul>
     <ul class="rightTitle">
       <li><a>下载豆瓣客户端</a></li>
-      <li><a>登录/注册</a></li>
+      <!-- <li><a>登录/注册</a></li> -->
+      <li>
+        <!-- <a>登录/注册</a> -->
+        <router-link to="/login">登录/注册</router-link>
+        </li>
     </ul>
   </div>
 </template>
