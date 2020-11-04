@@ -71,7 +71,14 @@
                 <th class="cart-item-actions"></th>
               </tr>
             </table>
-            
+
+            <div class="shop-card-list">
+              <div class="shop-card">
+                <div class="shop-header">
+                  <el-checkbox v-model="checked"></el-checkbox>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -81,7 +88,12 @@
 
 <script>
 export default {
-  name: "Cart"
+  name: "Cart",
+  data() {
+    return {
+      checked: true
+    };
+  }
 };
 </script>
 
@@ -254,17 +266,16 @@ export default {
           .cart-item-info {
             width: 335px;
           }
-          .cart-item-price{
+          .cart-item-price {
             width: 296px;
           }
-          .cart-item-picker{
+          .cart-item-picker {
             width: 150px;
           }
-          .cart-item-amount{
+          .cart-item-amount {
             width: 155px;
           }
         }
-
       }
     }
   }
