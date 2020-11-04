@@ -7,8 +7,7 @@ const Music = () => import('@/views/music/Music.vue')
 const Books = () => import('@/views/books/index.vue')
 const Doupin = () => import('@/views/doupin/index.vue')
 
-const routes = [
-    {
+const routes = [{
         path: '/movie',
         component: Movie,
         name: 'movie'
