@@ -5,6 +5,10 @@ import store from './store/index'
 import "swiper/css/swiper.min.css";
 import getImages from '@/utils/getImgUrl'
 
+import {Button} from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(Button)
+
 import Header from '@/components/Header/Header.vue'
 import Search from '@/components/Search/Search.vue'
 import Footer from '@/components/Footer/Footer.vue'
