@@ -1,8 +1,6 @@
 <template>
     <body>
     <!-- 头部导航 -->
-    <div class="headerNav"></div>
-
     
     <div id="market-main">
         <!-- 轮播上导航 -->
@@ -948,15 +946,15 @@
                 <div class="footer-right">
                     <div class="footer-kits">
                         <a class="item" id="openMarketInfo">
-                            <img class="shopping" src="./img/ia_100000018055.ico" alt="">
+                            <img class="shopping" src="./img/ia_100000018051.png" alt="">
                             <span>购物说明</span>
                         </a>
                         <a class="item" target="_blank" href="https://www.douban.com/doumail/write?to=119347429">
-                            <img class="yijian" src="./img/ia_100000018055.ico" alt="">
+                            <img class="yijian" src="./img/ia_100000018051.png" alt="">
                             <span>意见反馈</span>
                         </a>
                         <a class="item" href="https://bizpage.douban.com/business/">
-                            <img class="shangwu" src="./img/ia_100000018055.ico" alt="">
+                            <img class="shangwu" src="./img/ia_100000018051.png" alt="">
                             <span>商务合作</span>
                         </a>
                     </div>
@@ -969,7 +967,7 @@
 
 <script>
 export default {
-
+    name: 'Doupin',
 };
 </script>
 
