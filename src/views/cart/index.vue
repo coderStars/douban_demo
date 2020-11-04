@@ -75,7 +75,16 @@
             <div class="shop-card-list">
               <div class="shop-card">
                 <div class="shop-header">
-                  <el-checkbox v-model="checked"></el-checkbox>
+                  <el-checkbox v-model="checked" fill="#ffffff"></el-checkbox>
+                  <div class="shop-name">豆瓣书店</div>
+                  <a href="##" class="sobot-icon">联系客服</a>
+                </div>
+                <div class="shop-content-wrap">
+                  <div class="shop-content">
+                    <table class="mui-table">
+                      <tr class=""></tr>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
@@ -213,7 +222,6 @@ export default {
     .cart-section {
       width: 100%;
       height: 391px;
-      background-color: #bfc;
       .cart-content {
         .tag {
           display: flex;
@@ -274,6 +282,45 @@ export default {
           }
           .cart-item-amount {
             width: 155px;
+          }
+        }
+        .shop-card-list {
+          .shop-card {
+            .shop-header {
+              margin: 10px 0;
+              height: 24px;
+              line-height: 24px;
+              /deep/ .el-checkbox__inner {
+                width: 17px;
+                height: 17px;
+                margin-right: 10px;
+                border-radius: 0;
+                border: 1px solid #ababac;
+              }
+              /deep/ .el-checkbox__input.is-checked .el-checkbox__inner {
+                background-color: #44883e;
+                border-color: #44883e;
+              }
+              .shop-name {
+                color: #5c5c5c;
+                display: inline-block;
+                padding-right: 15px;
+              }
+              a {
+                color: #72a56e;
+              }
+              a:hover {
+                color: #44883e;
+              }
+            }
+            .shop-content-wrap {
+              .shop-content {
+                height: 360px;
+                border: 1px solid #ececec;
+                border-bottom: 0;
+                margin-bottom: 15px;
+              }
+            }
           }
         }
       }
