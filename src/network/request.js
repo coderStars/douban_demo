@@ -6,7 +6,7 @@ import 'nprogress/nprogress.css'
 // 创建实例
 const instance = axios.create({
     // 基础公共地址
-    baseURL: '',
+    baseURL: '/api',
     timeout: 20000,
 
 })

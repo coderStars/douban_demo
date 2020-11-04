@@ -919,12 +919,15 @@
             </div>
           </div>
         </div>
+        <!-- 跳转到读书详情的路由连接 -->
+          <router-link to="/booksinfo">详情</router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "Books",
 };

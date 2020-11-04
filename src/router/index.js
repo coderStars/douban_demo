@@ -5,24 +5,37 @@ Vue.use(VueRouter)
 const Movie = () => import('@/views/movie/index.vue')
 const Music = () => import('@/views/music/Music.vue')
 const Books = () => import('@/views/books/index.vue')
+const CommonCity = () => import('@/views/CommonCity/index.vue')
 
-const routes = [
-    {
-        path: '/movie',
-        component: Movie
-    },
-    {
-        path: '/music',
-        component: Music
-    },
-    {
-        path: '/books',
-        component: Books
-    }
+const routes = [{
+    path: '/movie',
+    component: Movie,
+    name: 'movie',
+    meta: { isShow: true },
+},
+{
+    path: '/music',
+    component: Music,
+    meta: { isShow: true },
+},
+{
+    path: '/books',
+    component: Books,
+    meta: { isShow: true },
+},
+{
+    path: '/commoncity',
+    component: CommonCity
+},
+{
+    path: '/booksinfo',
+    component: Books
+}
 
 ]
 
 const router = new VueRouter({
     routes
 })
-export default router
+
+export default router 
