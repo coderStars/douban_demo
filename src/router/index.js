@@ -26,30 +26,32 @@ const routes = [{
     meta: {
         isShow: true
     },
-},
-{
-    path: '/books',
-    component: Books,
-    meta: {
-        isShow: true
+    {
+        path: '/books',
+        component: Books,
+        meta: {
+            isShow: true
+        }
     },
-},
-{
-    path: '/commoncity',
-    component: CommonCity
-},
-{
-    path: '/booksinfo',
-    component: Books
-},
-{
-    path: '/login',
-    component: Login
-},
-{
-    path: '/doupin',
-    component: Doupin
-}
+    {
+        path: '/commoncity',
+        component: CommonCity
+    },
+    {
+        path: '/booksinfo',
+        component: Books
+    },
+    {
+        path: '/login',
+        component: Login
+    },
+    {
+        path: '/doupin',
+        component: Doupin,
+        // meta: {
+        //     isShow: false
+        // }
+    }
 ]
 
 
