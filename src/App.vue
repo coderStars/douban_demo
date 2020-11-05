@@ -3,7 +3,7 @@
     <Header />
     <!-- <Search v-show="$route.meta.isShow"/> -->
     <router-view></router-view>
-    <Footer />
+    <Footer v-show="!$route.meta.isHide"/>
   </div>
 </template>
 
