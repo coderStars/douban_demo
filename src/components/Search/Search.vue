@@ -20,9 +20,7 @@
     </div>
     <ul class="bottomList">
       <li v-for="(item, index) in buttomText" :key="index">
-        <a>
-          {{ item }}
-        </a>
+        <router-link :to="item.path">{{ item.name }}</router-link>
       </li>
     </ul>
   </div>
@@ -40,12 +38,30 @@ export default {
       type: Array,
       default() {
         return [
-          "购书单",
-          "电子图书",
-          "豆瓣书店",
-          "2019年度榜单",
-          "2019书影音报告",
-          "购物车"
+          {
+            name:"购书单",
+            path: "/music/buybooks"
+          },
+          {
+            name:"电子图书",
+            path: "/music/onlinebooks"
+          },
+          {
+            name:"豆瓣书店",
+            path: "/music/libray"
+          },
+          {
+            name: "2019年度榜单",
+            path: "/music/yearrank"
+          },
+          {
+            name: "2019书影音报告",
+            path: "/music/moviebanner"
+          },
+          {
+            name: "购物车",
+            path: "music/cart"
+          }
         ];
       }
     }
