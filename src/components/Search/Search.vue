@@ -82,7 +82,6 @@ export default {
       immediate: true,
       handler() {
         let path = this.$route.path;
-        console.log(typeof path);
         if (path.startsWith("/books")) {
           this.logoIndex = 0;
         } else if (path.startsWith("/movie")) {
