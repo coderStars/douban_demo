@@ -28,7 +28,11 @@
                         <img src="https://img1.doubanio.com/pview/event_poster/median/public/d80c5169eeeca69.jpg" alt="">
                         <!-- 描述 -->
                         <div class="desc">
-                            <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
+                            <p class="name">
+                                <a href="##">
+                                    脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场
+                                </a>
+                               </p>
                             <p class="date">11月8日 至 11月29日</p>
                             <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
                             <p class="num">2人关注</p>
@@ -40,7 +44,11 @@
                         <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
                         <!-- 描述 -->
                         <div class="desc">
-                            <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
+                            <p class="name">
+                                <a href="##">
+                                    脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场
+                                </a>
+                                </p>
                             <p class="date">11月8日 至 11月29日</p>
                             <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
                             <p class="num">2人关注</p>
@@ -50,7 +58,11 @@
                     <div class="showItem">
                         <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
                         <div class="desc">
-                            <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
+                            <p class="name">
+                                <a href="##">
+                                    脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场
+                                </a>
+                                </p>
                             <p class="date">11月8日 至 11月29日</p>
                             <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
                             <p class="num">2人关注</p>
@@ -60,7 +72,11 @@
                     <div class="showItem">
                         <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
                         <div class="desc">
-                            <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
+                            <p class="name">
+                                <a href="##">
+                                    脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场
+                                </a>
+                               </p>
                             <p class="date">11月8日 至 11月29日</p>
                             <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
                             <p class="num">2人关注</p>
@@ -70,7 +86,11 @@
                     <div class="showItem">
                         <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
                         <div class="desc">
-                            <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
+                            <p class="name">
+                                <a href="##">
+                                    脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场
+                                </a>
+                                </p>
                             <p class="date">11月8日 至 11月29日</p>
                             <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
                             <p class="num">2人关注</p>
@@ -80,7 +100,11 @@
                     <div class="showItem">
                         <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
                         <div class="desc">
-                            <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
+                            <p class="name">
+                                <a href="##">
+                                    脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场
+                                </a>
+                               </p>
                             <p class="date">11月8日 至 11月29日</p>
                             <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
                             <p class="num">2人关注</p>
@@ -183,14 +207,14 @@ export default {
                     width: 210px;
                     margin-right: 50px;
                     .name{
-                        font-size: 14px;
-                        color: #37a;
-                        margin-bottom: 6px;
-                        cursor: pointer;
-                        &:hover{
-                            background-color: ;
-                            
-                            color: #fff;
+                        a{
+                            font-size: 14px;
+                            color: #37a;
+                            margin-bottom: 6px;
+                            &:hover{
+                                background-color:#4188B9 ;
+                                color: #fff;
+                            }
                         }
 
                     }

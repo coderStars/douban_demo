@@ -9,45 +9,88 @@
             <div class="bodyContainer">
                 <!-- 左侧主体内容 -->
                 <div class="content">
-                    <!-- 热门活动 -->
+                  
+                    <!-- 自动轮播图 -->
+                    <div class="swiper-container" ref="activitySwiper">
+
+                          <!-- 热门活动 -->
                     <div class="hotActivity">
                         <h2>热门活动</h2>
                         <div class="control">
-                            <div>1/3</div>
-                            <a href="javascript:;" class="pre"></a>
-                            <a href="javascript:;" class="next"></a>
+                            <div class="swiper-pagination"></div>
+                            <div href="##" class="pre"></div>
+                            <div href="##" class="next"></div>
                         </div>
                     </div>
-                    <!-- 自动轮播图 -->
-                    <div class="swiper">
-                        <div class="swiperItem">
-                            <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                            <div class="name">话剧《丁西林戏剧三则》</div>
-                        </div>
-                        <!-- -------- -->
-                        <div class="swiperItem">
-                            <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                            <div class="name">话剧《丁西林戏剧三则》</div>
-                        </div>
-                        <!-- -------- -->
-                        <div class="swiperItem">
-                            <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                            <div class="name">话剧《丁西林戏剧三则》</div>
-                        </div>
-                        <!-- -------- -->
-                        <div class="swiperItem">
-                            <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                            <div class="name">话剧《丁西林戏剧三则》</div>
-                        </div>
-                        <!-- -------- -->
-                        <div class="swiperItem">
-                            <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                            <div class="name">话剧《丁西林戏剧三则》</div>
-                        </div>
-                        <!-- -------- -->
-                        <!-- -------- -->
 
+                         <div class="swiper-wrapper">
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                        </div> 
+
+                       
+                       
+                      
                     </div>
+
                     <!-- 分类导航 -->
                     <div class="navContainer">
                         <!-- 音乐» -->
@@ -158,35 +201,70 @@
                         <a href="##">＋发起同城活动</a>
                     </div>
 
-                    <!-- 轮播图 -->
-                    <div class="swiper">
-                        <!-- 头部 -->
-                        <div class="header">购票直通车</div>
-                        <!-- 轮播内容 -->
-                        <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-                                <div class="detail">
-                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                                    <p class="price">¥ 104</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                 <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-                                <div class="detail">
-                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                                    <p class="price">¥ 104</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">Slide 3</div>
-                        </div>
-                
-                        </div>
-                    </div>
+                    <!-- 购票直通车轮播图 -->
+<div class="swiper-container" ref="buyTicketSwiper">
+    <div class="buyTicket">购票直通车</div>    
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+    </div>
+</div>
 
+                    
                     <!-- 北京主办方 -->
                     <div class="hostInfo">
                         <div class="hostHeader">
@@ -302,7 +380,6 @@ import './css/index.css'
 import Swiper from "swiper";
 import "swiper/css/swiper.min.css";
 
-
 import CityHeader from '../../components/CityHeader'
 import ShowContent from '../../components/ShowContent'
 export default {
@@ -311,16 +388,63 @@ export default {
       CityHeader,
       ShowContent,
   },
+
   data() {
       return {
-         
+      
       }
   },
+  mounted() {
+      //热门活动轮播
+      this.activitySwiper()
+      this.buyTicketSwiper()
+
+  },
+  methods: {
+    //热门活动轮播
+    activitySwiper(){
+           var mySwiper = new Swiper (this.$refs.activitySwiper, {
+                loop: true, // 循环模式选项
+                
+                // 如果需要前进后退按钮
+                navigation: {
+                nextEl: '.next',
+                prevEl: '.pre',
+                },
+
+                slidesPerView : 5, //代表每屏显示几张
+                slidesPerGroup : 5, //没滑动一次滑动多少张
+
+                noSwiping : true,
+                noSwipingClass : 'stop-swiping',
+
+                autoplay:true, //自动切换
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction', //分页器样式类型
+                },
+                
+            })        
+    },
+    //购票直通车轮播图
+    buyTicketSwiper(){
+        var mySwiper = new Swiper (this.$refs.buyTicketSwiper, {
+        direction: 'vertical', // 垂直切换选项
+        loop: true, // 循环模式选项
+        autoplay:true, //自动切换   
+        slidesPerView : 6, //代表每屏显示几张
+         slidesPerGroup : 1,
+                   
+        })        
+    },
+    },
 }
+
 </script>
 
 <style scoped lang='less'>
-// @import '/src/assets/css/reset.css';
+@import '/src/assets/css/reset.css';
+
 // 主体
 body{
     background-color: #fff;
@@ -336,8 +460,11 @@ body{
             width:675px;
             padding-right: 25px;
             font: 12px Arial, Helvetica, sans-seri;
-            // 热门活动
+            //自动轮播图
+            .swiper-container{
+                // 热门活动
             .hotActivity{
+                position: relative;
                 width:100%;
                 height: 30px;
                 line-height: 30px;
@@ -355,15 +482,18 @@ body{
                     float: right;
                     margin-bottom: 12px;
                     vertical-align: middle;
+                    display: flex;
                     div{
+                        // position: absolute;
+                        // top: 0;
+                        // left: 0;
+                        width: 100px;
                         vertical-align: top;
-                        display: inline-block;
-                        margin-right: 12px;
+                        display: inline-block;   
+                        margin-left: 552px;
                         font-size: 13px;
                         color: #666;
-                        // height: 16px;
                         line-height: 18px;
-                        margin-bottom:10px;
                         
                     }
                     .pre{
@@ -372,8 +502,8 @@ body{
                         width: 19px;
                         height: 19px;
                         border-radius: 50%;
-                        margin-bottom: 10px;
-                        margin-right: 3px;
+                        margin:0 0 0 10px;
+                        cursor: pointer;
                     }
                     .next{
                         background: url('./images/pre.png') no-repeat -21px -2px ;
@@ -381,34 +511,40 @@ body{
                         width: 19px;
                         height: 19px;
                         border-radius: 50%;
-                        margin-bottom: 10px;
+                        margin: 0 0 0 4px;
+                        cursor: pointer;
                     }
 
                 }
             }
-            //自动轮播图
-            .swiper{
-                width: 675px;
-                display: flex;
-                justify-content: space-between;
-                .swiperItem{
-                    img{
-                        display: block;
-                        width: 115px;
-                        height: 161px;
-                        margin-bottom: 10px;
-                        cursor: pointer;
-                    }
-                    .name{
-                        width: 115px;
-                        cursor: pointer;
-                        color: #37a;
-                        text-align: center;
-                         overflow: hidden;
-                        text-overflow: ellipsis;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 2;  //2行
-                        -webkit-box-orient: vertical;
+
+
+
+                //下方轮播内容
+                .swiper-wrapper{
+                    width: 675px;
+                    display: flex;
+                    // justify-content: space-between;
+                    .swiper-slide{
+                        width: 140px;
+                        img{
+                            display: block;
+                            width: 115px;
+                            height: 161px;
+                            margin-bottom: 10px;
+                            cursor: pointer;
+                        }
+                        .name{
+                            width: 115px;
+                            cursor: pointer;
+                            color: #37a;
+                            text-align: center;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;  //2行
+                            -webkit-box-orient: vertical;
+                        }
                     }
                 }
 
@@ -487,9 +623,11 @@ body{
                     line-height: 27px;
                 }   
             }
-            // 轮播图
-            .swiper{
-                .header{
+            // 购票直通车轮播图
+            .swiper-container{
+                width:300px;
+                height:700px;
+                .buyTicket{
                     width: 300px;
                     font-size: 15px;
                     color: #111;
@@ -497,16 +635,15 @@ body{
                     padding-bottom: 7px;
                     border-bottom: 1px dotted #ddd;
                     margin-bottom: 20px;
-
                 }
-                //
-                .swiper-container{
-                    width:300px;
-                    height:700px;
-                    background-color: pink;
-                    margin-left: 0px;
+                //轮播内容
+                .swiper-wrapper{    
+                    height: 672px;  
                     .swiper-slide{
+                        width:300px;
                         display: flex;
+                        // background-color: red;
+                        // flex-direction: column;
                         img{
                             display: block;
                             width: 48px;
