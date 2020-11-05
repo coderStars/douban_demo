@@ -676,7 +676,8 @@ export default {
             cursor: pointer;
           }
           button:hover{
-            background-color: #E34668
+            background-color: #E34668;
+            background-color: #E34668;
           }
         }
       }
