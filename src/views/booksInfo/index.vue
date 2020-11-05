@@ -473,9 +473,80 @@
                 </div>
               </div>
             </div>
+            <!-- 短评 -->
             <div class="comments-section">
               <div class="mod-hd">
-                
+                <h2>短评  · · · · · · 
+                  <a href="##" class="pl">(全部148条)</a>
+                </h2>
+                <a href="##" class="redbutt">我来说两句</a>
+              </div>
+              <div class="nav-tab">
+                <div class="tabs-wrapper">
+                  <a href="##" class="short-comment-tabs">热门</a>/
+                  <a href="##" class="short-comment-tabs">最新</a>/
+                  <a href="##" class="short-comment-tabs">好友</a>
+                </div>
+              </div>
+              <div class="comment-list-wrapper">
+                <div class="comment-list">
+                  <ul>
+                    <li class="comment-item">
+                      <div class="comment">
+                        <h3>
+                          <div class="comment-info">
+                            <a href="##">风满蜃气楼</a>
+                            <span class="user-stars"></span>
+                            <span class="comment-time">2020-07-08</span>
+                          </div>
+                          <div class="comment-vote">
+                            <span class="count">1</span>
+                            <a href="##" class="vote-comment">有用</a>
+                          </div>
+                        </h3>
+                        <p class="comment-content">
+                          最后一篇最戳我。一代一代叛逆过但终究不得不顺从生活挣扎度日也偶尔怀旧的老去的青年人的怅然回望；“我”与吉儿的相识像是遥遥相望的豆瓣友邻的现实下载，但友邻也是会在社会生活的洪流中被打磨变化。其他篇目主题相似，不幸的婚姻抑或婚姻的不幸与情感中的裂痕，难以沟通的憋屈愤懑，叫人翻来覆去焦虑失眠那种，也有难忘的旧情初恋到黄昏死前复燃，大都哀伤却清醒。比起自传性质的《其后》更能明确地喜欢这本，文字节奏和叙事感觉很舒服，绵密细致无孔不入。
+                        </p>
+                      </div>
+                    </li>
+                    <li class="comment-item">
+                      <div class="comment">
+                        <h3>
+                          <div class="comment-info">
+                            <a href="##">风满蜃气楼</a>
+                            <span class="user-stars"></span>
+                            <span class="comment-time">2020-07-08</span>
+                          </div>
+                          <div class="comment-vote">
+                            <span class="count">1</span>
+                            <a href="##" class="vote-comment">有用</a>
+                          </div>
+                        </h3>
+                        <p class="comment-content">
+                          最后一篇最戳我。一代一代叛逆过但终究不得不顺从生活挣扎度日也偶尔怀旧的老去的青年人的怅然回望；“我”与吉儿的相识像是遥遥相望的豆瓣友邻的现实下载，但友邻也是会在社会生活的洪流中被打磨变化。其他篇目主题相似，不幸的婚姻抑或婚姻的不幸与情感中的裂痕，难以沟通的憋屈愤懑，叫人翻来覆去焦虑失眠那种，也有难忘的旧情初恋到黄昏死前复燃，大都哀伤却清醒。比起自传性质的《其后》更能明确地喜欢这本，文字节奏和叙事感觉很舒服，绵密细致无孔不入。
+                        </p>
+                      </div>
+                    </li>
+                    <li class="comment-item">
+                      <div class="comment">
+                        <h3>
+                          <div class="comment-info">
+                            <a href="##">风满蜃气楼</a>
+                            <span class="user-stars"></span>
+                            <span class="comment-time">2020-07-08</span>
+                          </div>
+                          <div class="comment-vote">
+                            <span class="count">1</span>
+                            <a href="##" class="vote-comment">有用</a>
+                          </div>
+                        </h3>
+                        <p class="comment-content">
+                          最后一篇最戳我。一代一代叛逆过但终究不得不顺从生活挣扎度日也偶尔怀旧的老去的青年人的怅然回望；“我”与吉儿的相识像是遥遥相望的豆瓣友邻的现实下载，但友邻也是会在社会生活的洪流中被打磨变化。其他篇目主题相似，不幸的婚姻抑或婚姻的不幸与情感中的裂痕，难以沟通的憋屈愤懑，叫人翻来覆去焦虑失眠那种，也有难忘的旧情初恋到黄昏死前复燃，大都哀伤却清醒。比起自传性质的《其后》更能明确地喜欢这本，文字节奏和叙事感觉很舒服，绵密细致无孔不入。
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -491,10 +562,10 @@
 </template>
 
 <script>
-import Search from '@/components/Search/Search'
+import Search from "@/components/Search/Search";
 export default {
   name: "BooksInfo",
-  components:{
+  components: {
     Search
   }
 };
@@ -502,7 +573,7 @@ export default {
 
 <style scoped lang="less">
 .wrapper {
-  width:1040px;
+  width: 1040px;
   height: 3500px;
   font-size: 13px;
   margin: 0 auto;
@@ -825,20 +896,104 @@ export default {
               }
             }
           }
-          .content_box{
+          .content_box {
             width: 700px;
             height: 536px;
             display: flex;
             flex-direction: column;
-            .box{
+            .box {
               width: 700px;
               display: flex;
               justify-content: space-between;
-              dl{
+              dl {
                 height: 196px;
               }
-              dd{
+              dd {
                 padding-top: 3px;
+              }
+            }
+          }
+        }
+        .comments-section {
+          .mod-hd {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            h2 {
+              margin: 0;
+              a {
+                color: #3377aa;
+                font-size: 13px;
+              }
+              a:hover {
+                background-color: #3377aa;
+                color: white;
+              }
+            }
+            .redbutt {
+              color: #c65e24;
+              background: rgba(198, 94, 36, 0.15);
+              padding: 7px 12px;
+              line-height: 13px;
+              border-radius: 2px;
+            }
+          }
+          .nav-tab {
+            height: 36px;
+            margin-top: 12px;
+            .tabs-wrapper {
+              padding-bottom: 15px;
+              border-bottom: 1px solid #ddd;
+            }
+          }
+          .comment-list-wrapper {
+            .comment-list {
+              .comment-item {
+                padding: 14px 0;
+                border-bottom: 1px solid #eeeeee;
+                .comment {
+                  h3 {
+                    font-size: 13px;
+                    font-weight: normal;
+                    display: flex;
+                    justify-content: space-between;
+                    height: 22px;
+                    line-height: 22px;
+                    .comment-info {
+                      a {
+                        color: #3377aa;
+                      }
+                      a:hover {
+                        background-color: #3377aa;
+                        color: white;
+                      }
+                      .user-stars {
+                        display: inline-block;
+                        width: 55px;
+                        height: 11px;
+                        margin: 0 3px 0 0;
+                        background: url(./images/star.png) no-repeat 0 -22px;
+                        background-size: 55px;
+                      }
+                    }
+                    .comment-vote {
+                      a {
+                        color: #3377aa;
+                      }
+                      a:hover {
+                        background-color: #3377aa;
+                        color: white;
+                      }
+                    }
+                  }
+                  .comment-content {
+                    p {
+                      color: #666;
+                      line-height: 1.5;
+                      word-break: break-word;
+                    }
+                  }
+                }
               }
             }
           }
