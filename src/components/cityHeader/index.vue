@@ -7,12 +7,12 @@
                <!-- 左侧导航 -->
               <div class="navLeft">
                 <div class="logo">豆瓣同城</div>
-                <div class="city">
+                <div class="city" @click="chooseCity">
                     <a href="javascript:;">北京
-                        <i></i>
+                        <i :class="{choose:otherCity}" ></i>
                     </a>
                     <!-- 其他城市选项 -->
-                    <div class="otherCity">
+                    <div class="otherCity"  v-show="otherCity === true">
                         <div>北京</div>
                         <div>上海</div>
                         <div>广州</div>
@@ -42,7 +42,7 @@
               <div class="searchRight">
                    <div class="rightContainer">
                     <input  class="input" type="text" placeholder="活动 / 舞台剧 / 地点">
-                    <div  class="submit iconfont iconSearch     "></div>
+                    <div  class="submit iconfont iconSearch  "></div>
                 </div>
               </div>
           </div>
@@ -54,6 +54,17 @@
 
 export default {
   name: 'CityHeader',
+  data() {
+      return {
+          otherCity:false,
+      }
+  },
+  methods: {
+      // 点击选择切换城市
+      chooseCity(){
+        this.otherCity = !this.otherCity
+      }
+  },
   
 }
 </script>
@@ -119,12 +130,18 @@ export default {
                         right: 12px;
                         transform: translateY(-50%);   
                     }
+                    .choose{
+                        transform: rotate(180deg) translateY(2px);
+                        // transform: ;
+
+                    }
                 }
                 //其他城市选项
                 .otherCity{
                     position: absolute;
                     top: 31px;
                     left: 0px;
+                    z-index: 2;
                     width: 208px;
                     height: 107px;
                     padding: 12px 20px;
@@ -133,7 +150,7 @@ export default {
                     justify-content: space-around;
                     background-color: #fff;
                     border: 1px solid #ddd;
-                    visibility: hidden;
+                    // visibility: hidden;
                     div{
                         width: 25%;
                         color: #37a;
