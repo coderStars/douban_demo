@@ -9,9 +9,8 @@
 
 <script>
 export default {
-  name: 'App'
-
-}
+  name: "App",
+};
 </script>
 
 <style lang="less" scoped>
@@ -20,5 +19,4 @@ export default {
 body,html {
   width: 100%;
 }
-
 </style>
