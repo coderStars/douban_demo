@@ -75,7 +75,6 @@ const routes = [
         path: '/commoncity',
         component: CommonCity
     },
-    
     {
         path: '/login',
         component: Login
