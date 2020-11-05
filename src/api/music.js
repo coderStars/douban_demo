@@ -11,5 +11,6 @@ export const getAlbumImgList = () => {
   return request({
     url: '/getalbumImgList',
     method: 'get'
+    
   })
 }
