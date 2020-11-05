@@ -13,3 +13,10 @@ export const getAlbumImgList = () => {
     method: 'get'
   })
 }
+
+export const getmusicRank = () => {
+  return request({
+    url: '/getmusicRank',
+    method: 'get'
+  })
+}

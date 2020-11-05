@@ -9,23 +9,18 @@
 </template>
 
 <script>
-
 export default {
   name: "Music",
   data() {
     return {
       buttomTextList: [
         {
-          name: "我听",
-          path: "/music/listner"
-        },
-        {
           name: "音乐人",
           path: "/music/producer"
         },
         {
           name: "专题",
-          path: "/music/title"
+          path: "/music/topic"
         },
         {
           name: "排行榜",
@@ -36,11 +31,15 @@ export default {
           path: "/music/views"
         },
         {
+          name: "乐评",
+          path: "/music/songComment"
+        },
+        {
           name: "豆瓣FM",
           path: "/music/comments"
         },
         {
-name: "歌单",
+          name: "歌单",
           path: "/music/songsheet"
         },
         {
@@ -54,10 +53,5 @@ name: "歌单",
 </script>
 
 <style lang="less" scoped>
-.musicWrapper {
-  width: 1040px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
+
 </style>

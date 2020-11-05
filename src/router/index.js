@@ -6,6 +6,8 @@ const Movie = () => import('@/views/movie/index.vue')
 const Music = () => import('@/views/music/Music.vue')
 const MusicIndex = () => import('@/views/music/childRouter/Index.vue')
 const MusicTopics= () => import('@/views/music/childRouter/Topics.vue')
+const MusicRank= () => import('@/views/music/childRouter/Rank.vue')
+const SongComment= () => import('@/views/music/childRouter/SongComment.vue')
 const Books = () => import('@/views/books/index.vue')
 const Doupin = () => import('@/views/doupin/index.vue')
 const CommonCity = () => import('@/views/CommonCity/index.vue')
@@ -42,6 +44,14 @@ const routes = [
             {
                 path: 'topic',
                 component: MusicTopics
+            },
+            {
+                path: 'rank',
+                component: MusicRank
+            },
+            {
+                path: 'songComment',
+                component: SongComment
             }
         ]
     },
