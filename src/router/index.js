@@ -4,6 +4,8 @@ Vue.use(VueRouter)
 
 const Movie = () => import('@/views/movie/index.vue')
 const Music = () => import('@/views/music/Music.vue')
+const MusicIndex = () => import('@/views/music/childRouter/Index.vue')
+const MusicTopics= () => import('@/views/music/childRouter/Topics.vue')
 const Books = () => import('@/views/books/index.vue')
 const Doupin = () => import('@/views/doupin/index.vue')
 const CommonCity = () => import('@/views/CommonCity/index.vue')
@@ -32,6 +34,16 @@ const routes = [
         meta: {
             isShow: true
         },
+        children: [
+            {
+                path: '/',
+                component: MusicIndex
+            },
+            {
+                path: 'topic',
+                component: MusicTopics
+            }
+        ]
     },
     {
         path: '/books',
