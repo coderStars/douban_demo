@@ -17,10 +17,10 @@ export default {
 
 <style lang="less" scoped>
 @import "assets/css/reset.css";
-.bodyWrapper {
-  // width: 1040px;
-  // margin: 0 auto;
-}
+// .bodyWrapper {
+//    width: 1040px;
+//    margin: 0 auto;
+// }
 body,
 html {
   width: 100%;
