@@ -1,5 +1,5 @@
 <template>
-    <div id="market-main">
+  <div id="market-main">
     <!-- 分类区 -->
     <div class="nav-warp">
       <a href="/doupin" alt="豆瓣豆品">
@@ -10,7 +10,7 @@
 
       <ul class="cateGory">
         <li>
-          <router-link to="/doupin/alls"></router-link>
+          <router-link to="/doupin/allshop">全部商品</router-link>
           <!-- <a href="##">全部商品</a> -->
         </li>
         <li>
@@ -48,17 +48,18 @@
               <a
                 href="https://img9.doubanio.com/view/treasury_image/raw/public/101d12178e528c6.jpg"
                 target="_blank"
-                >营业执照</a
               >
+                营业执照
+              </a>
               |
-              <a href="https://img3.doubanio.com/img/files/file-1597657012-0.jpg" target="_blank"
-                >食品经营许可证: JY11105111524423</a
-              >
+              <a href="https://img3.doubanio.com/img/files/file-1597657012-0.jpg" target="_blank">
+                食品经营许可证: JY11105111524423
+              </a>
             </p>
             <p>
-              <a href="https://img3.doubanio.com/img/files/file-1565582243-0.jpg" target="_blank"
-                >出版物经营许可证：新出发京批字第直170330号</a
-              >
+              <a href="https://img3.doubanio.com/img/files/file-1565582243-0.jpg" target="_blank">
+                出版物经营许可证：新出发京批字第直170330号
+              </a>
             </p>
           </div>
         </div>
@@ -84,7 +85,7 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
