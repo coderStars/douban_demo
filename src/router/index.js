@@ -5,14 +5,21 @@ Vue.use(VueRouter)
 const Movie = () => import('@/views/movie/index.vue')
 const Music = () => import('@/views/music/Music.vue')
 const Books = () => import('@/views/books/index.vue')
-const Doupin = () => import('@/views/doupin/index.vue')
+const Doupin = () => import('@/views/Doupin/index.vue')
 const CommonCity = () => import('@/views/CommonCity/index.vue')
 const Login = () => import('@/views/login/Login.vue')
 const showDetail = () => import('@/views/showDetail')
 const BooksInfo = () => import('@/views/booksInfo/index.vue')
 const Cart = () => import('@/views/cart/index.vue')
+const AllShop = () => import('@/views/Doupin/allshop/index.vue')
+const Maindoupin = () => import('@/views/Doupin/maindoupin/index.vue')
 
-const routes = [{
+const routes = [
+    // {
+    //     path:'/',
+    //     redirect: 
+    // },
+{
     path: '/movie',
     component: Movie,
     name: 'movie',
@@ -48,9 +55,23 @@ const routes = [{
     {
         path: '/doupin',
         component: Doupin,
-        // meta: {
-        //     isShow: false
-        // }
+        children: [
+            {
+                path: 'allshop',
+                component: AllShop,
+            },
+            {
+                path: 'maindoupin',
+                component: Maindoupin,
+            },
+            {
+                path: '/',
+                redirect: '/doupin/maindoupin'
+            }
+        ],
+        meta: {
+            isShow: false
+        }
     }
 ]
 
