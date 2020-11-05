@@ -11,29 +11,29 @@
           <!-- 演出信息 -->
           <div class="showInfo">
             <!-- 左侧图片 -->
-            <img src="https://img9.doubanio.com/pview/event_poster/plarge/public/99b3ba40e7c1515.jpg" alt="">
+            <img :src="imgInfo.small" alt="">
             <!-- 右侧详情 -->
             <div class="showDetail">
-              <h1>开心麻花爆笑舞台剧《谈判专家》 第9轮</h1>
+              <h1>{{showDetail.title}}</h1>
               <div class="date">
                 <span>时间: &nbsp;&nbsp;</span>
-                 11月05日 周四 19:30 ~ 11月15日 周日 21:30</div>
+                 {{showDetail.data}}</div>
               <div class="tip">活动结束时间以实际活动为准</div>
               <div class="adress">
                 <span>地点: &nbsp;&nbsp;</span>
-                 北京 海淀剧院 海淀路黄庄84号（人民大学向北）</div>
+                 {{showDetail.address}}</div>
               <div class="price">
                 <span>费用: &nbsp;&nbsp;</span>
-                <span>80 - 1134元</span>
+                <span>{{showDetail.money}}</span>
               </div>
               <div class="type">
                 <span>类型: &nbsp;&nbsp;</span>
                  
-                <a href="##">戏剧-话剧</a>
+                <a href="##">{{showDetail.type}}</a>
               </div>
               <div class="info">
                 <span>信息提供者:&nbsp;&nbsp; </span>
-                <a href="##">票牛</a>
+                <a href="##">{{showDetail.infoOrigin}}</a>
               </div>
               <div class="num">
                 <span>1</span>
@@ -74,7 +74,7 @@
           </div>
           <!-- 详情页 -->
           <div class="acticityDetail">
-            <h2>活动详情</h2>
+            <h2>{{exerciseDetail.title}}</h2>
             <div class="desc">
               购买须知：限购说明：每单限购6张 座位类型：请按门票对应座位，有序对号入座 儿童入场提示 ：1.2米以上凭票入场，1.2米以下谢绝入场 
               <br>
@@ -85,7 +85,7 @@
               &nbsp;
               <br>
               <div class="middle">
-                <img src="https://img3.doubanio.com/view/page_note/large/public/p100148960-1.jpg" alt="">
+                <img :src="imgInfo.longImg" alt="">
               </div>
             </div>
           </div>
@@ -109,77 +109,13 @@
           <div class="other">
             <h2>附近热门活动（距离本活动3公里范围内）</h2>
             <div class="content">
-            <div class="otherItem">
-              <img src="https://img9.doubanio.com/pview/event_poster/large/public/5e468194d0d1db5.jpg" alt="">
+            <div class="otherItem" v-for="item in showDetail.nearEImgListDetail" :key="item.id">
+              <img :src="item.imgUrl" alt="">
               <div class="text">
-                打破传统舞蹈教学模式，【新式教学法... 
+                {{item.name}}
               </div>
             </div>
             <!-- ======= -->
-            <div class="otherItem">
-              <img src="https://img9.doubanio.com/pview/event_poster/large/public/5e468194d0d1db5.jpg" alt="">
-              <div class="text">
-                打破传统舞蹈教学模式，【新式教学法... 
-              </div>
-            </div>
-            <!-- ======= -->
-            <div class="otherItem">
-              <img src="https://img9.doubanio.com/pview/event_poster/large/public/5e468194d0d1db5.jpg" alt="">
-              <div class="text">
-                打破传统舞蹈教学模式，【新式教学法... 
-              </div>
-            </div>
-            <!-- ======= -->
-            <div class="otherItem">
-              <img src="https://img9.doubanio.com/pview/event_poster/large/public/5e468194d0d1db5.jpg" alt="">
-              <div class="text">
-                打破传统舞蹈教学模式，【新式教学法... 
-              </div>
-            </div>
-            <!-- ======= -->
-            <div class="otherItem">
-              <img src="https://img9.doubanio.com/pview/event_poster/large/public/5e468194d0d1db5.jpg" alt="">
-              <div class="text">
-                打破传统舞蹈教学模式，【新式教学法... 
-              </div>
-            </div>
-            <!-- ======= -->
-            <div class="otherItem">
-              <img src="https://img9.doubanio.com/pview/event_poster/large/public/5e468194d0d1db5.jpg" alt="">
-              <div class="text">
-                打破传统舞蹈教学模式，【新式教学法... 
-              </div>
-            </div>
-            <!-- ======= -->
-            <div class="otherItem">
-              <img src="https://img9.doubanio.com/pview/event_poster/large/public/5e468194d0d1db5.jpg" alt="">
-              <div class="text">
-                打破传统舞蹈教学模式，【新式教学法... 
-              </div>
-            </div>
-            <!-- ======= -->
-             <div class="otherItem">
-              <img src="https://img9.doubanio.com/pview/event_poster/large/public/5e468194d0d1db5.jpg" alt="">
-              <div class="text">
-                打破传统舞蹈教学模式，【新式教学法... 
-              </div>
-            </div>
-            <!-- ======= -->
-             <div class="otherItem">
-              <img src="https://img9.doubanio.com/pview/event_poster/large/public/5e468194d0d1db5.jpg" alt="">
-              <div class="text">
-                打破传统舞蹈教学模式，【新式教学法... 
-              </div>
-            </div>
-            <!-- ======= -->
-             <div class="otherItem">
-              <img src="https://img9.doubanio.com/pview/event_poster/large/public/5e468194d0d1db5.jpg" alt="">
-              <div class="text">
-                打破传统舞蹈教学模式，【新式教学法... 
-              </div>
-            </div>
-            <!-- ======= -->
-
           </div>
           </div>
 
@@ -259,22 +195,55 @@
 <script>
 import CityHeader from '@/components/CityHeader'
 import './css/reset.css'
+import {getCommonCityShowDetail} from '@/api/commonCity'
 export default {
   name: 'showDetail',
   components:{
     CityHeader,
 
   },
+  data() {
+    return {
+      showDetail:{}
+    }
+  },
   mounted(){
     //画布地图
     // this.map()
+    //获取演出数据
+    this.getShowDetail()
   },
   methods:{
     //画布地图
     map(){
       
-    }
-  }
+    },
+    //获取演出数据
+    async getShowDetail(){
+      let result = await getCommonCityShowDetail(1)
+      this.showDetail = result
+    },
+  },
+  computed: {
+    exerciseDetail(){
+      return this.showDetail.exerciseDetail || {}
+    },
+    imgInfo(){
+      return this.exerciseDetail.imgInfo || {}
+    },
+        // avtiveRules(){
+        //   return this.exerciseDetail.name.split("：")
+        // },
+        // rowOne(){
+        //   return this.avtiveRules.slice(0,5)
+        // },
+        // rowTwo(){
+        //   return this.avtiveRules.slice(5,6)
+        // },
+        // rowThree(){
+        //   return this.avtiveRules.slice(6,7)
+        // },
+  },
 
 }
 </script>

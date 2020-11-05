@@ -194,7 +194,7 @@
                 <!-- 右侧侧边栏 -->
                 <aside>
                     <!-- 广告图1 -->
-                    <img class="adv" src="https://img9.doubanio.com/view/dale-online/dale_ad/public/f98459bcad0aed4.jpg" alt="">
+                    <img class="adv" src="https://img1.doubanio.com/view/dale-online/dale_ad/public/55d11c20710e288.jpg" alt="">
 
                     <!-- 发起同城活动 -->
                     <div class="commonActivity">
@@ -202,67 +202,68 @@
                     </div>
 
                     <!-- 购票直通车轮播图 -->
-<div class="swiper-container" ref="buyTicketSwiper">
-    <div class="buyTicket">购票直通车</div>    
-    <div class="swiper-wrapper">
-        <div class="swiper-slide">
-            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-            <div class="detail">
-                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                <p class="price">¥ 104</p>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-            <div class="detail">
-                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                <p class="price">¥ 104</p>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-            <div class="detail">
-                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                <p class="price">¥ 104</p>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-            <div class="detail">
-                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                <p class="price">¥ 104</p>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-            <div class="detail">
-                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                <p class="price">¥ 104</p>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-            <div class="detail">
-                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                <p class="price">¥ 104</p>
-            </div>
-        </div>
-        <div class="swiper-slide">
-            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-            <div class="detail">
-                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                <p class="price">¥ 104</p>
-            </div>
-        </div>
-    </div>
-</div>
+                    <div class="buyTicket">购票直通车</div>   
+                    <div class="swiper-container" ref="buyTicketSwiper">
+                         
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+                                <div class="detail">
+                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                                    <p class="price">¥ 104</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+                                <div class="detail">
+                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                                    <p class="price">¥ 104</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+                                <div class="detail">
+                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                                    <p class="price">¥ 104</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+                                <div class="detail">
+                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                                    <p class="price">¥ 104</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+                                <div class="detail">
+                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                                    <p class="price">¥ 104</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+                                <div class="detail">
+                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                                    <p class="price">¥ 104</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+                                <div class="detail">
+                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                                    <p class="price">¥ 104</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     
                     <!-- 北京主办方 -->
@@ -431,7 +432,12 @@ export default {
         var mySwiper = new Swiper (this.$refs.buyTicketSwiper, {
         direction: 'vertical', // 垂直切换选项
         loop: true, // 循环模式选项
-        autoplay:true, //自动切换   
+        speed:7000,
+        noSwipingClass : 'stop-swiping',
+        autoplay:{
+            // disableOnInteraction: false,
+            delay: 10,
+        }, //自动切换   
         slidesPerView : 6, //代表每屏显示几张
          slidesPerGroup : 1,
                    
@@ -624,10 +630,7 @@ body{
                 }   
             }
             // 购票直通车轮播图
-            .swiper-container{
-                width:300px;
-                height:700px;
-                .buyTicket{
+            .buyTicket{
                     width: 300px;
                     font-size: 15px;
                     color: #111;
@@ -636,10 +639,16 @@ body{
                     border-bottom: 1px dotted #ddd;
                     margin-bottom: 20px;
                 }
+            .swiper-container{
+                width:300px;
+                height:700px;
+                
                 //轮播内容
                 .swiper-wrapper{    
                     height: 672px;  
+                    // overflow: hidden;
                     .swiper-slide{
+                        overflow: hidden;
                         width:300px;
                         display: flex;
                         // background-color: red;
