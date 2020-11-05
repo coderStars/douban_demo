@@ -128,7 +128,6 @@ export default {
     margin: 0 auto;
     display: flex;
     padding: 10px 0 5px;
-
     .nav-logo {
       width: 145px;
       height: 56px;
