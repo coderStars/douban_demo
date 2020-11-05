@@ -5,12 +5,12 @@ Vue.use(VueRouter)
 const Movie = () => import('@/views/movie/index.vue')
 const Music = () => import('@/views/music/Music.vue')
 const Books = () => import('@/views/books/index.vue')
-const Doupin = () => import('@/views/doupin/index.vue')
+const Doupin = () => import('@/views/Doupin/index.vue')
 const CommonCity = () => import('@/views/CommonCity/index.vue')
 const Login = () => import('@/views/login/Login.vue')
 
-const AllShop = () => import('@/views/doupin/allShop/index.vue')
-const ChildRouter = () => import('@/views/doupin/childrouter/index.vue')
+const AllShop = () => import('@/views/Doupin/allshop/index.vue')
+const Maindoupin = () => import('@/views/Doupin/maindoupin/index.vue')
 
 const routes = [
     // {
@@ -54,22 +54,23 @@ const routes = [
     {
         path: '/doupin',
         component: Doupin,
-        children: [{
+        children: [
+            {
                 path: 'allshop',
                 component: AllShop,
             },
             {
-                path: 'childRouter',
-                component: ChildRouter,
+                path: 'maindoupin',
+                component: Maindoupin,
             },
             {
                 path: '/',
-                redirect: '/doupin/allshop '
+                redirect: '/doupin/maindoupin'
             }
-        ]
-        // meta: {
-        //     isShow: false
-        // }
+        ],
+        meta: {
+            isShow: false
+        }
     }
 ]
 

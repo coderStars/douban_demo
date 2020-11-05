@@ -1029,7 +1029,7 @@
 
 <script>
 export default {
-  name: "doupin",
+  name: "Maindoupin",
 };
 </script>
 
