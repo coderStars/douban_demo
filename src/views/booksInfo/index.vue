@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Search></Search>
     <div class="wrapper">
       <h1>第111天：人质手记</h1>
       <!-- 内容区 -->
@@ -485,8 +486,12 @@
 </template>
 
 <script>
+import Search from '@/components/Search/Search'
 export default {
-  name: "BooksInfo"
+  name: "BooksInfo",
+  components:{
+    Search
+  }
 };
 </script>
 
