@@ -14,3 +14,10 @@ export const getAlbumImgList = () => {
     
   })
 }
+
+export const getAllShopList =  () =>{
+  return request({
+    url:'/getAllShops',
+    method:'get'
+  })
+}
