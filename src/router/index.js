@@ -9,7 +9,15 @@ const Doupin = () => import('@/views/doupin/index.vue')
 const CommonCity = () => import('@/views/CommonCity/index.vue')
 const Login = () => import('@/views/login/Login.vue')
 
-const routes = [{
+const AllShop = () => import('@/views/doupin/allShop/index.vue')
+const ChildRouter = () => import('@/views/doupin/childrouter/index.vue')
+
+const routes = [
+    // {
+    //     path:'/',
+    //     redirect: 
+    // },
+    {
         path: '/movie',
         component: Movie,
         name: 'movie',
@@ -46,6 +54,19 @@ const routes = [{
     {
         path: '/doupin',
         component: Doupin,
+        children: [{
+                path: 'allshop',
+                component: AllShop,
+            },
+            {
+                path: 'childRouter',
+                component: ChildRouter,
+            },
+            {
+                path: '/',
+                redirect: '/doupin/allshop '
+            }
+        ]
         // meta: {
         //     isShow: false
         // }
