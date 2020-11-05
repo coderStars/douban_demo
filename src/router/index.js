@@ -15,6 +15,8 @@ const Login = () => import('@/views/login/Login.vue')
 const showDetail = () => import('@/views/showDetail')
 const BooksInfo = () => import('@/views/booksInfo/index.vue')
 const Cart = () => import('@/views/cart/index.vue')
+const AllShop = () => import('@/views/doupin/allShop/index.vue')
+const Maindoupin = () => import('@/views/doupin/maindoupin/index.vue')
 
 const routes = [
     {
@@ -81,7 +83,24 @@ const routes = [
     },
     {
         path: '/doupin',
-        component: Doupin
+        component: Doupin,
+        children: [
+            {
+                path: 'allshop',
+                component: AllShop,
+            },
+            {
+                path: 'maindoupin',
+                component: Maindoupin,
+            },
+            {
+                path: '/',
+                redirect: '/doupin/maindoupin'
+            }
+        ],
+        meta: {
+            isShow: false
+        }
     }
 ]
 
