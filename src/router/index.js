@@ -18,6 +18,15 @@ const Cart = () => import('@/views/cart/index.vue')
 
 const routes = [
     {
+        path: '/booksinfo',
+        component: BooksInfo
+    },
+    {
+        path: '/cart',
+        component: Cart,
+        meta: { isHide: true }
+    },
+    {
         path: '/',
         component: Books,
         meta: { isShow: true }
@@ -66,10 +75,7 @@ const routes = [
         path: '/commoncity',
         component: CommonCity
     },
-    {
-        path: '/booksinfo',
-        component: Books
-    },
+    
     {
         path: '/login',
         component: Login
