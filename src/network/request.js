@@ -1,4 +1,3 @@
-
 // 贾月洁写的
 import axios from 'axios'
 import NProgress from 'nprogress'
@@ -12,7 +11,7 @@ const instance = axios.create({
 })
 // 请求拦截器
 instance.interceptors.request.use(config => {
-    NProgress.start()  //添加进度条功能
+    NProgress.start() //添加进度条功能
     return config
 })
 
@@ -24,7 +23,7 @@ instance.interceptors.response.use(
     },
     error => {
         console.log(error)
-        return new Promise(()=>{})
+        return new Promise(() => {})
     }
 )
 
