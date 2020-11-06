@@ -1,6 +1,9 @@
 <template>
   <div>
-    <Search inpText="书名、作者、ISBN" :buttomTextList="buttomTextList"></Search>
+    <Search
+      inpText="书名、作者、ISBN"
+      :buttomTextList="buttomTextList"
+    ></Search>
     <!-- 广告 -->
     <div class="topAds">
       <img src="../../assets/images/books/homePages/ia_400000000.jpg" alt="" />
@@ -980,212 +983,25 @@
               <span class="hotLabels"><a href="">所有热门标签»</a></span>
             </h2>
           </div>
-          <!-- 热门内容分类 -->
+          <!-- 热门内容分类   （已渲染动态数据） -->
           <div class="contentLabels">
             <div class="ulContainer">
               <div class="titleContainer">
-                <div class="ificationContainer">
-                  <span>文学</span>
+                <div
+                  class="ificationContainer"
+                  v-for="item in booksLabel"
+                  :key="item.id"
+                >
+                  <span>{{ item.name }}</span>
                   <div>
-                    <span class="ificationDIV">
-                      <a href="">小说</a>
+                    <span
+                      class="ificationDIV"
+                      v-for="(itemChild, index) in item.typeList"
+                      :key="index"
+                    >
+                      <a href="">{{ itemChild }}</a>
                     </span>
-                    <span class="ificationDIV">
-                      <a href="">随笔</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">日本文学</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">散文</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">诗歌</a>
-                    </span>
-                  </div>
-                  <div>
-                    <span class="ificationDIV">
-                      <a href="">童话</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">名著</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">港台</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">更多»</a>
-                    </span>
-                  </div>
-                </div>
-                <div class="ificationContainer">
-                  <span>文学</span>
-                  <div>
-                    <span class="ificationDIV">
-                      <a href="">小说</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">随笔</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">日本文学</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">散文</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">诗歌</a>
-                    </span>
-                  </div>
-                  <div>
-                    <span class="ificationDIV">
-                      <a href="">童话</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">名著</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">港台</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">更多»</a>
-                    </span>
-                  </div>
-                </div>
-                <div class="ificationContainer">
-                  <span>文学</span>
-                  <div>
-                    <span class="ificationDIV">
-                      <a href="">小说</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">随笔</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">日本文学</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">散文</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">诗歌</a>
-                    </span>
-                  </div>
-                  <div>
-                    <span class="ificationDIV">
-                      <a href="">童话</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">名著</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">港台</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">更多»</a>
-                    </span>
-                  </div>
-                </div>
-                <div class="ificationContainer">
-                  <span>文学</span>
-                  <div>
-                    <span class="ificationDIV">
-                      <a href="">小说</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">随笔</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">日本文学</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">散文</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">诗歌</a>
-                    </span>
-                  </div>
-                  <div>
-                    <span class="ificationDIV">
-                      <a href="">童话</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">名著</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">港台</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">更多»</a>
-                    </span>
-                  </div>
-                </div>
-                <div class="ificationContainer">
-                  <span>文学</span>
-                  <div>
-                    <span class="ificationDIV">
-                      <a href="">小说</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">随笔</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">日本文学</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">散文</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">诗歌</a>
-                    </span>
-                  </div>
-                  <div>
-                    <span class="ificationDIV">
-                      <a href="">童话</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">名著</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">港台</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">更多»</a>
-                    </span>
-                  </div>
-                </div>
-                <div class="ificationContainer">
-                  <span>文学</span>
-                  <div>
-                    <span class="ificationDIV">
-                      <a href="">小说</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">随笔</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">日本文学</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">散文</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">诗歌</a>
-                    </span>
-                  </div>
-                  <div>
-                    <span class="ificationDIV">
-                      <a href="">童话</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">名著</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">港台</a>
-                    </span>
-                    <span class="ificationDIV">
-                      <a href="">更多»</a>
-                    </span>
+                    <span class="lastSpan"><a href="">更多»</a></span>
                   </div>
                 </div>
               </div>
@@ -1310,7 +1126,8 @@
               <span class="linMore">
                 <a
                   href="https://market.douban.com/book/?utm_campaign=book_freyr_section&amp;utm_source=douban&amp;utm_medium=pc_web"
-                  >更多»</a>
+                  >更多»</a
+                >
               </span>
             </h2>
           </div>
@@ -1318,7 +1135,10 @@
             <div class="adouBanBooks250Info">
               <div class="booksImg">
                 <a href="">
-                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                  <img
+                    src="../../assets/images/books/homePages/ia_100000089.jpg"
+                    alt=""
+                  />
                 </a>
               </div>
               <div class="booksTitle">
@@ -1330,7 +1150,10 @@
             <div class="adouBanBooks250Info">
               <div class="booksImg">
                 <a href="">
-                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                  <img
+                    src="../../assets/images/books/homePages/ia_100000089.jpg"
+                    alt=""
+                  />
                 </a>
               </div>
               <div class="booksTitle">
@@ -1342,7 +1165,10 @@
             <div class="adouBanBooks250Info">
               <div class="booksImg">
                 <a href="">
-                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                  <img
+                    src="../../assets/images/books/homePages/ia_100000089.jpg"
+                    alt=""
+                  />
                 </a>
               </div>
               <div class="booksTitle">
@@ -1354,7 +1180,10 @@
             <div class="adouBanBooks250Info">
               <div class="booksImg">
                 <a href="">
-                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                  <img
+                    src="../../assets/images/books/homePages/ia_100000089.jpg"
+                    alt=""
+                  />
                 </a>
               </div>
               <div class="booksTitle">
@@ -1366,7 +1195,10 @@
             <div class="adouBanBooks250Info">
               <div class="booksImg">
                 <a href="">
-                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                  <img
+                    src="../../assets/images/books/homePages/ia_100000089.jpg"
+                    alt=""
+                  />
                 </a>
               </div>
               <div class="booksTitle">
@@ -1378,7 +1210,10 @@
             <div class="adouBanBooks250Info">
               <div class="booksImg">
                 <a href="">
-                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                  <img
+                    src="../../assets/images/books/homePages/ia_100000089.jpg"
+                    alt=""
+                  />
                 </a>
               </div>
               <div class="booksTitle">
@@ -1390,7 +1225,10 @@
             <div class="adouBanBooks250Info">
               <div class="booksImg">
                 <a href="">
-                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                  <img
+                    src="../../assets/images/books/homePages/ia_100000089.jpg"
+                    alt=""
+                  />
                 </a>
               </div>
               <div class="booksTitle">
@@ -1402,7 +1240,10 @@
             <div class="adouBanBooks250Info2">
               <div class="booksImg">
                 <a href="">
-                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                  <img
+                    src="../../assets/images/books/homePages/ia_100000089.jpg"
+                    alt=""
+                  />
                 </a>
               </div>
               <div class="booksTitle">
@@ -1417,7 +1258,10 @@
             <div class="adouBanBooks250Info2">
               <div class="booksImg">
                 <a href="">
-                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                  <img
+                    src="../../assets/images/books/homePages/ia_100000089.jpg"
+                    alt=""
+                  />
                 </a>
               </div>
               <div class="booksTitle">
@@ -1439,12 +1283,35 @@
 </template>
 
 <script>
+import { getBookHotList } from "@/api/books.js";
 export default {
   name: "Books",
   data() {
     return {
-      buttomTextList: ['购书单','电子图书','豆瓣书店','2019年度榜单', '2019书影音报告','购物车']
-    }
+      buttomTextList: [
+        "购书单",
+        "电子图书",
+        "豆瓣书店",
+        "2019年度榜单",
+        "2019书影音报告",
+        "购物车",
+      ],
+      booksLabel: [],
+    };
+  },
+  mounted() {
+    this.getInitData();
+    // console.log(getBookHotList);
+  },
+  methods: {
+    async getInitData() {
+      try {
+        const result = await getBookHotList();
+        this.booksLabel = result;
+      } catch (error) {
+        console.log(error);
+      }
+    },
   },
 };
 </script>
@@ -2185,6 +2052,7 @@ export default {
             height: 75px;
             // display: flex;
             .ificationContainer {
+              height: 75px;
               margin-top: 16px;
               position: relative;
               &::before {
@@ -2201,6 +2069,7 @@ export default {
               }
               div {
                 display: flex;
+                flex-wrap: wrap;
                 .ificationDIV {
                   // width: 26px;
                   height: 20px;
@@ -2209,6 +2078,21 @@ export default {
                   margin: 0 3px 5px 0;
                   a {
                     color: #37a;
+                    font-size: 13px;
+                    display: inline-block;
+                    line-height: 20px;
+                    // width: 26px;
+                    height: 20px;
+                  }
+                }
+                .lastSpan {
+                  height: 20px;
+                  background: #f5f5f5;
+                  padding: 2px 11px 0;
+                  margin: 0 3px 5px 0;
+
+                  a {
+                    color: #aaaaaa;
                     font-size: 13px;
                     display: inline-block;
                     line-height: 20px;
@@ -2266,19 +2150,19 @@ export default {
               font: 13px Helvetica, Arial, sans-serif;
             }
           }
-          .shopBt{
-              position: absolute;
-              // left: -5px;
-              right: 5px;
-              top: 10px;
-              padding: 6px 8px;
-              span{
-                font-size: 13px;
-              }
+          .shopBt {
+            position: absolute;
+            // left: -5px;
+            right: 5px;
+            top: 10px;
+            padding: 6px 8px;
+            span {
+              font-size: 13px;
             }
+          }
         }
-        .popularContent:hover{
-          background: #F9F9F6;;
+        .popularContent:hover {
+          background: #f9f9f6;
         }
         .popularContent:hover .shopBt {
           border: 1px #d8c5b0 solid;
@@ -2309,19 +2193,19 @@ export default {
               font: 13px Helvetica, Arial, sans-serif;
             }
           }
-          .shopBt{
-              position: absolute;
-              // left: -5px;
-              right: 5px;
-              top: 10px;
-              padding: 6px 8px;
-              span{
-                font-size: 13px;
-              }
+          .shopBt {
+            position: absolute;
+            // left: -5px;
+            right: 5px;
+            top: 10px;
+            padding: 6px 8px;
+            span {
+              font-size: 13px;
             }
+          }
         }
-        .popularContent2:hover{
-          background: #F9F9F6;;
+        .popularContent2:hover {
+          background: #f9f9f6;
         }
         .popularContent2:hover .shopBt {
           border: 1px #d8c5b0 solid;
@@ -2330,11 +2214,11 @@ export default {
       }
     }
     // 豆瓣图书250
-    .douBanBooks250{
+    .douBanBooks250 {
       height: 568px;
       margin-bottom: 20px;
       // background: chartreuse;
-      .douBanBooks250Top{
+      .douBanBooks250Top {
         border-bottom: 1px #dddddd solid;
         padding-bottom: 3px;
         margin-bottom: 16px;
@@ -2351,75 +2235,75 @@ export default {
           }
         }
       }
-      .douBanBooks250Bottom{
+      .douBanBooks250Bottom {
         width: 323px;
         height: 524px;
         // background: chocolate;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        .adouBanBooks250Info{
+        .adouBanBooks250Info {
           width: 85px;
           height: 151px;
           // background: cornflowerblue;
           margin: 0 22px 10px 0;
-          .booksImg{
-            a{
-              img{
+          .booksImg {
+            a {
+              img {
                 width: 85px;
                 height: 127px;
               }
             }
           }
-          .booksTitle{
+          .booksTitle {
             width: 85px;
             height: 21px;
             padding-top: 3px;
             text-align: center;
-            a{
-              span{
+            a {
+              span {
                 font-size: 13px;
-                color: #3377AA;
+                color: #3377aa;
               }
             }
           }
         }
-        .adouBanBooks250Info2{
+        .adouBanBooks250Info2 {
           width: 85px;
           height: 172px;
           // background: cornflowerblue;
           margin: 0 22px 10px 0;
-          .booksImg{
-            a{
-              img{
+          .booksImg {
+            a {
+              img {
                 width: 85px;
                 height: 127px;
               }
             }
           }
-          .booksTitle{
+          .booksTitle {
             width: 85px;
             height: 45px;
             padding-top: 3px;
             text-align: center;
             position: relative;
-            a{
-              span{
+            a {
+              span {
                 font-size: 13px;
-                color: #3377AA;
+                color: #3377aa;
               }
             }
-            p{
+            p {
               position: absolute;
               top: 25px;
-              width:85px;
+              width: 85px;
               height: 21px;
               text-align: center;
-              span{
+              span {
                 padding: 2px 3px;
-                background: #A1A1A1;
-                color: #FFFFFF;
-                font-size: 13PX;
+                background: #a1a1a1;
+                color: #ffffff;
+                font-size: 13px;
               }
             }
           }
