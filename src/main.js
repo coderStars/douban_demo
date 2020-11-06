@@ -5,7 +5,10 @@ import store from './store/index'
 import "swiper/css/swiper.min.css";
 import getImages from '@/utils/getImgUrl'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
 import Header from '@/components/Header/Header.vue'
 import Search from '@/components/Search/Search.vue'
 import Footer from '@/components/Footer/Footer.vue'

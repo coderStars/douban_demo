@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
 // 贾月洁写的
 import axios from 'axios'
 import NProgress from 'nprogress'
@@ -12,7 +15,11 @@ const instance = axios.create({
 })
 // 请求拦截器
 instance.interceptors.request.use(config => {
+<<<<<<< HEAD
     NProgress.start()  //添加进度条功能
+=======
+    NProgress.start() //添加进度条功能
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
     return config
 })
 
@@ -24,7 +31,11 @@ instance.interceptors.response.use(
     },
     error => {
         console.log(error)
+<<<<<<< HEAD
         return new Promise(()=>{})
+=======
+        return new Promise(() => {})
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
     }
 )
 
