@@ -43,7 +43,7 @@ export default {
           path: "/music/songsheet"
         },
         {
-          name: "2019年度榜单",
+          name: "2019年度榜单",  
           path: "/music/yearrank"
         }
       ]
