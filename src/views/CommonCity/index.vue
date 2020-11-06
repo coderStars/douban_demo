@@ -1,40 +1,7 @@
 <template>
   <div>
       <!-- 头部 -->
-      <div class="nav">
-          <!-- 版心 -->
-          <div class="container">
-              <!-- 左侧导航 -->
-            <div class="navLeft">
-                <div class="logo">豆瓣同城</div>
-                <div class="city">
-                    <a href="javascript:;">北京
-                    <i></i>
-                    </a>
-                </div>
-                <div class="activityNav">
-                    <ul>
-                        <li>近期活动</li>
-                        <li>主办方</li>
-                        <li>舞台剧</li>
-                    </ul>
-                </div>
-            </div>
-            <!-- 右侧搜索 -->
-            <div class="searchRight">
-                <div class="rightContainer">
-                    <input  class="input" type="text" placeholder="活动 / 舞台剧 / 地点">
-                    <div  class="submit iconfont iconsearch"></div>
-                </div>
-            </div>
-
-         
-          </div>
-
-
-
-
-      </div>
+        <CityHeader></CityHeader>
 
       <!-- 主体 -->
         <body>
@@ -42,40 +9,88 @@
             <div class="bodyContainer">
                 <!-- 左侧主体内容 -->
                 <div class="content">
-                    <!-- 热门活动 -->
+                  
+                    <!-- 自动轮播图 -->
+                    <div class="swiper-container" ref="activitySwiper">
+
+                          <!-- 热门活动 -->
                     <div class="hotActivity">
                         <h2>热门活动</h2>
                         <div class="control">
-                            <div>1/3</div>
-                            <a href="javascript:;" class="pre"></a>
-                            <a href="javascript:;" class="next"></a>
+                            <div class="swiper-pagination"></div>
+                            <div href="##" class="pre"></div>
+                            <div href="##" class="next"></div>
                         </div>
                     </div>
-                    <!-- 自动轮播图 -->
-                    <div class="swiper">
-                      <ul class="swiperContainer">
-                          <li class="swiperItem">
-                              <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                              <p>话剧《丁西林戏剧三则》</p>
-                          </li>
-                          <li class="swiperItem">
-                              <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                              <p>话剧《丁西林戏剧三则》</p>
-                          </li>
-                          <li class="swiperItem">
-                              <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                              <p>话剧《丁西林戏剧三则》</p>
-                          </li>
-                          <li class="swiperItem">
-                              <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                              <p>话剧《丁西林戏剧三则》</p>
-                          </li>
-                          <li class="swiperItem">
-                              <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                              <p>话剧《丁西林戏剧三则》</p>
-                          </li>
-                      </ul>
+
+                         <div class="swiper-wrapper">
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                            <div class="swiper-slide stop-swiping">
+                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
+                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            </div>
+                        </div> 
+
+                       
+                       
+                      
                     </div>
+
                     <!-- 分类导航 -->
                     <div class="navContainer">
                         <!-- 音乐» -->
@@ -164,104 +179,17 @@
 
                     </div>
                     <!-- 展示内容区 -->
-                    <div class="show">
-                        <!-- 头部导航区 -->
-                        <div class="showHeader">
-                            <div class="title">戏剧</div>
-                            <!-- 类别选项卡 -->
-                            <div class="type">
-                                <div class="hot">最热</div>
-                                <div>话剧</div>
-                                <div>音乐剧</div>
-                                <div>舞剧</div>
-                                <div>歌剧</div>
-                                <div>戏曲</div>
-                                <div>其他</div>
-                            </div>
-                            <div class="more">更多» </div>
-                        </div>
-                        <!-- 内容区 -->
-                        <div class="showContent">
-                            <!-- 单个内容的展示 -->
-                            <div class="showItem">
-                                <img src="https://img1.doubanio.com/pview/event_poster/median/public/d80c5169eeeca69.jpg" alt="">
-                                <!-- 描述 -->
-                                <div class="desc">
-                                    <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
-                                    <p class="date">11月8日 至 11月29日</p>
-                                    <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
-                                    <p class="num">2人关注</p>
-                                </div>
-                            </div> 
-                          
-                            <!-- ----2  ---- -->
-                            <div class="showItem">
-                                <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
-                                <!-- 描述 -->
-                                <div class="desc">
-                                    <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
-                                    <p class="date">11月8日 至 11月29日</p>
-                                    <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
-                                    <p class="num">2人关注</p>
-                                </div>
-                            </div> 
-                            <!-- ------3---- -->
-                            <div class="showItem">
-                                <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
-                                <div class="desc">
-                                    <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
-                                    <p class="date">11月8日 至 11月29日</p>
-                                    <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
-                                    <p class="num">2人关注</p>
-                                </div>
-                            </div> 
-                            <!-- ------4------ -->
-                            <div class="showItem">
-                                <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
-                                <div class="desc">
-                                    <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
-                                    <p class="date">11月8日 至 11月29日</p>
-                                    <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
-                                    <p class="num">2人关注</p>
-                                </div>
-                            </div> 
-                            <!-------5-----  -->
-                            <div class="showItem">
-                                <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
-                                <div class="desc">
-                                    <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
-                                    <p class="date">11月8日 至 11月29日</p>
-                                    <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
-                                    <p class="num">2人关注</p>
-                                </div>
-                            </div> 
-                            <!-- ----6---- -->
-                            <div class="showItem">
-                                <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
-                                <div class="desc">
-                                    <p class="name">脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场</p>
-                                    <p class="date">11月8日 至 11月29日</p>
-                                    <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
-                                    <p class="num">2人关注</p>
-                                </div>
-                            </div> 
-                            <!-- -------- -->
-                        </div>
-
-                    </div>
+                    <ShowContent></ShowContent>
+                    <ShowContent></ShowContent>
+                    <ShowContent></ShowContent>
+                    <ShowContent></ShowContent>
+                    <ShowContent></ShowContent>
+                    <ShowContent></ShowContent>
+                    <ShowContent></ShowContent>
+                    <ShowContent></ShowContent>
+                    <ShowContent></ShowContent>
 
                 </div>
-
-                    <!-- 戏剧 -->
-                    <!-- 展览 -->
-                    <!-- 演唱会 -->
-                    <!-- 音乐 -->
-                    <!-- 亲子 -->
-                    <!-- 电影 -->
-                    <!-- 聚会 -->
-                    <!-- 讲座 -->
-                    <!-- 其他 -->
-            
 
                 <!-- 右侧侧边栏 -->
                 <aside>
@@ -270,36 +198,175 @@
 
                     <!-- 发起同城活动 -->
                     <div class="commonActivity">
-                        <a>＋发起同城活动</a>
+                        <a href="##">＋发起同城活动</a>
                     </div>
 
-                    <!-- 轮播图 -->
-                    <div class="swiper">
-                        <!-- 头部 -->
-                        <div class="header"></div>
-                        <!-- 轮播内容 -->
-                        <div>
+                    <!-- 购票直通车轮播图 -->
+<div class="swiper-container" ref="buyTicketSwiper">
+    <div class="buyTicket">购票直通车</div>    
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+            <div class="detail">
+                <p class="name">孟京辉戏剧作品《我爱xxx》</p>
+                <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
+                <p class="price">¥ 104</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-                        </div>
-                    </div>
-
+                    
                     <!-- 北京主办方 -->
                     <div class="hostInfo">
+                        <div class="hostHeader">
+                            <div>北京活跃的主办方</div>
+                            <div class="more">更多»</div>
+                        </div>
+                        <!-- 主体 -->
                         <div class="hostItem">
-                            <img src="" alt="">
+                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
                             <div class="desc">
-                                <p>KPRendezvous</p>
-                                <p>有2个活动正在进行</p>
-                                <p>[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
-                                <p>[展览] 西安SKP文苑·展览 | 探寻民间...</p>
+                                <p class="one">KPRendezvous</p>
+                                <p class="two">有2个活动正在进行</p>
+                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
+                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
                             </div>
                         </div>
+                        <!-- ----- -->
+                         <div class="hostItem">
+                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
+                            <div class="desc">
+                                <p class="one">KPRendezvous</p>
+                                <p class="two">有2个活动正在进行</p>
+                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
+                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
+                            </div>
+                        </div>
+                        <!-- ----- -->
+                         <div class="hostItem">
+                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
+                            <div class="desc">
+                                <p class="one">KPRendezvous</p>
+                                <p class="two">有2个活动正在进行</p>
+                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
+                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
+                            </div>
+                        </div>
+                        <!-- ----- -->
+                         <div class="hostItem">
+                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
+                            <div class="desc">
+                                <p class="one">KPRendezvous</p>
+                                <p class="two">有2个活动正在进行</p>
+                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
+                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
+                            </div>
+                        </div>
+                        <!-- ----- -->
+                         <div class="hostItem">
+                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
+                            <div class="desc">
+                                <p class="one">KPRendezvous</p>
+                                <p class="two">有2个活动正在进行</p>
+                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
+                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <!-- 广告 -->
-                    <img src="./images/adv.jpg" alt="">
+                    <!-- 广告2 -->
+                    <div class="adv2">
+                        <img src="./images/adv.jpg" alt="">
+                    </div>
+                    
 
-                    <!--  -->
+                    <!-- 联系我们 -->
+                    <div class="connection">
+                        <h2>
+                            联系我们
+                            <a href="##">
+                                 atguigu.com
+                            </a>
+                           
+                        </h2>
+                        <div class="itemContainer">
+                             <div class="iconItem">
+                            <img src="./images/douban.jpg" alt="">
+                            <div class="text">
+                                <a href="##">
+                                    豆瓣小站
+                                </a>
+                                </div>
+                        </div>
+                        <div class="iconItem">
+                            <img src="./images/weibo.jpg" alt="">
+                            <div class="text">
+                                <a href="##">
+                                    微博
+                                </a>
+                                </div>
+                        </div>
+                        <div class="iconItem">
+                            <img src="./images/weixin.png" alt="">
+                            <div class="text">
+                                <a href="##">
+                                    微信
+                                </a>
+                                </div>
+                        </div>
+                        </div>
+                       
+                    </div>
 
                 </aside>
 
@@ -310,121 +377,72 @@
 
 <script>
 import './css/index.css'
+import Swiper from "swiper";
+
+import CityHeader from '../../components/CityHeader'
+import ShowContent from '../../components/ShowContent'
 export default {
   name: 'CommonCity',
+  components:{
+      CityHeader,
+      ShowContent,
+  },
+
   data() {
       return {
-         
+      
       }
   },
+  mounted() {
+      //热门活动轮播
+      this.activitySwiper()
+      this.buyTicketSwiper()
+
+  },
+  methods: {
+    //热门活动轮播
+    activitySwiper(){
+           var mySwiper = new Swiper (this.$refs.activitySwiper, {
+                loop: true, // 循环模式选项
+                
+                // 如果需要前进后退按钮
+                navigation: {
+                nextEl: '.next',
+                prevEl: '.pre',
+                },
+
+                slidesPerView : 5, //代表每屏显示几张
+                slidesPerGroup : 5, //没滑动一次滑动多少张
+
+                noSwiping : true,
+                noSwipingClass : 'stop-swiping',
+
+                autoplay:true, //自动切换
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction', //分页器样式类型
+                },
+                
+            })        
+    },
+    //购票直通车轮播图
+    buyTicketSwiper(){
+        var mySwiper = new Swiper (this.$refs.buyTicketSwiper, {
+        direction: 'vertical', // 垂直切换选项
+        loop: true, // 循环模式选项
+        autoplay:true, //自动切换   
+        slidesPerView : 6, //代表每屏显示几张
+         slidesPerGroup : 1,
+                   
+        })        
+    },
+    },
 }
+
 </script>
 
-<style scoped lang='less'>
-@import './css/index.css';
-// 头部
-.nav{
-    width: 100%;
-    height: 66px;
-    background-color: #F6F5F2;
-    margin-bottom: 40px;
-    font: 12px Helvetica,Arial,sans-serif;
-    line-height: 1.62;
-    // 版心
-    .container{
-        width: 1040px;
-        margin: 0 auto;
-        height: 66px;
-        display: flex;
-        // 左侧导航
-        .navLeft{
-            height: 66px;
-            flex: 1;
-            display: flex;
-            align-items: center;
-            .logo{
-                width: 124px;
-                height: 56px;
-                background: url('./images/logo.png') no-repeat center center;
-                background-size: 112px auto;
-                float: left;
-                color: transparent;
-                margin-right: 13px;
-                // margin-top: 4px;
-            }
-            .city{
-                margin-right: 30px;
-                a{  
-                    position: relative;
-                    display: inline-block;
-                    padding: 5px 10px 6px;
-                    width: 64px;
-                    font: 700 14px/1 tahoma,arial,"stheiti","黑体",sans-serif;
-                    font-weight: bold;
-                    background-color:#DEDEDE;
-                    height: 25px;
-                    border-radius: 6px;
-                    i{
-                    position: absolute;        
-                    display:block;
-                    width:0;
-                    height:0;
-                    border-top:5px solid black;
-                    border-left:4px solid transparent;
-                    border-right:4px solid transparent;
-                    top: 50%;
-                    right: 10px;
-                    transform: translateY(-50%);   
-                    }
-                }
-            }
-            .activityNav{
-                ul{
-                    list-style: none;
-                    li{
-                        float: left;
-                        color: #643;
-                        margin: 0 15px;
-                        font-size: 16px;
-                    }   
-                }
-            }
-        }
-        //右侧搜索
-        .searchRight{
-            .rightContainer{
-                height: 28px;
-                // width: 218px;   
-                border: 1px solid #e3e2de;
-                // border: 1px  orange solid;
-                display: flex;
-                margin-top: 15px;
-                align-items: center;
-                .input{ 
-                    width: 200px;
-                    height: 26px;
-                    border: none;
-                    padding-left: 10px;
-                    outline: none;
-                }
-                input::-webkit-input-placeholder {
-                    color: #C8CCCC;
-                    font-size: 13px;
-                }
-                .submit{
-                    line-height: 26px;
-                    width: 30px;
-                    height: 26px;
-                    border: none;
-                    // color: transparent;
-                    background-color: #fff;
-                    font-size: 20px;
-
-                }
-            }
-        }
-    }
-}
+<style lang='less' scoped>
+@import '/src/assets/css/base.css';
 // 主体
 body{
     background-color: #fff;
@@ -432,24 +450,29 @@ body{
     .bodyContainer{
         width: 1040px;
         margin:  0 auto;
+        display: flex;
+        justify-content: space-between;
         //左侧主体内容
         .content{
-            float: left;
+            // float: left;
             width:675px;
             padding-right: 25px;
             font: 12px Arial, Helvetica, sans-seri;
-            // 热门活动
+            //自动轮播图
+            .swiper-container{
+                // 热门活动
             .hotActivity{
+                position: relative;
                 width:100%;
                 height: 30px;
                 line-height: 30px;
                 border-bottom: 1px dotted #dadada;
                 margin-bottom:20px;
                 overflow: hidden;
+                line-height: 1.2;
                 h2{
                     float: left;
                     font:16px Arial, Helvetica, sans-serif, sans-serif;
-                    line-height: 1.2;
                     color: #333;
                     margin-bottom: 12px;
                 }
@@ -457,15 +480,18 @@ body{
                     float: right;
                     margin-bottom: 12px;
                     vertical-align: middle;
+                    display: flex;
                     div{
+                        // position: absolute;
+                        // top: 0;
+                        // left: 0;
+                        width: 100px;
                         vertical-align: top;
-                        display: inline-block;
-                        margin-right: 14px;
+                        display: inline-block;   
+                        margin-left: 552px;
                         font-size: 13px;
                         color: #666;
-                        // height: 16px;
                         line-height: 18px;
-                        margin-bottom:10px;
                         
                     }
                     .pre{
@@ -474,8 +500,8 @@ body{
                         width: 19px;
                         height: 19px;
                         border-radius: 50%;
-                        margin-bottom: 10px;
-                        margin-right: 3px;
+                        margin:0 0 0 10px;
+                        cursor: pointer;
                     }
                     .next{
                         background: url('./images/pre.png') no-repeat -21px -2px ;
@@ -483,184 +509,264 @@ body{
                         width: 19px;
                         height: 19px;
                         border-radius: 50%;
-                        margin-bottom: 10px;
+                        margin: 0 0 0 4px;
+                        cursor: pointer;
                     }
 
                 }
             }
-            //自动轮播图
-            .swiper{
-                width: 650px;
-                overflow: hidden;
-                .swiperContainer{
-                    list-style: none;
-                    width: 9999px;
-                    overflow: hidden;
-                    .swiperItem{
-                        width: 115px;
-                        float: left;
-                        margin-right: 19px;
+
+
+
+                //下方轮播内容
+                .swiper-wrapper{
+                    width: 675px;
+                    display: flex;
+                    // justify-content: space-between;
+                    .swiper-slide{
+                        width: 140px;
                         img{
                             display: block;
                             width: 115px;
                             height: 161px;
                             margin-bottom: 10px;
+                            cursor: pointer;
                         }
-                        p{
+                        .name{
+                            width: 115px;
+                            cursor: pointer;
+                            color: #37a;
                             text-align: center;
-                           color: #37a;
-                           text-overflow: ellipsis;
-                           overflow: hidden;
-                           display: -webkit-box;
-                           -webkit-line-clamp: 2;
-                        -webkit-box-orient:vertical;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;  //2行
+                            -webkit-box-orient: vertical;
                         }
                     }
                 }
+
             }
             // 分类导航
             .navContainer{
-                width: 650px;
-                background-color: #F6F5F2;
+                width: 675px;
                 height: 126px;
+                background-color: #F6F5F2;
                 padding: 9px;
-                margin: 40px 0 40px 0;
+                margin: 40px 0;
                 display: flex;
                 justify-content: space-between;
-                padding: 9px;
-                .navItem{
-                    width: 118px;
+                .navItem{   
+                    width: 20%;
                     padding: 0 7px;
                     h5{
+                        width: 36px;
+                        height: 26px;
+                        line-height: 26px;
                         font-size: 14px;
                         color: #111;
-                        margin-bottom: 9px;
                         font-weight: normal;
-                        margin-top: 5px;
+                        margin: 5px 0px 9px 0px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #EEEEEE;
+                        }
                     }
                     .info{
-                        font-size: 12px;
-                        .row1{
+                        // text-align: center;
+                        font-size: 13px;
+                        .row1,.row2,.row3{
                             color: #37a;
                             margin-bottom: 10px;
                             span{
-                                padding-right:6px;
+                                margin-right:6px;
+                                cursor: pointer;
+                                &:hover{
+                                    color: #fff;
+                                    background-color: #3377AA;
+                                }
                             }
                         }
-                        .row2{
-                            // width: 154px;
-                            color: #37a;
-                            margin-bottom: 10px;
-                              span{
-                                padding-right:6px;
-                            }
-                        }
-                        .row3{
-                            color: #37a;
-                             margin-bottom: 6px;
-                              span{
-                                padding-right:8px;
-                            }
-                        }
+                       
                     }
                 }
             }
-            //内容展示区
-            .show{
-                // 头部导航区
-                .showHeader{
-                    display: flex;
-                    padding-bottom: 6px;
-                    margin-bottom: 20px;
-                      border-bottom: 1px dotted #DEDEDE;
-                    .title{
-                        color: #111;
-                        font-size: 16px;
-                        margin-right: 48px;
-                    }
-                    .type{
-                        display: flex;
-                        width: 391px;
-                        justify-content:space-between;
-                        color: #3377aa;
-                        align-items: center;
-                        .hot{
-                            color: #333;
-                            font: Helvetica,Arial,sans-serif;
-                            font-size: 13px;
-                            padding: 1px 10px;
-                            background-color: #e6e6e6;
-                        }
-                        // line-height: 16px;
-
-                    }
-                    .more{
-                        flex: 1;
-                        color: #3377aa;
-                        font-size: 13px;
-                    }
-                }
-                // 内容区
-                .showContent{
-                    display: flex;
-                    flex-wrap: wrap;
-                    // 单个内容的展示
-                    .showItem{
-                        width:325px !important;
-                        display: flex;
-                        margin-bottom: 30px;
-                        img{
-                            display: block;
-                            width: 75px;
-                            height: 112px;
-                            margin-right: 20px;
-                        }      
-                        .desc{
-                            width: 210px;
-                            .name{
-                                font-size: 14px;
-                                color: #37a;
-                                margin-bottom: 6px;
-                            }
-                            .date,.adress,.num{
-                                color: #666;
-                                font-size: 13px;
-                                height: 18px;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                                white-space: nowrap;
-
-                            }
-                            
-                        }
-                    }
-                }
-            }
+            
         }
+        // 右侧侧边栏
         aside{
-            width:340px;
-            float: right;
+            width:300px;
+            // 广告图1
             .adv{
                 display: block;
                 width: 300px;
                 height: 250px;
-                margin-bottom: 20px;    
+                margin-bottom: 20px;   
+                cursor: pointer; 
             }
+            // 发起同城活动
             .commonActivity{
                 width: 300px;
                 height: 28px;
                 margin-bottom: 40px;
                 a{  
                     display: block;
-                    // box-sizing: content-box;
+                    box-sizing: content-box;
                     width: 91px;
                     height: 28px;
                     padding: 0 13px;
                     background: #a88360;  
                     color: #fff; 
-                    // font-size: 10px;
+                    font-size: 13px;
+                    line-height: 27px;
                 }   
             }
+            // 购票直通车轮播图
+            .swiper-container{
+                width:300px;
+                height:700px;
+                .buyTicket{
+                    width: 300px;
+                    font-size: 15px;
+                    color: #111;
+                    box-sizing: content-box;
+                    padding-bottom: 7px;
+                    border-bottom: 1px dotted #ddd;
+                    margin-bottom: 20px;
+                }
+                //轮播内容
+                .swiper-wrapper{    
+                    height: 672px;  
+                    .swiper-slide{
+                        width:300px;
+                        display: flex;
+                        // background-color: red;
+                        // flex-direction: column;
+                        img{
+                            display: block;
+                            width: 48px;
+                            height: 62px;
+                            margin-right: 10px;
+                            cursor: pointer;
+                        }
+                        .detail{
+                            .name{
+                                color: #37a;
+                                font-size: 14px;
+                                margin-bottom: 8px;
+                                margin-top: 4px;
+                                cursor: pointer;
+                            }
+                            .date{
+                                color:#666;
+                                font-size: 13px; 
+                                margin-bottom: 5px;
+                            }
+                            .price{
+                                color: #FF8263;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+            //北京主办方
+            .hostInfo{
+                width: 300px;
+                margin-top: 40px;
+                //头部
+                .hostHeader{
+                    font-size: 15px;
+                    color: #111;
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px dotted #ddd;
+                    padding: 4px;
+                    margin-bottom: 12px;
+                    .more{
+                        color: #37a;
+                        font-size: 13px;
+                    }
+                }
+                //主体
+                .hostItem{
+                    display: flex;
+                    margin-bottom: 25px;
+                    img{
+                        display:block;
+                        width:48px;
+                        height:48px;
+                        margin-right: 10px;
+                    }
+                    .desc{
+                        font: 12px Helvetica,Arial,sans-serif;
+                        .one{
+                            color: #37a;
+                            font-size:14px;
+                             margin-bottom: 4px;
+                        }
+                        .two{
+                            color: #666;
+                            font-size: 13px;
+                             margin-bottom: 9px;
+                        }
+                        .three,.four{
+                            color: #666;
+                            font-size: 13px;
+                            margin-bottom: 4px;
+                        }
+                        
+                    }
+                }
+
+            }
+            // 广告2
+            .adv2{
+                margin-top: 15px;
+                img{
+                    display: block;
+                    width: 300px;
+                    height: 250px;
+                }
+            }
+            //联系我们
+            .connection{
+                margin-top: 40px;
+                h2{
+                    height: 26px;
+                    border-bottom: 1px solid #E4E2E2;
+                    color: #222;
+                    font-size: 16px;
+                    font-weight: normal;
+                    margin-bottom: 11.2px;
+                    a{
+                        margin-left: 6px;
+                        font-size: 13px;
+                        color: #666;
+                    }
+                }
+                .itemContainer{
+                    display: flex;
+                    .iconItem{
+                        text-align: center;
+                        margin: 0 10px;
+                        img{
+                            width: 40px;
+                            display: block;
+                            width: 40px;
+                            height: 40px;
+                            cursor: pointer;
+                        }
+                        .text{
+                            margin-top: 8px;
+                            font-size: 13px;
+                            line-height: 13px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            
         }
     }
 }

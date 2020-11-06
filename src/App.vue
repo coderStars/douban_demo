@@ -1,11 +1,9 @@
 <template>
   <div id="app">
     <Header />
-    <Search v-show="$route.meta.isShow" />
-    <div class="bodyWrapper">
-      <router-view></router-view>
-    </div>
-    <Footer />
+    <!-- <Search v-show="$route.meta.isShow"/> -->
+    <router-view></router-view>
+    <Footer v-show="!$route.meta.isHide" />
   </div>
 </template>
 
@@ -17,10 +15,6 @@ export default {
 
 <style lang="less" scoped>
 @import "assets/css/reset.css";
-// .bodyWrapper {
-//    width: 1040px;
-//    margin: 0 auto;
-// }
 body,
 html {
   width: 100%;

@@ -1,5 +1,7 @@
 <template>
   <div>
+    <Search inpText="书名、作者、ISBN" :buttomTextList="buttomTextList"></Search>
+    <!-- 广告 -->
     <div class="topAds">
       <img src="../../assets/images/books/homePages/ia_400000000.jpg" alt="" />
     </div>
@@ -566,7 +568,10 @@
                 <div class="abooksInfo">
                   <div class="aBooksImg">
                     <a href="">
-                      <img src="../../assets/images/books/homePages/ia_100000070.png" alt="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000070.png"
+                        alt=""
+                      />
                     </a>
                   </div>
                   <div class="aBooksText">
@@ -579,7 +584,10 @@
                 <div class="abooksInfo">
                   <div class="aBooksImg">
                     <a href="">
-                      <img src="../../assets/images/books/homePages/ia_100000070.png" alt="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000070.png"
+                        alt=""
+                      />
                     </a>
                   </div>
                   <div class="aBooksText">
@@ -592,7 +600,10 @@
                 <div class="abooksInfo">
                   <div class="aBooksImg">
                     <a href="">
-                      <img src="../../assets/images/books/homePages/ia_100000070.png" alt="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000070.png"
+                        alt=""
+                      />
                     </a>
                   </div>
                   <div class="aBooksText">
@@ -605,7 +616,10 @@
                 <div class="abooksInfo">
                   <div class="aBooksImg">
                     <a href="">
-                      <img src="../../assets/images/books/homePages/ia_100000070.png" alt="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000070.png"
+                        alt=""
+                      />
                     </a>
                   </div>
                   <div class="aBooksText">
@@ -618,7 +632,10 @@
                 <div class="abooksInfo">
                   <div class="aBooksImg">
                     <a href="">
-                      <img src="../../assets/images/books/homePages/ia_100000070.png" alt="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000070.png"
+                        alt=""
+                      />
                     </a>
                   </div>
                   <div class="aBooksText">
@@ -627,6 +644,325 @@
                     </div>
                     <div>￥88.00</div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 电子图书 -->
+        <div class="electronicBooks">
+          <div class="electronicBooksTop">
+            <h2>
+              <span>电子图书</span>
+              <span class="linMore">
+                <a
+                  href="https://market.douban.com/book/?utm_campaign=book_freyr_section&amp;utm_source=douban&amp;utm_medium=pc_web"
+                  >查看全部»</a
+                >
+              </span>
+            </h2>
+          </div>
+          <div class="electronicBooksBottom">
+            <div class="electronicBooksInfoTop">
+              <h3>
+                热门电子图书
+                <span class="moreInfo">
+                  <a
+                    href="https://read.douban.com/kind/1/?sort=hot&amp;dcs=book-hot&amp;dcm=douban&amp;dct=read-more"
+                    target="_blank"
+                  >
+                    更多»
+                  </a>
+                </span>
+              </h3>
+            </div>
+            <div class="electronicBooksInfoBottom">
+              <div class="flexContainer">
+                <div class="aElectronicBooksInfoText">
+                  <div class="aElectronicBooksImg">
+                    <a href="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000075.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="aElectronicBooksText">
+                    <div class="booksTitle">
+                      <a href="">我信仰阅读我信仰阅读我信仰阅读</a>
+                    </div>
+                    <div class="booksPrice">47.40元</div>
+                  </div>
+                </div>
+                <div class="aElectronicBooksInfoText">
+                  <div class="aElectronicBooksImg">
+                    <a href="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000075.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="aElectronicBooksText">
+                    <div class="booksTitle">
+                      <a href="">我信仰阅读</a>
+                    </div>
+                    <div class="booksPrice">47.40元</div>
+                  </div>
+                </div>
+                <div class="aElectronicBooksInfoText">
+                  <div class="aElectronicBooksImg">
+                    <a href="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000075.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="aElectronicBooksText">
+                    <div class="booksTitle">
+                      <a href="">我信仰阅读</a>
+                    </div>
+                    <div class="booksPrice">47.40元</div>
+                  </div>
+                </div>
+                <div class="aElectronicBooksInfoText">
+                  <div class="aElectronicBooksImg">
+                    <a href="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000075.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="aElectronicBooksText">
+                    <div class="booksTitle">
+                      <a href="">我信仰阅读</a>
+                    </div>
+                    <div class="booksPrice">47.40元</div>
+                  </div>
+                </div>
+                <div class="aElectronicBooksInfoText">
+                  <div class="aElectronicBooksImg">
+                    <a href="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000075.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="aElectronicBooksText">
+                    <div class="booksTitle">
+                      <a href="">我信仰阅读</a>
+                    </div>
+                    <div class="booksPrice">47.40元</div>
+                  </div>
+                </div>
+                <div class="aElectronicBooksInfoText">
+                  <div class="aElectronicBooksImg">
+                    <a href="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000075.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="aElectronicBooksText">
+                    <div class="booksTitle">
+                      <a href="">我信仰阅读</a>
+                    </div>
+                    <div class="booksPrice">47.40元</div>
+                  </div>
+                </div>
+                <div class="aElectronicBooksInfoText">
+                  <div class="aElectronicBooksImg">
+                    <a href="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000075.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="aElectronicBooksText">
+                    <div class="booksTitle">
+                      <a href="">我信仰阅读</a>
+                    </div>
+                    <div class="booksPrice">47.40元</div>
+                  </div>
+                </div>
+                <div class="aElectronicBooksInfoText">
+                  <div class="aElectronicBooksImg">
+                    <a href="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000075.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="aElectronicBooksText">
+                    <div class="booksTitle">
+                      <a href="">我信仰阅读</a>
+                    </div>
+                    <div class="booksPrice">47.40元</div>
+                  </div>
+                </div>
+                <div class="aElectronicBooksInfoText">
+                  <div class="aElectronicBooksImg">
+                    <a href="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000075.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="aElectronicBooksText">
+                    <div class="booksTitle">
+                      <a href="">我信仰阅读</a>
+                    </div>
+                    <div class="booksPrice">47.40元</div>
+                  </div>
+                </div>
+                <div class="aElectronicBooksInfoText">
+                  <div class="aElectronicBooksImg">
+                    <a href="">
+                      <img
+                        src="../../assets/images/books/homePages/ia_100000075.jpg"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                  <div class="aElectronicBooksText">
+                    <div class="booksTitle">
+                      <a href="">我信仰阅读</a>
+                    </div>
+                    <div class="booksPrice">47.40元</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 最受欢迎的书评 -->
+        <div class="bookReview">
+          <div class="booksReviewHeader">
+            <h2>
+              <span class="booksReviewTitle">最受欢迎的书评</span>
+              <span class="linkMore">
+                <a href="/chart?subcat=F&amp;icn=index-topchart-fiction"
+                  >更多热门书评»</a
+                >
+              </span>
+              <span class="linkMore">
+                <a href="/chart?icn=index-topchart-nonfiction">最新书评»</a>
+              </span>
+            </h2>
+          </div>
+          <div class="booksReviewBottom">
+            <div class="booksReviewContent">
+              <div class="booksReviewContentLeft">
+                <a href="">
+                  <img
+                    src="../../assets/images/books/homePages/ia_100000085.jpg"
+                    alt="当时间穿梭沦为背景后，本系列该何去何从"
+                  />
+                </a>
+              </div>
+              <div class="booksReviewContentRight">
+                <h3>
+                  <a href="">当时间穿梭沦为背景后，本系列该何去何从</a>
+                </h3>
+                <div class="infoTitle">
+                  <a href="">yasha001</a>
+                  <span>评论</span>
+                  <a href="">《逆时侦查组2》</a>
+                  <span>☆☆☆☆☆</span>
+                </div>
+                <div class="infoText">
+                  <span
+                    >看了《逆时侦查组》第一部结尾的预告，我在书评中留下了“时间循环感知者甚至可以回退时间，这个能力已经彻底打破了第一部中的时间循环规则，我非常期待猫咪老师如何在不破坏现有规则情况下圆这个新能力”这一段...</span
+                  >
+                  <a href="">（全文）</a>
+                </div>
+              </div>
+            </div>
+            <div class="booksReviewContent">
+              <div class="booksReviewContentLeft">
+                <a href="">
+                  <img
+                    src="../../assets/images/books/homePages/ia_100000085.jpg"
+                    alt="当时间穿梭沦为背景后，本系列该何去何从"
+                  />
+                </a>
+              </div>
+              <div class="booksReviewContentRight">
+                <h3>
+                  <a href="">当时间穿梭沦为背景后，本系列该何去何从</a>
+                </h3>
+                <div class="infoTitle">
+                  <a href="">yasha001</a>
+                  <span>评论</span>
+                  <a href="">《逆时侦查组2》</a>
+                  <span>☆☆☆☆☆</span>
+                </div>
+                <div class="infoText">
+                  <span
+                    >看了《逆时侦查组》第一部结尾的预告，我在书评中留下了“时间循环感知者甚至可以回退时间，这个能力已经彻底打破了第一部中的时间循环规则，我非常期待猫咪老师如何在不破坏现有规则情况下圆这个新能力”这一段...</span
+                  >
+                  <a href="">（全文）</a>
+                </div>
+              </div>
+            </div>
+            <div class="booksReviewContent">
+              <div class="booksReviewContentLeft">
+                <a href="">
+                  <img
+                    src="../../assets/images/books/homePages/ia_100000085.jpg"
+                    alt="当时间穿梭沦为背景后，本系列该何去何从"
+                  />
+                </a>
+              </div>
+              <div class="booksReviewContentRight">
+                <h3>
+                  <a href="">当时间穿梭沦为背景后，本系列该何去何从</a>
+                </h3>
+                <div class="infoTitle">
+                  <a href="">yasha001</a>
+                  <span>评论</span>
+                  <a href="">《逆时侦查组2》</a>
+                  <span>☆☆☆☆☆</span>
+                </div>
+                <div class="infoText">
+                  <span
+                    >看了《逆时侦查组》第一部结尾的预告，我在书评中留下了“时间循环感知者甚至可以回退时间，这个能力已经彻底打破了第一部中的时间循环规则，我非常期待猫咪老师如何在不破坏现有规则情况下圆这个新能力”这一段...</span
+                  >
+                  <a href="">（全文）</a>
+                </div>
+              </div>
+            </div>
+            <div class="booksReviewContent">
+              <div class="booksReviewContentLeft">
+                <a href="">
+                  <img
+                    src="../../assets/images/books/homePages/ia_100000085.jpg"
+                    alt="当时间穿梭沦为背景后，本系列该何去何从"
+                  />
+                </a>
+              </div>
+              <div class="booksReviewContentRight">
+                <h3>
+                  <a href="">当时间穿梭沦为背景后，本系列该何去何从</a>
+                </h3>
+                <div class="infoTitle">
+                  <a href="">yasha001</a>
+                  <span>评论</span>
+                  <a href="">《逆时侦查组2》</a>
+                  <span>☆☆☆☆☆</span>
+                </div>
+                <div class="infoText">
+                  <span
+                    >看了《逆时侦查组》第一部结尾的预告，我在书评中留下了“时间循环感知者甚至可以回退时间，这个能力已经彻底打破了第一部中的时间循环规则，我非常期待猫咪老师如何在不破坏现有规则情况下圆这个新能力”这一段...</span
+                  >
+                  <a href="">（全文）</a>
                 </div>
               </div>
             </div>
@@ -635,251 +971,500 @@
       </div>
       <!-- 右边布局 -->
       <div class="rightContainer">
-        <!-- 热门标签头部 -->
-        <div class="Hot-labels">
-          <h2>
-            <span>热门标签</span>
-            <span class="hotLabels"><a href="">所有热门标签»</a></span>
-          </h2>
-        </div>
-        <!-- 热门内容分类 -->
-        <div class="contentLabels">
-          <div class="ulContainer">
-            <div class="titleContainer">
-              <div class="ificationContainer">
-                <span>文学</span>
-                <div>
-                  <span class="ificationDIV">
-                    <a href="">小说</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">随笔</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">日本文学</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">散文</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">诗歌</a>
-                  </span>
+        <!-- 热门标签 -->
+        <div class="hot">
+          <!-- 热门标签头部 -->
+          <div class="Hot-labels">
+            <h2>
+              <span>热门标签</span>
+              <span class="hotLabels"><a href="">所有热门标签»</a></span>
+            </h2>
+          </div>
+          <!-- 热门内容分类 -->
+          <div class="contentLabels">
+            <div class="ulContainer">
+              <div class="titleContainer">
+                <div class="ificationContainer">
+                  <span>文学</span>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">小说</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">随笔</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">日本文学</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">散文</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">诗歌</a>
+                    </span>
+                  </div>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">童话</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">名著</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">港台</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">更多»</a>
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <span class="ificationDIV">
-                    <a href="">童话</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">名著</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">港台</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">更多»</a>
-                  </span>
+                <div class="ificationContainer">
+                  <span>文学</span>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">小说</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">随笔</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">日本文学</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">散文</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">诗歌</a>
+                    </span>
+                  </div>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">童话</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">名著</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">港台</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">更多»</a>
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div class="ificationContainer">
-                <span>文学</span>
-                <div>
-                  <span class="ificationDIV">
-                    <a href="">小说</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">随笔</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">日本文学</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">散文</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">诗歌</a>
-                  </span>
+                <div class="ificationContainer">
+                  <span>文学</span>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">小说</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">随笔</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">日本文学</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">散文</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">诗歌</a>
+                    </span>
+                  </div>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">童话</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">名著</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">港台</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">更多»</a>
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <span class="ificationDIV">
-                    <a href="">童话</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">名著</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">港台</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">更多»</a>
-                  </span>
+                <div class="ificationContainer">
+                  <span>文学</span>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">小说</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">随笔</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">日本文学</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">散文</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">诗歌</a>
+                    </span>
+                  </div>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">童话</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">名著</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">港台</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">更多»</a>
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div class="ificationContainer">
-                <span>文学</span>
-                <div>
-                  <span class="ificationDIV">
-                    <a href="">小说</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">随笔</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">日本文学</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">散文</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">诗歌</a>
-                  </span>
+                <div class="ificationContainer">
+                  <span>文学</span>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">小说</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">随笔</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">日本文学</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">散文</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">诗歌</a>
+                    </span>
+                  </div>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">童话</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">名著</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">港台</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">更多»</a>
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <span class="ificationDIV">
-                    <a href="">童话</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">名著</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">港台</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">更多»</a>
-                  </span>
-                </div>
-              </div>
-              <div class="ificationContainer">
-                <span>文学</span>
-                <div>
-                  <span class="ificationDIV">
-                    <a href="">小说</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">随笔</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">日本文学</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">散文</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">诗歌</a>
-                  </span>
-                </div>
-                <div>
-                  <span class="ificationDIV">
-                    <a href="">童话</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">名著</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">港台</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">更多»</a>
-                  </span>
-                </div>
-              </div>
-              <div class="ificationContainer">
-                <span>文学</span>
-                <div>
-                  <span class="ificationDIV">
-                    <a href="">小说</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">随笔</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">日本文学</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">散文</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">诗歌</a>
-                  </span>
-                </div>
-                <div>
-                  <span class="ificationDIV">
-                    <a href="">童话</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">名著</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">港台</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">更多»</a>
-                  </span>
-                </div>
-              </div>
-              <div class="ificationContainer">
-                <span>文学</span>
-                <div>
-                  <span class="ificationDIV">
-                    <a href="">小说</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">随笔</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">日本文学</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">散文</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">诗歌</a>
-                  </span>
-                </div>
-                <div>
-                  <span class="ificationDIV">
-                    <a href="">童话</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">名著</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">港台</a>
-                  </span>
-                  <span class="ificationDIV">
-                    <a href="">更多»</a>
-                  </span>
+                <div class="ificationContainer">
+                  <span>文学</span>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">小说</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">随笔</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">日本文学</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">散文</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">诗歌</a>
+                    </span>
+                  </div>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">童话</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">名著</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">港台</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">更多»</a>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- 畅销图书榜 -->
+        <div class="bestSellingList">
+          <div class="bestSellingListTop">
+            <h2>
+              <span>畅销图书榜</span>
+            </h2>
+          </div>
+          <div class="bestSellingListBottom">
+            <div class="popularContent">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本（歪歪兔童书馆出品）</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本（歪歪兔童书馆出品）</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- 豆瓣图书250 -->
+        <div class="douBanBooks250">
+          <div class="douBanBooks250Top">
+            <h2>
+              <span>豆瓣图书250</span>
+              <span class="linMore">
+                <a
+                  href="https://market.douban.com/book/?utm_campaign=book_freyr_section&amp;utm_source=douban&amp;utm_medium=pc_web"
+                  >更多»</a>
+              </span>
+            </h2>
+          </div>
+          <div class="douBanBooks250Bottom">
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info2">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+                <p>
+                  <span>有电子书</span>
+                </p>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info2">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+                <p>
+                  <span>有电子书</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- 跳转到读书详情的路由连接 -->
-          <router-link to="/booksinfo">详情</router-link>
+        <router-link to="/booksinfo">详情</router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "Books",
+  data() {
+    return {
+      buttomTextList: ['购书单','电子图书','豆瓣书店','2019年度榜单', '2019书影音报告','购物车']
+    }
+  },
 };
 </script>
 
 <style  lang="less"  scoped>
 .topAds {
+  width: 1040px;
+  margin: 0 auto;
   padding-bottom: 16px;
 }
 .boxsExpress {
   width: 1040px;
   margin: 0 auto;
   // background: turquoise;
-  height: 9990px;
+  // height: 9990px;
   display: flex;
   // 左边布局
   .leftContainer {
     padding-right: 25px;
+    // 新书速递
     .booksHeader {
       color: #111;
       font: 12px Helvetica, Arial, sans-serif;
@@ -890,7 +1475,6 @@ export default {
       float: left;
       width: 675px;
       padding-right: 25px;
-      // 新书速递
       h2 {
         padding: 0;
         font: 15px Arial, Helvetica, sans-serif;
@@ -1334,30 +1918,32 @@ export default {
             }
           }
         }
-        .booksShopInfoBottom{
+        .booksShopInfoBottom {
           height: 203px;
           // background: darkblue;
-          .flexContainer{
+          .flexContainer {
+            width: 700px;
             display: flex;
             justify-content: space-between;
-            .abooksInfo{
+            .abooksInfo {
               width: 115px;
               height: 183px;
               margin: 0 25px 20px 0;
               // background: darkolivegreen;
-              .aBooksImg{
+              .aBooksImg {
                 height: 140px;
                 margin-bottom: 12px;
-                a{
-                  img{
+                a {
+                  img {
                     width: 106px;
                   }
                 }
               }
-              .aBooksText{
-                div{
-                  font: 12px "Microsoft YaHei",Tahoma, Helvetica, Arial, sans-serif;
-                  a{
+              .aBooksText {
+                div {
+                  font: 12px "Microsoft YaHei", Tahoma, Helvetica, Arial,
+                    sans-serif;
+                  a {
                     color: #3377aa;
                     font-size: 13px;
                   }
@@ -1368,6 +1954,195 @@ export default {
         }
       }
     }
+    // 电子图书
+    .electronicBooks {
+      width: 675px;
+      height: 517px;
+      // background: chartreuse;
+      margin-bottom: 30px;
+      .electronicBooksTop {
+        border-bottom: 1px #dddddd solid;
+        padding-bottom: 3px;
+        margin-bottom: 16px;
+        h2 {
+          span {
+            font: 18px Arial, Helvetica, sans-serif;
+            font-weight: bold;
+          }
+          .linMore {
+            padding-left: 10px;
+            font: 13px Arial, Helvetica, sans-serif;
+            line-height: 150%;
+            a {
+              color: #3377aa;
+            }
+          }
+        }
+      }
+      .electronicBooksBottom {
+        height: 470px;
+        // background: chocolate;
+        .electronicBooksInfoTop {
+          height: 14px;
+          margin-bottom: 13px;
+          // background: cornflowerblue;
+          h3 {
+            font: 15px Helvetica, Arial, sans-serif;
+            font-weight: normal;
+            color: #111;
+            font-size: 15px;
+            line-height: 1;
+            // margin-bottom: 13px;
+            span {
+              margin-left: 10px;
+              a {
+                cursor: pointer;
+                color: #3377aa;
+              }
+            }
+          }
+        }
+        .electronicBooksInfoBottom {
+          height: 443px;
+          // background: crimson;
+          .flexContainer {
+            width: 700px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .aElectronicBooksInfoText {
+              width: 115px;
+              height: 201px;
+              margin-right: 25px;
+              margin-bottom: 20px;
+              // background: darkkhaki;
+              .aElectronicBooksImg {
+                a {
+                  img {
+                    width: 106px;
+                    height: 158px;
+                  }
+                }
+              }
+              .aElectronicBooksText {
+                width: 115px;
+                height: 31px;
+                .booksTitle {
+                  width: 115px;
+                  height: 14px;
+                  margin-bottom: 5px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  a {
+                    color: #3377aa;
+                    cursor: pointer;
+                    font: 13px Helvetica, Arial, sans-serif;
+                  }
+                }
+                .booksPrice {
+                  font: 13px Helvetica, Arial, sans-serif;
+                  color: #4b4b4b;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // 最受欢迎的书评
+    .bookReview {
+      width: 675px;
+      height: 688px;
+      margin-bottom: 50px;
+      // background: darkkhaki;
+      .booksReviewHeader {
+        width: 675px;
+        height: 27px;
+        // background: orange;
+        border-bottom: 1px #dddddd solid;
+        padding-bottom: 3px;
+        margin-bottom: 16px;
+        h2 {
+          .booksReviewTitle {
+            font: 18px Arial, Helvetica, sans-serif;
+            line-height: 150%;
+            font-weight: bold;
+            color: #111111;
+            // float: left;
+          }
+          .linkMore {
+            a {
+              font: 13px Arial, Helvetica, sans-serif;
+              line-height: 150%;
+              color: #3377aa;
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+      .booksReviewBottom {
+        height: 640px;
+        // background: darkolivegreen;
+        .booksReviewContent {
+          display: flex;
+          justify-content: space-between;
+          width: 675px;
+          height: 117px;
+          border-bottom: 1px #eaeaea solid;
+          padding-bottom: 24px;
+          margin-bottom: 24px;
+          .booksReviewContentLeft {
+            a {
+              img {
+                width: 75px;
+                height: 105px;
+              }
+            }
+          }
+          .booksReviewContentRight {
+            width: 585px;
+            height: 117px;
+            box-sizing: border-box;
+            // padding-left: 15px;
+            // background: darkorchid;
+            h3 {
+              a {
+                font: 15px Helvetica, Arial, sans-serif;
+                color: #3377aa;
+              }
+            }
+            .infoTitle {
+              height: 21px;
+              padding: 5px 0;
+              a {
+                margin-right: 3px;
+                color: #666666;
+                font: 13px Helvetica, Arial, sans-serif;
+              }
+              span {
+                font-size: 14px;
+                color: #666666;
+                margin-right: 3px;
+              }
+            }
+            .infoText {
+              height: 60px;
+              font: 13px Helvetica, Arial, sans-serif;
+              span {
+                line-height: 23px;
+              }
+              a {
+                color: #3377aa;
+              }
+            }
+          }
+        }
+        div:nth-child(4) {
+          border-bottom: none;
+        }
+      }
+    }
   }
   // 右边布局
   .rightContainer {
@@ -1375,68 +2150,276 @@ export default {
     height: 900px;
     // background-color: chartreuse;
     padding-top: 30px;
-    h2 {
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 3px;
-      margin-bottom: 16px;
-      margin: 0 0 12px 0;
-      line-height: 150%;
-      span {
-        font: 16px Arial, Helvetica, sans-serif;
-        color: #111;
-        font-weight: bold;
+    // 热门标签
+    .hot {
+      padding-bottom: 20px;
+      h2 {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 3px;
+        margin-bottom: 16px;
+        margin: 0 0 12px 0;
+        line-height: 150%;
+        span {
+          font: 16px Arial, Helvetica, sans-serif;
+          color: #111;
+          font-weight: bold;
+        }
+        .hotLabels {
+          font: 13px Arial, Helvetica, sans-serif;
+          color: #666666;
+          padding-left: 10px;
+          a {
+            color: #3377aa;
+          }
+        }
       }
-      .hotLabels {
-        font: 13px Arial, Helvetica, sans-serif;
-        color: #666666;
-        padding-left: 10px;
-        a {
-          color: #3377aa;
+      .contentLabels {
+        width: 300px;
+        height: 545px;
+        padding-bottom: 20px;
+        margin-top: 16px;
+        // background: chartreuse;
+        .ulContainer {
+          .titleContainer {
+            width: 300px;
+            height: 75px;
+            // display: flex;
+            .ificationContainer {
+              margin-top: 16px;
+              position: relative;
+              &::before {
+                content: "";
+                display: block;
+                border-bottom: 1px #dadada dashed;
+                position: absolute;
+                width: 100%;
+                bottom: 0;
+              }
+              span {
+                font: 13px Helvetica, Arial, sans-serif;
+                line-height: 1.62;
+              }
+              div {
+                display: flex;
+                .ificationDIV {
+                  // width: 26px;
+                  height: 20px;
+                  background: #f5f5f5;
+                  padding: 2px 11px 0;
+                  margin: 0 3px 5px 0;
+                  a {
+                    color: #37a;
+                    font-size: 13px;
+                    display: inline-block;
+                    line-height: 20px;
+                    // width: 26px;
+                    height: 20px;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
-    .contentLabels {
-      width: 300px;
-      height: 545px;
-      padding-bottom: 20px;
-      margin-top: 16px;
-      // background: chartreuse;
-      .ulContainer {
-        .titleContainer {
-          width: 300px;
-          height: 75px;
-          // display: flex;
-          .ificationContainer {
-            margin-top: 16px;
-            position: relative;
-            &::before {
-              content: "";
-              display: block;
-              border-bottom: 1px #dadada dashed;
-              position: absolute;
-              width: 100%;
-              bottom: 0;
-            }
-            span {
-              font: 13px Helvetica, Arial, sans-serif;
-              line-height: 1.62;
+    // 畅销图书榜
+    .bestSellingList {
+      height: 613px;
+      margin-bottom: 32px;
+      // background: brown;
+      .bestSellingListTop {
+        border-bottom: 1px #dddddd solid;
+        padding-bottom: 3px;
+        margin-bottom: 16px;
+        h2 {
+          span {
+            font: 18px Arial, Helvetica, sans-serif;
+            font-weight: bold;
+          }
+        }
+      }
+      .bestSellingListBottom {
+        height: 567px;
+        // background: burlywood;
+        .popularContent {
+          height: 67px;
+          padding: 4px 0;
+          border-bottom: 1px #dadada dashed;
+          // background: chartreuse;
+          display: flex;
+          position: relative;
+          .pop_num {
+            font: 14px Helvetica, Arial, sans-serif;
+            width: 20px;
+            height: 22px;
+          }
+          .pop_title {
+            width: 223px;
+            height: 66px;
+            a {
+              color: #3377aa;
+              font: 14px Helvetica, Arial, sans-serif;
+              cursor: pointer;
             }
             div {
-              display: flex;
-              .ificationDIV {
-                // width: 26px;
-                height: 20px;
-                background: #f5f5f5;
-                padding: 2px 11px 0;
-                margin: 0 3px 5px 0;
-                a {
-                  color: #37a;
-                  font-size: 13px;
-                  display: inline-block;
-                  line-height: 20px;
-                  // width: 26px;
-                  height: 20px;
-                }
+              color: #666666;
+              font: 13px Helvetica, Arial, sans-serif;
+            }
+          }
+          .shopBt{
+              position: absolute;
+              // left: -5px;
+              right: 5px;
+              top: 10px;
+              padding: 6px 8px;
+              span{
+                font-size: 13px;
+              }
+            }
+        }
+        .popularContent:hover{
+          background: #F9F9F6;;
+        }
+        .popularContent:hover .shopBt {
+          border: 1px #d8c5b0 solid;
+          color: #d8c5b0;
+        }
+        .popularContent2 {
+          height: 43px;
+          padding: 4px 0;
+          border-bottom: 1px #dadada dashed;
+          // background: chartreuse;
+          display: flex;
+          position: relative;
+          .pop_num {
+            font: 14px Helvetica, Arial, sans-serif;
+            width: 20px;
+            height: 22px;
+          }
+          .pop_title {
+            width: 223px;
+            height: 66px;
+            a {
+              color: #3377aa;
+              font: 14px Helvetica, Arial, sans-serif;
+              cursor: pointer;
+            }
+            div {
+              color: #666666;
+              font: 13px Helvetica, Arial, sans-serif;
+            }
+          }
+          .shopBt{
+              position: absolute;
+              // left: -5px;
+              right: 5px;
+              top: 10px;
+              padding: 6px 8px;
+              span{
+                font-size: 13px;
+              }
+            }
+        }
+        .popularContent2:hover{
+          background: #F9F9F6;;
+        }
+        .popularContent2:hover .shopBt {
+          border: 1px #d8c5b0 solid;
+          color: #d8c5b0;
+        }
+      }
+    }
+    // 豆瓣图书250
+    .douBanBooks250{
+      height: 568px;
+      margin-bottom: 20px;
+      // background: chartreuse;
+      .douBanBooks250Top{
+        border-bottom: 1px #dddddd solid;
+        padding-bottom: 3px;
+        margin-bottom: 16px;
+        h2 {
+          span {
+            font: 18px Arial, Helvetica, sans-serif;
+            font-weight: bold;
+          }
+          .linMore {
+            padding-left: 10px;
+            font: 13px Arial, Helvetica, sans-serif;
+            line-height: 150%;
+            color: #3377aa !important;
+          }
+        }
+      }
+      .douBanBooks250Bottom{
+        width: 323px;
+        height: 524px;
+        // background: chocolate;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .adouBanBooks250Info{
+          width: 85px;
+          height: 151px;
+          // background: cornflowerblue;
+          margin: 0 22px 10px 0;
+          .booksImg{
+            a{
+              img{
+                width: 85px;
+                height: 127px;
+              }
+            }
+          }
+          .booksTitle{
+            width: 85px;
+            height: 21px;
+            padding-top: 3px;
+            text-align: center;
+            a{
+              span{
+                font-size: 13px;
+                color: #3377AA;
+              }
+            }
+          }
+        }
+        .adouBanBooks250Info2{
+          width: 85px;
+          height: 172px;
+          // background: cornflowerblue;
+          margin: 0 22px 10px 0;
+          .booksImg{
+            a{
+              img{
+                width: 85px;
+                height: 127px;
+              }
+            }
+          }
+          .booksTitle{
+            width: 85px;
+            height: 45px;
+            padding-top: 3px;
+            text-align: center;
+            position: relative;
+            a{
+              span{
+                font-size: 13px;
+                color: #3377AA;
+              }
+            }
+            p{
+              position: absolute;
+              top: 25px;
+              width:85px;
+              height: 21px;
+              text-align: center;
+              span{
+                padding: 2px 3px;
+                background: #A1A1A1;
+                color: #FFFFFF;
+                font-size: 13PX;
               }
             }
           }
