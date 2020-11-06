@@ -2,7 +2,7 @@
   <div>
     <Search></Search>
     <div class="wrapper">
-      <h1>第111天：人质手记</h1>
+      <h1>{{booksInfo.name}}</h1>
       <!-- 内容区 -->
       <div class="content">
         <!-- 左侧 -->
@@ -14,14 +14,14 @@
                 <!-- 封面 -->
                 <div class="mainpic">
                   <a href="##">
-                    <img src="./images/bk_img.jpg" title="点击查看大图" />
+                    <img :src="booksInfo.imgUrl" title="点击查看大图" />
                   </a>
                 </div>
                 <!-- 书籍基本信息 -->
                 <div class="info">
                   <span
                     >作者:
-                    <a href="##">[澳大利亚]格里高利·大卫·罗伯兹</a> </span
+                    <a href="##">{{booksInfo.author}}</a> </span
                   ><br />
                   <span>出版社: 北京联合出版公司</span><br />
                   <span>出品方: <a href="##">磨铁图书</a></span
@@ -32,7 +32,7 @@
                   ><br />
                   <span>出版年: 2020-9</span><br />
                   <span>页数: 328</span><br />
-                  <span>定价: 48.00元</span><br />
+                  <span>定价: {{booksInfo.skuPrice}}元</span><br />
                   <span>装帧: 平装</span><br />
                   <span>丛书: <a href="##">项塔兰套装</a></span
                   ><br />
@@ -665,10 +665,32 @@
 
 <script>
 import Search from "@/components/Search/Search";
+
+import { getBooksInfo } from "@/api/booksInfo";
 export default {
   name: "BooksInfo",
-  components: {
-    Search
+  Search,
+  data() {
+    return {
+      booksInfo: {},
+      index: 1
+    };
+  },
+  mounted() {
+    let {id} = this.$route.params
+    this.getBookInfo(1);
+  },
+  methods: {
+    async getBookInfo() {
+      let resultData = await getBooksInfo(1);
+      if (resultData.code === 2000) {
+
+        this.booksInfo = resultData.data;
+      } else {
+        console.log(resultData);
+        
+      }
+    }
   }
 };
 </script>
@@ -1235,11 +1257,11 @@ export default {
           }
         }
       }
-      .article-card{
+      .article-card {
         width: 100%;
         height: 100px;
         margin-bottom: 15px;
-        img{
+        img {
           height: 100px;
           width: 300px;
         }

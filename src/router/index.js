@@ -20,7 +20,7 @@ const Maindoupin = () => import('@/views/doupin/maindoupin/index.vue')
 
 const routes = [
     {
-        path: '/booksinfo',
+        path: '/booksinfo/:id?',
         component: BooksInfo
     },
     {
