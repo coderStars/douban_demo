@@ -1,7 +1,7 @@
 <template>
   <div>
       <!-- 头部 -->
-        <CityHeader></CityHeader>
+        <!-- <CityHeader></CityHeader> -->
 
       <!-- 主体 -->
         <body>
@@ -378,12 +378,12 @@
 <script>
 import './css/index.css'
 import Swiper from "swiper";
-import CityHeader from '../../components/CityHeader'
+// import CityHeader from '../../components/CityHeader'
 import ShowContent from '../../components/ShowContent'
 export default {
   name: 'CommonCity',
   components:{
-      CityHeader,
+    //   CityHeader,
       ShowContent,
   },
   data() {

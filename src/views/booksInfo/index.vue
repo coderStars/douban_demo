@@ -557,6 +557,9 @@
           </router-link>
         </div>
       </div>
+      <div class="img_wrap">
+        <img src="./images/gg.jpg">
+      </div>
     </div>
   </div>
 </template>
@@ -574,7 +577,6 @@ export default {
 <style scoped lang="less">
 .wrapper {
   width: 1040px;
-  height: 3500px;
   font-size: 13px;
   margin: 0 auto;
   h1 {
@@ -1005,6 +1007,10 @@ export default {
       height: 3000px;
       background-color: pink;
     }
+  }
+  .img_wrap{
+    width: 100%;
+    height: 100px;
   }
 }
 </style>
