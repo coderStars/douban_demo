@@ -198,7 +198,7 @@ import MusicList from "../childCom/musicList/musicList.vue";
 import CallOur from "../childCom/callOur/callOur.vue";
 import MusicCover from "../childCom/musicCover/musicCover.vue";
 import NewAlbumCover from "../childCom/newAlbumCover/newAlbumCover.vue";
-import Topics from '@/views/music/childRouter/Topics'
+import Topics from "@/views/music/childRouter/Topics";
 
 import getImages from "@/utils/getImgUrl";
 import { getMusicImgList, getAlbumImgList } from "@/api/music";
@@ -213,7 +213,7 @@ export default {
         require("@/assets/img/music/banner-2874.jpg"),
         require("@/assets/img/music/banner-2912.jpg")
       ],
-      imgIndex: 0,
+      imgIndex: 0
     };
   },
   components: {
@@ -259,338 +259,66 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.swiper-container {
-  width: 100%;
-  height: 300px;
-  margin-bottom: 40px;
-  img {
+.musicWrapper {
+  width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  .swiper-container {
     width: 100%;
-    height: 100%;
-  }
-}
-
-.leftPage {
-  width: 675px;
-
-  .popularPerson {
-    width: 100%;
-    height: 480px;
+    height: 300px;
     margin-bottom: 40px;
-
-    .titleList {
-      height: 30px;
-      line-height: 30px;
-      border-bottom: 2px solid #02a682;
-
-      .active {
-        font-size: 17px;
-        a {
-          color: #222;
-        }
-        a:hover {
-          color: #222 !important;
-          text-decoration: none;
-        }
-      }
-
-      li {
-        list-style: none;
-        float: left;
-        position: relative;
-        margin-right: 5px;
-
-        a {
-          cursor: pointer;
-        }
-
-        a:hover {
-          color: #999 !important;
-          text-decoration: none;
-        }
-      }
-
-      li:after {
-        position: absolute;
-        transform: translateY(-50%);
-        right: -3px;
-        top: 16px;
-        content: "";
-        display: block;
-        width: 1px;
-        height: 15px;
-        background: black;
-      }
-
-      li:last-child:after {
-        width: 0px;
-      }
-    }
-    .content {
+    img {
       width: 100%;
-      height: 448px;
-      box-sizing: border-box;
-      text-align: center;
-      background: #f5f7f8;
-      padding: 15px 0 0 30px;
-      display: flex;
-      flex-wrap: wrap;
-      // justify-content: space-between;
-    }
-  }
-  .albumRank {
-    width: 100%;
-    // height: 489px;
-    margin-bottom: 20px;
-    .title {
-      height: 30px;
-      line-height: 30px;
-      border-bottom: 2px solid #02a682;
-      h3 {
-        float: left;
-        margin-right: 20px;
-      }
-      li {
-        list-style: none;
-        float: left;
-        position: relative;
-        margin-right: 5px;
-
-        a {
-          cursor: pointer;
-        }
-      }
-
-      li:after {
-        position: absolute;
-        transform: translateY(-50%);
-        right: -3px;
-        top: 16px;
-        content: "";
-        display: block;
-        width: 1px;
-        height: 15px;
-        background: black;
-      }
-
-      li:last-child:after {
-        width: 0px;
-      }
-    }
-    margin-bottom: 40px;
-    .content {
-      background: #f5f7f8;
+      height: 100%;
     }
   }
 
-  .hotMusic {
-    width: 100%;
-    height: 489px;
-    .title {
-      height: 30px;
-      line-height: 30px;
-      border-bottom: 2px solid #02a682;
-      h3 {
-        float: left;
-        margin-right: 20px;
-      }
-      li {
-        list-style: none;
-        float: left;
-        position: relative;
-        margin-right: 5px;
+  .leftPage {
+    width: 675px;
 
-        a {
-          cursor: pointer;
-        }
-      }
+    .popularPerson {
+      width: 100%;
+      height: 480px;
+      margin-bottom: 40px;
 
-      li:after {
-        position: absolute;
-        transform: translateY(-50%);
-        right: -3px;
-        top: 16px;
-        content: "";
-        display: block;
-        width: 1px;
-        height: 15px;
-        background: black;
-      }
+      .titleList {
+        height: 30px;
+        line-height: 30px;
+        border-bottom: 2px solid #02a682;
 
-      li:last-child:after {
-        width: 0px;
-      }
-    }
-
-    .content {
-      padding: 15px 0px 15px 15px;
-      background: #f4f7f8;
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        li {
-          width: 315px;
-          height: 166px;
-          margin: 0 10px 15px -2px;
-          background: #ffffff;
-          border: 1px solid #eeeeee;
-          display: flex;
-
-          position: relative;
+        .active {
+          font-size: 17px;
           a {
-            cursor: pointer;
+            color: #222;
           }
-          a.img {
-            cursor: pointer;
-            position: absolute;
-            left: 10px;
-            top: 10px;
-          }
-          img {
-            width: 41px;
-            height: 41px;
-          }
-
-          .itemInfo {
-            width: 237px;
-            padding: 16px 13px 16px 63px;
-            h3 {
-              height: 17px;
-              width: 100%;
-              font-weight: normal;
-              a {
-                display: block;
-                background: transparent;
-                width: 100%;
-                margin: 0;
-                font-size: 15px;
-                color: #138a64;
-                line-height: 15px;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-              }
-            }
-            .desc {
-              font-size: 13px;
-              color: #999;
-              line-height: 13px;
-              margin: 13px 0;
-            }
-            .intro {
-              font-size: 14px;
-              color: #666666;
-              line-height: 19px;
-            }
+          a:hover {
+            color: #222 !important;
+            text-decoration: none;
           }
         }
-      }
-    }
-  }
-}
 
-.rightPage {
-  width: 300px;
-  .topTitle {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-    .item {
-      width: 33.33%;
-      height: 57px;
-      background-color: #f5f7f8;
-      text-align: center;
-      line-height: 150%;
-      font-size: 15px;
-      h2 {
-        margin-top: 9px;
-        font-size: 17px;
-      }
-    }
-    .titleBtn {
-      flex: 1;
-      height: 40px;
-      border-style: inset;
-      color: #fff;
-      font-size: 17px;
-      border: none;
-      background-color: #139d72;
-    }
-  }
-  .hMusicPersonType {
-    margin-bottom: 40px;
-
-    .hotTitle {
-      font-size: 15px;
-      color: #222;
-      float: left;
-      height: 24px;
-    }
-    .typeList {
-      clear: both;
-      display: flex;
-      flex-wrap: wrap;
-      a {
-        padding-left: 5px;
-        font-size: 15px;
-        cursor: pointer;
-        width: 50%;
-        height: 39px;
-        line-height: 39px;
-        box-sizing: border-box;
-        border-top: 1px solid #f8f6f6;
-        border-right: 1px solid #f8f6f6;
-      }
-    }
-  }
-  .singleRank {
-    margin-bottom: 40px;
-    .singleTitle {
-      font-size: 15px;
-      color: #222;
-      float: left;
-      height: 24px;
-      width: 100%;
-      line-height: 24px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #e4e2e2;
-      padding-bottom: 4px;
-
-      .singleBtn {
-        background: #139d72;
-        border: 1px solid #138a64;
-        border-radius: 3px;
-        font-size: 13px;
-        color: #fff;
-        line-height: 22px;
-        width: 88px;
-        height: 23px;
-      }
-
-      button {
-        float: right;
-        color: blue;
-      }
-    }
-    .content {
-      .contentTitle {
         li {
           list-style: none;
           float: left;
           position: relative;
-          margin: 0 5px;
-          font-size: 13px;
-          color: #999999;
+          margin-right: 5px;
+
           a {
             cursor: pointer;
+          }
+
+          a:hover {
+            color: #999 !important;
+            text-decoration: none;
           }
         }
 
         li:after {
           position: absolute;
           transform: translateY(-50%);
-          right: -5px;
-          top: 50%;
+          right: -3px;
+          top: 16px;
           content: "";
           display: block;
           width: 1px;
@@ -602,79 +330,357 @@ export default {
           width: 0px;
         }
       }
-      .contentWrapper {
-        // height: 600px;
+      .content {
         width: 100%;
+        height: 448px;
+        box-sizing: border-box;
+        text-align: center;
+        background: #f5f7f8;
+        padding: 15px 0 0 30px;
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-between;
       }
     }
+    .albumRank {
+      width: 100%;
+      // height: 489px;
+      margin-bottom: 20px;
+      .title {
+        height: 30px;
+        line-height: 30px;
+        border-bottom: 2px solid #02a682;
+        h3 {
+          float: left;
+          margin-right: 20px;
+        }
+        li {
+          list-style: none;
+          float: left;
+          position: relative;
+          margin-right: 5px;
 
-    .contentWrapper {
-      li {
-        display: flex;
-        width: 100%;
-        height: 60px;
-        vertical-align: top;
-        .contentImg {
-          display: inline-block;
-          img {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            margin-top: 10px;
+          a {
+            cursor: pointer;
           }
         }
 
-        .textInfo {
-          margin-left: 10px;
-          .textTop {
-            max-width: 200px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            background-color: transparent;
-            font-size: 15px;
-            color: #138a64;
-            line-height: 14px;
-            padding: 12px 0 8px 0;
+        li:after {
+          position: absolute;
+          transform: translateY(-50%);
+          right: -3px;
+          top: 16px;
+          content: "";
+          display: block;
+          width: 1px;
+          height: 15px;
+          background: black;
+        }
+
+        li:last-child:after {
+          width: 0px;
+        }
+      }
+      margin-bottom: 40px;
+      .content {
+        background: #f5f7f8;
+      }
+    }
+
+    .hotMusic {
+      width: 100%;
+      height: 489px;
+      .title {
+        height: 30px;
+        line-height: 30px;
+        border-bottom: 2px solid #02a682;
+        h3 {
+          float: left;
+          margin-right: 20px;
+        }
+        li {
+          list-style: none;
+          float: left;
+          position: relative;
+          margin-right: 5px;
+
+          a {
+            cursor: pointer;
           }
-          .textBottom {
-            font-size: 13px;
-            color: #999;
-            line-height: 13px;
-            padding: 0;
-            margin: 0;
+        }
+
+        li:after {
+          position: absolute;
+          transform: translateY(-50%);
+          right: -3px;
+          top: 16px;
+          content: "";
+          display: block;
+          width: 1px;
+          height: 15px;
+          background: black;
+        }
+
+        li:last-child:after {
+          width: 0px;
+        }
+      }
+
+      .content {
+        padding: 15px 0px 15px 15px;
+        background: #f4f7f8;
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          li {
+            width: 315px;
+            height: 166px;
+            margin: 0 10px 15px -2px;
+            background: #ffffff;
+            border: 1px solid #eeeeee;
+            display: flex;
+
+            position: relative;
+            a {
+              cursor: pointer;
+            }
+            a.img {
+              cursor: pointer;
+              position: absolute;
+              left: 10px;
+              top: 10px;
+            }
+            img {
+              width: 41px;
+              height: 41px;
+            }
+
+            .itemInfo {
+              width: 237px;
+              padding: 16px 13px 16px 63px;
+              h3 {
+                height: 17px;
+                width: 100%;
+                font-weight: normal;
+                a {
+                  display: block;
+                  background: transparent;
+                  width: 100%;
+                  margin: 0;
+                  font-size: 15px;
+                  color: #138a64;
+                  line-height: 15px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
+              }
+              .desc {
+                font-size: 13px;
+                color: #999;
+                line-height: 13px;
+                margin: 13px 0;
+              }
+              .intro {
+                font-size: 14px;
+                color: #666666;
+                line-height: 19px;
+              }
+            }
           }
         }
       }
     }
   }
 
-  .artist-wx-qrcode-wrap {
-    margin-top: 10px;
-    margin-bottom: 15px;
-    .artist-wx-qrcode {
-      height: 240px;
-      border-radius: 5px;
-      border: 2px solid #f1f1f1;
-      padding: 10px 10px 20px 10px;
+  .rightPage {
+    width: 300px;
+    .topTitle {
       display: flex;
-      flex-flow: column;
-      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      .item {
+        width: 33.33%;
+        height: 57px;
+        background-color: #f5f7f8;
+        text-align: center;
+        line-height: 150%;
+        font-size: 15px;
+        h2 {
+          margin-top: 9px;
+          font-size: 17px;
+        }
+      }
+      .titleBtn {
+        flex: 1;
+        height: 40px;
+        border-style: inset;
+        color: #fff;
+        font-size: 17px;
+        border: none;
+        background-color: #139d72;
+      }
+    }
+    .hMusicPersonType {
+      margin-bottom: 40px;
 
-      .labels {
-        .main-title {
-          font-size: 16px;
-          font-weight: bold;
-          line-height: 1;
-          margin: 0;
-          padding-top: 9px;
-          text-align: center;
+      .hotTitle {
+        font-size: 15px;
+        color: #222;
+        float: left;
+        height: 24px;
+      }
+      .typeList {
+        clear: both;
+        display: flex;
+        flex-wrap: wrap;
+        a {
+          padding-left: 5px;
+          font-size: 15px;
+          cursor: pointer;
+          width: 50%;
+          height: 39px;
+          line-height: 39px;
+          box-sizing: border-box;
+          border-top: 1px solid #f8f6f6;
+          border-right: 1px solid #f8f6f6;
+        }
+      }
+    }
+    .singleRank {
+      margin-bottom: 40px;
+      .singleTitle {
+        font-size: 15px;
+        color: #222;
+        float: left;
+        height: 24px;
+        width: 100%;
+        line-height: 24px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #e4e2e2;
+        padding-bottom: 4px;
+
+        .singleBtn {
+          background: #139d72;
+          border: 1px solid #138a64;
+          border-radius: 3px;
+          font-size: 13px;
+          color: #fff;
+          line-height: 22px;
+          width: 88px;
+          height: 23px;
         }
 
-        .sub-title {
-          color: #4e4e4e;
-          margin: 0;
-          text-align: center;
+        button {
+          float: right;
+          color: blue;
+        }
+      }
+      .content {
+        .contentTitle {
+          li {
+            list-style: none;
+            float: left;
+            position: relative;
+            margin: 0 5px;
+            font-size: 13px;
+            color: #999999;
+            a {
+              cursor: pointer;
+            }
+          }
+
+          li:after {
+            position: absolute;
+            transform: translateY(-50%);
+            right: -5px;
+            top: 50%;
+            content: "";
+            display: block;
+            width: 1px;
+            height: 15px;
+            background: black;
+          }
+
+          li:last-child:after {
+            width: 0px;
+          }
+        }
+        .contentWrapper {
+          // height: 600px;
+          width: 100%;
+        }
+      }
+
+      .contentWrapper {
+        li {
+          display: flex;
+          width: 100%;
+          height: 60px;
+          vertical-align: top;
+          .contentImg {
+            display: inline-block;
+            img {
+              width: 48px;
+              height: 48px;
+              border-radius: 50%;
+              margin-top: 10px;
+            }
+          }
+
+          .textInfo {
+            margin-left: 10px;
+            .textTop {
+              max-width: 200px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              background-color: transparent;
+              font-size: 15px;
+              color: #138a64;
+              line-height: 14px;
+              padding: 12px 0 8px 0;
+            }
+            .textBottom {
+              font-size: 13px;
+              color: #999;
+              line-height: 13px;
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .artist-wx-qrcode-wrap {
+      margin-top: 10px;
+      margin-bottom: 15px;
+      .artist-wx-qrcode {
+        height: 240px;
+        border-radius: 5px;
+        border: 2px solid #f1f1f1;
+        padding: 10px 10px 20px 10px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        .labels {
+          .main-title {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 1;
+            margin: 0;
+            padding-top: 9px;
+            text-align: center;
+          }
+
+          .sub-title {
+            color: #4e4e4e;
+            margin: 0;
+            text-align: center;
+          }
         }
       }
     }

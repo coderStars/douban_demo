@@ -533,7 +533,6 @@ export default {
                           background-color: #f9f9f9;
                           color: #ababac;
                           width: 30px;
-
                           font-size: 14px;
                           display: inline-block;
                         }
@@ -599,7 +598,6 @@ export default {
       height: 100%;
       margin: 0 auto;
       font-size: 16px;
-
       .cart-footer {
         overflow: visible;
         min-height: 40px;

@@ -247,7 +247,11 @@
               <img src="https://tpc.googlesyndication.com/simgad/1182434949692079971?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qnYKJsN76CNFZ-CCGYr_eeO0TSaTQ" alt="">
             </div>
 
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
 
         </div>
 
@@ -263,7 +267,19 @@ export default {
   name: 'showDetail',
   components:{
     CityHeader,
+
+  },
+  mounted(){
+    //画布地图
+    // this.map()
+  },
+  methods:{
+    //画布地图
+    map(){
+      
+    }
   }
+
 }
 </script>
 

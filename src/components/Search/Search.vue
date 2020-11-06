@@ -82,13 +82,11 @@ export default {
       immediate: true,
       handler() {
         let path = this.$route.path;
-        console.log(path);
-        if (path === "/books") {
+        if (path.startsWith("/books")) {
           this.logoIndex = 0;
-        } else if (path === "/movie") {
-          console.log("=====");
+        } else if (path.startsWith("/movie")) {
           this.logoIndex = 1;
-        } else if (path === "/music") {
+        } else if (path.startsWith("/music")) {
           this.logoIndex = 2;
         } else {
           this.logoIndex = 0;

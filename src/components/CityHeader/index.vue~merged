@@ -1,5 +1,37 @@
 <template>
   <div>
+<<<<<<< HEAD
+      <!-- 头部 -->
+      <div class="nav">
+          <!-- 版心 -->
+          <div class="container">
+               <!-- 左侧导航 -->
+              <div class="navLeft">
+                <div class="logo">豆瓣同城</div>
+                <div class="city">
+                    <a href="javascript:;">北京
+                        <i></i>
+                    </a>
+                </div>
+                <div class="activityNav">
+                    <ul>
+                        <li>近期活动</li>
+                        <li>主办方</li>
+                        <li>舞台剧</li>
+                    </ul>
+                </div>
+              </div>
+
+              <!-- 右侧搜索 -->
+              <div class="searchRight">
+                   <div class="rightContainer">
+                    <input  class="input" type="text" placeholder="活动 / 舞台剧 / 地点">
+                    <div  class="submit iconfont iconsearch"></div>
+                </div>
+              </div>
+          </div>
+      </div>
+=======
     <!-- 头部 -->
     <div class="nav">
       <!-- 版心 -->
@@ -59,10 +91,20 @@
         </div>
       </div>
     </div>
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
+
+export default {
+  name: 'CityHeader',
+}
+</script>
+
+<style scoped lang='less'>
+=======
 export default {
   name: "CityHeader"
 };
@@ -70,6 +112,7 @@ export default {
 
 <style scoped lang='less'>
 @import '/src/assets/css/reset.css';
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
 @import '/src/assets/css/base.css';
     // 头部
 .nav{
@@ -91,6 +134,8 @@ export default {
             flex: 1;
             display: flex;
             align-items: center;
+<<<<<<< HEAD
+=======
             font: 12px Helvetica,Arial,sans-serif;
             line-height: 1.62;
             .logo{
@@ -152,6 +197,7 @@ export default {
                     }
                 }
             }
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
             .logo{
                 width: 124px;
                 height: 56px;
@@ -175,6 +221,18 @@ export default {
                     height: 25px;
                     border-radius: 6px;
                     i{
+<<<<<<< HEAD
+                    position: absolute;        
+                    display:block;
+                    width:0;
+                    height:0;
+                    border-top:5px solid black;
+                    border-left:4px solid transparent;
+                    border-right:4px solid transparent;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);   
+=======
                         position: absolute;        
                         display:block;
                         width:0;
@@ -185,10 +243,13 @@ export default {
                         top: 50%;
                         right: 10px;
                         transform: translateY(-50%);   
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
                     }
                 }
             }
             .activityNav{
+<<<<<<< HEAD
+=======
                 width: 240px;
                 display: flex;
                 justify-content: space-around;
@@ -205,6 +266,7 @@ export default {
                         color: #fff;
                     }
                 }
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
                 ul{
                     list-style: none;
                     li{
@@ -219,12 +281,15 @@ export default {
         //右侧搜索
         .searchRight{
             .rightContainer{
+<<<<<<< HEAD
+=======
                 width: 218px;
                 height: 28px;
                 border: 1px solid #e3e2de;
                 text-align: center;
                 display: flex;
                 margin-top: 20px;
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
                 height: 28px;
                 border: 1px solid #e3e2de;
                 display: flex;
@@ -234,11 +299,14 @@ export default {
                     width: 200px;
                     height: 26px;
                     border: none;
+<<<<<<< HEAD
+=======
                     padding-left:10px;
                     outline: none;
                 }
                 input::-webkit-input-placeholder {
                     vertical-align: middle;
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
                     padding-left: 10px;
                     outline: none;
                 }
