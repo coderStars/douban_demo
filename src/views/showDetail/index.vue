@@ -151,7 +151,7 @@
                 )
               </span>
             </h2>
-            <canvas></canvas>
+            <img src="./images/atguigu.jpg" alt="">
           </div>
 
           <!--  活动成员 -->
