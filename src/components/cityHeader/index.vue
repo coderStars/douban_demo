@@ -8,11 +8,11 @@
               <div class="navLeft">
                 <div class="logo">豆瓣同城</div>
                 <div class="city" @click="chooseCity">
-                    <a href="javascript:;">北京
+                    <a href="javascript:;">{{place}}
                         <i :class="{choose:otherCity}" ></i>
                     </a>
                     <!-- 其他城市选项 -->
-                    <div class="otherCity"  v-show="otherCity === true">
+                    <div class="otherCity"  v-show="otherCity === true" @click="choosePlace">
                         <div>北京</div>
                         <div>上海</div>
                         <div>广州</div>
@@ -57,12 +57,17 @@ export default {
   data() {
       return {
           otherCity:false,
+          place:'北京'
       }
   },
   methods: {
       // 点击选择切换城市
       chooseCity(){
         this.otherCity = !this.otherCity
+      },
+      //切换城市
+      choosePlace(event){
+          this.place = event.target.innerHTML
       }
   },
   

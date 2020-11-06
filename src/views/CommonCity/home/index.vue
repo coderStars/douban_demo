@@ -17,66 +17,11 @@
                     </div>
 
                          <div class="swiper-wrapper">
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
+                            <div class="swiper-slide stop-swiping" v-for="item in commonCityData.hotActivities" :key="item.id">
+                                <img :src="item.imgUrl" alt="">
+                                <div class="name">{{item.text}}</div>
                             </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img3.doubanio.com/pview/event_poster/large/public/fcf6df132e72f4e.jpg" alt="">
-                                <div class="name">话剧《丁西林戏剧三则》</div>
-                            </div>
+                        
                         </div> 
 
                        
@@ -172,15 +117,15 @@
 
                     </div>
                     <!-- 展示内容区 -->
-                    <ShowContent></ShowContent>
-                    <ShowContent></ShowContent>
-                    <ShowContent></ShowContent>
-                    <ShowContent></ShowContent>
-                    <ShowContent></ShowContent>
-                    <ShowContent></ShowContent>
-                    <ShowContent></ShowContent>
-                    <ShowContent></ShowContent>
-                    <ShowContent></ShowContent>
+                    <ShowContent :name="'戏剧'" :type="dramaTypes"></ShowContent>
+                    <ShowContent :name="'展览'"></ShowContent>
+                    <ShowContent :name="'演唱会'"></ShowContent>
+                    <ShowContent :name="'音乐'" :type="musicTypes"></ShowContent>
+                    <ShowContent :name="'亲子'"></ShowContent>
+                    <ShowContent :name="'电影'" :type="movieTypes"></ShowContent>
+                    <ShowContent :name="'聚会'" :type="meetingTypes"></ShowContent>
+                    <ShowContent :name="'讲座'" :type="LectureTypes"></ShowContent>
+                    <ShowContent :name="'其他'" :type="otherTypes"></ShowContent>
 
                 </div>
   </div>
@@ -188,16 +133,30 @@
 
 <script>
 import Swiper from "swiper";
-
+import {getCommonCityData} from '@/api/commonCity'
 import ShowContent from '@/components/CityShowContent'
+import {mapState} from 'vuex'
 export default {
   name: 'Home',
   components:{
       ShowContent,
   },
+  data() {
+      return {
+        dramaTypes:['最热' ,'话剧','音乐剧' ,'舞剧', '歌剧', '戏曲','其他'],
+        musicTypes:['小型现场', '音乐会' ,'音乐节','','',''],
+        movieTypes:['主题放映','影展','影院活动','','','',''],
+        meetingTypes:['生活' ,'集市',' 摄影',' 外语 ','桌游 ','夜店',' 交友',' 美食'],
+        LectureTypes:[' 发布会',' 见面会',' 分享会 ','沙龙','','',''],
+        otherTypes:['赛事',' 课程',' 旅行 ','公益',' 运动','','','' ]
+
+      }
+  },
   mounted() {
-      //热门活动轮播
+        // 热门活动轮播
       this.activitySwiper()
+      //获取home的初始化数据
+      this.getCommonCityData()
   },
   methods: {
     //热门活动轮播
@@ -225,6 +184,46 @@ export default {
                 
             })        
     },
+    //获取home初始化数据
+    async getCommonCityData(){
+        this.$store.dispatch('getCommonCityData')
+        
+    }
+  },
+  computed: {
+      ...mapState({
+          commonCityData: state => state.city.commonCityData
+      })
+  },
+  watch: {
+      commonCityData:{
+          handler(){
+              this.$nextTick(()=>{
+                var mySwiper = new Swiper (this.$refs.activitySwiper, {
+                loop: true, // 循环模式选项
+                
+                // 如果需要前进后退按钮
+                navigation: {
+                nextEl: '.next',
+                prevEl: '.pre',
+                },
+
+                slidesPerView : 5, //代表每屏显示几张
+                slidesPerGroup : 5, //没滑动一次滑动多少张
+
+                noSwiping : true,
+                noSwipingClass : 'stop-swiping',
+
+                autoplay:true, //自动切换
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction', //分页器样式类型
+                },
+                
+            }) 
+              })
+          }
+      }
   },
 }
 </script>
@@ -273,13 +272,13 @@ export default {
                     
                 }
                 .pre{
-                    background: url('./images/pre.png') no-repeat 1px -2px ;
+                    background: url('./images/pre.png') no-repeat 1px -21px ;
                     display: inline-block;
                     width: 19px;
                     height: 19px;
                     border-radius: 50%;
                     margin:0 0 0 10px;
-                    cursor: pointer;
+                    cursor: pointer!important;
                 }
                 .next{
                     background: url('./images/pre.png') no-repeat -21px -2px ;

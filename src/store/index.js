@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 
-
+import city from './city'
 //存数据的地方，多个属性的对象
 const state = {
 
@@ -24,6 +24,7 @@ const getters = {}
 //2、向外暴露一个Store对象
 export default new Vuex.Store({
   modules:{
+    city
   }
 })
 

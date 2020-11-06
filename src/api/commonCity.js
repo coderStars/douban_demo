@@ -8,3 +8,13 @@ export const getCommonCityShowDetail = (id) => {
   })
 }
 
+//获取同城home数据
+export const getCommonCityData = () => {
+  return request({
+    url:'/commonCityData',
+    method:'get'
+  })
+}
+
+
+

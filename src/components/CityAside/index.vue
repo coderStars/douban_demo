@@ -15,62 +15,15 @@
                     <div class="swiper-container" ref="buyTicketSwiper">
                          
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
+                            <div class="swiper-slide stop-swiping" v-for="item in commonCityData.tickets" :key="item.id">
+                                <img :src="item.imgUrl" alt="">
                                 <div class="detail">
-                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                                    <p class="price">¥ 104</p>
+                                    <p class="name">{{item.name}}</p>
+                                    <p class="date">{{item.time}}</p>
+                                    <p class="price">{{item.price}}</p>
                                 </div>
                             </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-                                <div class="detail">
-                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                                    <p class="price">¥ 104</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-                                <div class="detail">
-                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                                    <p class="price">¥ 104</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-                                <div class="detail">
-                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                                    <p class="price">¥ 104</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-                                <div class="detail">
-                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                                    <p class="price">¥ 104</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-                                <div class="detail">
-                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                                    <p class="price">¥ 104</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide stop-swiping">
-                                <img src="https://img1.doubanio.com/pview/event_poster/small/public/e4c7a0c2816b5f9.jpg" alt="">
-                                <div class="detail">
-                                    <p class="name">孟京辉戏剧作品《我爱xxx》</p>
-                                    <p class="date">11月25日 19:30 ~ 11月29日 17:00</p>
-                                    <p class="price">¥ 104</p>
-                                </div>
-                            </div>
+                          
                         </div>
                     </div>
 
@@ -82,55 +35,16 @@
                             <div class="more">更多»</div>
                         </div>
                         <!-- 主体 -->
-                        <div class="hostItem">
-                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
+                        <div class="hostItem" v-for="item in commonCityData.userInfo" :key=item.id>
+                            <img :src="item.imgUrl" alt="">
                             <div class="desc">
-                                <p class="one">KPRendezvous</p>
+                                <p class="one">{{item.name}}</p>
                                 <p class="two">有2个活动正在进行</p>
                                 <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
                                 <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
                             </div>
                         </div>
-                        <!-- ----- -->
-                         <div class="hostItem">
-                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
-                            <div class="desc">
-                                <p class="one">KPRendezvous</p>
-                                <p class="two">有2个活动正在进行</p>
-                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
-                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
-                            </div>
-                        </div>
-                        <!-- ----- -->
-                         <div class="hostItem">
-                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
-                            <div class="desc">
-                                <p class="one">KPRendezvous</p>
-                                <p class="two">有2个活动正在进行</p>
-                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
-                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
-                            </div>
-                        </div>
-                        <!-- ----- -->
-                         <div class="hostItem">
-                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
-                            <div class="desc">
-                                <p class="one">KPRendezvous</p>
-                                <p class="two">有2个活动正在进行</p>
-                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
-                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
-                            </div>
-                        </div>
-                        <!-- ----- -->
-                         <div class="hostItem">
-                            <img src="https://img1.doubanio.com/view/site/small/public/557878537613947.jpg" alt="">
-                            <div class="desc">
-                                <p class="one">KPRendezvous</p>
-                                <p class="two">有2个活动正在进行</p>
-                                <p class="three">[讲座] 李洱×苗炜：作为“局外人”的加缪</p>
-                                <p class="four">[展览] 西安SKP文苑·展览 | 探寻民间...</p>
-                            </div>
-                        </div>
+                  
 
                     </div>
 
@@ -184,6 +98,7 @@
 
 <script>
 import Swiper from "swiper";
+import {mapState} from 'vuex'
 
 export default {
   name: 'CityAside', 
@@ -208,6 +123,30 @@ export default {
                     
             })        
         },
+    },
+    watch: {
+        commonCityData:{
+            handler(){
+                var mySwiper = new Swiper (this.$refs.buyTicketSwiper, {
+                direction: 'vertical', // 垂直切换选项
+                loop: true, // 循环模式选项
+                speed:7000,
+                noSwipingClass : 'stop-swiping',
+                autoplay:{
+                    // disableOnInteraction: false,
+                    // delay: 10,
+                }, //自动切换   
+                slidesPerView : 6, //代表每屏显示几张
+                slidesPerGroup : 1,
+                        
+                })  
+            }
+        }
+    },
+    computed: {
+        ...mapState({
+            commonCityData:state => state.city.commonCityData
+        })
     },
 
 }

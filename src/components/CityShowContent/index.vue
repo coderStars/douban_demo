@@ -4,16 +4,11 @@
             <div class="show">
                 <!-- 头部导航区 -->
                 <div class="showHeader">
-                    <div class="title">戏剧</div>
+                    <div class="title">{{name}}</div>
                     <!-- 类别选项卡 -->
                     <div class="type">
-                        <div class="hot">最热</div>
-                        <div>话剧</div>
-                        <div>音乐剧</div>
-                        <div>舞剧</div>
-                        <div>歌剧</div>
-                        <div>戏曲</div>
-                        <div>其他</div>
+                        <div class="hot" v-if="type">最热</div>
+                        <div v-for="(item,index) in type" :key="index">{{item}}</div>
                     </div>
                     <div class="more">
                         <a href="##">
@@ -24,13 +19,13 @@
                 <!-- 内容区 -->
                 <div class="showContent">
                     <!-- 单个内容的展示 -->
-                    <div class="showItem">
-                        <img src="https://img1.doubanio.com/pview/event_poster/median/public/d80c5169eeeca69.jpg" alt="">
+                    <div class="showItem" v-for="item in commonCityData.showDetail" :key="item.id">
+                        <img :src="item.imgUrl" alt="">
                         <!-- 描述 -->
                         <div class="desc">
                             <p class="name">
                                 <a href="##">
-                                    脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场
+                                    {{item.name}}
                                 </a>
                                </p>
                             <p class="date">11月8日 至 11月29日</p>
@@ -39,78 +34,6 @@
                         </div>
                     </div> 
                     
-                    <!-- ----2  ---- -->
-                    <div class="showItem">
-                        <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
-                        <!-- 描述 -->
-                        <div class="desc">
-                            <p class="name">
-                                <a href="##">
-                                    脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场
-                                </a>
-                                </p>
-                            <p class="date">11月8日 至 11月29日</p>
-                            <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
-                            <p class="num">2人关注</p>
-                        </div>
-                    </div> 
-                    <!-- ------3---- -->
-                    <div class="showItem">
-                        <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
-                        <div class="desc">
-                            <p class="name">
-                                <a href="##">
-                                    脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场
-                                </a>
-                                </p>
-                            <p class="date">11月8日 至 11月29日</p>
-                            <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
-                            <p class="num">2人关注</p>
-                        </div>
-                    </div> 
-                    <!-- ------4------ -->
-                    <div class="showItem">
-                        <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
-                        <div class="desc">
-                            <p class="name">
-                                <a href="##">
-                                    脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场
-                                </a>
-                               </p>
-                            <p class="date">11月8日 至 11月29日</p>
-                            <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
-                            <p class="num">2人关注</p>
-                        </div>
-                    </div> 
-                    <!-------5-----  -->
-                    <div class="showItem">
-                        <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
-                        <div class="desc">
-                            <p class="name">
-                                <a href="##">
-                                    脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场
-                                </a>
-                                </p>
-                            <p class="date">11月8日 至 11月29日</p>
-                            <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
-                            <p class="num">2人关注</p>
-                        </div>
-                    </div> 
-                    <!-- ----6---- -->
-                    <div class="showItem">
-                        <img src="https://img9.doubanio.com/pview/event_poster/median/public/8999b599513d6c5.jpg" alt="">
-                        <div class="desc">
-                            <p class="name">
-                                <a href="##">
-                                    脱口秀开心大会巡演《笑喷了，精品专场》单口| 周日精品专场
-                                </a>
-                               </p>
-                            <p class="date">11月8日 至 11月29日</p>
-                            <p class="adress">北京 西城区 西城区车公庄大街4号新华1949园区20栋 A33剧场</p>
-                            <p class="num">2人关注</p>
-                        </div>
-                    </div> 
-                    <!-- -------- -->
                 </div>
 
             </div>
@@ -118,8 +41,15 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default {
   name: 'ShowContent',
+  props:["name","type"],
+  computed: {
+      ...mapState({
+           commonCityData: state => state.city.commonCityData
+      })
+  },
 }
 </script>
 
