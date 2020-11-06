@@ -1,65 +1,68 @@
 <template>
   <div>
-    <!-- 全部商品展示区 -->
-    <div class="allShop">
-      <div class="title">
-        全部商品
-      </div>
-      <div class="shopShow">
-        <ul>
-          <li class="shopItem">
-            <img src="./images/ia_200000001.jpg" alt="">
-            <h4>电影香薰</h4>
-            <p>迷人气息 致敬经典</p>
-            <div class="price">
-              <span class="price1">¥99</span>
-              <span class="price3">立减20元</span>
-            </div>
-          </li>
-          <li class="shopItem">
-            <img src="./images/ia_200000002.jpg" alt="">
-            <h4>豆瓣逆向手表-多色款</h4>
-            <p>风格不受限 白色也出彩</p>
-            <div class="price">
-              <span class="price1">¥289</span>
-              <span class="price2">¥329</span>
-              <span class="price3">最高减40元</span>
-            </div>
-          </li>
-          <li class="shopItem">
-            <img src="./images/ia_200000003.jpg" alt="">
-            <h4>豆猫卫衣</h4>
-            <p>厚毛圈面料,柔软舒适</p>
-            <div class="price">
-              <span class="price1">¥168</span>
-              <span class="price2">¥198</span>
-              <span class="price3">立减30元</span>
-              <span class="price4">满150减30</span>
-            </div>
-          </li>
-          <li class="shopItem">
-            <img src="./images/ia_200000004.jpg" alt="">
-            <h4>豆瓣读书周历2021</h4>
-            <p>用书籍标记时光</p>
-            <div class="price">
-              <span class="price1">¥71</span>
-              <span class="price2">¥88</span>
-              <span class="price3">立减17元</span>
-              <span class="price4">满150减10</span>
-            </div>
-          </li>
-          <li class="shopItem">
-            <img src="./images/ia_200000005.jpg" alt="">
-            <h4>豆瓣电影日历</h4>
-            <p>时间是电影的核心角色</p>
-            <div class="price">
-              <span class="price1">¥80</span>
-              <span class="price2">¥99</span>
-              <span class="price3">最高减26元</span>
-              <span class="price4">满150减10</span>
-            </div>
-          </li>
-        </ul>
+    <!-- 版心 -->
+    <div class="container">
+      <!-- 全部商品展示区 -->
+      <div class="allShop">
+        <div class="title">
+          全部商品
+        </div>
+        <div class="shopShow">
+          <ul>
+            <li class="shopItem">
+              <img src="./images/ia_200000001.jpg" alt="" />
+              <h4>电影香薰</h4>
+              <p>迷人气息 致敬经典</p>
+              <div class="price">
+                <span class="price1">¥99</span>
+                <span class="price3">立减20元</span>
+              </div>
+            </li>
+            <li class="shopItem">
+              <img src="./images/ia_200000002.jpg" alt="" />
+              <h4>豆瓣逆向手表-多色款</h4>
+              <p>风格不受限 白色也出彩</p>
+              <div class="price">
+                <span class="price1">¥289</span>
+                <span class="price2">¥329</span>
+                <span class="price3">最高减40元</span>
+              </div>
+            </li>
+            <li class="shopItem">
+              <img src="./images/ia_200000003.jpg" alt="" />
+              <h4>豆猫卫衣</h4>
+              <p>厚毛圈面料,柔软舒适</p>
+              <div class="price">
+                <span class="price1">¥168</span>
+                <span class="price2">¥198</span>
+                <span class="price3">立减30元</span>
+                <span class="price4">满150减30</span>
+              </div>
+            </li>
+            <li class="shopItem">
+              <img src="./images/ia_200000004.jpg" alt="" />
+              <h4>豆瓣读书周历2021</h4>
+              <p>用书籍标记时光</p>
+              <div class="price">
+                <span class="price1">¥71</span>
+                <span class="price2">¥88</span>
+                <span class="price3">立减17元</span>
+                <span class="price4">满150减10</span>
+              </div>
+            </li>
+            <li class="shopItem">
+              <img src="./images/ia_200000005.jpg" alt="" />
+              <h4>豆瓣电影日历</h4>
+              <p>时间是电影的核心角色</p>
+              <div class="price">
+                <span class="price1">¥80</span>
+                <span class="price2">¥99</span>
+                <span class="price3">最高减26元</span>
+                <span class="price4">满150减10</span>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -72,17 +75,20 @@ export default {
 </script>
 
 <style lang="less" scoped>
-   // 全部商品展示区
-  .allShop{
-    
-    .title{
+// 版心
+.container {
+  margin: 0 auto;
+  width: 1100px;
+  // 全部商品展示区
+  .allShop {
+    .title {
       margin-bottom: 60px;
       font-size: 27px;
       text-align: center;
       font-weight: 600;
     }
-    .shopShow{
-      ul{
+    .shopShow {
+      ul {
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
@@ -98,7 +104,7 @@ export default {
             font-weight: 500;
           }
 
-          P {
+          p {
             color: #ababac;
             font-size: 14px;
           }
@@ -134,7 +140,7 @@ export default {
           }
         }
       }
-      
     }
   }
+}
 </style>
