@@ -82,21 +82,11 @@ export default {
       immediate: true,
       handler() {
         let path = this.$route.path;
-<<<<<<< HEAD
-        console.log(path);
-        if (path === "/books") {
-          this.logoIndex = 0;
-        } else if (path === "/movie") {
-          console.log("=====");
-          this.logoIndex = 1;
-        } else if (path === "/music") {
-=======
         if (path.startsWith("/books")) {
           this.logoIndex = 0;
         } else if (path.startsWith("/movie")) {
           this.logoIndex = 1;
         } else if (path.startsWith("/music")) {
->>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
           this.logoIndex = 2;
         } else {
           this.logoIndex = 0;
@@ -136,10 +126,6 @@ export default {
     margin: 0 auto;
     display: flex;
     padding: 10px 0 5px;
-<<<<<<< HEAD
-
-=======
->>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
     .nav-logo {
       width: 145px;
       height: 56px;
