@@ -569,8 +569,8 @@
               <span class="promotion-info">满48元包邮</span>
               <div class="actions">
                 <a href="##" class="buy-btn">去购买</a>
-                <!-- <a href="##" class="cart-btn">加入购物车</a> -->
-                <router-link class="cart-btn" to="/cart">加入购物车</router-link>
+                <a href="javascript:;" class="cart-btn" @click="addCartList(booksInfo,isClicked = true)">{{isClicked ? '已加入购物车' : '加入购物车'}}</a>
+                <!-- <router-link class="cart-btn" to="/cart">加入购物车</router-link> -->
               </div>
             </div>
           </div>
@@ -667,24 +667,26 @@
 import Search from "@/components/Search/Search";
 
 import { getBooksInfo } from "@/api/booksInfo";
+
+import {mapMutations} from 'vuex'
 export default {
   name: "BooksInfo",
   Search,
   data() {
     return {
       booksInfo: {},
-      index: 1
+      isClicked: false
     };
   },
   mounted() {
     let {id} = this.$route.params
-    this.getBookInfo(1);
+    this.getBookInfo(id);
   },
   methods: {
-    async getBookInfo() {
-      let resultData = await getBooksInfo(1);
+    ...mapMutations(['addCartList']),
+    async getBookInfo(id) {
+      let resultData = await getBooksInfo(id);
       if (resultData.code === 2000) {
-
         this.booksInfo = resultData.data;
       } else {
         console.log(resultData);

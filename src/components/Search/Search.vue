@@ -60,7 +60,7 @@ export default {
           },
           {
             name: "购物车",
-            path: "music/cart"
+            path: "/cart"
           }
         ];
       }

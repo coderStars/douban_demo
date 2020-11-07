@@ -1,64 +1,75 @@
+import Vue from 'vue'
 //存数据的地方，多个属性的对象
 const state = {
-  cartInfo: [
-    {
-    "id": 1,
-    "skuId": 1,
-    "skuNum": 1,
-    "imgUrl": "https://img9.doubanio.com/view/dianpu_product_item/small/public/p25415975.jpg",
-    "skuName": "仿制药的真相",
-    "isChecked": true,
-    "skuPrice": 49.0
-  }, 
-    {
-    "id": 2,
-    "skuId": 2,
-    "skuNum": 1,
-    "imgUrl": "https://img9.doubanio.com/view/dianpu_product_item/small/public/p25415955.jpg",
-    "skuName": "我的思想与观念 ：爱因斯坦自选集",
-    "isChecked": true,
-    "skuPrice": 35.0
-  }, 
-    {
-    "id": 3,
-    "skuId": 3,
-    "skuNum": 1,
-    "imgUrl": "https://img1.doubanio.com/view/dianpu_product_item/small/public/p25414357.jpg",
-    "skuName": "极乐鸟与蜗牛",
-    "isChecked": true,
-    "skuPrice": 46.0
-  }, 
-    {
-    "id": 4,
-    "skuId": 4,
-    "skuNum": 1,
-    "imgUrl": "https://img1.doubanio.com/view/dianpu_product_item/small/public/p25414348.jpg",
-    "skuName": "当我们谈论爱情时我们在谈论什么",
-    "isChecked": true,
-    "skuPrice": 55
-  }, 
-]
+  cartInfoList: []
 }
 
 //直接修改数据的地，是多个方法的一个对象  方法当中不能出现if  for   异步操作
 const mutations = {
-  receiveCartInfo(state, cartInfo) {
-    state.cartInfo = cartInfo
+  addCartList(state, cartInfo) {
+    let cartItem = state.cartInfoList.find(item => item.id === cartInfo.id)
+    if (cartItem) {
+      cartItem.skuNum += 1
+    } else {
+      Vue.set(cartInfo, 'skuNum', 1)
+      state.cartInfoList.push(cartInfo)
+    }
+  },
+  // 修改购物车
+  changeCartList(state, cartList){
+    state.cartInfoList = cartList;
+  },
+  // 购物车商品数量加减
+  updateSkuNum(state, {
+    id,
+    disNum
+  }) {
+    const itemIndex = state.cartInfoList.findIndex(item => item.id === id)
+    if (state.cartInfoList[itemIndex].skuNum <= 1 && disNum === -1) {
+      state.cartInfoList[itemIndex].skuNum = 1
+    } else {
+      state.cartInfoList[itemIndex].skuNum += disNum
+    }
+  },
+
+  delCartList(state, id) {
+    const itemIndex = state.cartInfoList.findIndex(item => item.id === id)
+    if (window.confirm('您确定要删除所有选中的商品吗')) {
+      state.cartInfoList.splice(itemIndex, 1)
+    }
+  },
+  // 全选
+  allChecked(state) {
+    const result = state.cartInfoList.every(item => item.isChecked === true)
+    if (result) {
+      state.cartInfoList.map(item => item.isChecked = false)
+    } else {
+      state.cartInfoList.map(item => item.isChecked = true)
+    }
   }
+
 }
 
 
 //和用户对接的地方  也是多个方法的一个对象 方法当中可以出现if  for  异步操作
 const actions = {
-  addOrDeleCart({
-    commit
-  }, data) {
-    commit()
-  }
+
 }
 
 //通过state计算出来的属性数据（只有读没有写，只能使用state数据不能修改state数据）
-const getters = {}
+const getters = {
+  // 全选
+  allSelect(state) {
+    const result = state.cartInfoList.every(item => item.isChecked === true) && state.cartInfoList.length > 0
+    return result
+  },
+  allSkuNum(state){
+    const result = state.cartInfoList.reduce((prev,item) => prev += item.skuNum,0)
+    return result || 0
+    
+  }
+
+}
 
 
 export default {
