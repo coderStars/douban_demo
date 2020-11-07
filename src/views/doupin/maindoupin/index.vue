@@ -692,9 +692,9 @@ export default {
   methods: {
     async getMaindoupinDataList() {
       let result = await getMaindoupinDataList();
-      console.log(result);
+      // console.log(result);
       this.MaindoupinDataList = result;
-      console.log(this.MaindoupinDataList);
+      // console.log(this.MaindoupinDataList);
     },
   },
 
