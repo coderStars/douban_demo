@@ -4,58 +4,45 @@
       <div class="homepage">
         <div class="homepage-wrap">
           <!-- 轮播部分 -->
-          <div class="homepage-banner">
-            <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <a target="_blank" href="javascript:;">
-                    <img src="./img/ia_500000009.jpg" />
-                  </a>
-                </div>
-                <!-- <div class="swiper-slide">
-                                    <a target="_blank" href="javascript:;">
-                                        <img src="./img/ia_500000003.jpg">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a target="_blank" href="javascript:;">
-                                        <img src="./img/ia_500000004.jpg">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a target="_blank" href="javascript:;">
-                                        <img src="./img/ia_500000005.jpg">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a target="_blank" href="javascript:;">
-                                        <img src="./img/ia_500000006.jpg">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a target="_blank" href="javascript:;">
-                                        <img src="./img/ia_500000007.jpg">
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">
-                                    <a target="_blank" href="javascript:;">
-                                        <img src="./img/ia_500000008.jpg">
-                                    </a>
-                                </div> -->
+          <div class="swiper-container" refs="bannerSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a target="_blank" href="javascript:;">
+                  <img src="./img/file-1.jpg" />
+                </a>
               </div>
-              <!-- <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
-                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"> </span>
-                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"> </span>
-                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"> </span>
-                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"> </span>
-                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"> </span>
-                                <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 6"></span>
-                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 7"> </span>
-                            </div>
-                            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
-                            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
-                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span> -->
+              <div class="swiper-slide">
+                <a target="_blank" href="javascript:;">
+                  <img src="./img/file-2.jpg" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a target="_blank" href="javascript:;">
+                  <img src="./img/file-3.jpg" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a target="_blank" href="javascript:;">
+                  <img src="./img/file-4.jpg" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a target="_blank" href="javascript:;">
+                  <img src="./img/file-5.jpg" />
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a target="_blank" href="javascript:;">
+                  <img src="./img/file-6.jpg" />
+                </a>
+              </div>
             </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
 
           <!-- 新品首发 -->
@@ -263,84 +250,25 @@
                 <!-- <em class="mui-icon arrow-right"></em> -->
               </a>
             </div>
-            <ul class="product-list-content">
-              <div
-                class="swiper-container swiper-container-initialized swiper-container-horizontal"
+            <ul class="product-list-content" v-if="MaindoupinDataList.specials">
+              <li
+                class="swiper-container"
+                v-for="(item, index) in MaindoupinDataList.specials.data.items"
+                :key="index"
               >
                 <div class="swiper-wrapper">
-                  <!-- style="transition-duration: 0ms; transform: translate3d(-2240px, 0px, 0px);" -->
                   <a
                     href="https://bizpage.douban.com/dou-art/"
                     target="_blank"
-                    class="swiper-slide swiper-slide-duplicate"
-                    data-swiper-slide-index="3"
-                    style="width: 1120px;"
+                    class="swiper-slide"
                   >
-                    <span class="special-title" style="font-size: 16px; font-weight: 600;"
-                      >豆瓣经典艺术系列</span
-                    >
-                    <img style="width: 1100px; height: 420px;" src="./img/ia_500000009.jpg" />
+                    <span class="special-title" style="font-size: 16px; font-weight: 600;">{{
+                      item.title
+                    }}</span>
+                    <img :src="item.image" />
                   </a>
-                  <!-- <a href="https://bizpage.douban.com/doumao-coming/" target="_blank"
-                                        class="swiper-slide swiper-slide-prev" data-swiper-slide-index="0"
-                                        style="width: 1120px;">
-                                        <span class="special-title">豆猫来了</span>
-                                        <img src="./img/ia_500000024.jpg">
-                                    </a>
-                                    <a href="https://bizpage.douban.com/spring/" target="_blank" class="swiper-slide swiper-slide-active" data-swiper-slide-index="1"
-                                        style="width: 1120px;">
-                                        <span class="special-title">豆瓣收藏系列</span>
-                                        <img src="./img/ia_500000021.jpg">
-                                    </a>
-                                    <a href="https://bizpage.douban.com/dou-cang/" target="_blank"
-                                        class="swiper-slide swiper-slide-next" data-swiper-slide-index="2"
-                                        style="width: 1120px;">
-                                        <span class="special-title">豆瓣藏书票系列</span>
-                                        <img src="./img/ia_500000022.jpg">
-                                    </a>
-                                    <a href="https://bizpage.douban.com/dou-art/" target="_blank" class="swiper-slide"
-                                        data-swiper-slide-index="3" style="width: 1120px;">
-                                        <span class="special-title">豆瓣经典艺术系列</span>
-                                        <img src="./img/ia_500000023.jpg">
-                                    </a>
-                                    <a href="https://bizpage.douban.com/doumao-coming/" target="_blank"
-                                        class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
-                                        data-swiper-slide-index="0" style="width: 1120px;">
-                                        <span class="special-title">豆猫来了</span>
-                                        <img src="./img/ia_500000024.jpg">
-                                    </a> -->
                 </div>
-
-                <!-- 4个轮播点 -->
-                <!-- <div
-                                    class="product-list-specials swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
-                                    <span class="swiper-pagination-bullet" tabindex="0" role="button"
-                                        aria-label="Go to slide 1">
-                                    </span>
-                                    <span
-                                        class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0"
-                                        role="button" aria-label="Go to slide 2">
-                                    </span>
-                                    <span
-                                        class="swiper-pagination-bullet" tabindex="0" role="button"
-                                        aria-label="Go to slide 3">
-                                    </span>
-                                    <span class="swiper-pagination-bullet"
-                                        tabindex="0" role="button" aria-label="Go to slide 4">
-                                    </span>
-                                </div> -->
-
-                <!-- 上下翻页按钮部分 -->
-                <!-- <div class="product-list-specials  swiper-button-next" tabindex="0" role="button"
-                                    aria-label="Next slide">
-                                </div>
-                                <div class="product-list-specials  swiper-button-prev" tabindex="0" role="button"
-                                    aria-label="Previous slide">
-                                </div>
-                                <span class="swiper-notification"
-                                    aria-live="assertive" aria-atomic="true">
-                                </span> -->
-              </div>
+              </li>
             </ul>
           </div>
 
@@ -348,7 +276,7 @@
           <div class="product-wrap categorys-wrap">
             <!-- 豆瓣经典 -->
             <div class="category">
-              <div class=" product-list-category product-wrap product-list-wrap">
+              <div class=" product-list-category">
                 <div class="product-list-title">
                   <span class="tex">豆瓣经典</span>
                   <span class="product-list-desc">
@@ -364,66 +292,26 @@
                                         </em> -->
                   </a>
                 </div>
-                <ul class="product-list-content">
-                  <li class="product-list-item col-3">
-                    <img
-                      src="./img/ia_500000009.jpg"
-                      alt="豆瓣读书周历2021"
-                      class="product-cover-pic"
-                    />
+                <ul class="product-list-content" v-if="MaindoupinDataList.classic">
+                  <li
+                    class="product-list-item"
+                    v-for="(item, index) in MaindoupinDataList.classic.data.products"
+                    :key="item.id"
+                  >
+                    <img :src="item.image" alt="豆瓣读书周历2021" class="product-cover-pic" />
                     <div class="product-card-info">
-                      <div class="product-card-title">豆瓣读书周历2021</div>
-                      <div class="product-card-desc">用书籍标记时光</div>
-                      <div class="product-card-price">
-                        <span class="product-card-promote">¥88</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="product-list-item col-3">
-                    <img
-                      src="./img/ia_500000009.jpg"
-                      alt="豆瓣电影日历2021"
-                      class="product-cover-pic"
-                    />
-                    <div class="product-card-info">
-                      <div class="product-card-title">豆瓣电影日历2021</div>
-                      <div class="product-card-desc">时间是电影的核心角色</div>
-                      <div class="product-card-price">
-                        <span class="product-card-promote">¥99</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="product-list-item col-3">
-                    <div class="product-card-main">
-                      <img
-                        src="./img/ia_500000009.jpg"
-                        alt="豆瓣读书书签——鲁迅系列"
-                        class="product-cover-pic"
-                      />
-                      <div class="product-card-info">
-                        <div class="product-card-title">豆瓣读书书签——鲁迅系列</div>
-                        <div class="product-card-desc">每一页里，都得着深厚的趣味</div>
-                        <div class="product-card-price">
-                          <span class="product-card-promote">¥35</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="product-list-item col-3">
-                    <div class="product-card-main">
-                      <div class="product-card-cover">
-                        <img
-                          src="./img/ia_500000009.jpg"
-                          alt="电影徽章"
-                          class="product-cover-pic"
-                        />
-                      </div>
-                      <div class="product-card-info">
-                        <div class="product-card-title">电影徽章</div>
-                        <div class="product-card-desc">致敬光影造梦者</div>
-                        <div class="product-card-price">
-                          <span class="product-card-promote">¥35</span>
-                        </div>
+                      <div class="product-card-title">{{ item.title }}</div>
+                      <div class="product-card-desc">{{ item.desc }}</div>
+                      <div id="price">
+                        <span :class="{ space: item.price === item.promote_price }" id="price1"
+                          >¥{{ item.promote_price }}</span
+                        >
+                        <span v-if="item.price !== item.promote_price" id="price2"
+                          >¥{{ item.price }}</span
+                        >
+                        <!-- <span v-if='shopItem.price !== shopItem.promote_price' class="price2">¥{{ shopItem.price }}</span> -->
+                        <span v-if="item.tags" id="price3">{{ item.tags[0] }}</span>
+                        <span v-if="item.tags" id="price3">{{ item.tags[1] }}</span>
                       </div>
                     </div>
                   </li>
@@ -448,78 +336,34 @@
                     <!-- <em class="mui-icon arrow-right"></em> -->
                   </a>
                 </div>
-                <ul class="product-list-content">
-                  <li class="product-list-item col-3">
+                <ul class="product-list-content" v-if="MaindoupinDataList.homelife">
+                  <li
+                    class="product-list-item"
+                    v-for="(item, index) in MaindoupinDataList.homelife.data.products"
+                    :key="item.id"
+                  >
                     <div class="product-card-main">
                       <div class="product-card-cover">
                         <img
-                          src="./img/ia_500000009.jpg"
+                          :src="item.activity_image"
                           alt="豆瓣逆向手表—多色款"
                           class="product-cover-pic"
                         />
                       </div>
                       <div class="product-card-info">
-                        <div class="product-card-title">豆瓣逆向手表—多色款</div>
-                        <div class="product-card-desc">风格不设限 白色也出彩</div>
+                        <div class="product-card-title">{{ item.title }}</div>
+                        <div class="product-card-desc">{{ item.desc }}</div>
 
-                        <div class="product-card-price">
-                          <span class="product-card-promote">¥289</span>
-                          <span class="product-card-del">¥329</span>
-                          <span class="product-card-tag">最高减40元</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="product-list-item col-3">
-                    <div class="product-card-main">
-                      <div class="product-card-cover">
-                        <img
-                          src="./img/ia_500000009.jpg"
-                          alt="豆猫卫衣"
-                          class="product-cover-pic"
-                        />
-                      </div>
-                      <div class="product-card-info">
-                        <div class="product-card-title">豆猫卫衣</div>
-                        <div class="product-card-desc">厚毛圈面料，柔软舒适</div>
-                        <div class="product-card-price">
-                          <span class="product-card-promote">¥198</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="product-list-item col-3">
-                    <div class="product-card-main">
-                      <div class="product-card-cover">
-                        <img
-                          src="./img/ia_500000009.jpg"
-                          alt="豆瓣读书周历2021"
-                          class="product-cover-pic"
-                        />
-                      </div>
-                      <div class="product-card-info">
-                        <div class="product-card-title">豆瓣读书周历2021</div>
-                        <div class="product-card-desc">用书籍标记时光</div>
-                        <div class="product-card-price">
-                          <span class="product-card-promote">¥88</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="product-list-item col-3">
-                    <div class="product-card-main">
-                      <div class="product-card-cover">
-                        <img
-                          src="./img/ia_500000009.jpg"
-                          alt="豆猫电影手办"
-                          class="product-cover-pic"
-                        />
-                      </div>
-                      <div class="product-card-info">
-                        <div class="product-card-title">豆猫电影手办</div>
-                        <div class="product-card-desc">阿黑阿白“变身”导演影迷</div>
-                        <div class="product-card-price">
-                          <span class="product-card-promote">¥59</span>
+                        <div id="price">
+                          <span :class="{ space: item.price === item.promote_price }" id="price1"
+                            >¥{{ item.promote_price }}</span
+                          >
+                          <span v-if="item.price !== item.promote_price" id="price2"
+                            >¥{{ item.price }}</span
+                          >
+                          <!-- <span v-if='shopItem.price !== shopItem.promote_price' class="price2">¥{{ shopItem.price }}</span> -->
+                          <span v-if="item.tags[0]" id="price3">{{ item.tags[0] }}</span>
+                          <span v-if="item.tags[1]" id="price3">{{ item.tags[1] }}</span>
                         </div>
                       </div>
                     </div>
@@ -543,77 +387,29 @@
                     <!-- <em class="mui-icon arrow-right"></em> -->
                   </a>
                 </div>
-                <ul class="product-list-content">
-                  <li class="product-list-item col-3">
+                <ul class="product-list-content" v-if="MaindoupinDataList.travel">
+                  <li
+                    class="product-list-item"
+                    v-for="(item, index) in MaindoupinDataList.travel.data.products"
+                    :key="item.id"
+                  >
                     <div class="product-card-main">
                       <div class="product-card-cover">
-                        <img
-                          src="./img/ia_500000009.jpg"
-                          alt="豆瓣逆向手表—多色款"
-                          class="product-cover-pic"
-                        />
+                        <img :src="item.image" :alt="item.title" class="product-cover-pic" />
                       </div>
                       <div class="product-card-info">
-                        <div class="product-card-title">豆瓣逆向手表—多色款</div>
-                        <div class="product-card-desc">风格不设限 白色也出彩</div>
-                        <div class="product-card-price">
-                          <span class="product-card-promote">¥289</span>
-                          <span class="product-card-del">¥329</span>
-                          <span class="product-card-tag">最高减40元</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="product-list-item col-3">
-                    <div class="product-card-main">
-                      <div class="product-card-cover">
-                        <img
-                          src="./img/ia_500000009.jpg"
-                          alt="豆瓣X飞跃帆布鞋"
-                          class="product-cover-pic"
-                        />
-                      </div>
-                      <div class="product-card-info">
-                        <div class="product-card-title">豆瓣X飞跃帆布鞋</div>
-                        <div class="product-card-desc">搭得刚刚好</div>
-                        <div class="product-card-price">
-                          <span class="product-card-promote">¥178</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="product-list-item col-3">
-                    <div class="product-card-main">
-                      <div class="product-card-cover">
-                        <img
-                          src="./img/ia_500000009.jpg"
-                          alt="豆瓣逆向手表"
-                          class="product-cover-pic"
-                        />
-                      </div>
-                      <div class="product-card-info">
-                        <div class="product-card-title">豆瓣逆向手表</div>
-                        <div class="product-card-desc">摆脱“惯性”，逆势而行</div>
-                        <div class="product-card-price">
-                          <span class="product-card-promote">¥329</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="product-list-item col-3">
-                    <div class="product-card-main">
-                      <div class="product-card-cover">
-                        <img
-                          src="./img/ia_500000009.jpg"
-                          alt="豆瓣黑白帆布包"
-                          class="product-cover-pic"
-                        />
-                      </div>
-                      <div class="product-card-info">
-                        <div class="product-card-title">豆瓣黑白帆布包</div>
-                        <div class="product-card-desc">有型有料，时尚经典</div>
-                        <div class="product-card-price">
-                          <span class="product-card-promote">¥99</span>
+                        <div class="product-card-title">{{ item.title }}</div>
+                        <div class="product-card-desc">{{ item.desc }}</div>
+                        <div id="price">
+                          <span :class="{ space: item.price === item.promote_price }" id="price1"
+                            >¥{{ item.promote_price }}</span
+                          >
+                          <span v-if="item.price !== item.promote_price" id="price2"
+                            >¥{{ item.price }}</span
+                          >
+                          <!-- <span v-if='shopItem.price !== shopItem.promote_price' class="price2">¥{{ shopItem.price }}</span> -->
+                          <span v-if="item.tags" id="price3">{{ item.tags[0] }}</span>
+                          <span v-if="item.tags" id="price3">{{ item.tags[1] }}</span>
                         </div>
                       </div>
                     </div>
@@ -637,60 +433,26 @@
                     <!-- <em class="mui-icon arrow-right"></em> -->
                   </a>
                 </div>
-                <ul class="product-list-content">
-                  <li class="product-list-item col-3">
-                    <img
-                      src="./img/ia_500000009.jpg"
-                      alt="豆瓣读书周历2021"
-                      class="product-cover-pic"
-                    />
+                <ul class="product-list-content" v-if="MaindoupinDataList.stationery">
+                  <li
+                    class="product-list-item"
+                    v-for="(item, index) in MaindoupinDataList.stationery.data.products"
+                    :key="item.id"
+                  >
+                    <img :src="item.image" alt="豆瓣读书周历2021" class="product-cover-pic" />
                     <div class="product-card-info">
-                      <div class="product-card-title">豆瓣读书周历2021</div>
-                      <div class="product-card-desc">用书籍标记时光</div>
-                      <div class="product-card-price">
-                        <span class="product-card-promote">¥88</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="product-list-item col-3">
-                    <img
-                      src="./img/ia_500000009.jpg"
-                      alt="豆瓣2021日程本"
-                      class="product-cover-pic"
-                    />
-                    <div class="product-card-info">
-                      <div class="product-card-title">豆瓣2021日程本</div>
-                      <div class="product-card-desc">高效规划全年日程</div>
-                      <div class="product-card-price">
-                        <span class="product-card-promote">¥76</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="product-list-item col-3">
-                    <img
-                      src="./img/ia_500000009.jpg"
-                      alt="豆瓣电影日历2021"
-                      class="product-cover-pic"
-                    />
-                    <div class="product-card-info">
-                      <div class="product-card-title">豆瓣电影日历2021</div>
-                      <div class="product-card-desc">时间是电影的核心角色</div>
-                      <div class="product-card-price">
-                        <span class="product-card-promote">¥99</span>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="product-list-item col-3">
-                    <img
-                      src="./img/ia_500000009.jpg"
-                      alt="豆瓣读书书签——鲁迅系列"
-                      class="product-cover-pic"
-                    />
-                    <div class="product-card-info">
-                      <div class="product-card-title">豆瓣读书书签——鲁迅系列</div>
-                      <div class="product-card-desc">每一页里，都得着深厚的趣味</div>
-                      <div class="product-card-price">
-                        <span class="product-card-promote">¥35</span>
+                      <div class="product-card-title">{{ item.title }}</div>
+                      <div class="product-card-desc">{{ item.desc }}</div>
+                      <div id="price">
+                        <span :class="{ space: item.price === item.promote_price }" id="price1"
+                          >¥{{ item.promote_price }}</span
+                        >
+                        <span v-if="item.price !== item.promote_price" id="price2"
+                          >¥{{ item.price }}</span
+                        >
+                        <!-- <span v-if='shopItem.price !== shopItem.promote_price' class="price2">¥{{ shopItem.price }}</span> -->
+                        <span v-if="item.tags" id="price3">{{ item.tags[0] }}</span>
+                        <span v-if="item.tags" id="price3">{{ item.tags[1] }}</span>
                       </div>
                     </div>
                   </li>
@@ -702,172 +464,28 @@
           <!-- 用户测评 -->
           <div class="product-wrap product-list-evaluation">
             <div class="product-list-title">用户测评</div>
-            <ul class="product-list-content">
-              <li class="product-list-item">
+            <ul class="product-list-content" v-if="MaindoupinDataList.evaluations">
+              <li
+                class="product-list-item"
+                v-for="(item, index) in MaindoupinDataList.evaluations.data.items"
+                :key="item.user_id"
+              >
                 <a
                   href="https://www.douban.com/people/foselberg/status/3113214185/"
                   target="_blank"
                   class="product-card-main"
                 >
                   <img
-                    src="./img/ia_500000009.jpg"
-                    alt="「要想生活过得去，家里总得带点绿」"
+                    :src="item.image"
+                    alt=""
                     class="product-cover-pic"
                     id="product-cover-pic-one"
                   />
-                  <div class="product-card-title">「要想生活过得去，家里总得带点绿」</div>
+                  <div class="product-card-title">{{ item.title }}</div>
                 </a>
                 <a href="//www.douban.com/people/11313460" class="product-card-user">
-                  <img class="product-card-avatar" src="./img/ia_500000009.jpg" />
-                  <div class="product-card-username">王清欢</div>
-                </a>
-              </li>
-
-              <li class="product-list-item">
-                <a
-                  href="https://www.douban.com/people/matchesgoods/status/3112714845/"
-                  target="_blank"
-                  class="product-card-main"
-                >
-                  <img
-                    src="./img/ia_500000009.jpg"
-                    alt="秋天和明年一起来了。"
-                    class="product-cover-pic"
-                    id="product-cover-pic-two"
-                  />
-                  <div class="product-card-title">秋天和明年一起来了。</div>
-                </a>
-                <a href="//www.douban.com/people/168272553" class="product-card-user">
-                  <img class="product-card-avatar" src="./img/ia_500000009.jpg" />
-                  <div class="product-card-username">火柴古兹</div>
-                </a>
-              </li>
-              <li class="product-list-item">
-                <a
-                  href="https://www.douban.com/people/lottie9/status/3114780089/"
-                  target="_blank"
-                  class="product-card-main"
-                >
-                  <img
-                    src="./img/ia_500000009.jpg"
-                    alt="日历扉页是安德烈·塔可夫斯基的一句话，刚才组装日历时一页页翻过去，突然感觉已经触碰到了这金色的铁环圈住的、尚未拥有的、又一个年轮的时间。"
-                    class="product-cover-pic"
-                    data-id="2"
-                    id="product-cover-pic-three"
-                  />
-                  <div class="product-card-title">
-                    日历扉页是安德烈·塔可夫斯基的一句话，刚才组装日历时一页页翻过去，突然感觉已经触碰到了这金色的铁环圈住的、尚未拥有的、又一个年轮的时间。
-                  </div>
-                </a>
-                <a href="//www.douban.com/people/41105044" class="product-card-user">
-                  <img class="product-card-avatar" src="./img/ia_500000009.jpg" />
-                  <div class="product-card-username">Lottie</div>
-                </a>
-              </li>
-              <li class="product-list-item">
-                <a
-                  href="https://www.douban.com/people/tira7misu/status/3114228782/"
-                  target="_blank"
-                  class="product-card-main"
-                >
-                  <img
-                    src="./img/ia_500000009.jpg"
-                    alt="“需要相信，生中有些特别的东西，是可能存在的。”"
-                    class="product-cover-pic"
-                    data-id="3"
-                    id="product-cover-pic-four"
-                  />
-                  <div class="product-card-title">
-                    “需要相信，生中有些特别的东西，是可能存在的。”
-                  </div>
-                </a>
-                <a href="//www.douban.com/people/4089416" class="product-card-user">
-                  <img class="product-card-avatar" src="./img/ia_500000009.jpg" />
-                  <div class="product-card-username">固力果guriko</div>
-                </a>
-              </li>
-              <li class="product-list-item">
-                <a
-                  href="https://www.douban.com/people/sophiechou/status/3115279811/"
-                  target="_blank"
-                  class="product-card-main"
-                >
-                  <img
-                    src="./img/ia_500000009.jpg"
-                    alt="已经成为每年九月的期盼:-P"
-                    class="product-cover-pic"
-                    data-id="4"
-                    id="product-cover-pic-five"
-                  />
-                  <div class="product-card-title">已经成为每年九月的期盼:-P</div>
-                </a>
-                <a href="//www.douban.com/people/3204298" class="product-card-user">
-                  <img class="product-card-avatar" src="./img/ia_500000009.jpg" />
-                  <div class="product-card-username">迷特波鲁</div>
-                </a>
-              </li>
-              <li class="product-list-item">
-                <a
-                  href="https://www.douban.com/people/fingersmith-/status/3113583029/"
-                  target="_blank"
-                  class="product-card-main"
-                >
-                  <img
-                    src="./img/ia_500000009.jpg"
-                    alt="选择了电影🎬这条张力之路。也是选择了一种在静默中爆发的生活方式。"
-                    class="product-cover-pic"
-                    data-id="7"
-                    id="product-cover-pic-eight"
-                  />
-                  <div class="product-card-title">
-                    选择了电影🎬这条张力之路。也是选择了一种在静默中爆发的生活方式。
-                  </div>
-                </a>
-                <a href="//www.douban.com/people/1971861" class="product-card-user">
-                  <img class="product-card-avatar" src="./img/ia_500000009.jpg" />
-                  <div class="product-card-username">光</div>
-                </a>
-              </li>
-              <li class="product-list-item">
-                <a
-                  href="https://www.douban.com/people/7542909/status/3113787769/"
-                  target="_blank"
-                  class="product-card-main"
-                >
-                  <img
-                    src="./img/ia_500000009.jpg"
-                    alt="希望2021对大家都好一点......"
-                    class="product-cover-pic"
-                    data-id="6"
-                    id="product-cover-pic-senve"
-                  />
-                  <div class="product-card-title">希望2021对大家都好一点......</div>
-                </a>
-                <a href="//www.douban.com/people/7542909" class="product-card-user">
-                  <img class="product-card-avatar" src="./img/ia_500000009.jpg" />
-                  <div class="product-card-username">翻滚吧！蛋堡</div>
-                </a>
-              </li>
-              <li class="product-list-item">
-                <a
-                  href="https://www.douban.com/people/leaf0831/status/3115671308/"
-                  target="_blank"
-                  class="product-card-main"
-                >
-                  <img
-                    src="./img/ia_500000009.jpg"
-                    alt="不得不说，很喜欢今年日历的设计！双面印刷，颜色非常正！"
-                    class="product-cover-pic"
-                    data-id="5"
-                    id="product-cover-pic-six"
-                  />
-                  <div class="product-card-title">
-                    不得不说，很喜欢今年日历的设计！双面印刷，颜色非常正！
-                  </div>
-                </a>
-                <a href="//www.douban.com/people/1789713" class="product-card-user">
-                  <img class="product-card-avatar" src="./img/ia_500000009.jpg" />
-                  <div class="product-card-username">叶纸君</div>
+                  <img class="product-card-avatar" :src="item.user_avatar" />
+                  <div class="product-card-username">{{ item.user_name }}</div>
                 </a>
               </li>
             </ul>
@@ -1028,23 +646,149 @@
 </template>
 
 <script>
+import { getMaindoupinDataList } from "@/api/doupin";
+import Swiper from "swiper";
+import "swiper/css/swiper.min.css";
 export default {
   name: "Maindoupin",
+  data() {
+    return {
+      MaindoupinDataList: [],
+    };
+  },
+
+  mounted() {
+    //头部轮播图
+    //重点:swiper在实例化的时候(在new swiper的时候)一定要等待页面结构(html写好)形成以后再去用
+    //1.把实例化swiper写在mounted当中, 不能保证bnanerList有数据(这里是v-for遍历拿到的轮播数据),也就没法保证上面的轮播div结构形成
+    //2.即使数据能保证回来,放在mountedd当中也不能保证结构形成,因为上面div通过for循环去创建也需要时间
+
+    //延时定时器虽然可以解决这个问题,但是不好
+    // setTimeout(() => {
+    //   new Swiper(this.$refs.bannerSwiper, {  //如果是类名,要加双引号".swiper-container"
+    //     //direction: "vertical", // 垂直切换选项(方向:垂直, 不写默认水平,删了就是水平)
+    //     loop: true, // 循环模式选项.(代表无缝操作,从最后一张切换到第一张,是否添加无缝操作)
+
+    //     // 如果需要分页器,(有小圆点就得加这个)
+    //     pagination: {
+    //       el: ".swiper-pagination",
+    //     },
+
+    //     // 如果需要前进后退按钮
+    //     navigation: {
+    //       nextEl: ".swiper-button-next",
+    //       prevEl: ".swiper-button-prev",
+    //     },
+
+    //     // 如果需要滚动条
+    //     // scrollbar: {
+    //     //   el: ".swiper-scrollbar",
+    //     // },
+    //   });
+    // }, 3000);
+
+    this.getMaindoupinDataList();
+  },
+  methods: {
+    async getMaindoupinDataList() {
+      let result = await getMaindoupinDataList();
+      console.log(result);
+      this.MaindoupinDataList = result;
+      console.log(this.MaindoupinDataList);
+    },
+  },
+
+  //一般监视:只能监视数组本身数据的改变,而不能监视数组内部对象内部属性的变化
+  //   watch:{
+
+  //     // bannerList(){
+  //     //   new Swiper...
+  //     // }   //bannerList里面只有一个handler,那么代码就可以简写成函数形式
+  //     bannerList:{
+  //       //一般监视
+  //       handler(){
+
+  //         //等待页面最近的一次更新循环完成之后再去执行它内部的回调
+  //         // 区别:updated updated也可以实现,但是并不是最近一次更新,而是所有的更新都会执行这个钩子(updated)
+  //         this.$nextTick(() => {
+  // //这个回调是nextTick的回调,nextTick会等待页面dom最近的一次循环更新完成之后再去执行它内部传递的回调
+
+  //           //监视哪个数据变化之后所执行的函数
+  //           //放在这里能保证我们的bannerList内一定有数据,但是还是不能保证结构完全形成 --->到nextTick
+  //         new Swiper(this.$refs.bannerSwiper, {  //如果是类名,要加双引号".swiper-container"
+  //          //direction: "vertical", // 垂直切换选项(方向:垂直, 不写默认水平,删了就是水平)
+  //          loop: true, // 循环模式选项.(代表无缝操作,从最后一张切换到第一张,是否添加无缝操作)
+
+  //          // 如果需要分页器,(有小圆点就得加这个)
+  //           pagination: {
+  //             el: ".swiper-pagination",
+  //           },
+
+  //          // 如果需要前进后退按钮
+  //           navigation: {
+  //             nextEl: ".swiper-button-next",
+  //             prevEl: ".swiper-button-prev",
+  //           },
+
+  //          // 如果需要滚动条
+  //          // scrollbar: {
+  //          //   el: ".swiper-scrollbar",
+  //          // },
+  //         });
+  //         })
+
+  //       }
+  //     }
+  //   },
+  //深度监视:用来解决一般监视搞不定的问题
+  // watch:{
+  //   //一般监视和深度监视
+  //   bannerList:{
+  //     deep:true,//深度监视
+  //     //一般监视
+  //     handler(){
+  //       //监视哪个数据变化之后所执行的函数
+  //     }
+  //}
+  //},
+
+  //
 };
 </script>
 
 <style lang="less" scoped>
+//item全部样式
+.homepage-wrap {
+  #price {
+    #price1 {
+      color: #e4476a;
+      font-size: 16px;
+    }
+    .space {
+      margin-right: 10px;
+    }
+    #price2 {
+      color: #d1cabf;
+      font-size: 13px;
+      margin: 0 10px 0 3px;
+      text-decoration: line-through;
+    }
+    #price3 {
+      color: #e4476a;
+      font-size: 12px;
+      margin-right: 3px;
+      padding: 1px 4px;
+      background: #ffd2ec;
+    }
+  }
+}
+
 //轮播部分
 .homepage-wrap {
   .swiper-container {
-    .swiper-wrapper {
-      width: 100%;
-
-      .swiper-slide img {
-        width: 100%;
-        height: 420px;
-      }
-    }
+    width: 100%;
+    height: 420px;
+    margin-bottom: 30px;
   }
 }
 

@@ -21,9 +21,3 @@ export const getmusicRank = () => {
     method: 'get'
   })
 }
-export const getAllShopDataList = () => {
-  return request({
-    url: '/getAllShopDataList',
-    method: 'get'
-  })
-}

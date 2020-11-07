@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { getAllShopDataList } from "@/api/music";
+import { getAllShopDataList } from "@/api/doupin";
 export default {
   name: "Allshop",
   data() {
