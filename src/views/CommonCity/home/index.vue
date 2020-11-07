@@ -17,9 +17,13 @@
                     </div>
 
                          <div class="swiper-wrapper">
-                            <div class="swiper-slide stop-swiping" v-for="item in commonCityData.hotActivities" :key="item.id">
-                                <img :src="item.imgUrl" alt="">
-                                <div class="name">{{item.text}}</div>
+                            <div class="swiper-slide stop-swiping" v-for="item in commonCityData.hotActivities" :key="item.id" @click="toShowDetail(item.id)">
+                                <img :src="item.imgUrl" alt="" data-name="img" >
+                                <div class="name">
+                                    <a href="##" data-name='a'>
+                                        {{item.text}}
+                                    </a>
+                                </div>
                             </div>
                         
                         </div> 
@@ -188,12 +192,22 @@ export default {
     async getCommonCityData(){
         this.$store.dispatch('getCommonCityData')
         
-    }
+    },
+    //点击跳转到ShowDetail详情页
+    toShowDetail(id,$event){
+            let goal = event.target.dataset
+            if(goal.name === 'img' || goal.name === 'a'){
+                this.$router.push('/showdetail?id='+id)
+            }
+    },
   },
   computed: {
       ...mapState({
           commonCityData: state => state.city.commonCityData
-      })
+      }),
+      hotActivities(){
+          return this.commonCityData.hotActivities
+      }
   },
   watch: {
       commonCityData:{
@@ -310,15 +324,20 @@ export default {
                         cursor: pointer;
                     }
                     .name{
+                        
+                        a{
                         width: 115px;
                         cursor: pointer;
                         color: #37a;
+                        font-size: 14px;
                         text-align: center;
                         overflow: hidden;
                         text-overflow: ellipsis;
                         display: -webkit-box;
                         -webkit-line-clamp: 2;  //2行
                         -webkit-box-orient: vertical;
+                            
+                        }
                     }
                 }
             }

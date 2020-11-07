@@ -22,6 +22,25 @@
           <div><a href="##">亲子</a></div>
           <div><a href="##">其他</a></div>
         </div>
+
+      <div class="add">
+          <ul class="clearfix">
+              <li class="all"><span>全部</span></li>
+              <li><a href="https://beijing.douban.com/events/today-1001">
+                  小型现场
+              </a></li>
+              <li><a href="https://beijing.douban.com/events/today-1002">
+                  音乐会
+              </a></li>
+              <li><a href="https://beijing.douban.com/events/today-1003">
+                  演唱会
+              </a></li>
+              <li><a href="https://beijing.douban.com/events/today-1004">
+                  音乐节
+              </a></li>
+          </ul>
+      </div>
+
         <div class="date">
           <div class="left">
              <div>时间：</div>
@@ -34,7 +53,30 @@
             <div><a href="##">最新发布</a></div>
           </div>
          
-          <div class="right"><a href="##" class="new">全部地区</a></div>
+          <div class="right">
+            <a href="##" class="new">全部地区</a>
+            <div class="place">
+              <ul>
+                <li>全部</li>
+                <li>东城区</li>
+                <li>西城区</li>
+                <li>朝阳区</li>
+                <li>丰台区</li>
+                <li>石景山区</li>
+                <li>海淀区</li>
+                <li>门头沟区</li>
+                <li>房山区</li>
+                <li>通州区</li>
+                <li>顺义区</li>
+                <li>昌平区</li>
+                <li>大兴区</li>
+                <li>怀柔区</li>
+                <li>平谷区</li>
+                <li>密云县</li>
+                <li>延庆县</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -353,8 +395,8 @@ export default {
           font-family: Tahoma;
           color: #444;
           font-size: 13px;
-         
-        }
+        } 
+      
         .all{
           padding: 0 5px;
           line-height: 1.4;
@@ -380,10 +422,43 @@ export default {
           }
         }
       }
+      .add{
+        display: none;
+         color: #111;
+        font: 12px Helvetica,Arial,sans-serif;
+        line-height: 1.62;
+        font-size: 13px;
+        margin: 0;
+        background: #f5f5f5;
+        padding: 8px 15px;
+        border-radius: 4px;
+       
+        ul{
+          li{
+            float: left;
+            margin: -0 4px;
+           padding: 0 4px;
+           border-radius: 4px;
+            a{
+              color: #37a;
+              border-radius: 4px;
+              &:hover{
+                background-color: #46c1cf;
+                color: #fff;
+              }
+            }
+          }
+          .all:hover{
+              background-color: #3377AA;
+              color: #fff;
+          }
+        }
+      }
+      
       .date {
         display: flex;
         justify-content: space-between;
-        margin: 3px 0 20px 0;  
+        margin: 8px 0 20px 0;  
         padding-bottom: 8px;
         border-bottom: 1px solid #e6e6e6;
         .left{
@@ -405,12 +480,49 @@ export default {
           }
         }
         }
-        .new{
-          float: right;
-          color: #111;
-          padding-right: 18px;
-          background: url('./images/down.png') no-repeat 50px 2px;
+        .right{
+          position: relative;
+          &:hover .place{
+            display: block;
+          }
+          .new{
+            float: right;
+            color: #111;
+            padding-right: 18px;
+            background: url('./images/down.png') no-repeat 50px 2px;
+          }
+          .place{
+            display: none;
+            position: absolute;
+            top: 22px;background-color: #fff;
+            right: -53px;
+            width: 120px;
+            height: 386px;
+            padding: 8px 0; 
+            border: 1px solid #ddd;
+            border-color: #ddd #bbb #bbb #ddd;
+            box-shadow: 2px 1px 3px rgba(0,0,0,0.1);
+            z-index: 2;
+            ul{
+              height: 386px;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              li{
+                 padding:4px 4px 6px 8px;
+                 color: #37a;
+                 font-size: 13px;
+                &:hover{
+                  background-color: #46C1CF;
+                  color: #fff;
+                }
+               
+              }
+            }
+        
+          }
         }
+       
       }
     }
   }

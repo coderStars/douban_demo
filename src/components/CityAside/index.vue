@@ -16,9 +16,9 @@
                          
                         <div class="swiper-wrapper">
                             <div class="swiper-slide stop-swiping" v-for="item in commonCityData.tickets" :key="item.id">
-                                <img :src="item.imgUrl" alt="">
+                                <img :src="item.imgUrl" alt="" @click="toShowDetail">
                                 <div class="detail">
-                                    <p class="name">{{item.name}}</p>
+                                    <p class="name" @click="toShowDetail">{{item.name}}</p>
                                     <p class="date">{{item.time}}</p>
                                     <p class="price">{{item.price}}</p>
                                 </div>
@@ -98,7 +98,7 @@
 
 <script>
 import Swiper from "swiper";
-import {mapState} from 'vuex'
+import {mapState} from 'vuex';
 
 export default {
   name: 'CityAside', 
@@ -123,6 +123,10 @@ export default {
                     
             })        
         },
+        //跳转到showDetail
+        toShowDetail(){
+            this.$router.push('/showDetail?id=999')
+        }
     },
     watch: {
         commonCityData:{

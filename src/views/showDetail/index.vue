@@ -84,7 +84,7 @@
               <br>
               &nbsp;
               <br>
-              <div class="middle">
+              <div class="middle" v-if="imgInfo.longImg">
                 <img :src="imgInfo.longImg" alt="">
               </div>
             </div>
@@ -120,10 +120,10 @@
           </div>
 
           <!-- 广告1 -->
-          <div class="adv">
+          <!-- <div class="adv">
             <img src="./images/adv.jpg" alt=""
             title="硅谷祝你成功">
-          </div>
+          </div> -->
 
         </div>
 
@@ -193,9 +193,11 @@
 </template>
 
 <script>
+
 import CityHeader from '@/components/CityHeader'
 import './css/reset.css'
 import {getCommonCityShowDetail} from '@/api/commonCity'
+import { mapState } from 'vuex'
 export default {
   name: 'showDetail',
   components:{
@@ -220,29 +222,18 @@ export default {
     },
     //获取演出数据
     async getShowDetail(){
-      let result = await getCommonCityShowDetail(1)
-      this.showDetail = result
+      let result = await getCommonCityShowDetail(this.$route.query.id)
+      this.showDetail = result[0]
     },
   },
   computed: {
+  
     exerciseDetail(){
       return this.showDetail.exerciseDetail || {}
     },
     imgInfo(){
       return this.exerciseDetail.imgInfo || {}
     },
-        // avtiveRules(){
-        //   return this.exerciseDetail.name.split("：")
-        // },
-        // rowOne(){
-        //   return this.avtiveRules.slice(0,5)
-        // },
-        // rowTwo(){
-        //   return this.avtiveRules.slice(5,6)
-        // },
-        // rowThree(){
-        //   return this.avtiveRules.slice(6,7)
-        // },
   },
 
 }
@@ -256,6 +247,7 @@ export default {
   // 版心
   .container{
     width: 1040px;
+    // height: 4050px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -411,8 +403,8 @@ export default {
                 .middle{
                   display: block;
                   width: 288px;
-                  height: 3000px;
-                  margin: 0 auto;
+                  // height: 3000px;
+                  margin: 0 30px;
                   margin-bottom: 6px;
                 }
            }

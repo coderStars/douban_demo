@@ -9,6 +9,7 @@ const CommonCity = () => import('@/views/commonCity/index.vue')
 const Home = () => import('@/views/commonCity/home/index.vue')
 const RecentActivity = () => import('@/views/commonCity/recentActivity/index.vue')
 const showDetail = () => import('@/views/showDetail')
+const Sponsor = () => import('@/views/sponsor')
 
 const routes = [{
     path: '/movie',
@@ -29,6 +30,10 @@ const routes = [{
 {
     path: '/showdetail',
     component: showDetail,
+},
+{
+    path:'/sponsor',
+    component:Sponsor
 },
 {
     path: '/commoncity',

@@ -68,6 +68,7 @@ export default {
       //切换城市
       choosePlace(event){
           this.place = event.target.innerHTML
+        //   this.$router.go(0)
       }
   },
   
