@@ -1,5 +1,9 @@
 <template>
   <div>
+<<<<<<< HEAD
+=======
+    <Search inpText="书名、作者、ISBN" :buttomTextList="buttomTextList"></Search>
+>>>>>>> 09060976c3cb68fe30b32f74aadf65a3188e67dc
     <!-- 广告 -->
     <div class="topAds">
       <img src="../../assets/images/books/homePages/ia_400000000.jpg" alt="" />
@@ -1187,6 +1191,381 @@
                     </span>
                   </div>
                 </div>
+                <div class="ificationContainer">
+                  <span>文学</span>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">小说</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">随笔</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">日本文学</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">散文</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">诗歌</a>
+                    </span>
+                  </div>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">童话</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">名著</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">港台</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">更多»</a>
+                    </span>
+                  </div>
+                </div>
+                <div class="ificationContainer">
+                  <span>文学</span>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">小说</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">随笔</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">日本文学</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">散文</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">诗歌</a>
+                    </span>
+                  </div>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">童话</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">名著</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">港台</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">更多»</a>
+                    </span>
+                  </div>
+                </div>
+                <div class="ificationContainer">
+                  <span>文学</span>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">小说</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">随笔</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">日本文学</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">散文</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">诗歌</a>
+                    </span>
+                  </div>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">童话</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">名著</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">港台</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">更多»</a>
+                    </span>
+                  </div>
+                </div>
+                <div class="ificationContainer">
+                  <span>文学</span>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">小说</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">随笔</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">日本文学</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">散文</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">诗歌</a>
+                    </span>
+                  </div>
+                  <div>
+                    <span class="ificationDIV">
+                      <a href="">童话</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">名著</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">港台</a>
+                    </span>
+                    <span class="ificationDIV">
+                      <a href="">更多»</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 畅销图书榜 -->
+        <div class="bestSellingList">
+          <div class="bestSellingListTop">
+            <h2>
+              <span>畅销图书榜</span>
+            </h2>
+          </div>
+          <div class="bestSellingListBottom">
+            <div class="popularContent">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本（歪歪兔童书馆出品）</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本（歪歪兔童书馆出品）</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+            <div class="popularContent2">
+              <span class="pop_num">1.</span>
+              <div class="pop_title">
+                <a>一看就会的思维导图启蒙绘本</a>
+                <div>歪歪兔关键期早教 项目组编绘</div>
+              </div>
+              <a href="" class="shopBt">
+                <span>去购买</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- 豆瓣图书250 -->
+        <div class="douBanBooks250">
+          <div class="douBanBooks250Top">
+            <h2>
+              <span>豆瓣图书250</span>
+              <span class="linMore">
+                <a
+                  href="https://market.douban.com/book/?utm_campaign=book_freyr_section&amp;utm_source=douban&amp;utm_medium=pc_web"
+                  >更多»</a>
+              </span>
+            </h2>
+          </div>
+          <div class="douBanBooks250Bottom">
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info2">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+                <p>
+                  <span>有电子书</span>
+                </p>
+              </div>
+            </div>
+            <div class="adouBanBooks250Info2">
+              <div class="booksImg">
+                <a href="">
+                  <img src="../../assets/images/books/homePages/ia_100000089.jpg" alt="">
+                </a>
+              </div>
+              <div class="booksTitle">
+                <a href="">
+                  <span>少年凯哥</span>
+                </a>
+                <p>
+                  <span>有电子书</span>
+                </p>
               </div>
             </div>
           </div>
@@ -1440,11 +1819,18 @@
 <script>
 export default {
   name: "Books",
+  data() {
+    return {
+      buttomTextList: ['购书单','电子图书','豆瓣书店','2019年度榜单', '2019书影音报告','购物车']
+    }
+  },
 };
 </script>
 
 <style  lang="less"  scoped>
 .topAds {
+  width: 1040px;
+  margin: 0 auto;
   padding-bottom: 16px;
 }
 .boxsExpress {

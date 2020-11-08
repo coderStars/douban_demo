@@ -71,6 +71,10 @@
                 <th class="cart-item-actions"></th>
               </tr>
             </table>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 09060976c3cb68fe30b32f74aadf65a3188e67dc
             <div class="shop-card-list">
               <div class="shop-card">
                 <div class="shop-header">
@@ -200,6 +204,32 @@
           </div>
         </div>
       </div>
+      <!-- 底部footer -->
+      <div class="cart-footer-wrapper">
+        <div class="market-wrapper">
+          <div class="cart-footer">
+            <div class="cart-actions">
+              <div class="select-all">
+                <el-checkbox v-model="checked"></el-checkbox>
+                <span class="select-all-text">全选</span>
+              </div>
+              <div class="quantity-all">
+                已选择<b>3</b>件商品
+              </div>
+            </div>
+            <div class="cart-info">
+              <div class="amount-all">
+                <div class="amount">
+                  <div class="freight">不含运费</div>
+                  <div class="amount-text">合计：</div>
+                  <div class="price">¥ 132</div>
+                </div>
+              </div>
+              <button>结算</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -219,6 +249,7 @@ export default {
 .cart-main {
   width: 100%;
   height: 600px;
+  position: relative;
   .header {
     height: 100px;
     position: relative;
@@ -316,7 +347,7 @@ export default {
   }
   .market-wrapper {
     width: 1100px;
-    height: 482px;
+    height: 600px;
     margin: 0 auto;
     margin-bottom: 130px;
     .cart-header {
@@ -551,6 +582,104 @@ export default {
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+  .cart-footer-wrapper {
+    width: 100%;
+    height: 70px;
+    background-color: #f9f9f9;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: 1.5s linear;
+    .market-wrapper {
+      width: 1100px;
+      height: 100%;
+      margin: 0 auto;
+      font-size: 16px;
+
+      .cart-footer {
+        overflow: visible;
+        min-height: 40px;
+        font-size: 14px;
+        line-height: 36px;
+        padding: 15px 0 15px 22px;
+        position: relative;
+        z-index: 1;
+        text-align: right;
+        vertical-align: middle;
+        .cart-actions {
+          float: left;
+          display: flex;
+          /deep/ .el-checkbox__inner {
+            width: 17px;
+            height: 17px;
+            margin-right: 10px;
+            border-radius: 0;
+            border: 1px solid #ababac;
+          }
+          /deep/ .el-checkbox__input.is-checked .el-checkbox__inner {
+            background-color: #44883e;
+            border-color: #44883e;
+          }
+          .select-all {
+            .select-all-text {
+              margin-left: 20px;
+            }
+          }
+          .quantity-all {
+            margin-left: 24px;
+            vertical-align: middle;
+            b {
+              font-weight: normal;
+              margin: 0 5px;
+              color: #dd1944;
+            }
+          }
+        }
+        .cart-info {
+          display: flex;
+          float: right;
+          line-height: 36px;
+          height: 36px;
+          .amount-all {
+            margin-right: 40px;
+            vertical-align: middle;
+            .amount {
+              display: flex;
+              .freight {
+                margin-right: 15px;
+                color: #ababac;
+                font-size: 12px;
+              }
+              .amount-text {
+                font-size: 16px;
+                color: #3e3a39;
+              }
+              .price {
+                color: #dd1944;
+                font-size: 20px;
+                display: inline-block;
+                height: 36px;
+              }
+            }
+          }
+          button {
+            height: 37px;
+            width: 95px;
+            font-size: 18px;
+            background-color: #dd1944;
+            color: #fff;
+            border: 0;
+            cursor: pointer;
+          }
+          button:hover{
+            background-color: #E34668;
           }
         }
       }

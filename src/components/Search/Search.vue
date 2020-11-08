@@ -18,11 +18,11 @@
         />
       </div>
     </div>
-    <div class="bottomList">
-      <a v-for="(item, index) in buttomText" :key="index">
-        {{ item }}
-      </a>
-    </div>
+    <ul class="bottomList">
+      <li v-for="(item, index) in buttomText" :key="index">
+        <router-link :to="item.path">{{ item.name }}</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -38,12 +38,30 @@ export default {
       type: Array,
       default() {
         return [
-          "购书单",
-          "电子图书",
-          "豆瓣书店",
-          "2019年度榜单",
-          "2019书影音报告",
-          "购物车"
+          {
+            name:"购书单",
+            path: "/music/buybooks"
+          },
+          {
+            name:"电子图书",
+            path: "/music/onlinebooks"
+          },
+          {
+            name:"豆瓣书店",
+            path: "/music/libray"
+          },
+          {
+            name: "2019年度榜单",
+            path: "/music/yearrank"
+          },
+          {
+            name: "2019书影音报告",
+            path: "/music/moviebanner"
+          },
+          {
+            name: "购物车",
+            path: "music/cart"
+          }
         ];
       }
     }
@@ -64,13 +82,11 @@ export default {
       immediate: true,
       handler() {
         let path = this.$route.path;
-        console.log(path);
-        if (path === "/books") {
+        if (path.startsWith("/books")) {
           this.logoIndex = 0;
-        } else if (path === "/movie") {
-          console.log("=====");
+        } else if (path.startsWith("/movie")) {
           this.logoIndex = 1;
-        } else if (path === "/music") {
+        } else if (path.startsWith("/music")) {
           this.logoIndex = 2;
         } else {
           this.logoIndex = 0;
@@ -85,6 +101,18 @@ export default {
 .searchContainer {
   background: #f6f6f1;
   margin-bottom: 40px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 75px;
+    // border-bottom: 1px solid #e5ebe4;
+    background: #e5ebe4;
+    height: 1px;
+    width: 100%;
+  }
   input {
     outline: none;
     border: none;
@@ -92,7 +120,7 @@ export default {
     outline-color: "red";
   }
   .searchWrapper {
-    border-bottom: 1px solid #e5ebe4;
+    // border-bottom: 1px solid #e5ebe4;
     width: 1040px;
     height: 60px;
     margin: 0 auto;
@@ -104,11 +132,13 @@ export default {
       a {
         width: 100%;
         height: 100%;
+        display: block;
+        cursor: pointer;
       }
     }
     .searchInpt {
       // width: 461px;
-      // margin-left: 145px;
+      margin-left: 10px;
       line-height: 56px;
       input::placeholder {
         font-size: 12px;
@@ -116,14 +146,15 @@ export default {
       .inptFirst {
         padding-left: 20px;
         box-sizing: border-box;
-        height: 34px;
+        height: 30px;
         width: 461px;
         border: none;
-        border-radius: 10px;
+        border-radius: 5px;
+        box-shadow: 0 1px 1px #888888;
       }
       .inp-btn {
         width: 37px;
-        height: 35px;
+        height: 31px;
         color: transparent;
         cursor: pointer;
         border-style: inset;
@@ -137,14 +168,22 @@ export default {
     height: 40px;
     line-height: 40px;
     display: flex;
-    a {
+
+    li {
       margin-left: 25px;
-      color: #614e3c;
-      text-decoration: none;
-      font-size: 14px;
-      cursor: pointer;
+      a {
+        color: #614e3c;
+        text-decoration: none;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      a:hover {
+        background: #614e3c;
+        color: #fff;
+        text-decoration: none;
+      }
     }
-    a:first-child {
+    li:first-child {
       margin-left: 0;
     }
   }

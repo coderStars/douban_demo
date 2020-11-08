@@ -11,13 +11,19 @@ export const getAlbumImgList = () => {
   return request({
     url: '/getalbumImgList',
     method: 'get'
-    
+
   })
 }
 
-export const getAllShopList =  () =>{
+export const getmusicRank = () => {
   return request({
-    url:'/getAllShops',
-    method:'get'
+    url: '/getmusicRank',
+    method: 'get'
+  })
+}
+export const getAllShopDataList = () => {
+  return request({
+    url: '/getAllShopDataList',
+    method: 'get'
   })
 }
