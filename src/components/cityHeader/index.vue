@@ -1,76 +1,80 @@
 <template>
   <div>
-    <!-- 头部 -->
-    <div class="nav">
-      <!-- 版心 -->
-      <div class="container">
-        <!-- 左侧导航 -->
-        <div class="navLeft">
-          <div class="logo">豆瓣同城</div>
-          <div class="city">
-            <a href="javascript:;"
-              >北京
-              <i></i>
-            </a>
-            <!-- 其他城市选项 -->
-            <div class="otherCity">
-              <div>北京</div>
-              <div>上海</div>
-              <div>广州</div>
-              <div>武汉</div>
-              <div>成都</div>
-              <div>深圳</div>
-              <div>杭州</div>
-              <div>西安</div>
-              <div>南京</div>
-              <div>郑州</div>
-              <div>长沙</div>
-              <div>温州</div>
-              <div class="fuzhou">福州</div>
-              <div>沈阳</div>
-              <div>更多城市</div>
-              <div></div>
-            </div>
-          </div>
-          <div class="activityNav">
-            <div>近期活动</div>
-            <div>主办方</div>
-            <div>舞台剧</div>
-          </div>
-          <div class="activityNav">
-            <ul>
-              <li>近期活动</li>
-              <li>主办方</li>
-              <li>舞台剧</li>
-            </ul>
-          </div>
-        </div>
+      <!-- 头部 -->
+      <div class="nav">
+          <!-- 版心 -->
+          <div class="container">
+               <!-- 左侧导航 -->
+              <div class="navLeft">
+                <div class="logo">豆瓣同城</div>
+                <div class="city" @click="chooseCity">
+                    <a href="javascript:;">{{place}}
+                        <i :class="{choose:otherCity}" ></i>
+                    </a>
+                    <!-- 其他城市选项 -->
+                    <div class="otherCity"  v-show="otherCity === true" @click="choosePlace">
+                        <div>北京</div>
+                        <div>上海</div>
+                        <div>广州</div>
+                        <div>武汉</div>
+                        <div>成都</div>
+                        <div>深圳</div>
+                        <div>杭州</div>
+                        <div>西安</div>
+                        <div>南京</div>
+                        <div>郑州</div>
+                        <div>长沙</div>
+                        <div>温州</div>
+                        <div class="fuzhou">福州</div>
+                        <div>沈阳</div>
+                        <div>更多城市</div>
+                        <div></div>
+                    </div>
+                </div>
+                <div class="activityNav">
+                    <div>近期活动</div>
+                    <div>主办方</div>
+                    <div>舞台剧</div>   
+                </div>
+              </div>
 
-        <!-- 右侧搜索 -->
-        <div class="searchRight">
-          <div class="rightContainer">
-            <input
-              class="input"
-              type="text"
-              placeholder="活动 / 舞台剧 / 地点"
-            />
-            <div class="submit iconfont iconsearch"></div>
+              <!-- 右侧搜索 -->
+              <div class="searchRight">
+                   <div class="rightContainer">
+                    <input  class="input" type="text" placeholder="活动 / 舞台剧 / 地点">
+                    <div  class="submit iconfont iconSearch  "></div>
+                </div>
+              </div>
           </div>
-        </div>
       </div>
-    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "CityHeader"
-};
+  name: 'CityHeader',
+  data() {
+      return {
+          otherCity:false,
+          place:'北京'
+      }
+  },
+  methods: {
+      // 点击选择切换城市
+      chooseCity(){
+        this.otherCity = !this.otherCity
+      },
+      //切换城市
+      choosePlace(event){
+          this.place = event.target.innerHTML
+      }
+  },
+  
+}
 </script>
 
 <style scoped lang='less'>
 @import '/src/assets/css/reset.css';
-@import '/src/assets/css/base.css';
     // 头部
 .nav{
     width: 100%;
@@ -130,12 +134,17 @@ export default {
                         right: 12px;
                         transform: translateY(-50%);   
                     }
+                    .choose{
+                        transform: rotate(180deg) translateY(2px);
+                        // transform: ;
+                    }
                 }
                 //其他城市选项
                 .otherCity{
                     position: absolute;
                     top: 31px;
                     left: 0px;
+                    z-index: 2;
                     width: 208px;
                     height: 107px;
                     padding: 12px 20px;
@@ -144,47 +153,11 @@ export default {
                     justify-content: space-around;
                     background-color: #fff;
                     border: 1px solid #ddd;
-                    visibility: hidden;
+                    // visibility: hidden;
                     div{
                         width: 25%;
                         color: #37a;
                         cursor: pointer;
-                    }
-                }
-            }
-            .logo{
-                width: 124px;
-                height: 56px;
-                background: url('./images/logo.png') no-repeat center center;
-                background-size: 112px auto;
-                float: left;
-                color: transparent;
-                margin-right: 13px;
-                // margin-top: 4px;
-            }
-            .city{
-                margin-right: 30px;
-                a{  
-                    position: relative;
-                    display: inline-block;
-                    padding: 5px 10px 6px;
-                    width: 64px;
-                    font: 700 14px/1 tahoma,arial,"stheiti","黑体",sans-serif;
-                    font-weight: bold;
-                    background-color:#DEDEDE;
-                    height: 25px;
-                    border-radius: 6px;
-                    i{
-                        position: absolute;        
-                        display:block;
-                        width:0;
-                        height:0;
-                        border-top:5px solid black;
-                        border-left:4px solid transparent;
-                        border-right:4px solid transparent;
-                        top: 50%;
-                        right: 10px;
-                        transform: translateY(-50%);   
                     }
                 }
             }
@@ -205,15 +178,6 @@ export default {
                         color: #fff;
                     }
                 }
-                ul{
-                    list-style: none;
-                    li{
-                        float: left;
-                        color: #643;
-                        margin: 0 15px;
-                        font-size: 16px;
-                    }   
-                }
             }
         }
         //右侧搜索
@@ -225,10 +189,6 @@ export default {
                 text-align: center;
                 display: flex;
                 margin-top: 20px;
-                height: 28px;
-                border: 1px solid #e3e2de;
-                display: flex;
-                margin-top: 15px;
                 align-items: center;
                 .input{ 
                     width: 200px;
@@ -239,10 +199,6 @@ export default {
                 }
                 input::-webkit-input-placeholder {
                     vertical-align: middle;
-                    padding-left: 10px;
-                    outline: none;
-                }
-                input::-webkit-input-placeholder {
                     color: #C8CCCC;
                     font-size: 13px;
                 }
@@ -254,7 +210,6 @@ export default {
                     // color: transparent;
                     background-color: #fff;
                     font-size: 20px;
-
                 }
             }
         }
