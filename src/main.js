@@ -28,6 +28,9 @@ Vue.prototype.$message = Message;  //用来提示错误信息，更漂亮
 Vue.config.productionTip = false
 
 new Vue({
+  beforeCreate() {
+    Vue.prototype.$bus = this
+  },
   render: h => h(App),
   router,
   store
