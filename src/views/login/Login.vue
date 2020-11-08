@@ -1,220 +1,231 @@
 <template>
-  <div class="login-wrap">
-    <div class="login-left">
-      <div class="login-left-box"></div>
+  <div class="logincontainer">
+    <div class="topBannerWrap">
+      <div class="bannerContainer">
+        <a>
+          <img
+            src="https://img3.doubanio.com/f/accounts/4fd84763a74089b20eb02ba0225d6e7739d2c432/passport/pics/douban_logo@2x.png"
+          />
+        </a>
+      </div>
     </div>
+    <div class="login-wrap">
+      <div class="login-left">
+        <div class="login-left-box"></div>
+      </div>
 
-    <div class="login-right">
-      <div class="account-body login-wrap login-start ">
-        <div class="account-body-tabs">
-          <ul class="tab-start">
-            <li
-              class="account-tab-phone"
-              :class="{ on: type === 0 }"
-              @click="type = 0"
-            >
-              短信登录／注册
-            </li>
-            <li
-              class="account-tab-account"
-              :class="{ on: type === 1 }"
-              @click="type = 1"
-            >
-              密码登录
-            </li>
-          </ul>
-          <!-- <ul class="tab-quick">
+      <div class="login-right">
+        <div class="account-body login-wrap login-start ">
+          <div class="account-body-tabs">
+            <ul class="tab-start">
+              <li
+                class="account-tab-phone"
+                :class="{ on: type === 0 }"
+                @click="type = 0"
+              >
+                短信登录／注册
+              </li>
+              <li
+                class="account-tab-account"
+                :class="{ on: type === 1 }"
+                @click="type = 1"
+              >
+                密码登录
+              </li>
+            </ul>
+            <!-- <ul class="tab-quick">
             <li class="account-tab-scan">二维码登录</li>
           </ul> -->
-          <div class="account-tab-switch">
-            <div class="account-tab-switch-icon">
-              <a class="quick icon-switch"></a>
-              <a class="start icon-switch"></a>
-            </div>
-            <div class="account-tab-switch-text">
-              <span class="quick">扫码登录</span>
-              <span class="start">短信登录／注册</span>
+            <div class="account-tab-switch">
+              <div class="account-tab-switch-icon">
+                <a class="quick icon-switch"></a>
+                <a class="start icon-switch"></a>
+              </div>
+              <div class="account-tab-switch-text">
+                <span class="quick">扫码登录</span>
+                <span class="start">短信登录／注册</span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="account-tabcon-start">
-          <div
-            class="loginInpt1"
-            :style="{ display: type === 0 ? 'block' : 'none' }"
-          >
-            <div class="account-form">
-              <div class="account-form-tips">
-                请仔细阅读
-                <a
-                  target="_blank"
-                  href="https://accounts.douban.com/passport/agreement"
-                  >豆瓣使用协议、隐私政策</a
-                >
-              </div>
-              <div class="account-form-error"><span class="hide"></span></div>
+          <div class="account-tabcon-start">
+            <div
+              class="loginInpt1"
+              :style="{ display: type === 0 ? 'block' : 'none' }"
+            >
+              <div class="account-form">
+                <div class="account-form-tips">
+                  请仔细阅读
+                  <a
+                    target="_blank"
+                    href="https://accounts.douban.com/passport/agreement"
+                    >豆瓣使用协议、隐私政策</a
+                  >
+                </div>
+                <div class="account-form-error"><span class="hide"></span></div>
 
-              <div class="account-form-raw">
-                <div class="account-form-field account-form-field-phone">
-                  <span class="icon clear-input"></span>
-                  <input
-                    v-model="phone"
-                    type="phone"
-                    name="phone"
-                    maxlength="11"
-                    class="account-form-input"
-                    placeholder="手机号"
-                    tabindex="1"
-                  />
-                  <div class="account-form-field-area-code">
-                    <div
-                      class="account-form-field-area-code-label js-choose-district"
-                    >
-                      +86
+                <div class="account-form-raw">
+                  <div class="account-form-field account-form-field-phone">
+                    <span class="icon clear-input"></span>
+                    <input
+                      v-model="phone"
+                      type="phone"
+                      name="phone"
+                      maxlength="11"
+                      class="account-form-input"
+                      placeholder="手机号"
+                      tabindex="1"
+                    />
+                    <div class="account-form-field-area-code">
+                      <div
+                        class="account-form-field-area-code-label js-choose-district"
+                      >
+                        +86
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="nation-select hide"></div>
+                <div class="nation-select hide"></div>
 
-              <div class="account-form-raw">
-                <div class="account-form-field account-form-codes">
-                  <input
-                    v-model="code"
-                    id="code"
-                    type="text"
-                    name="code"
-                    maxlength="6"
-                    class="account-form-input"
-                    placeholder="验证码"
-                    tabindex="2"
-                    autocomplete="off"
-                  />
-                  <div class="account-form-field-code">
-                    <a href="javascript:;" @click="isCode ? '' : getCode()">{{
-                      isCode ? `${time}s后重新发送` : "获取验证码"
-                    }}</a>
+                <div class="account-form-raw">
+                  <div class="account-form-field account-form-codes">
+                    <input
+                      v-model="code"
+                      id="code"
+                      type="text"
+                      name="code"
+                      maxlength="6"
+                      class="account-form-input"
+                      placeholder="验证码"
+                      tabindex="2"
+                      autocomplete="off"
+                    />
+                    <div class="account-form-field-code">
+                      <a href="javascript:;" @click="isCode ? '' : getCode()">{{
+                        isCode ? `${time}s后重新发送` : "获取验证码"
+                      }}</a>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="account-form-field-submit ">
-                <a
-                  href="javascript:;"
-                  class="btn btn-phone"
-                  :class="{
-                    'btn-active': phone.trim() != '' && code.trim() != ''
-                  }"
-                  @click="toLogin(0)"
-                  >登录豆瓣</a
-                >
-              </div>
-            </div>
-            <div class="account-form-ft">
-              <p class="account-form-link">
-                <a
-                  class="help-link"
-                  target="_blank"
-                  data-action="login_phone_nocode"
-                  href="https://help.douban.com/account?app=1#t1-q5"
-                  >收不到验证码</a
-                >
-              </p>
-            </div>
-          </div>
-          <div
-            class="loginInpt2"
-            :style="{ display: type === 1 ? 'block' : 'none' }"
-          >
-            <div class="account-form">
-              <div class="account-form-error"><span class="hide"></span></div>
-
-              <div class="account-form-raw">
-                <div class="account-form-field account-form-field-phone">
-                  <span class="icon clear-input"></span>
-                  <input
-                    v-model="phone"
-                    type="phone"
-                    name="phone"
-                    maxlength="11"
-                    class="account-form-input"
-                    placeholder="手机号 / 邮箱"
-                    tabindex="1"
-                  />
+                <div class="account-form-field-submit ">
+                  <a
+                    href="javascript:;"
+                    class="btn btn-phone"
+                    :class="{
+                      'btn-active': phone.trim() != '' && code.trim() != ''
+                    }"
+                    @click="toLogin(0)"
+                    >登录豆瓣</a
+                  >
                 </div>
               </div>
-              <div class="nation-select hide"></div>
-
-              <div class="account-form-raw">
-                <div class="account-form-field account-form-codes">
-                  <input
-                    v-model="password"
-                    id="code"
-                    type="password"
-                    name="password"
-                    class="account-form-input"
-                    placeholder="密码"
-                    tabindex="2"
-                    autocomplete="off"
-                  />
-                  <div class="account-form-field-code">
-                    <a
-                      href="javascript:;"
-                      @click="$message('此功能正在开发中...')"
-                      >找回密码</a
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <div class="account-form-field-submit ">
-                <a
-                  href="javascript:;"
-                  class="btn btn-phone"
-                  :class="{
-                    'btn-active': phone.trim() != '' && code.trim() != ''
-                  }"
-                  @click="toLogin(1)"
-                  >登录豆瓣</a
-                >
+              <div class="account-form-ft">
+                <p class="account-form-link">
+                  <a
+                    class="help-link"
+                    target="_blank"
+                    data-action="login_phone_nocode"
+                    href="https://help.douban.com/account?app=1#t1-q5"
+                    >收不到验证码</a
+                  >
+                </p>
               </div>
             </div>
-            <div class="account-form-ft">
-              <p class="account-form-link">
-                <a
-                  class="help-link"
-                  target="_blank"
-                  data-action="login_phone_nocode"
-                  href="https://help.douban.com/account?app=1#t1-q5"
-                  >海外手机登录</a
-                >
-              </p>
-            </div>
-          </div>
-
-          <div class="captcha-error hide" style="display:none">
-            登录出现问题，<a
-              href="javascript:window.location.reload()"
-              data-action="captch_error"
-              >反馈并刷新</a
+            <div
+              class="loginInpt2"
+              :style="{ display: type === 1 ? 'block' : 'none' }"
             >
-          </div>
-          <div class="account-form-3rd ">
-            <div class="account-form-3rd-hd">第三方登录:</div>
-            <div class="account-form-3rd-bd">
-              <a
-                href="https://www.douban.com/accounts/connect/wechat/?from=book&amp;redir=https%3A//book.douban.com/"
-                class="link-3rd-wx link-3rd-wx-on"
-                target="_top"
-                title="用微信登录"
-                >微信</a
+              <div class="account-form">
+                <div class="account-form-error"><span class="hide"></span></div>
+
+                <div class="account-form-raw">
+                  <div class="account-form-field account-form-field-phone">
+                    <span class="icon clear-input"></span>
+                    <input
+                      v-model="phone"
+                      type="phone"
+                      name="phone"
+                      maxlength="11"
+                      class="account-form-input"
+                      placeholder="手机号 / 邮箱"
+                      tabindex="1"
+                    />
+                  </div>
+                </div>
+                <div class="nation-select hide"></div>
+
+                <div class="account-form-raw">
+                  <div class="account-form-field account-form-codes">
+                    <input
+                      v-model="password"
+                      id="code"
+                      type="password"
+                      name="password"
+                      class="account-form-input"
+                      placeholder="密码"
+                      tabindex="2"
+                      autocomplete="off"
+                    />
+                    <div class="account-form-field-code">
+                      <a
+                        href="javascript:;"
+                        @click="$message('此功能正在开发中...')"
+                        >找回密码</a
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="account-form-field-submit ">
+                  <a
+                    href="javascript:;"
+                    class="btn btn-phone"
+                    :class="{
+                      'btn-active': phone.trim() != '' && code.trim() != ''
+                    }"
+                    @click="toLogin(1)"
+                    >登录豆瓣</a
+                  >
+                </div>
+              </div>
+              <div class="account-form-ft">
+                <p class="account-form-link">
+                  <a
+                    class="help-link"
+                    target="_blank"
+                    data-action="login_phone_nocode"
+                    href="https://help.douban.com/account?app=1#t1-q5"
+                    >海外手机登录</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="captcha-error hide" style="display:none">
+              登录出现问题，<a
+                href="javascript:window.location.reload()"
+                data-action="captch_error"
+                >反馈并刷新</a
               >
-              <a
-                href="https://www.douban.com/accounts/connect/sina_weibo/?from=book&amp;redir=https%3A//book.douban.com/&amp;fallback="
-                class="link-3rd-wb link-3rd-wb-on"
-                target="_top"
-                title="用微博登录"
-                >微博</a
-              >
+            </div>
+            <div class="account-form-3rd ">
+              <div class="account-form-3rd-hd">第三方登录:</div>
+              <div class="account-form-3rd-bd">
+                <a
+                  href="https://www.douban.com/accounts/connect/wechat/?from=book&amp;redir=https%3A//book.douban.com/"
+                  class="link-3rd-wx link-3rd-wx-on"
+                  target="_top"
+                  title="用微信登录"
+                  >微信</a
+                >
+                <a
+                  href="https://www.douban.com/accounts/connect/sina_weibo/?from=book&amp;redir=https%3A//book.douban.com/&amp;fallback="
+                  class="link-3rd-wb link-3rd-wb-on"
+                  target="_top"
+                  title="用微博登录"
+                  >微博</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -224,8 +235,12 @@
 </template>
 
 <script>
-import { getRequestPhone, getLoginVerify, getVerifyUserCode } from "@/api/login";
-import { mapMutations } from 'vuex'
+import {
+  getRequestPhone,
+  getLoginVerify,
+  getVerifyUserCode
+} from "@/api/login";
+import { mapMutations } from "vuex";
 export default {
   name: "Login",
   data() {
@@ -239,9 +254,9 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(['receiveUserInfo']),
+    ...mapMutations(["receiveUserInfo"]),
     async getCode() {
-      let phoneExp = /^1[3|4|5|7|8][0-9]{9}$/;
+      let phoneExp = /^(0|86|17951)?(13[0-9]|15[012356789]|166|17[3678]|18[0-9]|14[57])[0-9]{8}$/;
       let { phone, code } = this;
       if (!phone.trim()) {
         this.$message.error("手机号码不能为空!");
@@ -273,12 +288,13 @@ export default {
       let phoneExp = /^1[3|4|5|7|8][0-9]{9}$/;
       let { phone, password, code } = this;
       if (index === 0) {
-        let result = await getVerifyUserCode({telephone: phone,code})
-        if(result.code === 2000) {
-          this.receiveUserInfo(result.data)
+        let result = await getVerifyUserCode({ telephone: phone, code });
+        if (result.code === 2000) {
+          this.receiveUserInfo(result.data);
+          this.saveUserInfo(result.data);
           this.$message("登录成功,准备跳转");
           this.$router.push("/");
-        }else {
+        } else {
           this.$message(result.message);
         }
       } else {
@@ -300,13 +316,18 @@ export default {
 
         let result = await getLoginVerify({ telephone: phone, password });
         if (result.code === 2000) {
-          this.receiveUserInfo(result.data)
+          this.receiveUserInfo(result.data);
+          this.saveUserInfo(result.data);
           this.$message("登录成功,准备跳转");
           this.$router.push("/");
         } else {
           this.$message(result.message);
         }
       }
+    },
+
+    saveUserInfo(data) {
+      localStorage.setItem("userInfo", JSON.stringify(data));
     }
   }
 };
@@ -316,6 +337,20 @@ export default {
 .btn-active {
   cursor: pointer;
   background-color: #41ac52 !important;
+}
+.topBannerWrap {
+  background: #edf4ed;
+  .bannerContainer {
+    width: 1040px;
+    height: 70px;
+    margin: 0 auto;
+
+    img {
+      margin-top: 22px;
+      width: 142px;
+      height: 28px;
+    }
+  }
 }
 .login-wrap {
   width: 1002px;

@@ -8,8 +8,9 @@
         <a href="https://book.douban.com"></a>
       </div>
       <div class="searchInpt">
-        <input v-model="keyword" class="inptFirst" :placeholder="inpText" />
+        <input v-model="keyword" @keyup.enter="searchForParams" class="inptFirst" :placeholder="inpText" />
         <input
+          @click="searchForParams"
           type="submit"
           class="inp-btn"
           :style="{
@@ -23,6 +24,10 @@
         <router-link :to="item.path">{{ item.name }}</router-link>
       </li>
     </ul>
+    <a
+      class="rightlogo"
+      href="https://music.douban.com/annual/2019?source=music_navigation"
+    ></a>
   </div>
 </template>
 
@@ -30,6 +35,10 @@
 export default {
   name: "Search",
   props: {
+    start: {
+      type: Number,
+      default: 1
+    },
     inpText: {
       type: String,
       default: "书名、作者、ISBN"
@@ -39,15 +48,15 @@ export default {
       default() {
         return [
           {
-            name:"购书单",
+            name: "购书单",
             path: "/music/buybooks"
           },
           {
-            name:"电子图书",
+            name: "电子图书",
             path: "/music/onlinebooks"
           },
           {
-            name:"豆瓣书店",
+            name: "豆瓣书店",
             path: "/music/libray"
           },
           {
@@ -76,6 +85,17 @@ export default {
       ],
       logoIndex: 0
     };
+  },
+  methods: {
+    async searchForParams() {
+      let { keyword } = this;
+      this.$router.push({
+        path: "/music/musicitem",
+        query: {
+          q: keyword
+        }
+      });
+    }
   },
   watch: {
     $route: {
@@ -187,5 +207,16 @@ export default {
       margin-left: 0;
     }
   }
+}
+.rightlogo {
+  position: absolute;
+  right: 89px;
+  top: 9px;
+  z-index: 10;
+  background-color: transparent;
+  width: 146px;
+  height: 96px;
+  background: url("../../assets/img/annual_2019.png") right center/cover
+    no-repeat;
 }
 </style>

@@ -1,13 +1,16 @@
 
 //存数据的地方，多个属性的对象
 const state = {
-  userInfo: {}
+  userInfo: JSON.parse(localStorage.getItem('userInfo')) || {} 
 }
 
 //直接修改数据的地，是多个方法的一个对象  方法当中不能出现if  for   异步操作
 const mutations = {
   receiveUserInfo(state,userInfo) {
     state.userInfo = userInfo
+  },
+  clearUserInfo(state) {
+    state.userInfo = {}
   }
 }
 

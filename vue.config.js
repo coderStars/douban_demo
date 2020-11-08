@@ -8,6 +8,10 @@ module.exports = {
         pathRewrite: {
           "^/api": ''
         }
+      },
+      "/music": {
+        target: "https://api.douban.com/v2",
+        changeOrigin: true,
       }
     }
   }

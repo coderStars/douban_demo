@@ -19,6 +19,7 @@ import {MessageBox,Message,Pagination,Checkbox,Button} from 'element-ui'
 
 
 Vue.use(Checkbox)
+Vue.use(Pagination)
 Vue.use(Button)
 
 Vue.prototype.$msgbox = MessageBox;
@@ -26,6 +27,8 @@ Vue.prototype.$alert = MessageBox.alert;
 Vue.prototype.$message = Message;  //用来提示错误信息，更漂亮
 
 Vue.config.productionTip = false
+
+
 
 new Vue({
   render: h => h(App),

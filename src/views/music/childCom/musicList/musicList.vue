@@ -1,6 +1,6 @@
 <template>
-  <div class="musicWrapper">
-    <div class="top">
+  <div class="musicListWrapper">
+    <div class="top clearfix">
       <h2>豆瓣音乐250</h2>
       <span class="more"><a>更多</a></span>
     </div>
@@ -26,7 +26,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.musicWrapper {
+.musicListWrapper {
   .top {
     border-bottom: 1px solid #e4e2e2;
     width: 100%;
