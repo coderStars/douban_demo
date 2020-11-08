@@ -4,7 +4,7 @@
       <div class="homepage">
         <div class="homepage-wrap">
           <!-- 轮播部分 -->
-          <div class="swiper-container" refs="bannerSwiper">
+          <div class="swiper-container">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <a target="_blank" href="javascript:;">
@@ -53,7 +53,7 @@
                 <a class="product-card">
                   <div class="product-card-cover">
                     <img
-                      src="./img/ia_500000009.jpg"
+                      src="https://img2.doubanio.com/img/files/file-1604632273-3.jpg"
                       alt="豆瓣逆向手表—多色款"
                       class="product-cover-pic"
                     />
@@ -74,11 +74,7 @@
               <li class="product-list-item">
                 <a src="##" class="product-card">
                   <div class="product-card-cover">
-                    <img
-                      src="./img/ia_500000009.jpg"
-                      alt="豆瓣电影日历2021"
-                      class="product-cover-pic"
-                    />
+                    <img src="./img/file-4.jpg" alt="豆瓣电影日历2021" class="product-cover-pic" />
                   </div>
                   <div class="product-card-info">
                     <div class="product-card-title">豆瓣电影日历2021</div>
@@ -92,11 +88,7 @@
               <li class="product-list-item">
                 <a src="##" class="product-card">
                   <div class="product-card-cover">
-                    <img
-                      src="./img/ia_500000009.jpg"
-                      alt="豆瓣读书周历2021"
-                      class="product-cover-pic"
-                    />
+                    <img src="./img/file-5.jpg" alt="豆瓣读书周历2021" class="product-cover-pic" />
                   </div>
 
                   <div class="product-card-info">
@@ -114,15 +106,15 @@
           <!-- 会员中心 -->
           <div class="product-wrap">
             <a href="##">
-              <img src="./img/ia_500000009.jpg" alt="加载中..." />
+              <img src="http://localhost:8080/img/ia_500000009.b83deca0.jpg" alt="加载中..." />
             </a>
           </div>
 
           <!-- 限时抢购 -->
-          <div class="product-wrap product-list-sale">
-            <div class="product-list-title">
-              限时抢购
-              <div class="product-list-time">
+          <div class="product-wrap1 product-list-sale1">
+            <div class="product-list-title1">
+              <p>限时抢购</p>
+              <div class="product-list-time1">
                 距结束：
                 <em>08</em>
                 天
@@ -132,39 +124,119 @@
                 分
               </div>
             </div>
-            <div class="product-list-content">
-              <a class="product-card-large" href="##" target="_blank">
-                <img
-                  src="./img/ia_500000009.jpg"
-                  alt="豆瓣逆向手表—多色款"
-                  class="product-cover-pic"
-                />
-              </a>
 
-              <div class="product-card-main">
-                <div class="product-card-cover">
-                  <img
-                    src="./img/ia_500000009.jpg"
-                    alt="豆瓣逆向手表—多色款"
-                    class="product-cover-pic"
-                  />
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide product-list-content ">
+                  <a class="product-card-large" href="##" target="_blank">
+                    <img
+                      src="https://img3.doubanio.com/img/files/file-1604653295-1.jpg"
+                      alt="豆瓣逆向手表—多色款"
+                      class="product-cover-pic"
+                    />
+                  </a>
+                  <div class="product-card-main">
+                    <a class="product-card-cover">
+                      <img src="./img/file-2.jpg" alt="豆瓣逆向手表—多色款" class="product-cover-pic"/>
+                      <div class="product-card-title">豆瓣逆向手表—多色款</div>
+                      <div class="product-card-desc">风格不设限 白色也出彩</div>
+                      <div class="product-card-tags">
+                        <span class="product-card-tag1">最高减26元</span>
+                        <span class="product-card-tag2">满150减10</span>
+                      </div>
+                      <div class="product-card-price">
+                        <span class="product-card-promote">¥289</span>
+                        <span class="product-card-del">¥329</span>
+                      </div>
+                      <span class="product-card-btn">马上抢</span>
+                    </a>
+                  </div>
                 </div>
-                <div class="product-card-info">
-                  <div class="product-card-title">豆瓣逆向手表—多色款</div>
-                  <div class="product-card-desc">风格不设限 白色也出彩</div>
-                  <div class="product-card-tags">
-                    <span class="product-card-tag">最高减40元</span>
+                <div class="swiper-slide product-list-content ">
+                  <a class="product-card-large" href="##" target="_blank">
+                    <img
+                      src="./img/file-4.jpg"
+                      alt="豆瓣逆向手表—多色款"
+                      class="product-cover-pic"
+                    />
+                  </a>
+                  <div class="product-card-main">
+                    <a class="product-card-cover">
+                      <img src="https://img9.doubanio.com/img/files/file-1604655145-5.jpg" alt="豆瓣逆向手表—多色款" class="product-cover-pic"/>
+                      <div class="product-card-title">豆瓣逆向手表—多色款</div>
+                      <div class="product-card-desc">风格不设限 白色也出彩</div>
+                      <div class="product-card-tags">
+                        <span class="product-card-tag1">最高减26元</span>
+                        <span class="product-card-tag2">满150减10</span>
+                      </div>
+                      <div class="product-card-price">
+                        <span class="product-card-promote">¥289</span>
+                        <span class="product-card-del">¥329</span>
+                      </div>
+                      <span class="product-card-btn">马上抢</span>
+                    </a>
                   </div>
-                  <div class="product-card-price">
-                    <span class="product-card-promote">¥289</span>
-                    <span class="product-card-del">¥329</span>
+                </div>
+                <div class="swiper-slide product-list-content ">
+                  <a class="product-card-large" href="##" target="_blank">
+                    <img
+                      src="./img/file-1.jpg"
+                      alt="豆瓣逆向手表—多色款"
+                      class="product-cover-pic"
+                    />
+                  </a>
+                  <div class="product-card-main">
+                    <a class="product-card-cover">
+                      <img src="./img/file-2.jpg" alt="豆瓣逆向手表—多色款" class="product-cover-pic"/>
+                      <div class="product-card-title">豆瓣逆向手表—多色款</div>
+                      <div class="product-card-desc">风格不设限 白色也出彩</div>
+                      <div class="product-card-tags">
+                        <span class="product-card-tag1">最高减26元</span>
+                        <span class="product-card-tag2">满150减10</span>
+                      </div>
+                      <div class="product-card-price">
+                        <span class="product-card-promote">¥289</span>
+                        <span class="product-card-del">¥329</span>
+                      </div>
+                      <span class="product-card-btn">马上抢</span>
+                    </a>
                   </div>
-                  <div class="product-card-action">
-                    <a class="product-card-btn" href="##">马上抢</a>
+                </div>
+                <div class="swiper-slide product-list-content ">
+                  <a class="product-card-large" href="##" target="_blank">
+                    <img
+                      src="./img/file-4.jpg"
+                      alt="豆瓣逆向手表—多色款"
+                      class="product-cover-pic"
+                    />
+                  </a>
+                  <div class="product-card-main">
+                    <a class="product-card-cover">
+                      <img src="./img/file-5.jpg" alt="豆瓣逆向手表—多色款" class="product-cover-pic"/>
+                      <div class="product-card-title">豆瓣逆向手表—多色款</div>
+                      <div class="product-card-desc">风格不设限 白色也出彩</div>
+                      <div class="product-card-tags">
+                        <span class="product-card-tag1">最高减26元</span>
+                        <span class="product-card-tag2">满150减10</span>
+                      </div>
+                      <div class="product-card-price">
+                        <span class="product-card-promote">¥289</span>
+                        <span class="product-card-del">¥329</span>
+                      </div>
+                      <span class="product-card-btn">马上抢</span>
+                    </a>
                   </div>
                 </div>
               </div>
+
+                <!-- 如果需要分页器 -->
+              <div class="swiper-pagination"></div>
+
+                <!-- 如果需要导航按钮 -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
+            
           </div>
 
           <!-- 人气单品 -->
@@ -175,7 +247,7 @@
                 <div class="product-card-main">
                   <div class="product-card-cover">
                     <img
-                      src="./img/ia_500000009.jpg"
+                      src="https://img3.doubanio.com/img/files/file-1602559242-11.jpg"
                       alt="豆瓣X飞跃帆布鞋"
                       class="product-cover-pic"
                     />
@@ -193,7 +265,7 @@
                 <div class="product-card-main">
                   <div class="product-card-cover">
                     <img
-                      src="./img/ia_500000009.jpg"
+                      src="https://img3.doubanio.com/img/files/file-1602559242-10.jpg"
                       alt="豆瓣逆向手表"
                       class="product-cover-pic"
                     />
@@ -210,7 +282,7 @@
               <li class="product-list-item col-3">
                 <div class="product-card-main">
                   <div class="product-card-cover">
-                    <img src="./img/ia_500000009.jpg" alt="豆瓣收藏夹" class="product-cover-pic" />
+                    <img src="https://img1.doubanio.com/img/files/file-1602559242-9.jpg" alt="豆瓣收藏夹" class="product-cover-pic" />
                   </div>
                   <div class="product-card-info">
                     <div class="product-card-title">豆瓣收藏夹</div>
@@ -225,7 +297,7 @@
                 <div class="product-card-main">
                   <div class="product-card-cover">
                     <img
-                      src="./img/ia_500000009.jpg"
+                      src="https://img1.doubanio.com/img/files/file-1602559242-8.jpg"
                       alt="豆瓣 晴雨伞下的印象派"
                       class="product-cover-pic"
                     />
@@ -243,33 +315,26 @@
           </div>
 
           <!-- 中间轮播 -->
-          <div class=" product-list-specials product-wrap product-list-wrap">
-            <div class="product-list-title">
+          <div class="shop-wrap">
+            <span class="shop-list-title">
               <a href="/specials" target="_blank" class="more">
                 查看更多>
-                <!-- <em class="mui-icon arrow-right"></em> -->
               </a>
-            </div>
-            <ul class="product-list-content" v-if="MaindoupinDataList.specials">
-              <li
-                class="swiper-container"
-                v-for="(item, index) in MaindoupinDataList.specials.data.items"
+            </span>
+            <div class="shop-list-content swiper-container" ref="bannerSwiper">
+              <div
+                class="centerLunbo swiper-wrapper"
+                v-for="(item, index) in bannerList"
                 :key="index"
               >
-                <div class="swiper-wrapper">
-                  <a
-                    href="https://bizpage.douban.com/dou-art/"
-                    target="_blank"
-                    class="swiper-slide"
-                  >
-                    <span class="special-title" style="font-size: 16px; font-weight: 600;">{{
-                      item.title
-                    }}</span>
-                    <img :src="item.image" />
-                  </a>
-                </div>
-              </li>
-            </ul>
+                <a href="https://bizpage.douban.com/dou-art/" target="_blank" class="swiper-slide">
+                  <div class="shop-title" style="font-size: 16px; font-weight: 600;">
+                    {{ item.title }}
+                  </div>
+                  <img :src="item.image" style="width: 1100px; height: 420px" />
+                </a>
+              </div>
+            </div>
           </div>
 
           <!-- 四个楼层 -->
@@ -277,7 +342,7 @@
             <!-- 豆瓣经典 -->
             <div class="category">
               <div class=" product-list-category">
-                <div class="product-list-title">
+                <div class="product-list-title" id="cnm">
                   <span class="tex">豆瓣经典</span>
                   <span class="product-list-desc">
                     口碑好物，匠心甄选
@@ -322,7 +387,7 @@
             <!-- 家居生活 -->
             <div class="category">
               <div class="product-wrap product-list-wrap product-list-category">
-                <div class="product-list-title">
+                <div class="product-list-title" id="cnm">
                   家居生活
                   <span class="product-list-desc">
                     追求品质，乐享生活
@@ -375,7 +440,7 @@
             <!-- 外出旅行 -->
             <div class="category">
               <div class="product-wrap product-list-wrap product-list-category">
-                <div class="product-list-title">
+                <div class="product-list-title" id="cnm">
                   外出旅行
                   <span class="product-list-desc">实用贴心，探索世界</span>
                   <a
@@ -421,7 +486,7 @@
             <!-- 文具小物 -->
             <div class="category">
               <div class="product-wrap product-list-wrap product-list-category">
-                <div class="product-list-title">
+                <div class="product-list-title" id="cnm">
                   文具小物
                   <span class="product-list-desc">点滴思绪，自在书写</span>
                   <a
@@ -654,6 +719,8 @@ export default {
   data() {
     return {
       MaindoupinDataList: [],
+      bannerListData: [],
+      bannerList: [],
     };
   },
 
@@ -688,6 +755,7 @@ export default {
     // }, 3000);
 
     this.getMaindoupinDataList();
+    this.headBannerList();
   },
   methods: {
     async getMaindoupinDataList() {
@@ -695,51 +763,65 @@ export default {
       // console.log(result);
       this.MaindoupinDataList = result;
       // console.log(this.MaindoupinDataList);
+      this.bannerListData = result.specials;
+      this.bannerList = this.bannerListData.items;
+    },
+    // 头部轮播
+
+    headBannerList() {
+      var mySwiper = new Swiper(".swiper-container", {
+        loop: true, // 循环模式选项
+        autoplay: true,
+        // 如果需要分页器
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
     },
   },
 
   //一般监视:只能监视数组本身数据的改变,而不能监视数组内部对象内部属性的变化
-  //   watch:{
+  watch: {
+    // bannerList(){
+    //   new Swiper...
+    // }   //bannerList里面只有一个handler,那么代码就可以简写成函数形式
 
-  //     // bannerList(){
-  //     //   new Swiper...
-  //     // }   //bannerList里面只有一个handler,那么代码就可以简写成函数形式
-  //     bannerList:{
-  //       //一般监视
-  //       handler(){
+    bannerList: {
+      //一般监视
+      handler() {
+        //等待页面最近的一次更新循环完成之后再去执行它内部的回调
+        // 区别:updated updated也可以实现,但是并不是最近一次更新,而是所有的更新都会执行这个钩子(updated)
+        this.$nextTick(() => {
+          //这个回调是nextTick的回调,nextTick会等待页面dom最近的一次循环更新完成之后再去执行它内部传递的回调
 
-  //         //等待页面最近的一次更新循环完成之后再去执行它内部的回调
-  //         // 区别:updated updated也可以实现,但是并不是最近一次更新,而是所有的更新都会执行这个钩子(updated)
-  //         this.$nextTick(() => {
-  // //这个回调是nextTick的回调,nextTick会等待页面dom最近的一次循环更新完成之后再去执行它内部传递的回调
+          //监视哪个数据变化之后所执行的函数
+          //放在这里能保证我们的bannerList内一定有数据,但是还是不能保证结构完全形成 --->到nextTick
+          new Swiper(this.$refs.bannerSwiper, {
+            //如果是类名,要加双引号".swiper-container"
+            //direction: "vertical", // 垂直切换选项(方向:垂直, 不写默认水平,删了就是水平)
+            loop: true, // 循环模式选项.(代表无缝操作,从最后一张切换到第一张,是否添加无缝操作)
 
-  //           //监视哪个数据变化之后所执行的函数
-  //           //放在这里能保证我们的bannerList内一定有数据,但是还是不能保证结构完全形成 --->到nextTick
-  //         new Swiper(this.$refs.bannerSwiper, {  //如果是类名,要加双引号".swiper-container"
-  //          //direction: "vertical", // 垂直切换选项(方向:垂直, 不写默认水平,删了就是水平)
-  //          loop: true, // 循环模式选项.(代表无缝操作,从最后一张切换到第一张,是否添加无缝操作)
+            // 如果需要分页器,(有小圆点就得加这个)
+            pagination: {
+              el: ".swiper-pagination",
+            },
 
-  //          // 如果需要分页器,(有小圆点就得加这个)
-  //           pagination: {
-  //             el: ".swiper-pagination",
-  //           },
-
-  //          // 如果需要前进后退按钮
-  //           navigation: {
-  //             nextEl: ".swiper-button-next",
-  //             prevEl: ".swiper-button-prev",
-  //           },
-
-  //          // 如果需要滚动条
-  //          // scrollbar: {
-  //          //   el: ".swiper-scrollbar",
-  //          // },
-  //         });
-  //         })
-
-  //       }
-  //     }
-  //   },
+            // 如果需要前进后退按钮
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        });
+      },
+    },
+  },
   //深度监视:用来解决一般监视搞不定的问题
   // watch:{
   //   //一般监视和深度监视
@@ -789,13 +871,19 @@ export default {
     width: 100%;
     height: 420px;
     margin-bottom: 30px;
+    .swiper-slide {
+      img {
+        width: 1920px;
+        height: 420px;
+      }
+    }
   }
 }
 
 //新品首发
 .product-wrap {
   .product-list-title {
-    margin: 50px auto 20px;
+    padding-bottom: 30px;
     color: #3e3a39;
     font-size: 20px;
     font-weight: 600;
@@ -871,65 +959,80 @@ export default {
 }
 
 // 限时抢购
-.product-list-sale {
-  .product-list-title {
-    padding: 30px 0;
-    color: #3e3a39;
-    font-size: 20px;
-    font-weight: 600;
+.product-list-sale1{
+  width: 1100px;
+  height: 420px;
+  margin: 0px auto 100px;
+  .product-list-title1 {
+    width: 1100px;
+    height: 119px;
     text-align: center;
-    .product-list-time {
-      margin-top: 5px;
+    P{
+      font-size: 20px;
+      font-weight: 600;
+      padding: 40px 0 10px;
+      color: #3e3a39;
+    }
+    .product-list-time1 {
+      width: 1100px;
+      height: 24px;
       font-size: 12px;
       font-weight: 400;
     }
   }
   .product-list-content {
-    display: flex;
-    flex: 1;
-    justify-content: flex-start;
-    margin: 0 auto;
     width: 1100px;
-    height: 360px;
+    height: 420px;
+    display: flex;
+    justify-content: flex-start;
+    
     .product-card-large {
       .product-cover-pic {
-        width: 825.36px;
+        width: 820px;
         height: 360px;
       }
     }
     .product-card-main {
-      margin-left: 32px;
+      text-align: left;
+      margin-left: 20px;
       width: 260px;
       height: 360px;
       padding: 15px;
       background: #fff;
+      position: relative;
       .product-card-cover {
         .product-cover-pic {
           width: 230px;
           height: 230px;
         }
-      }
-      .product-card-info {
-        text-align: left;
         .product-card-title {
-          color: #3e3a39;
+          width: 230px;
+          height: 24px;
+          color: #4e5659;
           font-size: 16px;
           font-weight: 500;
           margin-top: 5px;
         }
         .product-card-desc {
-          color: #ababac;
+          width: 230px;
+          height: 21px;
+          color: #D1CABF;
           font-size: 14px;
-          margin-top: 8px;
         }
         .product-card-tags {
-          margin-top: 8px;
-          .product-card-tag {
-            padding: 1px 4px;
-            margin-right: 3px;
-            color: #dd1944;
+          .product-card-tag1 {
+            margin-left: 3px;
+            color: #E4476A;
             font-size: 12px;
-            background-color: #fbe8ec;
+            padding: 1px 4px;
+            background: #FFD2EC;
+          }
+          .product-card-tag2 {
+            margin-left: 3px;
+            color: #E4476A;
+            font-size: 12px;
+            padding: 1px 4px;
+            background: #FFD2EC;
           }
         }
         .product-card-price {
@@ -946,19 +1049,21 @@ export default {
             text-decoration: line-through;
           }
         }
-        .product-card-action {
-          margin-top: 8px;
-          float: right;
-          .product-card-btn {
+        .product-card-btn {
             padding: 4px 8px;
-            -webkit-border-radius: 40px;
+            border-radius: 40px;
             border-radius: 40px;
             color: #fff;
             font-size: 13px;
             background: #dd1944;
             vertical-align: middle;
-          }
+            position: absolute;
+            right: 15px;
+            bottom: 50px;
+
         }
+        
+      
       }
     }
   }
@@ -1009,20 +1114,38 @@ export default {
 }
 
 //中间轮播
-.product-list-specials {
-  width: 1100px;
-  height: 470px;
-  position: relative;
+
+.shop-wrap {
+  padding-bottom: 50px;
   margin: 0 auto;
-  .product-list-title {
+  width: 1120px;
+  height: 520px;
+  position: relative;
+  .shop-list-title {
     .more {
       color: #3e3a39;
       font-size: 16px;
       font-weight: 600;
       position: absolute;
-      top: -50px;
+      top: 0px;
       right: 0px;
       z-index: 10;
+    }
+  }
+
+  .shop-list-content {
+    .centerLunbo {
+      width: 1100px;
+      height: 470px;
+      margin: 0 10px;
+      .shop-title {
+        width: 1100px;
+        height: 50px;
+      }
+      img {
+        width: 1100px;
+        height: 420px;
+      }
     }
   }
 }
@@ -1119,12 +1242,16 @@ export default {
       }
     }
   }
+
+  #cnm{
+    margin: 0 auto;
+  }
 }
 
 //用户测评
 .product-list-evaluation {
   width: 1100px;
-  height: 1236.51px;
+  height: 650px;
   margin: 0 auto;
   .product-list-title {
     padding: 30px 0;
@@ -1135,9 +1262,8 @@ export default {
   }
   .product-list-content {
     display: flex;
-    height: 1151.5px;
+    
     align-items: flex-start;
-    justify-content: space-between;
     flex-wrap: wrap;
     .product-list-item {
       width: 260px;
