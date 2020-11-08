@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 import user from './user'
+import cart from './cart'
 
 import city from './city'
 //存数据的地方，多个属性的对象
@@ -12,7 +13,8 @@ import city from './city'
 export default new Vuex.Store({
   modules:{
     user,
-    city
+    city,
+    cart
   }
 })
 

@@ -26,7 +26,7 @@ const routes = [{
     path: '/showdetail',
     component: ShowDetail
 }, {
-    path: '/booksinfo',
+    path: '/booksinfo/:id?',
     component: BooksInfo
 },
 {
@@ -74,7 +74,7 @@ const routes = [{
             path: 'musicitem',
             component: MusicItem
         }
-    ]
+    ],
 },
 {
     path: '/books',
@@ -82,6 +82,7 @@ const routes = [{
     meta: {
         isShow: true
     },
+
 },
 {
     path: '/commoncity',
@@ -117,8 +118,25 @@ const routes = [{
         component: Maindoupin,
     },
     {
-        path: '/',
-        redirect: '/doupin/maindoupin'
+        path: '/doupin',
+        component: Doupin,
+        children: [
+            {
+                path: 'allshop',
+                component: AllShop,
+            },
+            {
+                path: 'maindoupin',
+                component: Maindoupin,
+            },
+            {
+                path: '/',
+                redirect: '/doupin/maindoupin'
+            }
+        ],
+        meta: {
+            isShow: false
+        }
     }
     ],
     meta: {

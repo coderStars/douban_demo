@@ -1,7 +1,7 @@
 <template>
   <div>
       <!-- 头部 -->
-        <CityHeader></CityHeader>
+        <!-- <CityHeader></CityHeader> -->
 
       <!-- 主体 -->
         <body>
@@ -30,7 +30,6 @@ export default {
       CityHeader,
       CityAside,
   },
-
   data() {
       return {
       
@@ -43,7 +42,6 @@ export default {
       
    },
 }
-
 </script>
 
 <style lang='less' scoped>
@@ -61,6 +59,4 @@ body{
        
     }
 }
-
 </style>
-

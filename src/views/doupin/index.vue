@@ -101,7 +101,6 @@ export default {
   height: 28px;
   background-color: rgb(103, 111, 116);
 }
-
 //分类区
 .nav-warp {
   width: 1100px;
@@ -110,18 +109,15 @@ export default {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-
   .logoPic {
     img {
       width: 123.02px;
       height: 27.78px;
     }
   }
-
   .cateGory {
     display: flex;
     justify-content: space-between;
-
     li {
       a {
         margin: 0 12px;
@@ -131,7 +127,6 @@ export default {
       }
     }
   }
-
   .user {
     .user-pic {
       width: 20px;
@@ -139,7 +134,6 @@ export default {
       border-radius: 50%;
       vertical-align: middle;
     }
-
     .user-center {
       font-size: 14px;
       color: #808b91;
@@ -147,7 +141,6 @@ export default {
     }
   }
 }
-
 // 底部文字部分
 #footer {
   width: 100%;

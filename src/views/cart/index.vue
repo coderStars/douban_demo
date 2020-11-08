@@ -40,13 +40,13 @@
           <div class="cart-content">
             <ul class="tag">
               <li>
-                <a href="##">全部商品<span>(3)</span></a>
+                <a href="##">全部商品<span>({{allSkuNum}})</span></a>
               </li>
               <li>
                 <a href="##">豆瓣豆品<span>(0)</span></a>
               </li>
               <li>
-                <a href="##">豆瓣书店<span>(3)</span></a>
+                <a href="##">豆瓣书店<span>({{allSkuNum}})</span></a>
               </li>
               <li>
                 <a href="##">豆瓣时间<span>(0)</span></a>
@@ -82,122 +82,49 @@
             <div class="shop-card-list">
               <div class="shop-card">
                 <div class="shop-header">
-                  <el-checkbox v-model="checked"></el-checkbox>
+                  <el-checkbox :value="allSelect" :checked="allSelect" @click="changeAllSelect"></el-checkbox>
                   <div class="shop-name">豆瓣书店</div>
                   <a href="##" class="sobot-icon">联系客服</a>
                 </div>
                 <div class="shop-content-wrap">
                   <div class="shop-content">
                     <table class="mui-table">
-                      <tr class="item-row">
+                      <tr class="item-row" v-for="(cartItem, index) in cartInfo" :key="cartItem.id">
                         <td class="checkout">
-                          <el-checkbox v-model="checked"></el-checkbox>
+                          <el-checkbox v-model="cartItem.isChecked"></el-checkbox>
                         </td>
                         <td class="cart-item-info">
                           <div class="cart-item">
                             <div class="item-pic">
                               <a href="##">
-                                <img src="./images/p25414357.jpg" />
+                                <img :src="cartItem.imgUrl" />
                               </a>
                             </div>
                             <div class="cart-item-detail">
                               <p class="item-title">
-                                <a href="##">极乐鸟与蜗牛</a>
+                                <a href="##">{{cartItem.skuName}}</a>
                               </p>
                             </div>
                           </div>
                         </td>
                         <td class="cart-item-price">
-                          <span class="item-price">¥46.4</span>
+                          <span class="item-price">¥{{cartItem.skuPrice}}</span>
                         </td>
                         <td class="cart-item-picker">
                           <div class="item-number-picker">
                             <div class="mui-number-picker">
-                              <i class="prev">-</i>
-                              <span class="current-number">1</span>
-                              <i class="plus">+</i>
+                              <!-- cursor: not-allowed; -->
+                              <i class="prev" @click="changeCartNum(cartItem.skuNum,cartItem.id,-1)">-</i>
+                              <span class="current-number">{{cartItem.skuNum}}</span>
+                              <i class="plus" @click="changeCartNum(cartItem.skuNum,cartItem.id,+1)">+</i>
                             </div>
                           </div>
                         </td>
                         <td class="cart-item-amount">
-                          <span class="item-amount">¥46.4</span>
+                          <span class="item-amount">¥{{cartItem.skuPrice * cartItem.skuNum }}</span>
                         </td>
                         <td class="cart-item-actions">
-                          <button type="button">×</button>
-                        </td>
-                      </tr>
-                      <tr class="item-row">
-                        <td class="checkout">
-                          <el-checkbox v-model="checked"></el-checkbox>
-                        </td>
-                        <td class="cart-item-info">
-                          <div class="cart-item">
-                            <div class="item-pic">
-                              <a href="##">
-                                <img src="./images/p25414357.jpg" />
-                              </a>
-                            </div>
-                            <div class="cart-item-detail">
-                              <p class="item-title">
-                                <a href="##">极乐鸟与蜗牛</a>
-                              </p>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="cart-item-price">
-                          <span class="item-price">¥46.4</span>
-                        </td>
-                        <td class="cart-item-picker">
-                          <div class="item-number-picker">
-                            <div class="mui-number-picker">
-                              <i class="prev">-</i>
-                              <span class="current-number">1</span>
-                              <i class="plus">+</i>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="cart-item-amount">
-                          <span class="item-amount">¥46.4</span>
-                        </td>
-                        <td class="cart-item-actions">
-                          <button type="button">×</button>
-                        </td>
-                      </tr>
-                      <tr class="item-row">
-                        <td class="checkout">
-                          <el-checkbox v-model="checked"></el-checkbox>
-                        </td>
-                        <td class="cart-item-info">
-                          <div class="cart-item">
-                            <div class="item-pic">
-                              <a href="##">
-                                <img src="./images/p25414357.jpg" />
-                              </a>
-                            </div>
-                            <div class="cart-item-detail">
-                              <p class="item-title">
-                                <a href="##">极乐鸟与蜗牛</a>
-                              </p>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="cart-item-price">
-                          <span class="item-price">¥46.4</span>
-                        </td>
-                        <td class="cart-item-picker">
-                          <div class="item-number-picker">
-                            <div class="mui-number-picker">
-                              <i class="prev">-</i>
-                              <span class="current-number">1</span>
-                              <i class="plus">+</i>
-                            </div>
-                          </div>
-                        </td>
-                        <td class="cart-item-amount">
-                          <span class="item-amount">¥46.4</span>
-                        </td>
-                        <td class="cart-item-actions">
-                          <button type="button">×</button>
+                          <button type="button" @click="deleteCartItem">×</button>
                         </td>
                       </tr>
                     </table>
@@ -214,11 +141,11 @@
           <div class="cart-footer">
             <div class="cart-actions">
               <div class="select-all">
-                <el-checkbox v-model="checked"></el-checkbox>
+                <el-checkbox :value="allSelect" :checked="allSelect" @change="changeAllSelect"></el-checkbox>
                 <span class="select-all-text">全选</span>
               </div>
               <div class="quantity-all">
-                已选择<b>3</b>件商品
+                已选择<b>{{checkedNum}}</b>件商品
               </div>
             </div>
             <div class="cart-info">
@@ -226,7 +153,7 @@
                 <div class="amount">
                   <div class="freight">不含运费</div>
                   <div class="amount-text">合计：</div>
-                  <div class="price">¥ 132</div>
+                  <div class="price">¥ {{allMoney}}</div>
                 </div>
               </div>
               <button>结算</button>
@@ -239,13 +166,62 @@
 </template>
 
 <script>
+import {mapState,mapGetters, mapMutations} from 'vuex'
+
 export default {
   name: "Cart",
   data() {
     return {
-      checked: true
+      
     };
-  }
+  },
+  beforeCreate() {
+    window.addEventListener('beforeunload',()=>{
+      sessionStorage.setItem('cartList', JSON.stringify(this.$store.state.cart.cartInfoList))
+    })
+
+  },
+  mounted() {
+    let cartList = sessionStorage.getItem('cartList')
+    if(cartList){
+      this.$store.commit('changeCartList', JSON.parse(cartList))
+    }
+  },
+  computed: {
+    ...mapGetters(['allSelect','allSkuNum']),
+    ...mapState({
+      cartInfo : state => state.cart.cartInfoList
+    }),
+    checkedNum() {
+      return this.cartInfo.reduce((prev, cartItem) => {
+        if (cartItem.isChecked) {
+          prev += cartItem.skuNum;
+        }
+        return prev;
+      }, 0);
+    },
+    allMoney() {
+      return this.cartInfo.reduce((prev, cartItem) => {
+        if (cartItem.isChecked) {
+          prev += cartItem.skuNum * cartItem.skuPrice;
+        }
+        return prev;
+      }, 0);
+    },
+  },
+  methods: {
+    
+    //修改购物车商品数量
+    changeCartNum(skuNum,id,disNum){
+      this.$store.commit('updateSkuNum',{id,disNum})
+    },
+    changeAllSelect(){
+      this.$store.commit('allChecked')
+    },
+    deleteCartItem(id){
+      this.$store.commit('delCartList',id)
+    }
+  },
 };
 </script>
 
@@ -351,7 +327,6 @@ export default {
   }
   .market-wrapper {
     width: 1100px;
-    height: 600px;
     margin: 0 auto;
     margin-bottom: 130px;
     .cart-header {
@@ -429,6 +404,7 @@ export default {
           }
         }
         .shop-card-list {
+          height: 650px;
           .shop-card {
             .shop-header {
               margin: 10px 0;
@@ -459,7 +435,6 @@ export default {
             }
             .shop-content-wrap {
               .shop-content {
-                height: 360px;
                 border: 1px solid #ececec;
                 margin-bottom: 15px;
                 .mui-table {
@@ -534,13 +509,12 @@ export default {
                         height: 30px;
                         .prev {
                           color: #d8d8d8;
-                          cursor: not-allowed;
                           height: 30px;
                           line-height: 30px;
                           background-color: #f9f9f9;
-                          color: #ababac;
+                          color: #3e3a39;
+                          cursor: pointer;
                           width: 30px;
-
                           font-size: 14px;
                           display: inline-block;
                         }
@@ -606,7 +580,6 @@ export default {
       height: 100%;
       margin: 0 auto;
       font-size: 16px;
-
       .cart-footer {
         overflow: visible;
         min-height: 40px;

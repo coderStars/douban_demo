@@ -2,7 +2,7 @@
   <div>
     <Search></Search>
     <div class="wrapper">
-      <h1>第111天：人质手记</h1>
+      <h1>{{booksInfo.name}}</h1>
       <!-- 内容区 -->
       <div class="content">
         <!-- 左侧 -->
@@ -14,14 +14,14 @@
                 <!-- 封面 -->
                 <div class="mainpic">
                   <a href="##">
-                    <img src="./images/bk_img.jpg" title="点击查看大图" />
+                    <img :src="booksInfo.imgUrl" title="点击查看大图" />
                   </a>
                 </div>
                 <!-- 书籍基本信息 -->
                 <div class="info">
                   <span
                     >作者:
-                    <a href="##">[澳大利亚]格里高利·大卫·罗伯兹</a> </span
+                    <a href="##">{{booksInfo.author}}</a> </span
                   ><br />
                   <span>出版社: 北京联合出版公司</span><br />
                   <span>出品方: <a href="##">磨铁图书</a></span
@@ -32,7 +32,7 @@
                   ><br />
                   <span>出版年: 2020-9</span><br />
                   <span>页数: 328</span><br />
-                  <span>定价: 48.00元</span><br />
+                  <span>定价: {{booksInfo.skuPrice}}元</span><br />
                   <span>装帧: 平装</span><br />
                   <span>丛书: <a href="##">项塔兰套装</a></span
                   ><br />
@@ -553,9 +553,111 @@
         </div>
         <!-- 右侧 -->
         <div class="aside">
-          <router-link to="/cart">加入购物车、
-          </router-link>
+          <!-- 广告 -->
+          <div class="ad">
+            <img src="./images/atguigu.jpg" alt="">
+          </div>
+          <div class="gray_ad">
+            <h2>在豆瓣书店有售  · · · · · ·</h2>
+            <div class="market-banner">
+              <span class="title">
+                纸质版&nbsp;
+              </span>
+              <span class="price"> 134.40元&nbsp;</span>
+              <span class="price"> <s>168.00元</s></span>
+              <br>
+              <span class="promotion-info">满48元包邮</span>
+              <div class="actions">
+                <a href="##" class="buy-btn">去购买</a>
+                <a href="javascript:;" class="cart-btn" @click="addCartList(booksInfo,isClicked = true)">{{isClicked ? '已加入购物车' : '加入购物车'}}</a>
+                <!-- <router-link class="cart-btn" to="/cart">加入购物车</router-link> -->
+              </div>
+            </div>
+          </div>
+          <div class="buyinfo">
+            <div class="buyinfo-printed">
+              <h2>当前版本有售  · · · · · ·</h2>
+              <ul class="current-list">
+                <li class="price-btn-wrapper">
+                  <div class="vendor-name">
+                    <a href="##">京东商城</a>
+                  </div>
+                  <div class="impression">
+                    <div class="price-wrapper">
+                      <a href="##">57.40元</a>
+                      <s>￥58.0</s>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <a href="##">购买纸质书</a>
+                  </div>
+                </li>
+                <li class="price-btn-wrapper">
+                  <div class="vendor-name">
+                    <a href="##">京东商城</a>
+                  </div>
+                  <div class="impression">
+                    <div class="price-wrapper">
+                      <a href="##">57.40元</a>
+                      <s>￥58.0</s>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <a href="##">购买纸质书</a>
+                  </div>
+                </li>
+                <li class="price-btn-wrapper">
+                  <div class="vendor-name">
+                    <a href="##">京东商城</a>
+                  </div>
+                  <div class="impression">
+                    <div class="price-wrapper">
+                      <a href="##">57.40元</a>
+                      <s>￥58.0</s>
+                    </div>
+                  </div>
+                  <div class="cell">
+                    <a href="##">购买纸质书</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <h2>以下豆列推荐  · · · · · · </h2>
+          <div class="db-doulist">
+            <ul>
+              <li>
+                <a href="##">豆瓣高分书籍是否名实相符</a>
+                <span class="pl">(无心恋战)</span>
+              </li>
+              <li>
+                <a href="##">豆瓣高分书籍是否名实相符</a>
+                <span class="pl">(无心恋战)</span>
+              </li>
+              <li>
+                <a href="##">豆瓣高分书籍是否名实相符</a>
+                <span class="pl">(无心恋战)</span>
+              </li>
+              <li>
+                <a href="##">豆瓣高分书籍是否名实相符</a>
+                <span class="pl">(无心恋战)</span>
+              </li>
+            </ul>
+          </div>
+          <div class="article-card">
+            <img src="./images/ad01.jpg" alt="">
+          </div>
+          <h2>谁读这本书?</h2>
+
+          <!-- 广告 -->
+          <div class="ad">
+            <img src="./images/atguigu.jpg" alt="">
+          </div>
         </div>
+      </div>
+      <!-- 底部广告 -->
+      <div class="img_wrap">
+        <img src="./images/gg.jpg">
       </div>
     </div>
   </div>
@@ -563,10 +665,34 @@
 
 <script>
 import Search from "@/components/Search/Search";
+
+import { getBooksInfo } from "@/api/booksInfo";
+
+import {mapMutations} from 'vuex'
 export default {
   name: "BooksInfo",
-  components: {
-    Search
+  Search,
+  data() {
+    return {
+      booksInfo: {},
+      isClicked: false
+    };
+  },
+  mounted() {
+    let {id} = this.$route.params
+    this.getBookInfo(id);
+  },
+  methods: {
+    ...mapMutations(['addCartList']),
+    async getBookInfo(id) {
+      let resultData = await getBooksInfo(id);
+      if (resultData.code === 2000) {
+        this.booksInfo = resultData.data;
+      } else {
+        console.log(resultData);
+        
+      }
+    }
   }
 };
 </script>
@@ -574,7 +700,6 @@ export default {
 <style scoped lang="less">
 .wrapper {
   width: 1040px;
-  height: 3500px;
   font-size: 13px;
   margin: 0 auto;
   h1 {
@@ -1003,8 +1128,151 @@ export default {
     .aside {
       width: 300px;
       height: 3000px;
-      background-color: pink;
+      h2 {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #0b7c2a;
+        font-weight: normal;
+      }
+      .gray_ad {
+        padding: 18px 16px;
+        background: #f6f6f2;
+        line-height: 1.62;
+        .market-banner {
+          .price {
+            s {
+              font-size: 11px;
+              color: rgba(0, 0, 0, 0.5);
+            }
+          }
+          .promotion-info {
+            display: block;
+            color: rgba(0, 0, 0, 0.5);
+            line-height: 1;
+          }
+          .actions {
+            margin-top: 15px;
+            a:hover {
+              opacity: 0.8;
+            }
+            .buy-btn {
+              display: inline-block;
+              margin-right: 8px;
+              padding: 5px 12px;
+              border-radius: 2px;
+              color: #fff;
+              line-height: 1;
+              text-align: center;
+              box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.07);
+              background-color: #f39300;
+            }
+            .cart-btn {
+              color: #eb9108;
+              background: #fff;
+              display: inline-block;
+              margin-right: 8px;
+              padding: 5px 12px;
+              border-radius: 2px;
+              font-size: 13px;
+              line-height: 1;
+              text-align: center;
+              box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.07);
+            }
+          }
+        }
+      }
+      .ad {
+        margin-bottom: 20px;
+        img {
+          width: 100%;
+          height: 256px;
+        }
+      }
+      .buyinfo {
+        width: 268px;
+        padding: 18px 16px;
+        margin-bottom: 20px;
+        background: #f6f6f2;
+        .buyinfo-printed {
+          margin-bottom: 15px;
+          .current-list {
+            margin-bottom: 27px;
+            li {
+              display: flex;
+              padding: 12px 0;
+              line-height: 21px;
+              border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+              a {
+                color: #3377aa;
+              }
+              a:hover {
+                background-color: #3377aa;
+                color: white;
+              }
+              .vendor-name {
+                flex: 0 0 33%;
+              }
+              .impression {
+                margin-right: 25px;
+                .price-wrapper {
+                  s {
+                    padding-left: 2px;
+                    font-size: 11px;
+                    color: rgba(0, 0, 0, 0.25);
+                  }
+                }
+              }
+              .cell {
+                a {
+                  color: #eb9108;
+                  display: inline-block;
+                  height: 20px;
+                  background: #fff;
+                  border-radius: 3px;
+                  font-size: 12px;
+                  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.07);
+                  padding: 0 3px;
+                }
+                a:hover {
+                  background: #eb9108;
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+      .db-doulist {
+        margin-bottom: 40px;
+        line-height: 1.6;
+        ul {
+          li {
+            border-bottom: 1px dashed #ddd;
+            padding: 4px 0;
+            a {
+              color: #3377aa;
+            }
+            a:hover {
+              background-color: #3377aa;
+              color: white;
+            }
+          }
+        }
+      }
+      .article-card {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 15px;
+        img {
+          height: 100px;
+          width: 300px;
+        }
+      }
     }
+  }
+  .img_wrap {
+    width: 100%;
+    height: 100px;
   }
 }
 </style>
