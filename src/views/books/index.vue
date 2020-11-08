@@ -1229,8 +1229,10 @@ export default {
         slidesPerColumnFill: "column",
         slidesPerView: 5, //一行显示3个
         slidesPerColumn: 2, //显示2行
+
         // slidesPerView : 5,
         slidesPerGroup: 5,
+
         // 如果需要前进后退按钮
         navigation: {
           nextEl: ".next",
@@ -1267,8 +1269,10 @@ export default {
             slidesPerColumnFill: "column",
             slidesPerView: 5, //一行显示3个
             slidesPerColumn: 2, //显示2行
+
             // slidesPerView : 5,
             slidesPerGroup: 5,
+
             // 如果需要前进后退按钮
             navigation: {
               nextEl: ".next",

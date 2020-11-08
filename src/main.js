@@ -22,6 +22,7 @@ import {MessageBox,Message,Pagination,Checkbox,Button} from 'element-ui'
 Vue.use(Checkbox)
 Vue.use(Pagination)
 Vue.use(Button)
+Vue.use(Pagination);
 
 Vue.prototype.$msgbox = MessageBox;
 Vue.prototype.$alert = MessageBox.alert;

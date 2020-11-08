@@ -11,6 +11,8 @@ const MusicItem = () => import('@/views/music/childRouter/MusicItem.vue')
 const SongComment = () => import('@/views/music/childRouter/SongComment.vue')
 const Books = () => import('@/views/books/index.vue')
 const Doupin = () => import('@/views/doupin/index.vue')
+const AllShop = () => import('@/views/doupin/allShop/index.vue')
+const Maindoupin = () => import('@/views/doupin/maindoupin/index.vue')
 const Login = () => import('@/views/login/Login.vue')
 const CommonCity = () => import('@/views/commonCity/index.vue')
 const Home = () => import('@/views/commonCity/home/index.vue')
@@ -18,8 +20,7 @@ const RecentActivity = () => import('@/views/commonCity/recentActivity/index.vue
 const ShowDetail = () => import('@/views/showDetail')
 const BooksInfo = () => import('@/views/booksInfo/index.vue')
 const Cart = () => import('@/views/cart/index.vue')
-const AllShop = () => import('@/views/doupin/allShop/index.vue')
-const Maindoupin = () => import('@/views/doupin/maindoupin/index.vue')
+const NovelTag = ()=> import('@/views/novelTag/index.vue')
 
 
 const routes = [{
@@ -110,34 +111,17 @@ const routes = [{
     path: '/doupin',
     component: Doupin,
     children: [{
-        path: 'allshop',
-        component: AllShop,
-    },
-    {
-        path: 'maindoupin',
-        component: Maindoupin,
-    },
-    {
-        path: '/doupin',
-        component: Doupin,
-        children: [
-            {
-                path: 'allshop',
-                component: AllShop,
-            },
-            {
-                path: 'maindoupin',
-                component: Maindoupin,
-            },
-            {
-                path: '/',
-                redirect: '/doupin/maindoupin'
-            }
-        ],
-        meta: {
-            isShow: false
+            path: 'allshop',
+            component: AllShop,
+        },
+        {
+            path: 'maindoupin',
+            component: Maindoupin,
+        },
+        {
+            path: '/',
+            redirect: '/doupin/maindoupin'
         }
-    }
     ],
     meta: {
         isShow: false

@@ -164,19 +164,19 @@
                 <div class="online-read-or-audio">
                   <a href="##">
                     <img src="./images/icon_douban_read.png" >
-                    <span>豆瓣阅读></span></span>
+                    <span>豆瓣阅读></span>
                   </a>
                 </div>
                 <div class="online-read-or-audio">
                   <a href="##">
                     <img src="./images/icon_migubook.png" >
-                    <span>咪咕阅读></span></span>
+                    <span>咪咕阅读></span>
                   </a>
                 </div>
                 <div class="online-read-or-audio">
                   <a href="##">
                     <img src="./images/icon_dedao.png" >
-                    <span>得到></span></span>
+                    <span>得到></span>
                   </a>
                 </div>
               </div>
@@ -850,7 +850,6 @@ export default {
             span {
               display: inline-block;
               font: 12px Helvetica, Arial, sans-serif;
-              float: left;
               font-size: 28px;
               color: #494949;
               width: 46.5px;
