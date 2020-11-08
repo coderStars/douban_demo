@@ -22,9 +22,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
-@import 'assets/css/reset.css';
-body,html {
+@import "assets/css/reset.css";
+body,
+html {
   width: 100%;
   #app {
     width: 100%;

@@ -21,112 +21,110 @@ const Cart = () => import('@/views/cart/index.vue')
 const AllShop = () => import('@/views/doupin/allShop/index.vue')
 const Maindoupin = () => import('@/views/doupin/maindoupin/index.vue')
 
-const routes = [
-    {
-        path: '/showdetail',
-        component: ShowDetail
+
+const routes = [{
+    path: '/showdetail',
+    component: ShowDetail
+}, {
+    path: '/booksinfo',
+    component: BooksInfo
+},
+{
+    path: '/cart',
+    component: Cart,
+    meta: { isHide: true }
+},
+{
+    path: '/',
+    component: Books,
+    meta: { isShow: true }
+},
+{
+    path: '/movie',
+    component: Movie,
+    name: 'movie',
+    meta: {
+        isShow: true
+    },
+},
+{
+    path: '/music',
+    component: Music,
+    meta: {
+        isShow: true
+    },
+    children: [
+        {
+            path: '/',
+            component: MusicIndex
+        },
+        {
+            path: 'topic',
+            component: MusicTopics
+        },
+        {
+            path: 'rank',
+            component: MusicRank
+        },
+        {
+            path: 'songComment',
+            component: SongComment
+        },
+        {
+            path: 'musicitem',
+            component: MusicItem
+        }
+    ]
+},
+{
+    path: '/books',
+    component: Books,
+    meta: {
+        isShow: true
+    },
+},
+{
+    path: '/commoncity',
+    component: CommonCity,
+    children: [
+        {
+            path: 'home',
+            component: Home
+        },
+        {
+            path: 'recentactivity',
+            component: RecentActivity
+        },
+        {
+            path: '/commoncity',
+            redirect: '/commoncity/home'
+        }
+    ]
+},
+{
+    path: '/login',
+    component: Login
+},
+{
+    path: '/doupin',
+    component: Doupin,
+    children: [{
+        path: 'allshop',
+        component: AllShop,
     },
     {
-        path: '/booksinfo',
-        component: BooksInfo
-    },
-    {
-        path: '/cart',
-        component: Cart,
-        meta: { isHide: true }
+        path: 'maindoupin',
+        component: Maindoupin,
     },
     {
         path: '/',
-        component: Books,
-        meta: { isShow: true }
-    },
-    {
-        path: '/movie',
-        component: Movie,
-        name: 'movie',
-        meta: {
-            isShow: true
-        },
-    },
-    {
-        path: '/music',
-        component: Music,
-        meta: {
-            isShow: true
-        },
-        children: [
-            {
-                path: '/',
-                component: MusicIndex
-            },
-            {
-                path: 'topic',
-                component: MusicTopics
-            },
-            {
-                path: 'rank',
-                component: MusicRank
-            },
-            {
-                path: 'songComment',
-                component: SongComment
-            },
-            {
-                path: 'musicitem',
-                component: MusicItem
-            }
-        ]
-    },
-    {
-        path: '/books',
-        component: Books,
-        meta: {
-            isShow: true
-        },
-    },
-    {
-        path: '/commoncity',
-        component: CommonCity,
-        children: [
-            {
-                path: 'home',
-                component: Home
-            },
-            {
-                path: 'recentactivity',
-                component: RecentActivity
-            },
-            {
-                path: '/commoncity',
-                redirect: '/commoncity/home'
-            }
-        ]
-    },
-    {
-        path: '/login',
-        component: Login
-    },
-    {
-        path: '/doupin',
-        component: Doupin,
-        children: [
-            {
-                path: 'allshop',
-                component: AllShop,
-            },
-            {
-                path: 'maindoupin',
-                component: Maindoupin,
-            },
-            {
-                path: '/',
-                redirect: '/doupin/maindoupin'
-            }
-        ],
-        meta: {
-            isShow: false
-        }
+        redirect: '/doupin/maindoupin'
     }
+    ],
+    meta: {
+        isShow: false
+    }
+}
 ]
 
 const originPush = VueRouter.prototype.push

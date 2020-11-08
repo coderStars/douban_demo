@@ -39,7 +39,7 @@
     <div id="footer">
       <div class="footer-wrapper">
         <div class="footer-left">
-          <img src="./img/ia_500000009.jpg" alt="" />
+          <img src="./img/ia_100000018051.png" alt="" />
           <div class="info">
             <p>
               © 2020 market.douban.com, all rights reserved 北京豆瓣豆品文化有限公司
@@ -66,7 +66,7 @@
         <div class="footer-right">
           <div class="footer-kits">
             <a class="item" id="openMarketInfo">
-              <img class="shopping" src="./img/ia_500000009.jpg" alt="" />
+              <img class="shopping" src="./img/icon1.jpg" alt="" />
               <span>购物说明</span>
             </a>
             <a
@@ -74,11 +74,11 @@
               target="_blank"
               href="https://www.douban.com/doumail/write?to=119347429"
             >
-              <img class="yijian" src="./img/ia_500000009.jpg" alt="" />
+              <img class="yijian" src="./img/icon2.jpg" alt="" />
               <span>意见反馈</span>
             </a>
             <a class="item" href="https://bizpage.douban.com/business/">
-              <img class="shangwu" src="./img/ia_500000009.jpg" alt="" />
+              <img class="shangwu" src="./img/icon3.jpg" alt="" />
               <span>商务合作</span>
             </a>
           </div>
@@ -175,19 +175,34 @@ export default {
         font-size: 12px;
         line-height: 21px;
         text-align: left;
+        p{
+          a{
+            color: #D1CABF;
+          }
+        }
       }
     }
     .footer-right {
       margin-top: 20px;
-      margin-right: 30px;
+      display: flex;
+      width: 424.58px;
+      height: 27px;
+      // justify-content: end;
+      
       .item {
         img {
           width: 20px;
           vertical-align: middle;
+          padding-left: 50px;
         }
         span {
-          font-size: 20px;
+          font-size: 14px;
           vertical-align: middle;
+          height: 18px;
+          line-height: 18px;
+          color: #D1CABF;
+          
+
         }
       }
     }

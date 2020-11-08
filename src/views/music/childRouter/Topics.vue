@@ -177,7 +177,6 @@ export default {
 .topicContainer {
   width: 1040px;
   margin: 0 auto;
-
   .topImg {
     overflow: hidden;
     img {
@@ -185,7 +184,6 @@ export default {
       // vertical-align: middle;
     }
   }
-
   .separator-section {
     height: 20px;
     margin: 40px 0;
@@ -195,7 +193,6 @@ export default {
     color: #999;
     background: url("../../../assets/img/music/separator.png") no-repeat center;
   }
-
   .topicsContent {
     display: flex;
     flex-wrap: wrap;
@@ -214,7 +211,6 @@ export default {
           width: 100%;
         }
       }
-
       .itemCenter {
         width: 100%;
         height: 63px;
@@ -223,12 +219,10 @@ export default {
         padding: 20px 15px;
         color: #666;
         font-size: 13px;
-
         p {
           line-height: 23px;
         }
       }
-
       .itemBottom {
         span {
           padding-left: 20px;
@@ -237,18 +231,15 @@ export default {
       }
     }
   }
-
   #bottom-section {
     margin: 25px auto 70px;
     position: relative;
-
     #more-section {
       width: 250px;
       text-align: center;
       border-bottom: 1px solid #999;
       margin: auto;
       line-height: 0;
-
       #more {
         padding: 0 10px;
           background: #FFF;
@@ -260,7 +251,6 @@ export default {
       }
       
     }
-
     #to-top {
         position: absolute;
         top: -6px;

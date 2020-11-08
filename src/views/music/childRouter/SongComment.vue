@@ -313,7 +313,6 @@ export default {
     font-weight: bold;
     line-height: 1.1;
   }
-
   .commentContent {
     display: flex;
     justify-content: space-between;
@@ -330,25 +329,21 @@ export default {
             color: #111;
             cursor: default;
           }
-
           a:after {
             color: #111;
             content: "/";
             padding: 0 4px;
           }
         }
-
         li:last-child {
           a:after {
             content: "";
           }
         }
       }
-
       .review-list {
         margin-top: 20px;
         width: 675px;
-
         .review-item {
           padding: 20px 0px;
           // background-color: #ddd;
@@ -365,7 +360,6 @@ export default {
               height: 75px;
             }
           }
-
           .musicInfo {
             .infoTop {
               display: flex;
@@ -381,7 +375,6 @@ export default {
                 line-height: 27px;
               }
             }
-
             .infoCenter {
               margin-top: 10px;
               margin-bottom: 10px;
@@ -390,14 +383,12 @@ export default {
                 color: #3377aa;
               }
             }
-
             .infoBottom {
               p {
                 font-size: 13px;
                 line-height: 1.62;
               }
             }
-
             .bottomIcon {
               a {
                 display: inline-block;
@@ -415,10 +406,8 @@ export default {
         }
       }
     }
-
     .otherInfo {
       width: 300px;
-
       p {
         line-height: 1.62;
         color: #999;

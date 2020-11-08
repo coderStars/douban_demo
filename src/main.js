@@ -11,7 +11,6 @@ import Header from '@/components/Header/Header.vue'
 import Search from '@/components/Search/Search.vue'
 import Footer from '@/components/Footer/Footer.vue'
 
-
 Vue.component('Header',Header)
 Vue.component('Search',Search)
 Vue.component('Footer',Footer)

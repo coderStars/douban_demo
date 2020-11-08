@@ -71,7 +71,14 @@
                 <th class="cart-item-actions"></th>
               </tr>
             </table>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 09060976c3cb68fe30b32f74aadf65a3188e67dc
+>>>>>>> mati
             <div class="shop-card-list">
               <div class="shop-card">
                 <div class="shop-header">

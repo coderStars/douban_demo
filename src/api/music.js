@@ -21,7 +21,7 @@ export const getmusicRank = () => {
     method: 'get'
   })
 }
-export const getAllShopList = () => {
+export const getAllShopDataList = () => {
   return request({
     url: '/getAllShops',
     method: 'get'
