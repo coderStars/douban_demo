@@ -16,9 +16,11 @@
                         <div>其他</div>
                     </div>
                     <div class="more">
+<!-- 
                         <a href="##">
                             更多» 
-                        </a>
+                        </a> -->
+                        <router-link to="/commoncity/recentactivity">更多»</router-link>
                         </div>
                 </div>
                 <!-- 内容区 -->
@@ -120,6 +122,9 @@
 <script>
 export default {
   name: 'ShowContent',
+  mounted() {
+    console.log('111111111111')
+  },
 }
 </script>
 

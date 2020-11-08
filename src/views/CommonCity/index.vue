@@ -1,7 +1,7 @@
 <template>
   <div>
       <!-- 头部 -->
-        <!-- <CityHeader></CityHeader> -->
+        <CityHeader></CityHeader>
 
       <!-- 主体 -->
         <body>

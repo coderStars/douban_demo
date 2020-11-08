@@ -8,10 +8,10 @@
                     <!-- 类别选项卡 -->
                     <div class="type">
                         <div class="hot" v-if="type">最热</div>
-                        <div v-for="(item,index) in type" :key="index">{{item}}</div>
+                        <div v-for="(item,index) in type" :key="index" @click="changeType">{{item}}</div>
                     </div>
                     <div class="more">
-                        <a href="##">
+                        <a href="##" @click="toRecent">
                             更多» 
                         </a>
                         </div>
@@ -20,11 +20,11 @@
                 <div class="showContent">
                     <!-- 单个内容的展示 -->
                     <div class="showItem" v-for="item in commonCityData.showDetail" :key="item.id">
-                        <img :src="item.imgUrl" alt="">
+                        <img :src="item.imgUrl" alt="" @click="toShowDetail(item.id)">
                         <!-- 描述 -->
                         <div class="desc">
-                            <p class="name">
-                                <a href="##">
+                            <p class="name" >
+                                <a href="##" @click="toShowDetail(item.id)">
                                     {{item.name}}
                                 </a>
                                </p>
@@ -49,6 +49,19 @@ export default {
       ...mapState({
            commonCityData: state => state.city.commonCityData
       })
+  },
+  methods: {
+      //点击改变类型
+      changeType(){
+          this.$router.go(0)
+      },
+      //点击跳转到ShowDetail页面
+      toShowDetail(id){
+          this.$router.push('/showDetail?id='+id)
+      },
+      toRecent(){
+          this.$router.push('/commoncity/recentactivity')
+      }
   },
 }
 </script>

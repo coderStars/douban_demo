@@ -7,7 +7,6 @@ const instance = axios.create({
     // 基础公共地址
     baseURL: '/api',
     timeout: 20000,
-
 })
 // 请求拦截器
 instance.interceptors.request.use(config => {

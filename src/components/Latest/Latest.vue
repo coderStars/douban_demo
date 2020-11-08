@@ -4,15 +4,15 @@
     <div class="fliter-wp">
       <div class="left">
         <h2 class="active">最近热门电影</h2>
-        <span class="hot"><a href="#">热门</a></span>
         <ul class="tag-list">
-          <li class="tag-item"><a href="#">最新</a></li>
-          <li class="tag-item"><a href="#">豆瓣高分</a></li>
-          <li class="tag-item"><a href="#">冷门佳片</a></li>
-          <li class="tag-item"><a href="#">华语</a></li>
-          <li class="tag-item"><a href="#">欧美</a></li>
-          <li class="tag-item"><a href="#">韩国</a></li>
-          <li class="tag-item"><a href="#">日本</a></li>
+          <li
+            v-for="(tagItem, index) in tag"
+            :key="index"
+            class="tag-item"
+            :class="currentTag * 1 === index ? 'hot' : ''"
+          >
+            <a href="#" @click="changeTag(index)">{{ tagItem }}</a>
+          </li>
         </ul>
       </div>
 
@@ -20,169 +20,25 @@
     </div>
 
     <!-- 轮播图 -->
-    <div class="swiper-container contentContainer">
-      <div class="swiper-wrapper slide-container">
-        <li class="slide-page swiper-slide">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>
-              <img
-                src="../../assets/images/movie/index/ic_new.png"
-                alt="新电影"
-                class="new"
-              />
-              八佰&nbsp;<span>7.7</span>
-            </p>
+    <div class="swiper-container bannerList-container">
+      <ul class="swiper-wrapper bannerList">
+        <li
+          v-for="listItem in list"
+          :key="listItem.id"
+          class="swiper-slide bannerItem"
+        >
+          <!-- 电影 -->
+          <a href="#">
+            <img :src="listItem.cover" alt="封面" />
+            <div class="title-wp">
+              <span :class="listItem.is_new && 'new'"></span>
+              {{ listItem.title }}
+              <span class="grade">{{ listItem.rate }}</span>
+            </div>
           </a>
+          <!-- 描述 -->
         </li>
-        <li class="slide-page swiper-slide">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>
-              <img
-                src="../../assets/images/movie/index/ic_new.png"
-                alt="新电影"
-                class="new"
-              />
-              八佰&nbsp;<span>7.7</span>
-            </p>
-          </a>
-        </li>
-        <li class="slide-page swiper-slide">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>
-              <img
-                src="../../assets/images/movie/index/ic_new.png"
-                alt="新电影"
-                class="new"
-              />
-              八佰&nbsp;<span>7.7</span>
-            </p>
-          </a>
-        </li>
-        <li class="slide-page swiper-slide">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>
-              <img
-                src="../../assets/images/movie/index/ic_new.png"
-                alt="新电影"
-                class="new"
-              />
-              八佰&nbsp;<span>7.7</span>
-            </p>
-          </a>
-        </li>
-        <li class="slide-page swiper-slide">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>
-              <img
-                src="../../assets/images/movie/index/ic_new.png"
-                alt="新电影"
-                class="new"
-              />
-              八佰&nbsp;<span>7.7</span>
-            </p>
-          </a>
-        </li>
-        <li class="slide-page swiper-slide">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>
-              <img
-                src="../../assets/images/movie/index/ic_new.png"
-                alt="新电影"
-                class="new"
-              />
-              八佰&nbsp;<span>7.7</span>
-            </p>
-          </a>
-        </li>
-        <li class="slide-page swiper-slide">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>
-              <img
-                src="../../assets/images/movie/index/ic_new.png"
-                alt="新电影"
-                class="new"
-              />
-              八佰&nbsp;<span>7.7</span>
-            </p>
-          </a>
-        </li>
-        <li class="slide-page swiper-slide">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>
-              <img
-                src="../../assets/images/movie/index/ic_new.png"
-                alt="新电影"
-                class="new"
-              />
-              八佰&nbsp;<span>7.7</span>
-            </p>
-          </a>
-        </li>
-        <li class="slide-page swiper-slide">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>
-              <img
-                src="../../assets/images/movie/index/ic_new.png"
-                alt="新电影"
-                class="new"
-              />
-              八佰&nbsp;<span>7.7</span>
-            </p>
-          </a>
-        </li>
-        <li class="slide-page swiper-slide">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>
-              <img
-                src="../../assets/images/movie/index/ic_new.png"
-                alt="新电影"
-                class="new"
-              />
-              八佰&nbsp;<span>7.7</span>
-            </p>
-          </a>
-        </li>
-      </div>
+      </ul>
       <!-- 如果需要分页器 -->
       <div class="swiper-pagination"></div>
 
@@ -190,151 +46,58 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
-
-    <!-- 内容区 -->
-    <div class="contentContainer">
-      <!-- 电影 -->
-      <ul class="slide-container">
-        <li class="slide-page">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>
-              <img
-                src="../../assets/images/movie/index/ic_new.png"
-                alt="新电影"
-                class="new"
-              />
-              八佰&nbsp;<span>7.7</span>
-            </p>
-          </a>
-        </li>
-        <li class="slide-page">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>来自深渊：深魂的黎明 &nbsp;<span>7.7</span></p>
-          </a>
-        </li>
-        <li class="slide-page">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>来自深渊：深魂的黎明 &nbsp;<span>7.7</span></p>
-          </a>
-        </li>
-        <li class="slide-page">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>八佰&nbsp;<span>7.7</span></p>
-          </a>
-        </li>
-        <li class="slide-page">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>八佰&nbsp;<span>7.7</span></p>
-          </a>
-        </li>
-        <li class="slide-page">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>八佰&nbsp;<span>7.7</span></p>
-          </a>
-        </li>
-        <li class="slide-page">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>八佰&nbsp;<span>7.7</span></p>
-          </a>
-        </li>
-        <li class="slide-page">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>八佰&nbsp;<span>7.7</span></p>
-          </a>
-        </li>
-        <li class="slide-page">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>八佰&nbsp;<span>7.7</span></p>
-          </a>
-        </li>
-        <li class="slide-page">
-          <a href="#" class="item">
-            <img
-              src="../../assets/images/movie/index/p2615992304.webp"
-              alt=""
-            />
-            <p>八佰&nbsp;<span>7.7</span></p>
-          </a>
-        </li>
-      </ul>
-
-      <!-- 小圆点 -->
-      <div class="pointerContainer">
-        <a href="#"><div class="pointer-pre"></div></a>
-        <ul class="pointerList">
-          <li class="pointer"><a href="#"></a></li>
-          <li class="pointer"><a href="#"></a></li>
-          <li class="pointer"><a href="#"></a></li>
-          <li class="pointer"><a href="#"></a></li>
-          <li class="pointer"><a href="#"></a></li>
-        </ul>
-        <a href="#"><div class="pointer-next"></div></a>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
-// import Swiper from 'swiper'
+import Swiper from "swiper";
+import { mapActions, mapState } from "vuex";
 export default {
   name: "Latest",
-  // mounted() {
-  //   var mySwiper = new Swiper(".swiper-container", {
-  //     direction: "vertical", // 垂直切换选项
-  //     loop: true, // 循环模式选项
+  props: ["currentTag", "tag", "tagType", "list"],
+  data() {
+    return {};
+  },
+  mounted() {},
 
-  //     // 如果需要分页器
-  //     pagination: {
-  //       el: ".swiper-pagination",
-  //     },
+  methods: {
+    // 修改当前tag
+    changeTag(index) {
+      this.$emit("update:currentTag", index);
+    },
+  },
+  computed: {},
 
-  //     // 如果需要前进后退按钮
-  //     navigation: {
-  //       nextEl: ".swiper-button-next",
-  //       prevEl: ".swiper-button-prev",
-  //     },
+  // watch: {
+  //   list: {
+  //     immediate: true,
+  //     handler() {
+  //       let _this = this;
+  //       this.$nextTick(() => {
+  //         new Swiper(".bannerList-container", {
+  //           direction: "horizontal", // 垂直切换选项
+  //           loop: true, // 循环模式选项
+  //           // 在carousel mode下定义slides的数量多少为一组
+  //           // slidesPerView : 10,
+  //           // slidesPerGroup : 10,
+  //           // 在slide之间设置距离（单位px）。
+  //           // spaceBetween : 40,
+  //           slidesPerView: 5, //一行显示3个
+  //           slidesPerColumn: 2, //显示2行
+  //           // 如果需要分页器
+  //           pagination: {
+  //             el: ".swiper-pagination",
+  //           },
 
-  //     // 如果需要滚动条
-  //     scrollbar: {
-  //       el: ".swiper-scrollbar",
+  //           // 如果需要前进后退按钮
+  //           navigation: {
+  //             nextEl: ".swiper-button-next",
+  //             prevEl: ".swiper-button-prev",
+  //           },
+  //         });
+  //       });
   //     },
-  //   });
+  //   },
   // },
 };
 </script>
@@ -358,13 +121,7 @@ export default {
       font-size: 16px;
       font-weight: normal;
     }
-    .hot {
-      margin-left: 12px;
-      a {
-        font-size: 13px;
-        color: #111;
-      }
-    }
+
     .tag-list {
       display: flex;
       width: 450px;
@@ -381,6 +138,17 @@ export default {
           &:active {
             color: #ffffff;
             background: rgb(255, 153, 51);
+          }
+        }
+      }
+      .tag-item.hot {
+        margin-left: 12px;
+        a {
+          font-size: 13px;
+          color: #111;
+          &:hover {
+            background: transparent;
+            color: #111 !important;
           }
         }
       }
@@ -403,33 +171,30 @@ export default {
     }
   }
 }
-// 内容容器
-.contentContainer {
-  margin-bottom: 40px;
 
-  .slide-container {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    .slide-page {
-      width: 115px;
-      // width: 20%;
-      text-align: center;
-      .item {
+// 轮播图
+.bannerList-container {
+  .bannerList {
+    .bannerItem {
+      a {
+        width: 115px;
+        color: #37a;
         img {
-          width: 100%;
-        }
-        p {
           width: 115px;
-          height: 44px;
-          margin-top: 5px;
-          color: #3377aa;
-          font-size: 13px;
+        }
+        .title-wp {
+          width: 115px;
+          text-align: center;
           .new {
+            position: relative;
+            top: 3px;
+            display: inline-block;
             width: 16px;
+            height: 16px;
+            background-image: url("https://img3.doubanio.com/f/movie/caa8f80abecee1fc6f9d31924cef8dd9a24c7227/pics/movie/ic_new.png");
+            background-size: 16px 16px;
           }
-          span {
+          .grade {
             color: #e09015;
           }
         }

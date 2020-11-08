@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const Movie = () => import('@/views/movie/index.vue')
+const MovieIndex = () => import('@/views/movie/movieIndex/MovieIndex.vue')
+const Explore = () => import('@/views/movie/explore/Explore.vue')
 const Music = () => import('@/views/music/Music.vue')
 const MusicIndex = () => import('@/views/music/childRouter/Index.vue')
 const MusicTopics = () => import('@/views/music/childRouter/Topics.vue')
@@ -47,6 +49,25 @@ const routes = [{
     meta: {
         isShow: true
     },
+    children: [
+        {
+            path: '/',
+            component: MovieIndex
+        },
+        {
+            // path: '/movie/explore',
+            path: 'explore/:type?',
+            component: Explore,
+            name: 'explore'
+        },
+
+        /**
+         * 二级路由
+         * 1. index 不写前面的'/' 会自动添加父级的路由
+         * 2. 如果加 / 只能是/，而不能在后面再加其他东西, 再加其他东西就匹配不到路由了，就只会匹配二级的路由
+         * 3. 加/ 连同父类的path也得写上才可以匹配到
+         */
+    ]
 },
 {
     path: '/music',
