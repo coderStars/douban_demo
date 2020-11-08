@@ -13,13 +13,16 @@
           <!-- 轮播图 -->
           <div class="swiper-container">
               <div class="header">
-                  <h3>新加入主办方</h3>
+                  <h2>新加入主办方</h2>
+                  <div class="common">
                       <!-- 如果需要分页器 -->
-                    <div class="swiper-pagination"></div>
+                      <div class="swiper-pagination"></div>
 
-                    <!-- 如果需要导航按钮 -->
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                      <!-- 如果需要导航按钮 -->
+                      <div class="swiper-button-prev"></div>
+                      <div class="swiper-button-next"></div>
+                  </div>
+                    
               </div>
 
             <div class="swiper-wrapper">
@@ -152,7 +155,9 @@ export default {
             navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
-            }
+            },
+            slidesPerView :6,
+            slidesPerGroup : 6,
  
         })        
       }
@@ -170,11 +175,38 @@ export default {
       h1 {
         font-size: 26px;
         padding-bottom: 30px;
+        color: #494949;
       }
       .swiper-container {
         position: relative;
         width: 675px;
         height: 184px;
+        margin-bottom: 40px;
+        .header{
+          width: 675px;
+          height: 46px;
+          margin-bottom: 10px;
+          background-color: pink;
+          h2{
+            float: left;
+            width: 90px;
+            height: 22px;
+            margin-bottom: 24px;
+            font-size: 15px;
+            color: #333;
+            font-weight: normal;  
+          }
+          .common{
+            float: right;
+            .swiper-pagination{
+              background-color: pink;
+              color: aqua;
+            }
+          }
+
+
+        }
+        .swiper-wrapper
         .swiper-slide{
             width: 110px;
             height: 128px;
@@ -196,31 +228,8 @@ export default {
             }
 
         }
-        .swiper-pagination{
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-        .swiper-button-prev{
-            position: absolute;
-            left: 575px;
-            top: 0;
-            z-index: 999;
-            width: 100px;
-            height: 100px;
-            // background-color: red;
-            background: url('./images/next.gif') no-repeat 10px 0px; 
-        }
-        .swiper-button-next{
-            position: absolute;
-            left: 575px;
-            top: 0;
-            z-index: 999;
-            width: 100px;
-            height: 100px;
-            // background-color: red;
-            background: url('./images/next.gif') no-repeat 10px 0px; 
-        }
+        
+        
       }
     }
   }
