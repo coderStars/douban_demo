@@ -68,6 +68,7 @@
 import { mapMutations } from "vuex";
 export default {
   name: "Header",
+<<<<<<< HEAD
   data() {
     return {
       active: false,
@@ -95,6 +96,8 @@ export default {
       this.active = false;
     }
   }
+=======
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
 };
 </script>
 

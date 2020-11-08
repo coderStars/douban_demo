@@ -5,10 +5,16 @@ Vue.use(VueRouter)
 const Movie = () => import('@/views/movie/index.vue')
 const Music = () => import('@/views/music/Music.vue')
 const MusicIndex = () => import('@/views/music/childRouter/Index.vue')
+<<<<<<< HEAD
 const MusicTopics = () => import('@/views/music/childRouter/Topics.vue')
 const MusicRank = () => import('@/views/music/childRouter/Rank.vue')
 const MusicItem = () => import('@/views/music/childRouter/MusicItem.vue')
 const SongComment = () => import('@/views/music/childRouter/SongComment.vue')
+=======
+const MusicTopics= () => import('@/views/music/childRouter/Topics.vue')
+const MusicRank= () => import('@/views/music/childRouter/Rank.vue')
+const SongComment= () => import('@/views/music/childRouter/SongComment.vue')
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
 const Books = () => import('@/views/books/index.vue')
 const Doupin = () => import('@/views/doupin/index.vue')
 const CommonCity = () => import('@/views/CommonCity/index.vue')
@@ -64,10 +70,13 @@ const routes = [
             {
                 path: 'songComment',
                 component: SongComment
+<<<<<<< HEAD
             },
             {
                 path: 'musicitem',
                 component: MusicItem
+=======
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
             }
         ]
     },
@@ -134,6 +143,7 @@ const router = new VueRouter({
     routes
 
 })
+<<<<<<< HEAD
 
 router.beforeEach((to, from, next) => {
     let userInfo = JSON.parse(localStorage.getItem('userInfo'))
@@ -148,4 +158,6 @@ router.beforeEach((to, from, next) => {
     }
 })
 
+=======
+>>>>>>> 79235f8faf04a75c4b7321f324c75d45fe659ef1
 export default router
