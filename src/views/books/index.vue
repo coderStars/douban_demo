@@ -1183,7 +1183,7 @@ export default {
     // 声明式导航跳转新书速递传参数
     toBooksInfo(item) {
       this.$router.push({
-        path: "/boosinfo",
+        path: "/booksinfo",
         query: {
           id: item.id,
         },

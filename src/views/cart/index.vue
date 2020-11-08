@@ -71,14 +71,7 @@
                 <th class="cart-item-actions"></th>
               </tr>
             </table>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 09060976c3cb68fe30b32f74aadf65a3188e67dc
->>>>>>> mati
             <div class="shop-card-list">
               <div class="shop-card">
                 <div class="shop-header">
@@ -167,7 +160,6 @@
 
 <script>
 import {mapState,mapGetters, mapMutations} from 'vuex'
-
 export default {
   name: "Cart",
   data() {
@@ -179,7 +171,6 @@ export default {
     window.addEventListener('beforeunload',()=>{
       sessionStorage.setItem('cartList', JSON.stringify(this.$store.state.cart.cartInfoList))
     })
-
   },
   mounted() {
     let cartList = sessionStorage.getItem('cartList')
