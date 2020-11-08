@@ -200,7 +200,6 @@ export default {
   name: 'showDetail',
   components:{
     CityHeader,
-
   },
   data() {
     return {
@@ -244,7 +243,6 @@ export default {
         //   return this.avtiveRules.slice(6,7)
         // },
   },
-
 }
 </script>
 
@@ -325,7 +323,6 @@ export default {
             .two{
                 padding-left: 2px;
             }  
-
           }
           .share{
             display: flex;
@@ -366,7 +363,6 @@ export default {
             }
           }
         }
-
       }
       // 前往购票
       .buy{
@@ -392,7 +388,6 @@ export default {
               padding: 10px 20px;
               background: #4db4be;
             }
-
           }
         }
       }
@@ -536,7 +531,6 @@ export default {
           margin: 0 0 12px 0;
           font: 15px Arial, Helvetica, sans-serif;
           line-height: 150%
-
         }
       }
       // 广告2
@@ -590,7 +584,6 @@ export default {
             height: 35px;
           }
         }
-
       }
       // jojo的奇妙冒险
       .jojoContainer{
@@ -626,7 +619,6 @@ export default {
           height: 250px;
         }
       }
-
     }
   }
 }
