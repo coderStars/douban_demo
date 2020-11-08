@@ -4,12 +4,14 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 import user from './user'
+import books from './books'
 
 
 //2、向外暴露一个Store对象
 export default new Vuex.Store({
   modules:{
-    user
+    user,
+    books
   }
 })
 

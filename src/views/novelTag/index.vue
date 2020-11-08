@@ -7,842 +7,208 @@
     <div class="typeArea">
       <div class="container">
         <!-- 标题头部 -->
-        <h1 class="title">豆瓣图书标签：小说</h1>
+        <h1 class="title">豆瓣图书标签：{{ bookList.labelName }}</h1>
         <!-- 小说内容 -->
         <div class="content">
           <!-- 左边布局 -->
           <div class="leftContainer">
             <div class="booksTextContainer">
+              <!-- 右上角排序 -->
               <div class="rightSort">
                 <span
                   >综合排序 / <a href="">按出版日期排序</a> /
                   <a href="">按评价排序</a></span
                 >
               </div>
+              <!-- 书信息  （动态数据已渲染完成）-->
               <div class="booksText">
-                <div class="booksInfo">
+                <div
+                  class="booksInfo"
+                  v-for="item in bookList.booksInfo"
+                  :key="item.novelId"
+                >
                   <div class="booksImg">
                     <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
+                      <img :src="item.imgUrl" alt="" />
                     </a>
                   </div>
                   <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
+                    <h2>
+                      <a href="">{{ item.booksTitle }}</a>
+                    </h2>
                     <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
+                      {{ item.author }}
                     </div>
                     <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
+                      <span class="span1">{{ item.pentagram }}</span>
+                      <span class="span2">{{ item.PF }}</span>
+                      <span class="span3">{{ item.EvaluationNumber }}</span>
                     </div>
                     <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
+                      {{ item.booksContent }}
                     </p>
                     <div class="buyBooks">
                       <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
+                        <span
+                          ><a href="">{{ item.wantRead }}</a></span
+                        >
+                        <span
+                          ><a href="">{{ item.reading }}</a></span
+                        >
+                        <span
+                          ><a href="">{{ item.readed }}</a></span
+                        >
                       </div>
                       <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
+                        <span
+                          ><a href="">{{ item.doubanPurchase }} </a></span
+                        >
                         <span>
                           <a href="">
-                            <span>加入购书单</span>
+                            <span>{{ item.addBookCart }}</span>
                           </a>
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="booksInfo">
-                  <div class="booksImg">
-                    <a href="">
-                      <img
-                        src="../../assets/images/books/label/ia_100000000.jpg"
-                        alt=""
-                      />
-                    </a>
-                  </div>
-                  <div class="booksIntroduce">
-                    <h2><a href="">活着</a></h2>
-                    <div class="author">
-                      余华 / 作家出版社 / 2012-8-1 / 20.00元
-                    </div>
-                    <div class="PF">
-                      <span class="span1">☆☆☆☆☆</span>
-                      <span class="span2">9.4</span>
-                      <span class="span3">(530631人评价)</span>
-                    </div>
-                    <p>
-                      《活着(新版)》讲述了农村人福贵悲惨的人生遭遇。福贵本是个阔少爷，可他嗜赌如命，终于赌光了家业，一贫如洗。他的父亲被他活活气死，母亲则在穷困中患了重病，福贵...
-                    </p>
-                    <div class="buyBooks">
-                      <div class="like">
-                        <span><a href="">想读</a></span>
-                        <span><a href="">在读</a></span>
-                        <span><a href="">读过</a></span>
-                      </div>
-                      <div class="buy">
-                        <span><a href="">在豆瓣购买 </a></span>
-                        <span>
-                          <a href="">
-                            <span>加入购书单</span>
-                          </a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                <!-- 分页器 -->
+                <div class="paginationContainer">
+                  <el-pagination
+                    @size-change="handleSizeChange"
+                    @current-change="handleCurrentChange"
+                    :page-size="21"
+                    :pager-count="11"
+                    layout="prev, pager, next"
+                    :total="7980"
+                    prev-text="<前页"
+                    next-text="后页>"
+                  >
+                  </el-pagination>
                 </div>
               </div>
             </div>
           </div>
-          <div class="rightContainer"></div>
+          <!-- 右边布局 -->
+          <div class="rightContainer">
+            <!-- 广告 -->
+            <div class="advertising">
+              <a href="">
+                <img
+                  src="https://img1.doubanio.com/view/dale-online/dale_ad/public/55d11c20710e288.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="h2Label">
+              <h2>
+                <span>相关的标签</span
+                >&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+              </h2>
+            </div>
+            <div class="tags-list">
+              <a href="/tag/外国文学">外国文学</a>
+              <a href="/tag/言情">言情</a>
+              <a href="/tag/美国">美国</a>
+              <a href="/tag/文学">文学</a>
+              <a href="/tag/爱情">爱情</a>
+              <a href="/tag/中国">中国</a>
+              <a href="/tag/中国文学">中国文学</a>
+              <a href="/tag/英国">英国</a>
+            </div>
+            <!-- input输入框 -->
+            <form action="/tag/" method="GET" class="formInput">
+              <input
+                class="search_text"
+                type="text"
+                size="24"
+                maxlength="36"
+                title="去其他标签"
+                value=""
+              />
+              <input class="butt" type="submit" value="进入" />
+            </form>
+            <br />
+            <br />
+            <p>
+              >
+              <a href="https://book.douban.com/tag/">浏览全部图书标签</a>
+            </p>
+            <!-- 最受关注的小说 -->
+            <div class="focusBooks">
+              <h2>最受关注的书-小说</h2>
+              <div class="booksImgContainer">
+                <div class="booksImg">
+                  <a href="">
+                    <img
+                      src="https://img9.doubanio.com/view/subject/s/public/s2364685.jpg"
+                      alt=""
+                    />
+                  </a>
+                  <a href="">
+                    <span>故事新编</span>
+                  </a>
+                </div>
+                <div class="booksImg">
+                  <a href="">
+                    <img
+                      src="https://img9.doubanio.com/view/subject/s/public/s33500305.jpg"
+                      alt=""
+                    />
+                  </a>
+                  <a href="">
+                    <span>彷徨</span>
+                  </a>
+                </div>
+                <div class="booksImg">
+                  <a href="">
+                    <img
+                      src="https://img2.doubanio.com/view/subject/s/public/s4696893.jpg"
+                      alt=""
+                    />
+                  </a>
+                  <a href="">
+                    <span>呐喊</span>
+                  </a>
+                </div>
+                <div class="booksImg">
+                  <a href="">
+                    <img
+                      src="https://img3.doubanio.com/view/subject/s/public/s33718940.jpg"
+                      alt=""
+                    />
+                  </a>
+                  <a href="">
+                    <span>夜晚的潜水艇</span>
+                  </a>
+                </div>
+                <div class="booksImg">
+                  <a href="">
+                    <img
+                      src="https://img9.doubanio.com/view/subject/s/public/s9069944.jpg"
+                      alt=""
+                    />
+                  </a>
+                  <a href="">
+                    <span>中国小说史略</span>
+                  </a>
+                </div>
+                <div class="booksImg">
+                  <a href="">
+                    <img
+                      src="https://img1.doubanio.com/view/subject/s/public/s5813979.jpg"
+                      alt=""
+                    />
+                  </a>
+                  <a href="">
+                    <span>喜宝</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <br />
+            <br />
+          </div>
         </div>
       </div>
     </div>
@@ -850,10 +216,40 @@
 </template>
 
 <script>
+import {
+  getBookHotList,
+  getNewsBooksList,
+  getBooksClassification,
+} from "@/api/books.js";
+
+import { mapState } from "vuex";
 export default {
   name: "NovelTag",
+  mounted() {
+    this.getBooksClassification();
+  },
+  methods: {
+    handleSizeChange(val) {
+      // console.log(`每页 ${val} 条`);
+    },
+    handleCurrentChange(val) {
+      // console.log(`当前页: ${val}`);
+    },
+    async getBooksClassification() {
+      let { labelId, labelName } = this.$route.query;
+      console.log(labelId, labelName);
+      let result = await getBooksClassification();
+      this.bookList = result.find((item) => {
+        return item.labelId == labelId;
+      });
+      // console.log(result.find(item => item.labelId == labelId));
+      // this.bookList = result
+      console.log(this.bookList);
+    },
+  },
   data() {
     return {
+      bookList: [],
       buttomTextList: [
         "购书单",
         "电子图书",
@@ -864,6 +260,12 @@ export default {
       ],
     };
   },
+
+  computed: {
+    ...mapState({
+      booksClassification: (state) => state.books.booksClassification,
+    }),
+  },
 };
 </script>
 
@@ -871,20 +273,23 @@ export default {
 .typeArea {
   width: 1040px;
   margin: 0 auto;
-  height: 9999px;
+  // height: 9999px;
   //   background: yellowgreen;
   .container {
     width: 100%;
+    // 标题头部
     .title {
       height: 28px;
       font-size: 26px;
       padding-bottom: 15px;
     }
+    // 内容
     .content {
-    //   height: 999px;
-    //   background: violet;
+      //   height: 999px;
+      //   background: violet;
       display: flex;
       justify-content: space-between;
+      // 左边布局
       .leftContainer {
         width: 675px;
         height: 100%;
@@ -892,7 +297,7 @@ export default {
         // background: turquoise;
         .booksTextContainer {
           width: 675px;
-        //   height: 100%;
+          //   height: 100%;
           .rightSort {
             height: 21px;
             position: relative;
@@ -1003,6 +408,10 @@ export default {
                       font-size: 13px;
                       color: #3377aa;
                     }
+                    a:hover {
+                      background-color: #3377aa;
+                      color: white;
+                    }
                   }
                 }
               }
@@ -1010,10 +419,91 @@ export default {
           }
         }
       }
+      // 右边布局
       .rightContainer {
         width: 300px;
-        height: 100%;
-        background: saddlebrown;
+        // height: 9999px;
+        // background: saddlebrown;
+        // 广告
+        .advertising {
+          height: 256px;
+          // background: #3377aa;
+          margin-bottom: 20px;
+        }
+        .h2Label {
+          h2 {
+            width: 300px;
+            height: 24px;
+            margin-bottom: 12px;
+            color: #111;
+            font-size: 16px;
+            font-weight: normal;
+          }
+        }
+        .tags-list {
+          width: 300px;
+          height: 45px;
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 20px;
+          a {
+            height: 22.4px;
+            margin-right: 20px;
+            font-size: 13px;
+            color: #3377aa;
+          }
+        }
+        // input输入框
+        .formInput {
+          input {
+            border: 2px #878787 solid;
+            margin-right: 3px;
+            box-sizing: border-box;
+            border-radius: 3px;
+          }
+        }
+        p {
+          margin-top: 14px;
+          margin-bottom: 30px;
+          a {
+            font-size: 14px;
+            color: #3377aa;
+          }
+        }
+        // 最受关注的书
+        .focusBooks {
+          height: 378px;
+          margin-bottom: 20px;
+          h2 {
+            height: 24px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: #111;
+            line-height: 150%;
+            font-weight: normal;
+          }
+          .booksImgContainer {
+            height: 342px;
+            width: 350px;
+            display: flex;
+            flex-wrap: wrap;
+            .booksImg {
+              width: 85px;
+              height: 150px;
+              margin-right: 22px;
+              margin-bottom: 10px;
+              a {
+                color: #3377aa;
+                font-size: 13px;
+                text-align: center;
+                img {
+                  width: 85px;
+                  height: 132px;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
