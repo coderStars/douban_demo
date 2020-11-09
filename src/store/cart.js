@@ -31,7 +31,7 @@ const mutations = {
       state.cartInfoList[itemIndex].skuNum += disNum
     }
   },
-
+  //删除购物车里的摸个商品
   delCartList(state, id) {
     const itemIndex = state.cartInfoList.findIndex(item => item.id === id)
     if (window.confirm('您确定要删除所有选中的商品吗')) {

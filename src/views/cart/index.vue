@@ -95,7 +95,7 @@
                             </div>
                             <div class="cart-item-detail">
                               <p class="item-title">
-                                <a href="##">{{cartItem.skuName}}</a>
+                                <a href="##">{{cartItem.name}}</a>
                               </p>
                             </div>
                           </div>
@@ -175,10 +175,12 @@ export default {
 
   },
   mounted() {
-    let cartList = sessionStorage.getItem('cartList')
-    if(cartList){
+    console.log(this.cartInfo)
+    if(!this.cartInfo.length){ // Vuex有数据
+      let cartList = sessionStorage.getItem('cartList')
       this.$store.commit('changeCartList', JSON.parse(cartList))
     }
+    
   },
   computed: {
     ...mapGetters(['allSelect','allSkuNum']),
@@ -211,6 +213,7 @@ export default {
     changeAllSelect(){
       this.$store.commit('allChecked')
     },
+    //删除购物车
     deleteCartItem(id){
       this.$store.commit('delCartList',id)
     }
