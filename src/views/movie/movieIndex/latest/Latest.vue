@@ -58,7 +58,7 @@
           <!-- 描述 -->
         </li>
       </ul>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-pagination pagination"></div>
 
       <!-- 分页及导航 -->
       <div class="slide-ctrl">
@@ -110,7 +110,7 @@ export default {
               loop: true, // 循环模式选项
               // 在carousel mode下定义slides的数量多少为一组。
               // slidesPerView : 10,
-              slidesPerGroup : 5,
+              slidesPerGroup : 10,
               slidesPerView: 5,
               slidesPerColumn: 2,
               slidesPerColumnFill: "row",
@@ -239,6 +239,8 @@ export default {
 
   // 轮播图
   .bannerList-container {
+    position: relative;
+    text-align: center;
     .bannerList {
       .bannerItem {
         a {
@@ -267,13 +269,21 @@ export default {
         }
       }
     }
+    .pagination{
+      position: absolute;
+      width: 80px;
+      bottom: 5px;
+      right: 50px;
+      overflow:hidden;
+      height: 20px;
+    }
     .slide-ctrl {
       position: relative;
       width: 150px;
       height: 23px;
       margin-bottom: 13px;
       text-align: center;
-      margin: 0 auto;
+      margin: 20px auto 0;
       .swiper-pagination {
         margin-left: 30px;
       }
