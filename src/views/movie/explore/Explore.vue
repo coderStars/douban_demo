@@ -3,15 +3,16 @@
   <div class="Container">
     <!-- 左边区域 -->
     <div class="article">
-      <h1>选电影</h1>
+      <h1>{{type === 'tv'? '热门电视据':'选电影'}}</h1>
       <div class="filter">
         <ul class="tagList">
           <li
             class="tagItem"
             v-for="(tagItem, index) in tagList.tags"
             :key="index"
+            @click="tagChange(tagItem)"
           >
-            <a href="#">{{ tagItem }}</a>
+            <a href="javascript:;" :class="currentTag === tagItem? 'active':''">{{ tagItem }}</a>
           </li>
         </ul>
 
@@ -28,66 +29,7 @@
         </div>
       </div>
 
-      <div class="list-wp">
-        <ul class="list">
-          <li class="item">
-            <a href="#">
-              <img src="../../../assets/images/movie/index/p2610225002.jpg" alt="" />
-              <div class="title-wp">
-                <span class="new"></span> 半泽直树 <span class="grade">9.0</span>
-              </div>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#">
-              <img src="../../../assets/images/movie/index/p2610225002.jpg" alt="" />
-              <div class="title-wp">
-                <span class="new"></span> 半泽直树 <span class="grade">9.0</span>
-              </div>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#">
-              <img src="../../../assets/images/movie/index/p2610225002.jpg" alt="" />
-              <div class="title-wp">
-                <span class="new"></span> 半泽直树 <span class="grade">9.0</span>
-              </div>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#">
-              <img src="../../../assets/images/movie/index/p2610225002.jpg" alt="" />
-              <div class="title-wp">
-                <span class="new"></span> 半泽直树 <span class="grade">9.0</span>
-              </div>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#">
-              <img src="../../../assets/images/movie/index/p2610225002.jpg" alt="" />
-              <div class="title-wp">
-                <span class="new"></span> 半泽直树 <span class="grade">9.0</span>
-              </div>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#">
-              <img src="../../../assets/images/movie/index/p2610225002.jpg" alt="" />
-              <div class="title-wp">
-                <span class="new"></span> 半泽直树 <span class="grade">9.0</span>
-              </div>
-            </a>
-          </li>
-          <li class="item">
-            <a href="#">
-              <img src="../../../assets/images/movie/index/p2610225002.jpg" alt="" />
-              <div class="title-wp">
-                <span class="new"></span> 半泽直树 <span class="grade">9.0</span>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <router-view></router-view>
     </div>
     <!-- 右边区域 -->
     <div class="aside">
@@ -135,82 +77,31 @@ export default {
   data() {
     return {
       tagList: [],
+      currentTag: '热门',
     };
   },
   mounted() {
-    // 获取热门电影
-    this.getMovieHot();
-    // 获取最新电影
-    this.getMovieNew();
-    // 获取豆瓣高分电影
-    this.getMovieHigh();
-    // 获取冷门佳片电影
-    this.getMovieCold();
-    // 获取华语电影
-    this.getMovieCh();
-    // 获取欧美电影
-    this.getMovieEur();
-    // 获取韩国电影
-    this.getMovieKor();
-    // 获取日本电影
-    this.getMovieJan();
-
     // 获取标签
     this.getMovieTag();
     this.getTvTag();
   },
   methods: {
-    getMovieHot() {
-      this.$store.dispatch("getMovieHot");
-    },
-    getMovieNew() {
-      this.$store.dispatch("getMovieNew");
-    },
-    getMovieHigh() {
-      this.$store.dispatch("getMovieHigh");
-    },
-    getMovieCold() {
-      this.$store.dispatch("getMovieCold");
-    },
-    getMovieCh() {
-      this.$store.dispatch("getMovieCh");
-    },
-    getMovieEur() {
-      this.$store.dispatch("getMovieEur");
-    },
-    getMovieKor() {
-      this.$store.dispatch("getMovieKor");
-    },
-    getMovieJan() {
-      this.$store.dispatch("getMovieJan");
-    },
-
     getMovieTag() {
       this.$store.dispatch("getMovieTag");
     },
     getTvTag() {
       this.$store.dispatch("getTvTag");
     },
+
+    tagChange(tagItem){
+      this.currentTag = tagItem
+      this.$router.push(`/movie/explore/detail?tags=${tagItem}`)
+    },
+
+    
   },
   computed: {
     ...mapState({
-      // 获取热门电影
-      movieHot: (state) => state.movie.movieHot,
-      // 获取最新电影
-      movieNew: (state) => state.movie.movieNew,
-      // 获取豆瓣高分电影
-      movieHigh: (state) => state.movie.movieHigh,
-      // 获取冷门佳片电影
-      movieCold: (state) => state.movie.movieCold,
-      // 获取华语电影
-      movieCh: (state) => state.movie.movieCh,
-      // 获取欧美电影
-      movieEur: (state) => state.movie.movieEur,
-      // 获取韩国电影
-      movieKor: (state) => state.movie.movieKor,
-      // 获取日本电影
-      movieJan: (state) => state.movie.movieJan,
-
       // 获取标签
       movieTag: (state) => state.movie.movieTag,
       tvTag: (state) => state.movie.tvTag,
@@ -218,11 +109,10 @@ export default {
   },
 
   watch: {
-    movieTag: {
+    tvTag: {
       immediate: true,
       handler() {
-        let { type } = this.$route.params;
-        console.log(type);
+        let { type } = this.$route.query;
         if (type === "tv") {
           this.tagList = this.tvTag;
         } else {
@@ -279,6 +169,10 @@ export default {
             }
           }
         }
+        .tagItem.active{
+          background: #4b8ccb;
+          color: #fff;
+        }
       }
       .tool {
         border-top: 1px solid #eee;
@@ -306,45 +200,10 @@ export default {
       }
     }
 
-    .list-wp {
-      width: 700px;
-      font-size: 13px;
-      line-height: 1.62;
-      .list{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        .item{
-          width: 20%;
-          a{
-            width: 115px;
-            color: #37a;
-            img{
-              width: 115px;
-            }
-            .title-wp{
-              width: 115px;
-              text-align: center;
-              .new{
-                position: relative;
-                top: 3px;
-                display: inline-block;
-                width: 16px;
-                height: 16px;
-                background-image: url('https://img3.doubanio.com/f/movie/caa8f80abecee1fc6f9d31924cef8dd9a24c7227/pics/movie/ic_new.png');
-                background-size: 16px 16px;
-              }
-              .grade{
-                color: #e09015;
-              }
-            }
-          }
-        }
-      }
-    }
   }
   .aside {
     width: 300px;
+    margin-left: 30px;
     a {
       color: #37a;
       text-decoration: none;

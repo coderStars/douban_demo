@@ -8,7 +8,8 @@
         <a href="https://book.douban.com"></a>
       </div>
       <div class="searchInpt">
-        <input v-model="keyword" class="inptFirst" :placeholder="inpText" />
+        <input v-if="logoIndex === 1" v-model="keyword" class="inptFirst" placeholder="搜索电影、电视剧、综艺、影人" />
+        <input v-else v-model="keyword" class="inptFirst" :placeholder="inpText" />
         <input
           type="submit"
           class="inp-btn"
@@ -18,11 +19,43 @@
         />
       </div>
     </div>
-    <ul class="bottomList">
+    <ul v-if="logoIndex === 1" class="bottomList">
+      <li>
+        <a href="javascript:;">我看</a>
+      </li>
+      <li>
+        <a href="javascript:;">影讯&购票</a>
+      </li>
+      <li>
+        <router-link to="/movie/explore/detail?tags=%E7%83%AD%E9%97%A8">选电影</router-link>
+      </li>
+      <li>
+        <router-link to="/movie/explore/detail?type=tv&tags=热门">电视剧</router-link>
+      </li>
+      <li>
+        <a href="javascript:;">排行榜</a>
+      </li>
+      <li>
+        <a href="javascript:;">分类</a>
+      </li>
+      <li>
+        <a href="javascript:;">影评</a>
+      </li>
+      <li>
+        <a href="javascript:;">2019年度榜单</a>
+      </li>
+      <li>
+        <a href="javascript:;">2019书影音报告</a>
+      </li>
+      <a class="movieannual" href="javascript:;"><img src="../../assets/images/movie/index/annual_2019.png" alt=""></a>
+    </ul>
+    <ul v-else class="bottomList">
       <li v-for="(item, index) in buttomText" :key="index">
         <router-link :to="item.path">{{ item.name }}</router-link>
       </li>
     </ul>
+
+    
   </div>
 </template>
 
@@ -186,6 +219,19 @@ export default {
     li:first-child {
       margin-left: 0;
     }
+    .movieannual{
+      position: absolute;
+      width: 186px;
+      height: 96px;
+      top: 10px;
+      left: 50%;
+      margin-left: 200px;
+      img{
+        width: 186px;
+        height: 96px;
+      }
+    }
+        
   }
 }
 </style>

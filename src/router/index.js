@@ -4,6 +4,7 @@ Vue.use(VueRouter)
 
 const Movie = () => import('@/views/movie/index.vue')
 const MovieIndex = () => import('@/views/movie/movieIndex/MovieIndex.vue')
+const List = () => import('@/views/movie/explore/list/List.vue')
 const Explore = () => import('@/views/movie/explore/Explore.vue')
 const Music = () => import('@/views/music/Music.vue')
 const MusicIndex = () => import('@/views/music/childRouter/Index.vue')
@@ -49,9 +50,21 @@ const routes = [
             },
             {
                 // path: '/movie/explore',
-                path: 'explore/:type?',
+                path: 'explore',
                 component: Explore,
-                name: 'explore'
+                name: 'explore',
+                children: [
+                    {
+                        path: 'detail',
+                        component: List,
+                        props:(route)=> ({name:route.query.tags})
+                    },
+                    {
+                        path:'/movie/explore',
+                        redirect:'/movie/explore/detail'
+                    }
+
+                ]
             },
 
             /**

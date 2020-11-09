@@ -20,7 +20,8 @@
     </div>
 
     <!-- 轮播图 -->
-    <div class="swiper-container bannerList-container">
+    <div v-show="isShow">有值了</div>
+    <div v-if="isShow" class="swiper-container bannerList-container">
       <ul class="swiper-wrapper bannerList">
         <li
           v-for="listItem in list"
@@ -46,6 +47,8 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
+
+    <div v-show="!isShow" class="loading">加载中...</div>
   </div>
 </template>
 
@@ -56,7 +59,9 @@ export default {
   name: "Latest",
   props: ["currentTag", "tag", "tagType", "list"],
   data() {
-    return {};
+    return {
+      isShow: false,
+    };
   },
   mounted() {},
 
@@ -68,37 +73,38 @@ export default {
   },
   computed: {},
 
-  // watch: {
-  //   list: {
-  //     immediate: true,
-  //     handler() {
-  //       let _this = this;
-  //       this.$nextTick(() => {
-  //         new Swiper(".bannerList-container", {
-  //           direction: "horizontal", // 垂直切换选项
-  //           loop: true, // 循环模式选项
-  //           // 在carousel mode下定义slides的数量多少为一组
-  //           // slidesPerView : 10,
-  //           // slidesPerGroup : 10,
-  //           // 在slide之间设置距离（单位px）。
-  //           // spaceBetween : 40,
-  //           slidesPerView: 5, //一行显示3个
-  //           slidesPerColumn: 2, //显示2行
-  //           // 如果需要分页器
-  //           pagination: {
-  //             el: ".swiper-pagination",
-  //           },
+  watch: {
+    list: {
+      immediate: true,
+      deep: true,
+      handler() {
+        // 如果还没有获取到list
+        if (list) {
+          this.$set(this, "isShow", true);
+          new Swiper(".bannerList-container", {
+            direction: "vertical", // 垂直切换选项
+            loop: true, // 循环模式选项
 
-  //           // 如果需要前进后退按钮
-  //           navigation: {
-  //             nextEl: ".swiper-button-next",
-  //             prevEl: ".swiper-button-prev",
-  //           },
-  //         });
-  //       });
-  //     },
-  //   },
-  // },
+            // 如果需要分页器
+            pagination: {
+              el: ".swiper-pagination",
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+
+            // 如果需要滚动条
+            scrollbar: {
+              el: ".swiper-scrollbar",
+            },
+          });
+        }
+      },
+    },
+  },
 };
 </script>
 

@@ -8,8 +8,10 @@
         <div class="screening-hd">
           <div class="hd-left">
             <h2 id="Hoting">正在热映</h2>
-            <span id="all-Hoting"><a href="#">全部正在热映»</a></span>
-            <span id="will-show"><a href="#">即将上映»</a></span>
+            <span id="all-Hoting"
+              ><a href="javascript:;">全部正在热映»</a></span
+            >
+            <span id="will-show"><a href="javascript:;">即将上映»</a></span>
           </div>
           <div class="hd-right">
             <div class="pages">
@@ -17,8 +19,8 @@
             </div>
             <!-- 翻页导航按钮 -->
             <div class="pre-next">
-              <a href="#" class="pre"><div></div></a>
-              <a href="#" class="next"><div></div></a>
+              <a href="javascript:;" class="pre"><div></div></a>
+              <a href="javascript:;" class="next"><div></div></a>
             </div>
           </div>
         </div>
@@ -29,11 +31,11 @@
             v-for="movie in movieHot.subjects"
             :key="movie.id"
           >
-            <a href="#" class="hoting-movie-img"
+            <a href="javascript:;" class="hoting-movie-img"
               ><img :src="movie.cover" alt=""
             /></a>
             <div class="movie-title">
-              <a href="#">{{ movie.title }}</a>
+              <a href="javascript:;">{{ movie.title }}</a>
             </div>
             <!-- 星级 -->
             <div class="grade">
@@ -87,7 +89,7 @@
         :currentTag.sync="tagList.currentMvTag"
         :list="tagList.mvList"
         :tag="tagList.mvTagList"
-        :tagType="true"
+        :tagType="tagList.mvType"
         ref="mv"
       ></Latest>
 
@@ -95,7 +97,7 @@
         :currentTag.sync="tagList.currentTvTag"
         :list="tagList.tvList"
         :tag="tagList.tvTagList"
-        :tagType="false"
+        :tagType="tagList.tvType"
         ref="tv"
       ></Latest>
 
@@ -109,45 +111,54 @@
     <div class="aside">
       <!-- 豆瓣电影评分八问 -->
       <div id="rating_answer">
-        <a href="#">豆瓣电影评分八问</a>
+        <a href="javascript:;">豆瓣电影评分八问</a>
       </div>
 
       <!-- 口碑单 -->
       <div id="billboard">
-        <h2 id="billboard-hd">一周口碑榜<a href="#">更多榜单»</a></h2>
+        <h2 id="billboard-hd">
+          一周口碑榜<a href="javascript:;">更多榜单»</a>
+        </h2>
         <ul id="billboard-bd">
           <li>
             <span class="order">1</span
-            ><a href="#" class="title">芝加哥七君子审判</a>
+            ><a href="javascript:;" class="title">芝加哥七君子审判</a>
           </li>
           <li>
-            <span class="order">2</span><a href="#" class="title">云上情歌</a>
+            <span class="order">2</span
+            ><a href="javascript:;" class="title">云上情歌</a>
           </li>
           <li>
-            <span class="order">3</span><a href="#" class="title">金都</a>
+            <span class="order">3</span
+            ><a href="javascript:;" class="title">金都</a>
           </li>
           <li>
             <span class="order">4</span
-            ><a href="#" class="title">拖米莉斯女王</a>
+            ><a href="javascript:;" class="title">拖米莉斯女王</a>
           </li>
           <li>
-            <span class="order">5</span><a href="#" class="title">梦想</a>
+            <span class="order">5</span
+            ><a href="javascript:;" class="title">梦想</a>
           </li>
           <li>
-            <span class="order">6</span><a href="#" class="title">波拉特2</a>
+            <span class="order">6</span
+            ><a href="javascript:;" class="title">波拉特2</a>
           </li>
           <li>
-            <span class="order">7</span><a href="#" class="title">十八个礼物</a>
+            <span class="order">7</span
+            ><a href="javascript:;" class="title">十八个礼物</a>
           </li>
           <li>
-            <span class="order">8</span><a href="#" class="title">金鱼</a>
+            <span class="order">8</span
+            ><a href="javascript:;" class="title">金鱼</a>
           </li>
           <li>
-            <span class="order">9</span><a href="#" class="title">回声</a>
+            <span class="order">9</span
+            ><a href="javascript:;" class="title">回声</a>
           </li>
           <li>
             <span class="order">10</span
-            ><a href="#" class="title">喀布尔的燕子</a>
+            ><a href="javascript:;" class="title">喀布尔的燕子</a>
           </li>
         </ul>
       </div>
@@ -157,11 +168,11 @@
         <h2>热门豆列</h2>
         <ul>
           <li>
-            <a href="#">◆◆历届威尼斯电影节金狮奖◆◆</a>
+            <a href="javascript:;">◆◆历届威尼斯电影节金狮奖◆◆</a>
             <span class="title">22推荐</span>
           </li>
           <li>
-            <a href="#">【容易忽视的好电影】</a>
+            <a href="javascript:;">【容易忽视的好电影】</a>
             <span class="title">12719推荐</span>
           </li>
         </ul>
@@ -202,51 +213,51 @@
         <h2>关注我们</h2>
         <ul>
           <li>
-            <a class="logo" href="#"
+            <a class="logo" href="javascript:;"
               ><img
                 src="../../../assets/images/movie/index/home_weibo@2x.jpg"
                 alt=""
             /></a>
-            <a class="title" href="#">微博</a>
+            <a class="title" href="javascript:;">微博</a>
           </li>
           <li>
-            <a class="logo" href="#"
+            <a class="logo" href="javascript:;"
               ><img
                 src="../../../assets/images/movie/index/home_weixin@2x.jpg"
                 alt=""
             /></a>
-            <a class="title" href="#">微信</a>
+            <a class="title" href="javascript:;">微信</a>
           </li>
           <li>
-            <a class="logo" href="#"
+            <a class="logo" href="javascript:;"
               ><img
                 src="../../../assets/images/movie/index/bite_me@2x.jpg"
                 alt=""
             /></a>
-            <a class="title" href="#">瓣嘴</a>
+            <a class="title" href="javascript:;">瓣嘴</a>
           </li>
           <li>
-            <a class="logo" href="#"
+            <a class="logo" href="javascript:;"
               ><img
                 src="../../../assets/images/movie/index/home_film_pro@2x.jpg"
                 alt=""
             /></a>
-            <a class="title" href="#">豆瓣影人PRO</a>
+            <a class="title" href="javascript:;">豆瓣影人PRO</a>
           </li>
           <li>
-            <a class="logo" href="#"
+            <a class="logo" href="javascript:;"
               ><img
                 src="../../../assets/images/movie/index/home_club@2x.jpg"
                 alt=""
             /></a>
-            <a class="title" href="#">观影club</a>
+            <a class="title" href="javascript:;">观影club</a>
           </li>
         </ul>
       </div>
 
       <!-- 广告 -->
       <div id="advertising">
-        <a id="active" href="#"
+        <a id="active" href="javascript:;"
           ><img
             src="../../../assets/images/movie/index/509f463353311cd.jpg"
             alt=""
@@ -264,7 +275,7 @@
 import Swiper from "swiper";
 import { mapActions, mapState } from "vuex";
 
-import Latest from "../../../components/Latest/Latest";
+import Latest from "./latest/Latest";
 import Gallery from "./gallery/Gallery";
 import Reviews from "./reviews/Reviews";
 export default {
@@ -280,7 +291,6 @@ export default {
         movieTotal: 0, // 总共的电影数目
         pageTotal: 5, // 总页数
         currentPage: 1, // 当前页数
-
         eachPage: 5, // ，每页多少个
       },
 
@@ -288,6 +298,8 @@ export default {
       tagList: {
         currentMvTag: 0, // 当前电影的标签
         currentTvTag: 0, // 当前电视的标签
+        mvType: "mv",
+        tvType: "tv",
         mvTagList: [], // 电影标签
         tvTagList: [], // 电视剧标签
         mvList: [], // 子路由展示的电影数据
@@ -295,7 +307,6 @@ export default {
       },
     };
   },
-
 
   mounted() {
     // 获取热门电影
@@ -317,6 +328,23 @@ export default {
 
     // 获取标签
     this.getTag();
+
+    // 获取热门电视
+    this.getTvHot();
+    // 获取国产剧
+    this.getTvCh();
+    // 获取综艺
+    this.getTvZh();
+    // 获取美剧
+    this.getTvTus();
+    // 获取日剧
+    this.getTvJan();
+    // 获取韩剧
+    this.getTvKor();
+    // 获取日本动画
+    this.getTvAni();
+    // 获取纪录片
+    this.getTvRec();
   },
 
   methods: {
@@ -348,6 +376,31 @@ export default {
     getTag() {
       this.$store.dispatch("getTag");
     },
+
+    getTvHot() {
+      this.$store.dispatch("getTvHot");
+    },
+    getTvCh() {
+      this.$store.dispatch("getTvCh");
+    },
+    getTvZh() {
+      this.$store.dispatch("getTvZh");
+    },
+    getTvTus() {
+      this.$store.dispatch("getTvTus");
+    },
+    getTvJan() {
+      this.$store.dispatch("getTvJan");
+    },
+    getTvKor() {
+      this.$store.dispatch("getTvKor");
+    },
+    getTvAni() {
+      this.$store.dispatch("getTvAni");
+    },
+    getTvRec() {
+      this.$store.dispatch("getTvRec");
+    },
   },
   computed: {
     ...mapState({
@@ -370,6 +423,24 @@ export default {
 
       // 获取标签
       tag: (state) => state.movie.tag,
+
+      // 电视剧
+      // 热门
+      tvHot: (state) => state.movie.tvHot,
+      // 国产剧
+      tvCh: (state) => state.movie.tvCh,
+      // 综艺
+      tvZh: (state) => state.movie.tvZh,
+      // 美剧
+      tvTus: (state) => state.movie.tvTus,
+      // 日剧
+      tvJan: (state) => state.movie.tvJan,
+      // 韩剧
+      tvKor: (state) => state.movie.tvKor,
+      // 日本动画
+      tvAni: (state) => state.movie.tvAni,
+      // 纪录片
+      tvRec: (state) => state.movie.tvRec,
     }),
   },
   // 监测数据
@@ -387,7 +458,7 @@ export default {
             // 在carousel mode下定义slides的数量多少为一组。
             slidesPerView: _this.movieList.eachPage,
             slidesPerGroup: _this.movieList.eachPage,
-            speed:500,    // 切换速度
+            speed: 500, // 切换速度
             autoplay: {
               delay: 5000, //2秒切换一次
             },
@@ -441,15 +512,34 @@ export default {
       },
     },
 
+    tvHot: {
+      immediate: true,
+      deep: true,
+      handler() {
+        this.$nextTick(() => {
+          let currentMvTag = this.tagList.currentMvTag * 1;
+          let currentTvTag = this.tagList.currentTvTag * 1;
+          if (this.movieHot.subjects) {
+            this.$set(this.tagList, "mvList", this.movieHot.subjects);
+          }
+          if (this.tvHot.subjects) {
+            this.$set(this.tagList, "tvList", this.tvHot.subjects);
+          }
+        });
+      },
+    },
+
     tagList: {
       immediate: true,
       deep: true,
       handler() {
         this.$nextTick(() => {
           let currentMvTag = this.tagList.currentMvTag * 1;
-          if (this.movieHot) {
+          let currentTvTag = this.tagList.currentTvTag * 1;
+          if (this.movieHot.subjects) {
             switch (currentMvTag) {
               case 0:
+
                 this.$set(this.tagList, "mvList", this.movieHot.subjects);
                 break;
               case 1:
@@ -472,6 +562,34 @@ export default {
                 break;
               case 7:
                 this.$set(this.tagList, "mvList", this.movieJan.subjects);
+                break;
+            }
+          }
+          if (this.tvHot.subjects) {
+            switch (currentTvTag) {
+              case 0:
+                this.$set(this.tagList, "tvList", this.tvHot.subjects);
+                break;
+              case 1:
+                this.$set(this.tagList, "tvList", this.tvCh.subjects);
+                break;
+              case 2:
+                this.$set(this.tagList, "tvList", this.tvZh.subjects);
+                break;
+              case 3:
+                this.$set(this.tagList, "tvList", this.tvTus.subjects);
+                break;
+              case 4:
+                this.$set(this.tagList, "tvList", this.tvJan.subjects);
+                break;
+              case 5:
+                this.$set(this.tagList, "tvList", this.tvKor.subjects);
+                break;
+              case 6:
+                this.$set(this.tagList, "tvList", this.tvAni.subjects);
+                break;
+              case 7:
+                this.$set(this.tagList, "tvList", this.tvRec.subjects);
                 break;
             }
           }

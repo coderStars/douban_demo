@@ -16,7 +16,7 @@
     "nprogress": "^0.2.0",
     "sass-loader": "^10.0.4",
     "style-loader": "^2.0.0",
-    "swiper": "^5.4.5",
+    "swiper": "^4.5.1",
     "vue": "^2.6.11",
     "vue-router": "^3.4.8",
     "vuex": "^3.5.1"

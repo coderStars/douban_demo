@@ -1,6 +1,8 @@
 import {getMovieHot,getMovieNew,getMovieHigh,getMovieCold,getMovieCh,getMovieEur,getMovieKor,getMovieJan} from '@/api/movie/movies'
 
 import {getTag, getMovieTag, getTvTag} from '@/api/movie/tags'
+
+import {getTvHot, getTvCh, getTvZh, getTvTus, getTvJan, getTvKor, getTvAni, getTvRec} from '@/api/movie/tvs'
 //存数据的地方，多个属性的对象
 const state = {
   // 电影种类
@@ -16,7 +18,17 @@ const state = {
   // 标签种类
   tag: [],
   movieTag: [],
-  tvTag: []
+  tvTag: [],
+
+  // 电视
+  tvHot: {},
+  tvCh: {},
+  tvZh: {},
+  tvTus: {},
+  tvJan: {},
+  tvKor: {},
+  tvAni: {},
+  tvRec: {}
 }
 //直接修改数据的地，是多个方法的一个对象  方法当中不能出现if  for   异步操作
 const mutations = {
@@ -55,6 +67,39 @@ const mutations = {
   },
   RECEIVETVTAG(state,tvTag){
     state.tvTag = tvTag
+  },
+
+  // 获取电视
+  RECEIVETVHOT(state,tvHot){
+    state.tvHot = tvHot
+  },
+
+  RECEIVETVCH(state,tvCh){
+    state.tvCh = tvCh
+  },
+
+  RECEIVETVZH(state,tvZh){
+    state.tvZh = tvZh
+  },
+
+  RECEIVETVTUS(state,tvTus){
+    state.tvTus = tvTus
+  },
+
+  RECEIVETVJAN(state,tvJan){
+    state.tvJan = tvJan
+  },
+
+  RECEIVETVKOR(state,tvKor){
+    state.tvKor = tvKor
+  },
+
+  RECEIVETVANI(state,tvAni){
+    state.tvAni = tvAni
+  },
+
+  RECEIVETVREC(state,tvRec){
+    state.tvRec = tvRec
   },
 }
 
@@ -127,6 +172,56 @@ const actions = {
     const result = await getTvTag()
     if(result.code === 200){
       commit('RECEIVETVTAG',result.data)
+    }
+  },
+
+  // 获取电视
+  async getTvHot({commit}){
+    const result = await getTvHot()
+    if(result.code === 200){
+      commit('RECEIVETVHOT',result.data)
+    }
+  },
+  async getTvCh({commit}){
+    const result = await getTvCh()
+    if(result.code === 200){
+      commit('RECEIVETVCH',result.data)
+    }
+  },
+  async getTvZh({commit}){
+    const result = await getTvZh()
+    if(result.code === 200){
+      commit('RECEIVETVZH',result.data)
+    }
+  },
+  async getTvTus({commit}){
+    const result = await getTvTus()
+    if(result.code === 200){
+      commit('RECEIVETVTUS',result.data)
+    }
+  },
+  async getTvJan({commit}){
+    const result = await getTvJan()
+    if(result.code === 200){
+      commit('RECEIVETVJAN',result.data)
+    }
+  },
+  async getTvKor({commit}){
+    const result = await getTvKor()
+    if(result.code === 200){
+      commit('RECEIVETVKOR',result.data)
+    }
+  },
+  async getTvAni({commit}){
+    const result = await getTvAni()
+    if(result.code === 200){
+      commit('RECEIVETVANI',result.data)
+    }
+  },
+  async getTvRec({commit}){
+    const result = await getTvRec()
+    if(result.code === 200){
+      commit('RECEIVETVREC',result.data)
     }
   },
 }
