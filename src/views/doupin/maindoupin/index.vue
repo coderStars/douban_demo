@@ -106,7 +106,7 @@
           <!-- 会员中心 -->
           <div class="product-wrap">
             <a href="##">
-              <img src="http://localhost:8080/img/ia_500000009.b83deca0.jpg" alt="加载中..." />
+              <img src="./img/file-7.jpg" alt="加载中..." />
             </a>
           </div>
 
@@ -137,7 +137,11 @@
                   </a>
                   <div class="product-card-main">
                     <a class="product-card-cover">
-                      <img src="./img/file-2.jpg" alt="豆瓣逆向手表—多色款" class="product-cover-pic"/>
+                      <img
+                        src="./img/file-2.jpg"
+                        alt="豆瓣逆向手表—多色款"
+                        class="product-cover-pic"
+                      />
                       <div class="product-card-title">豆瓣逆向手表—多色款</div>
                       <div class="product-card-desc">风格不设限 白色也出彩</div>
                       <div class="product-card-tags">
@@ -162,7 +166,11 @@
                   </a>
                   <div class="product-card-main">
                     <a class="product-card-cover">
-                      <img src="https://img9.doubanio.com/img/files/file-1604655145-5.jpg" alt="豆瓣逆向手表—多色款" class="product-cover-pic"/>
+                      <img
+                        src="https://img9.doubanio.com/img/files/file-1604655145-5.jpg"
+                        alt="豆瓣逆向手表—多色款"
+                        class="product-cover-pic"
+                      />
                       <div class="product-card-title">豆瓣逆向手表—多色款</div>
                       <div class="product-card-desc">风格不设限 白色也出彩</div>
                       <div class="product-card-tags">
@@ -187,7 +195,11 @@
                   </a>
                   <div class="product-card-main">
                     <a class="product-card-cover">
-                      <img src="./img/file-2.jpg" alt="豆瓣逆向手表—多色款" class="product-cover-pic"/>
+                      <img
+                        src="./img/file-2.jpg"
+                        alt="豆瓣逆向手表—多色款"
+                        class="product-cover-pic"
+                      />
                       <div class="product-card-title">豆瓣逆向手表—多色款</div>
                       <div class="product-card-desc">风格不设限 白色也出彩</div>
                       <div class="product-card-tags">
@@ -212,7 +224,11 @@
                   </a>
                   <div class="product-card-main">
                     <a class="product-card-cover">
-                      <img src="./img/file-5.jpg" alt="豆瓣逆向手表—多色款" class="product-cover-pic"/>
+                      <img
+                        src="./img/file-5.jpg"
+                        alt="豆瓣逆向手表—多色款"
+                        class="product-cover-pic"
+                      />
                       <div class="product-card-title">豆瓣逆向手表—多色款</div>
                       <div class="product-card-desc">风格不设限 白色也出彩</div>
                       <div class="product-card-tags">
@@ -229,14 +245,13 @@
                 </div>
               </div>
 
-                <!-- 如果需要分页器 -->
+              <!-- 如果需要分页器 -->
               <div class="swiper-pagination"></div>
 
-                <!-- 如果需要导航按钮 -->
+              <!-- 如果需要导航按钮 -->
               <div class="swiper-button-prev"></div>
               <div class="swiper-button-next"></div>
             </div>
-            
           </div>
 
           <!-- 人气单品 -->
@@ -282,7 +297,11 @@
               <li class="product-list-item col-3">
                 <div class="product-card-main">
                   <div class="product-card-cover">
-                    <img src="https://img1.doubanio.com/img/files/file-1602559242-9.jpg" alt="豆瓣收藏夹" class="product-cover-pic" />
+                    <img
+                      src="https://img1.doubanio.com/img/files/file-1602559242-9.jpg"
+                      alt="豆瓣收藏夹"
+                      class="product-cover-pic"
+                    />
                   </div>
                   <div class="product-card-info">
                     <div class="product-card-title">豆瓣收藏夹</div>
@@ -322,18 +341,22 @@
               </a>
             </span>
             <div class="shop-list-content swiper-container" ref="bannerSwiper">
-              <div
-                class="centerLunbo swiper-wrapper"
-                v-for="(item, index) in bannerList"
-                :key="index"
-              >
-                <a href="https://bizpage.douban.com/dou-art/" target="_blank" class="swiper-slide">
-                  <div class="shop-title" style="font-size: 16px; font-weight: 600;">
-                    {{ item.title }}
-                  </div>
-                  <img :src="item.image" style="width: 1100px; height: 420px" />
-                </a>
+              <div class="centerLunbo swiper-wrapper">
+                <div v-for="(item, index) in bannerList" :key="index" class="swiper-slide">
+                  <a href="https://bizpage.douban.com/dou-art/" target="_blank">
+                    <div class="shop-title" style="font-size: 16px; font-weight: 600;">
+                      {{ item.title }}
+                    </div>
+                    <img :src="item.image"/>
+                  </a>
+                </div>
               </div>
+              <!-- 如果需要分页器 -->
+              <div class="swiper-pagination"></div>
+
+              <!-- 如果需要导航按钮 -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
 
@@ -764,7 +787,8 @@ export default {
       this.MaindoupinDataList = result;
       // console.log(this.MaindoupinDataList);
       this.bannerListData = result.specials;
-      this.bannerList = this.bannerListData.items;
+      // console.log(this.bannerListData);
+      this.bannerList = this.bannerListData.data.items;
     },
     // 头部轮播
 
@@ -806,7 +830,7 @@ export default {
             //如果是类名,要加双引号".swiper-container"
             //direction: "vertical", // 垂直切换选项(方向:垂直, 不写默认水平,删了就是水平)
             loop: true, // 循环模式选项.(代表无缝操作,从最后一张切换到第一张,是否添加无缝操作)
-
+            autoplay: true,
             // 如果需要分页器,(有小圆点就得加这个)
             pagination: {
               el: ".swiper-pagination",
@@ -959,7 +983,7 @@ export default {
 }
 
 // 限时抢购
-.product-list-sale1{
+.product-list-sale1 {
   width: 1100px;
   height: 420px;
   margin: 0px auto 100px;
@@ -967,7 +991,7 @@ export default {
     width: 1100px;
     height: 119px;
     text-align: center;
-    P{
+    p {
       font-size: 20px;
       font-weight: 600;
       padding: 40px 0 10px;
@@ -985,7 +1009,7 @@ export default {
     height: 420px;
     display: flex;
     justify-content: flex-start;
-    
+
     .product-card-large {
       .product-cover-pic {
         width: 820px;
@@ -1016,23 +1040,23 @@ export default {
         .product-card-desc {
           width: 230px;
           height: 21px;
-          color: #D1CABF;
+          color: #d1cabf;
           font-size: 14px;
         }
         .product-card-tags {
           .product-card-tag1 {
             margin-left: 3px;
-            color: #E4476A;
+            color: #e4476a;
             font-size: 12px;
             padding: 1px 4px;
-            background: #FFD2EC;
+            background: #ffd2ec;
           }
           .product-card-tag2 {
             margin-left: 3px;
-            color: #E4476A;
+            color: #e4476a;
             font-size: 12px;
             padding: 1px 4px;
-            background: #FFD2EC;
+            background: #ffd2ec;
           }
         }
         .product-card-price {
@@ -1050,20 +1074,17 @@ export default {
           }
         }
         .product-card-btn {
-            padding: 4px 8px;
-            border-radius: 40px;
-            border-radius: 40px;
-            color: #fff;
-            font-size: 13px;
-            background: #dd1944;
-            vertical-align: middle;
-            position: absolute;
-            right: 15px;
-            bottom: 50px;
-
+          padding: 4px 8px;
+          border-radius: 40px;
+          border-radius: 40px;
+          color: #fff;
+          font-size: 13px;
+          background: #dd1944;
+          vertical-align: middle;
+          position: absolute;
+          right: 15px;
+          bottom: 50px;
         }
-        
-      
       }
     }
   }
@@ -1113,10 +1134,8 @@ export default {
   }
 }
 
-//中间轮播
-
+//中间轮播    
 .shop-wrap {
-  padding-bottom: 50px;
   margin: 0 auto;
   width: 1120px;
   height: 520px;
@@ -1134,10 +1153,13 @@ export default {
   }
 
   .shop-list-content {
+    width: 1100px;
+    height: 470px;
+    margin: 0 10px;
     .centerLunbo {
       width: 1100px;
       height: 470px;
-      margin: 0 10px;
+      
       .shop-title {
         width: 1100px;
         height: 50px;
@@ -1243,7 +1265,7 @@ export default {
     }
   }
 
-  #cnm{
+  #cnm {
     margin: 0 auto;
   }
 }
@@ -1262,7 +1284,7 @@ export default {
   }
   .product-list-content {
     display: flex;
-    
+
     align-items: flex-start;
     flex-wrap: wrap;
     .product-list-item {
