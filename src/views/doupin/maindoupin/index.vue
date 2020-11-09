@@ -734,10 +734,10 @@
 </template>
 
 <script>
-import { getMaindoupinDataList } from "@/api/doupin";
-import Swiper from "swiper";
-import "swiper/css/swiper.min.css";
-export default {
+import { getMaindoupinDataList } from "@/api/doupin";  //非默认暴露
+import Swiper from "swiper";  //默认暴露
+import "swiper/css/swiper.min.css";  //样式直接引入
+export default {  
   name: "Maindoupin",
   data() {
     return {
@@ -799,6 +799,7 @@ export default {
         // 如果需要分页器
         pagination: {
           el: ".swiper-pagination",
+          clickable :true,
         },
 
         // 如果需要前进后退按钮
@@ -834,6 +835,8 @@ export default {
             // 如果需要分页器,(有小圆点就得加这个)
             pagination: {
               el: ".swiper-pagination",
+              clickable :true,
+            
             },
 
             // 如果需要前进后退按钮
@@ -863,6 +866,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+
 //item全部样式
 .homepage-wrap {
   #price {
